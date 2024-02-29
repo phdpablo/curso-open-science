@@ -1,0 +1,12 @@
+# Abstract {.unnumbered .unlisted}
+
+This is a Quarto book template for scientific article.
+
+To learn more about Quarto books visit <https://quarto.org/docs/books>.
+
+**Key-words:**
+
+**How cite this template:**
+
+<a href="https://doi.org/10.5281/zenodo.10443127"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.10443127.svg" alt="DOI"></a>
+
