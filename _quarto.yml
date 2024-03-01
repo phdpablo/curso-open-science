@@ -8,14 +8,14 @@ execute:
   #- webr
   #- abstract-section:
 book:
-  title: "Your title"
-  subtitle: "Your subtitle"
-  author: "Your name"
+  title: "Artigo à Prova de Futuro"
+  subtitle: "Jornada de Open Science na Prática"
+  author: "Pablo Rogers"
   date: last-modified
   date-format: long
-  doi: 10.5281/zenodo.10443128
+  #doi: 10.5281/zenodo.10443128
   cover-image: img/cover.png
-  downloads: pdf
+  # downloads: pdf
   reader-mode: true
   sidebar:
     align: left
@@ -23,19 +23,23 @@ book:
   page-footer:
     left: <a href="https://www.phdpablo.com">by Pablo Rogers</a>
     right: This article was built with <a href="https://quarto.org/">Quarto</a> 
-  site-url: "https://phdpablo.github.io/article-template/"
-  repo-url: "https://github.com/phdpablo/article-template/"
+  site-url: "https://phdpablo.github.io/curso-open-science/"
+  repo-url: "https://github.com/phdpablo/curso-open-science/"
   #repo-actions: [edit,issue]
   sharing: [twitter, facebook, linkedin]
   open-graph: true
   
   chapters:
     - index.qmd
+    - 00-prework.qmd
     - 01-intro.qmd
-    - 02-background.qmd
-    - 03-methods.qmd
-    - 04-results.qmd
-    - 05-considerations.qmd
+    - 02-osf.qmd
+    - 03-zotero.qmd
+    - 04-project.qmd
+    - 05-git.qmd
+    - 06-quarto.qmd
+    - 07-docker.qmd
+    - 08-AI.qmd
     - references.qmd
 
 bibliography: references.bib

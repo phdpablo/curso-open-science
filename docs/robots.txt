@@ -1,1 +1,1 @@
-Sitemap: https://phdpablo.github.io/article-template/sitemap.xml
+Sitemap: https://phdpablo.github.io/curso-open-science/sitemap.xml

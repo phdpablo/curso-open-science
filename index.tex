@@ -1,0 +1,459 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  a4paper,
+]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[paperwidth=8.00in,paperheight=10.00in,left=1.25in,textwidth=
+5.25in,top=1.00in,textheight=8.25in]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{5}
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\makeatletter
+\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Artigo à Prova de Futuro},
+  pdfauthor={Pablo Rogers},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Artigo à Prova de Futuro}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Jornada de Open Science na Prática}
+\author{Pablo Rogers}
+\date{March 1, 2024}
+
+\begin{document}
+\maketitle
+
+\bookmarksetup{startatroot}
+
+\section*{HOME}\label{home}
+
+\markboth{HOME}{HOME}
+
+\subsection*{Sobre essa página}\label{sobre-essa-puxe1gina}
+
+\markright{Sobre essa página}
+
+Página do curso \textbf{``Artigo à Prova de Futuro: Jornada de Open
+Science na Prática''}. Aqui você encontrará informações sobre o programa
+do curso, materiais para seu acompanhamento e sugestões de leituras
+sobre a prática da ciência aberta (artigos, notas de aulas, blogs,
+vídeos, etc.).
+
+\subsection*{Sobre o instrutor}\label{sobre-o-instrutor}
+
+\markright{Sobre o instrutor}
+
+O curso será ministrado por Pablo Rogers, doutor em administração pela
+Universidade de São Paulo (FEA/USP) e professor de métodos quantitativos
+desde 2007. Na \href{https://github.com/phdpablo}{página de perfil do
+Github} do instrutor você pode encontrar informações de trabalhos
+recentes, e no seu \href{https://phdpablo.com/}{site pessoal}, detalhes
+sobre suas formações, competências, trajetória e projetos.
+
+\subsection*{Sobre o curso}\label{sobre-o-curso}
+
+\markright{Sobre o curso}
+
+O curso tem objetivo de introduzir os conceitos relacionados com a
+ciência aberta e a prática da pesquisa reprodutível. O curso aborda
+temas introdutórios sobre ciência aberta, com foco no ferramental
+disponível para tornar a pesquisa mais transparente, reprodutível e
+acessível. O curso é voltado para pesquisadores e estudantes de
+pós-graduação, mas aberto a qualquer pessoa interessada em aprender
+sobre a prática da ciência aberta. O protagonista do curso é o
+pesquisador brasileiro que deseja aprimorar a qualidade e a
+transparência de sua pesquisa, e que busca ferramentas para tornar-lá
+mais eficiente e acessível.
+
+Trata-se de um curso intermitente programado para acontecer em 4
+encontros de 4 horas cada (ou 8 encontros de 2 horas cada), totalizando
+16 horas de aulas síncronas. Ele acontecerá algumas vezes ao ano, com
+datas e horários a serem definidos.
+
+O curso é gratuito, com a possibilidade de certificado de extensão pela
+Universidade Federal de Uberlândia (UFU), e as inscrições serão feitas
+por meio de formulário disponibilizado no site do projeto
+Psico\&Econo\_METRIA. Quando da previsão das datas, uma campanha de
+e-mail marketing divulgará o link para a inscrição através de
+coordenações de pós-graduações selecionadas.
+
+As vagas são limitadas e a seleção será feita por ordem de inscrição.
+Após o preenchimento das vagas, os demais interessados poderão se
+inscrever em uma lista de espera, para serem avisados sobre a próxima
+edição do curso. Após selecionados, os inscritos receberão um e-mail com
+instruções para acesso à plataforma de aulas síncronas e para a
+realização das atividades prévias ao curso.
+
+\subsection*{Ementa do curso}\label{ementa-do-curso}
+
+\markright{Ementa do curso}
+
+Introdução da Ciência Aberta / Repositórios da Ciência Aberta /
+Gerenciamento de Referências e Bibliotecas / Gestão de Dados e Projetos
+/ Controle de Versão / Documentos Reprodutíveis / Controle de Ambiente
+(containers) / IA Aplicada à Pesquisa Científica
+
+\subsection*{Metodologia}\label{metodologia}
+
+\markright{Metodologia}
+
+O curso sempre acontecerá de forma remota e síncrona, com aulas
+expositivas e práticas. As aulas serão gravadas e disponibilizadas no
+\href{https://www.youtube.com/c/PsicoEconoMETRIA}{canal do YouTube do
+projeto Psico\&Econo\_METRIA}. Nesse sentido, o material do curso
+organizado nessa página refere-se ao roteiro estruturado de tudo que se
+vê nas aulas síncronas e conteúdos adicionais (bibliografia, notas de
+aulas, links, etc).
+
+\bookmarksetup{startatroot}
+
+\section*{Pré-requisitos}\label{pruxe9-requisitos}
+
+\markboth{Pré-requisitos}{Pré-requisitos}
+
+O curso não exige conhecimento prévio em programação, mas é recomendável
+que o aluno tenha familiaridade com o uso de computadores (ambiente
+Windows) e com a escrita de textos científicos. Nesse sentido, não é
+necessário ter conhecimento prévio sobre as ferramentas e plataformas
+que utilizaremos no curso: Zotero, OSF, Zenodo, Git, Github, RStudio,
+Quarto/RMarkdown, Docker, etc; mas desejável que o aluno já as tenha
+instalado e/ou cadastro nas plataformas.
+
+Abaixo eu descrevo sucintamente o que é cada uma dessas ferramentas e
+plataformas, e como você pode se preparar para o curso. Também apresento
+um vídeo curto sobre a instalação e cadastro em cada uma delas. A ideia
+é que você já tenha todas as ferramentas e plataformas instaladas e/ou
+cadastro antes do início do curso, para que possamos focar no conteúdo e
+prática durante as aulas síncronas. Mas pode ficar tranquilo, pois na
+primeira aula do curso abordaremos essas tarefas, e caso ainda haja
+alguma dúvida na instalação e cadastro, dedicaremos algum tempo para
+saná-las.
+
+Outras soluções que iremos discutir e testar durante o curso, como
+alguns pacotes do R, e aplicações de IA no último módulo, deixaremos
+para as aulas remotas. Essas soluções na sua maioria requerem cadastros
+rápidos, e podem ser feitos de forma instantânea via conta
+Google/Microsoft/Apple.
+
+\subsection*{Github}\label{github}
+\addcontentsline{toc}{subsection}{Github}
+
+\markright{Github}
+
+Primeiramente, se cadastre no Github: \url{https://github.com/signup},
+pois com ele você poderá acessar o material do curso e interagir com os
+demais participantes. E com a conta do Github você também poderá se
+cadastrar em outras plataformas, como o Zenodo, OSF, etc. Algumas
+features que aprenderemos no curso exigem o vínculo entre as contas. Se
+for professor ou estudante, você pode solicitar o
+\href{https://education.github.com/}{GitHub Education} e ter acesso, por
+exemplo, ao Copilot, uma das ferramentas de IA que abordaremos no último
+módulo. Por isso, é importante que você se cadastre com um e-mail
+institucional. Use o mesmo e-mail para se cadastrar em todas
+plataformas.
+
+\subsection*{Git}\label{git}
+\addcontentsline{toc}{subsection}{Git}
+
+\markright{Git}
+
+Github não é a mesma coisa que Git. O Github é uma plataforma, e o Git é
+uma ferramenta. Instale a versão mais recente do Git:
+\url{https://git-scm.com/downloads}. O Git é uma ferramenta de controle
+de versão, e o Github é uma plataforma que utiliza o Git. O Git é uma
+ferramenta essencial para a prática da ciência aberta, e é uma das
+ferramentas mais importantes para o pesquisador que deseja tornar sua
+pesquisa mais transparente e reprodutível.
+
+\subsection*{Zotero}\label{zotero}
+\addcontentsline{toc}{subsection}{Zotero}
+
+\markright{Zotero}
+
+Baixe a versão mais recente do Zotero:
+\url{https://www.zotero.org/download/} e cadastre uma conta:
+\url{https://www.zotero.org/user/register/}. Vamos discutir sobre o
+Zotero e diversos plugins que são úteis no dia-a-dia do pesquisador.
+Atualmente, o Zotero é a ferramenta mais completa para gerenciamento de
+referências e bibliotecas, e se integra nativamente com o RStudio.
+
+\subsection*{OSF}\label{osf}
+\addcontentsline{toc}{subsection}{OSF}
+
+\markright{OSF}
+
+Cadastre no Open Science Framework (OSF):
+\url{https://osf.io/register/}. Como veremos, essa plataforma é uma das
+mais importantes para a prática da ciência aberta. Ela está no começo
+(pré-registro) e no final (repositório de dados e pré-print) do ciclo de
+vida (workflow) de um projeto de pesquisa.
+
+\subsection*{Zenodo}\label{zenodo}
+\addcontentsline{toc}{subsection}{Zenodo}
+
+\markright{Zenodo}
+
+Apesar do Zenodo cumprir funções similares ao OSF e até mesmo ao Github,
+ele é mais voltado para a publicação de dados e publicações científicas.
+Cadastre no Zenodo: \url{https://zenodo.org/login/} e víncule sua conta
+com o Github. Isso será útil, principalmente, para geração de DOI de
+repositórios do Github.
+
+\subsection*{RStudio}\label{rstudio}
+\addcontentsline{toc}{subsection}{RStudio}
+
+\markright{RStudio}
+
+Baixe a versão mais recente do RStudio:
+\url{https://posit.co/download/rstudio-desktop/}. O RStudio é uma
+Integrated Development Environment (IDE) para a linguagem R. O RStudio é
+uma ferramenta essencial para a prática da ciência aberta em R, pois
+integra as principais soluções que abordaremos no curso (Zotero, Quarto,
+Git/Github, etc.). A empresa RStudio recentemente mudou o nome para
+Posit, com o objetivo refletir melhor a expansão da empresa para além do
+desenvolvimento de ferramentas para R, incluindo Python e outras
+linguagens. Nesse mesmo link você pode baixar o R, que é a linguagem de
+programação que utilizaremos no curso.
+
+\subsection*{Quarto}\label{quarto}
+\addcontentsline{toc}{subsection}{Quarto}
+
+\markright{Quarto}
+
+Baixe a versão mais recente do Quarto: \url{https://www.quarto.org/}. O
+Quarto é uma linguagem de marcação que permite a criação de documentos
+reprodutíveis e dinâmicos. Ele é uma evolução e tende a substituir o
+RMarkdown, que é a principal linguagem de marcação do R. O Quarto
+engloba e adiciona diversas outras vantagens ao RMarkdown, tal como a
+possibilidade de criar documentos reprodutíveis em Python, Julia, etc.
+Se você já tem algum conhecimento de RMarkdown, não se preocupe, pois o
+Quarto é uma extensão natural.
+
+\subsection*{Docker}\label{docker}
+\addcontentsline{toc}{subsection}{Docker}
+
+\markright{Docker}
+
+Baixe a versão mais recente do Docker:
+\url{https://www.docker.com/products/docker-desktop}. Nesse mesmo link
+você cria uma conta. O Docker é uma plataforma para desenvolvimento,
+envio e execução de aplicativos. O Docker é uma ferramenta essencial
+para a prática da ciência aberta, pois permite a criação de ambientes
+reprodutíveis.
+
+\bookmarksetup{startatroot}
+
+\section{Introdução à Ciência
+Aberta}\label{introduuxe7uxe3o-uxe0-ciuxeancia-aberta}
+
+\bookmarksetup{startatroot}
+
+\section{Repositórios da Ciência
+Aberta}\label{reposituxf3rios-da-ciuxeancia-aberta}
+
+\bookmarksetup{startatroot}
+
+\section{Gerenciamento de Referências e
+Bibliotecas}\label{gerenciamento-de-referuxeancias-e-bibliotecas}
+
+\bookmarksetup{startatroot}
+
+\section{Gestão de Dados e
+Projetos}\label{gestuxe3o-de-dados-e-projetos}
+
+\bookmarksetup{startatroot}
+
+\section{Controle de versão}\label{controle-de-versuxe3o}
+
+\bookmarksetup{startatroot}
+
+\section{Documentos Reprodutíveis}\label{documentos-reprodutuxedveis}
+
+\bookmarksetup{startatroot}
+
+\section{Controle de Ambiente
+(Containers)}\label{controle-de-ambiente-containers}
+
+\bookmarksetup{startatroot}
+
+\section{IA Aplicada à Pesquisa
+Científica}\label{ia-aplicada-uxe0-pesquisa-cientuxedfica}
+
+\bookmarksetup{startatroot}
+
+\section*{Referências}\label{referuxeancias}
+\addcontentsline{toc}{section}{Referências}
+
+\markboth{Referências}{Referências}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{0}{1}
+\end{CSLReferences}
+
+
+
+\end{document}
