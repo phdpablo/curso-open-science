@@ -1,4 +1,4 @@
-# Pré-requisitos {.unnumbered .unlisted}
+# Pré-requisitos 📇 {#sec-prework .unnumbered .unlisted}
 
 O curso não exige conhecimento prévio em programação, mas é recomendável que o aluno tenha familiaridade com o uso de computadores (ambiente Windows) e com a escrita de textos científicos. Nesse sentido, não é necessário ter conhecimento prévio sobre as ferramentas e plataformas que utilizaremos no curso: Zotero, OSF, Zenodo, Git, Github, RStudio, Quarto/RMarkdown, Docker, etc; mas desejável que o aluno já as tenha instalado e/ou cadastro nas plataformas.
 
@@ -6,34 +6,56 @@ Abaixo eu descrevo sucintamente o que é cada uma dessas ferramentas e plataform
 
 Outras soluções que iremos discutir e testar durante o curso, como alguns pacotes do R, e aplicações de IA no último módulo, deixaremos para as aulas remotas. Essas soluções na sua maioria requerem cadastros rápidos, e podem ser feitos de forma instantânea via conta Google/Microsoft/Apple.
 
-## Github
+::: {.callout-important collapse="true"}
+## ChatGPT para suas notas de leituras
+
+Os resumos das bibliografias que apresento nas seções seguintes foram elaborados com o auxílio do ChatGPT 4, seja pelo o [webapp da OpenAI](https://chat.openai.com/) ou pelo [Copilot](https://copilot.microsoft.com/) (ou buscador Bing) da Microsoft.
+
+Eu destaco (seleciono através de marca texto no Zotero, por exemplo) as passagens que considero importante do artigo científico, tendo em vista a minha perspectiva e fins no momento da leitura, e posteriormente copio e colo as notas de leitura com a seguinte prompt:
+
+"*Senteces in the text are reading notes, that is, what I found most important and interesting, from a scientific article on the topic open science. I would like you to summarize the notes in a descriptive text and concatenate the arguments highlighted in the notes. Give your answer in Portuguese*"
+:::
+
+::: {.callout-caution collapse="true"}
+## Não confie cegamente na IA
+
+Eu simplesmente copiei e colei os resultados do ChatGPT para compilar essas notas de leituras? Não. Após o resultado do ChatGPT eu reviso o sumário das notas de leituras e faço ajustes, que somente são possíveis porque li o artigo por completo. A despeito do ChatGPT fazer um bom serviço nesse sentido, ele ainda comete muitos deslizes. Deslizes esses que você não pode deixar passar num texto científico, e somente captaria a partir da leitura do artigo ou sendo conhecedor do assunto abordado.
+:::
+
+::: {.callout-note collapse="true"}
+## Outra curiosidade...
+
+A [imagem cover desse curso](https://phdpablo.github.io/curso-open-science/img/cover.png) foi gerada por uma IA, com posteriores ajustes (off course!). Existem diversos geradores de imagens que você pode testar gratuitamente, mas eu costumo utilizar o i) [DALL-E](https://openai.com/dall-e/), que é uma solução da OpenAI que também pode ser utilizada no [Copilot da Microsoft](https://copilot.microsoft.com/); ii) o [PlaygroundAI](https://playgroundai.com/), e iii) o [Gemini](https://gemini.google.com/app) do Google.
+:::
+
+## Github {#sec-githubprework}
 
 Primeiramente, se cadastre no Github: <https://github.com/signup>, pois com ele você poderá acessar o material do curso e interagir com os demais participantes. E com a conta do Github você também poderá se cadastrar em outras plataformas, como o Zenodo, OSF, etc. Algumas features que aprenderemos no curso exigem o vínculo entre as contas. Se for professor ou estudante, você pode solicitar o [GitHub Education](https://education.github.com/) e ter acesso, por exemplo, ao Copilot, uma das ferramentas de IA que abordaremos no último módulo. Por isso, é importante que você se cadastre com um e-mail institucional. Use o mesmo e-mail para se cadastrar em todas plataformas.
 
-## Git
+## Git {#sec-gitprework}
 
 Github não é a mesma coisa que Git. O Github é uma plataforma, e o Git é uma ferramenta. Instale a versão mais recente do Git: <https://git-scm.com/downloads>. O Git é uma ferramenta de controle de versão, e o Github é uma plataforma que utiliza o Git. O Git é uma ferramenta essencial para a prática da ciência aberta, e é uma das ferramentas mais importantes para o pesquisador que deseja tornar sua pesquisa mais transparente e reprodutível.
 
-## Zotero
+## Zotero {#sec-zoteroprework}
 
 Baixe a versão mais recente do Zotero: <https://www.zotero.org/download/> e cadastre uma conta: <https://www.zotero.org/user/register/>. Vamos discutir sobre o Zotero e diversos plugins que são úteis no dia-a-dia do pesquisador. Atualmente, o Zotero é a ferramenta mais completa para gerenciamento de referências e bibliotecas, e se integra nativamente com o RStudio.
 
-## OSF
+## OSFn {#sec-osfprework}
 
 Cadastre no Open Science Framework (OSF): <https://osf.io/register/>. Como veremos, essa plataforma é uma das mais importantes para a prática da ciência aberta. Ela está no começo (pré-registro) e no final (repositório de dados e pré-print) do ciclo de vida (workflow) de um projeto de pesquisa.
 
-## Zenodo
+## Zenodo {#sec-zenodoprework}
 
 Apesar do Zenodo cumprir funções similares ao OSF e até mesmo ao Github, ele é mais voltado para a publicação de dados e publicações científicas. Cadastre no Zenodo: <https://zenodo.org/login/> e víncule sua conta com o Github. Isso será útil, principalmente, para geração de DOI de repositórios do Github.
 
-## RStudio
+## RStudio {#sec-rstudioprework}
 
 Baixe a versão mais recente do RStudio: <https://posit.co/download/rstudio-desktop/>. O RStudio é uma Integrated Development Environment (IDE) para a linguagem R. O RStudio é uma ferramenta essencial para a prática da ciência aberta em R, pois integra as principais soluções que abordaremos no curso (Zotero, Quarto, Git/Github, etc.). A empresa RStudio recentemente mudou o nome para Posit, com o objetivo refletir melhor a expansão da empresa para além do desenvolvimento de ferramentas para R, incluindo Python e outras linguagens. Nesse mesmo link você pode baixar o R, que é a linguagem de programação que utilizaremos no curso.
 
-## Quarto
+## Quarto {#sec-quartoprework}
 
 Baixe a versão mais recente do Quarto: <https://www.quarto.org/>. O Quarto é uma linguagem de marcação que permite a criação de documentos reprodutíveis e dinâmicos. Ele é uma evolução e tende a substituir o RMarkdown, que é a principal linguagem de marcação do R. O Quarto engloba e adiciona diversas outras vantagens ao RMarkdown, tal como a possibilidade de criar documentos reprodutíveis em Python, Julia, etc. Se você já tem algum conhecimento de RMarkdown, não se preocupe, pois o Quarto é uma extensão natural.
 
-## Docker
+## Docker {#sec-dockerprework}
 
 Baixe a versão mais recente do Docker: <https://www.docker.com/products/docker-desktop>. Nesse mesmo link você cria uma conta. O Docker é uma plataforma para desenvolvimento, envio e execução de aplicativos. O Docker é uma ferramenta essencial para a prática da ciência aberta, pois permite a criação de ambientes reprodutíveis.

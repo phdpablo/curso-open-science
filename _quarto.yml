@@ -10,9 +10,9 @@ execute:
 book:
   title: "Artigo à Prova de Futuro"
   subtitle: "Jornada de Open Science na Prática"
-  author: "Pablo Rogers"
-  date: last-modified
-  date-format: long
+  #author: "Pablo Rogers"
+  #date: last-modified
+  #date-format: long
   #doi: 10.5281/zenodo.10443128
   cover-image: img/cover.png
   # downloads: pdf
@@ -32,6 +32,7 @@ book:
   chapters:
     - index.qmd
     - 00-prework.qmd
+    - 00-schedule.qmd
     - 01-intro.qmd
     - 02-osf.qmd
     - 03-zotero.qmd

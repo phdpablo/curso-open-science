@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.1)  1 MAR 2024 18:10
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.1)  14 MAR 2024 18:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -334,7 +334,244 @@ Package graphics Info: Driver file: xetex.def on input line 107.
 )
 \cslhangindent=\skip62
 \csllabelwidth=\skip63
-(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/bookmark/bookmark.sty
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks28
+\pgfutil@tempdima=\dimen183
+\pgfutil@tempdimb=\dimen184
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box63
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks29
+\pgfkeys@temptoks=\toks30
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks31
+))
+\pgf@x=\dimen185
+\pgf@y=\dimen186
+\pgf@xa=\dimen187
+\pgf@ya=\dimen188
+\pgf@xb=\dimen189
+\pgf@yb=\dimen190
+\pgf@xc=\dimen191
+\pgf@yc=\dimen192
+\pgf@xd=\dimen193
+\pgf@yd=\dimen194
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count306
+\c@pgf@countb=\count307
+\c@pgf@countc=\count308
+\c@pgf@countd=\count309
+\t@pgf@toka=\toks32
+\t@pgf@tokb=\toks33
+\t@pgf@tokc=\toks34
+\pgf@sys@id@count=\count310
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-xetex.def
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
+File: pgfsys-xetex.def 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
+File: pgfsys-dvipdfmx.def 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)
+\pgfsys@objnum=\count311
+))) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count312
+\pgfsyssoftpath@bigbuffer@items=\count313
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen195
+\pgfmath@count=\count314
+\pgfmath@box=\box64
+\pgfmath@toks=\toks35
+\pgfmath@stack@operand=\toks36
+\pgfmath@stack@operation=\toks37
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count315
+)) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen196
+\pgf@picmaxx=\dimen197
+\pgf@picminy=\dimen198
+\pgf@picmaxy=\dimen199
+\pgf@pathminx=\dimen256
+\pgf@pathmaxx=\dimen257
+\pgf@pathminy=\dimen258
+\pgf@pathmaxy=\dimen259
+\pgf@xx=\dimen260
+\pgf@xy=\dimen261
+\pgf@yx=\dimen262
+\pgf@yy=\dimen263
+\pgf@zx=\dimen264
+\pgf@zy=\dimen265
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen266
+\pgf@path@lasty=\dimen267
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen268
+\pgf@shorten@start@additional=\dimen269
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box65
+\pgf@hbox=\box66
+\pgf@layerbox@main=\box67
+\pgf@picture@serial@count=\count316
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen270
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen271
+\pgf@pt@y=\dimen272
+\pgf@pt@temp=\dimen273
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen274
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen275
+\pgf@sys@shading@range@num=\count317
+\pgf@shadingcount=\count318
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box68
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box69
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen276
+\pgf@nodesepend=\dimen277
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks38
+\verbatim@line=\toks39
+\verbatim@in@stream=\read3
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\tcb@titlebox=\box70
+\tcb@upperbox=\box71
+\tcb@lowerbox=\box72
+\tcb@phantombox=\box73
+\c@tcbbreakpart=\count319
+\c@tcblayer=\count320
+\c@tcolorbox@number=\count321
+\l__tcobox_tmpa_box=\box74
+\l__tcobox_tmpa_dim=\dimen278
+\tcb@temp=\box75
+\tcb@temp=\box76
+\tcb@temp=\box77
+\tcb@temp=\box78
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.2.0'
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/math/pgfmath.sty (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen279
+\pgffor@skip=\dimen280
+\pgffor@stack=\toks40
+\pgffor@toks=\toks41
+)) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count322
+\pgfplotmarksize=\dimen281
+)
+\tikz@lastx=\dimen282
+\tikz@lasty=\dimen283
+\tikz@lastxsaved=\dimen284
+\tikz@lastysaved=\dimen285
+\tikz@lastmovetox=\dimen286
+\tikz@lastmovetoy=\dimen287
+\tikzleveldistance=\dimen288
+\tikzsiblingdistance=\dimen289
+\tikz@figbox=\box79
+\tikz@figbox@bg=\box80
+\tikz@tempbox=\box81
+\tikz@tempbox@bg=\box82
+\tikztreelevel=\count323
+\tikznumberofchildren=\count324
+\tikznumberofcurrentchild=\count325
+\tikz@fig@count=\count326
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count327
+\pgfmatrixcurrentcolumn=\count328
+\pgf@matrix@numberofcolumns=\count329
+)
+\tikz@expandcount=\count330
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
+Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tikzfill/tikzfill-common.sty
+Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
+) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.tex
+File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
+\l__tikzfill_img_box=\box83
+)) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.2.0'
+)) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.2.0'
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdfcol/pdfcol.sty
+Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdfcol Info: Interface disabled because of missing PDF mode of pdfTeX.
+)
+Package pdfcol Info: pdfTeX's color stacks are not available.
+\tcb@testbox=\box84
+\tcb@totalupperbox=\box85
+\tcb@totallowerbox=\box86
+)) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
+Package: fontawesome5 2022/05/02 v5.15.4 Font Awesome 5
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontawesome5/fontawesome5-utex-helper.sty
+Package: fontawesome5-utex-helper 2022/05/02 v5.15.4 uTeX helper for fontawesome5
+LaTeX Font Info:    Trying to load font information for TU+fontawesomefree on input line 69.
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontawesome5/tufontawesomefree.fd)
+LaTeX Font Info:    Trying to load font information for TU+fontawesomebrands on input line 70.
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontawesome5/tufontawesomebrands.fd))) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
@@ -344,9 +581,6 @@ Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
-(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode not found.
@@ -361,17 +595,17 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count306
+\c@section@level=\count331
 )
-\@linkdim=\dimen183
-\Hy@linkcounter=\count307
-\Hy@pagecounter=\count308
+\@linkdim=\dimen290
+\Hy@linkcounter=\count332
+\Hy@pagecounter=\count333
 (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-01-20 v7.01h Hyperref: PDFDocEncoding definition (HO)
 ) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count309
+\Hy@SavedSpaceFactor=\count334
 (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-01-20 v7.01h Hyperref: PDF Unicode definition (HO)
 )
@@ -383,21 +617,21 @@ Package hyperref Info: Plain pages OFF on input line 4194.
 Package hyperref Info: Backreferencing OFF on input line 4199.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4446.
-\c@Hy@tempcnt=\count310
+\c@Hy@tempcnt=\count335
 (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4784.
-\XeTeXLinkMargin=\dimen184
+\XeTeXLinkMargin=\dimen291
 (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count311
-\Field@Width=\dimen185
-\Fld@charsize=\dimen186
+\Fld@menulength=\count336
+\Field@Width=\dimen292
+\Fld@charsize=\dimen293
 Package hyperref Info: Hyper figures OFF on input line 6063.
 Package hyperref Info: Link nesting OFF on input line 6068.
 Package hyperref Info: Hyper index ON on input line 6071.
@@ -409,9 +643,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6093.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count312
-\c@Item=\count313
-\c@Hfootnote=\count314
+\Hy@abspage=\count337
+\c@Item=\count338
+\c@Hfootnote=\count339
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hxetex.def
@@ -419,11 +653,11 @@ File: hxetex.def 2024-01-20 v7.01h Hyperref driver for XeTeX
 (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\pdfm@box=\box63
-\c@Hy@AnnotLevel=\count315
-\HyField@AnnotCount=\count316
-\Fld@listcount=\count317
-\c@bookmark@seq@number=\count318
+\pdfm@box=\box87
+\c@Hy@AnnotLevel=\count340
+\HyField@AnnotCount=\count341
+\Fld@listcount=\count342
+\c@bookmark@seq@number=\count343
 (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
 (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty
@@ -437,82 +671,82 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip64
 ) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/bookmark/bkm-dvipdfm.def
 File: bkm-dvipdfm.def 2023-12-10 v1.31 bookmark driver for dvipdfm (HO)
-\BKM@id=\count319
+\BKM@id=\count344
 )) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen187
-\captionmargin=\dimen188
-\caption@leftmargin=\dimen189
-\caption@rightmargin=\dimen190
-\caption@width=\dimen191
-\caption@indent=\dimen192
-\caption@parindent=\dimen193
-\caption@hangindent=\dimen194
+\caption@tempdima=\dimen294
+\captionmargin=\dimen295
+\caption@leftmargin=\dimen296
+\caption@rightmargin=\dimen297
+\caption@width=\dimen298
+\caption@indent=\dimen299
+\caption@parindent=\dimen300
+\caption@hangindent=\dimen301
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count320
-\c@continuedfloat=\count321
+\c@caption@flags=\count345
+\c@continuedfloat=\count346
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
 (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count322
-\float@exts=\toks28
-\float@box=\box64
-\@float@everytoks=\toks29
-\@floatcapt=\box65
+\c@float@type=\count347
+\float@exts=\toks42
+\float@box=\box88
+\@float@everytoks=\toks43
+\@floatcapt=\box89
 )
-\@float@every@codelisting=\toks30
-\c@codelisting=\count323
+\@float@every@codelisting=\toks44
+\c@codelisting=\count348
 (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count324
+\c@subfigure=\count349
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count325
+\c@subtable=\count350
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 174.
+Package hyperref Info: Option `colorlinks' set `true' on input line 189.
 No file index.aux.
 \openout1 = `index.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 187.
-LaTeX Font Info:    ... okay on input line 187.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 187.
-LaTeX Font Info:    ... okay on input line 187.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 187.
-LaTeX Font Info:    ... okay on input line 187.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 187.
-LaTeX Font Info:    ... okay on input line 187.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 187.
-LaTeX Font Info:    ... okay on input line 187.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 187.
-LaTeX Font Info:    ... okay on input line 187.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 187.
-LaTeX Font Info:    ... okay on input line 187.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 187.
-LaTeX Font Info:    ... okay on input line 187.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 187.
-LaTeX Font Info:    ... okay on input line 187.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 187.
-LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 187.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 202.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 187.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 202.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 187.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 202.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 187.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 202.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 187.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 202.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 187.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 202.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 187.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 202.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -538,7 +772,7 @@ Package fontspec Info: Font family 'latinmodern-math.otf(0)' created for font
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 187.
+(Font)              scaled to size 10.0pt on input line 202.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -570,15 +804,15 @@ Package fontspec Info: Font family 'latinmodern-math.otf(1)' created for font
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 187.
+(Font)              scaled to size 10.0pt on input line 202.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 187.
+(Font)              `operators' in the math version `normal' on input line 202.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 187.
+(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 202.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 187.
+(Font)              `operators' in the math version `bold' on input line 202.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 187.
+(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 202.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -657,13 +891,13 @@ Package fontspec Info: Font family 'latinmodern-math.otf(2)' created for font
 (fontspec)             \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 187.
+(Font)              `symbols' in the math version `normal' on input line 202.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 187.
+(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 202.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 187.
+(Font)              `symbols' in the math version `bold' on input line 202.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 187.
+(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 202.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -724,19 +958,19 @@ Package fontspec Info: Font family 'latinmodern-math.otf(3)' created for font
 (fontspec)             =6.0pt\relax \fontdimen 13\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 187.
+(Font)              `largesymbols' in the math version `normal' on input line 202.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 187.
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 202.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 187.
+(Font)              `largesymbols' in the math version `bold' on input line 202.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 187.
-LaTeX Info: Redefining \microtypecontext on input line 187.
-Package microtype Info: Applying patch `item' on input line 187.
-Package microtype Info: Applying patch `toc' on input line 187.
-Package microtype Info: Applying patch `eqnum' on input line 187.
-Package microtype Info: Applying patch `footnote' on input line 187.
-Package microtype Info: Applying patch `verbatim' on input line 187.
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 202.
+LaTeX Info: Redefining \microtypecontext on input line 202.
+Package microtype Info: Applying patch `item' on input line 202.
+Package microtype Info: Applying patch `toc' on input line 202.
+Package microtype Info: Applying patch `eqnum' on input line 202.
+Package microtype Info: Applying patch `footnote' on input line 202.
+Package microtype Info: Applying patch `verbatim' on input line 202.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: No adjustment of tracking.
@@ -779,7 +1013,7 @@ File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Mode
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 187.
+Package hyperref Info: Link coloring ON on input line 202.
 
 Package hyperref Warning: Rerun to get /PageLabels entry.
 
@@ -787,58 +1021,154 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 189.
+(Font)              scaled to size 12.0pt on input line 204.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 189.
+(Font)              scaled to size 8.0pt on input line 204.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 189.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 189.
+(Font)              scaled to size 6.0pt on input line 204.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 204.
 (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.0011pt on input line 189.
+(Font)              scaled to size 12.0011pt on input line 204.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00073pt on input line 189.
+(Font)              scaled to size 8.00073pt on input line 204.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00055pt on input line 189.
+(Font)              scaled to size 6.00055pt on input line 204.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 189.
+(Font)              scaled to size 11.99872pt on input line 204.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 189.
+(Font)              scaled to size 7.99915pt on input line 204.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 189.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 189.
+(Font)              scaled to size 5.99936pt on input line 204.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 204.
 (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 189.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 204.
 (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [1
+)
+Missing character: There is no 🏢 (U+1F3E2) in font [lmroman12-bold]:mapping=tex-text;!
+[1
 
 ]
+Missing character: There is no 📇 (U+1F4C7) in font [lmroman12-bold]:mapping=tex-text;!
+(c:/Users/pablo/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-TU-empty.cfg
+File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonstandard glyph set (RS)
+) [2]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 307.
+(Font)              scaled to size 7.0pt on input line 366.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 307.
+(Font)              scaled to size 5.0pt on input line 366.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 307.
+(Font)              scaled to size 10.00092pt on input line 366.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 307.
+(Font)              scaled to size 7.00064pt on input line 366.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 307.
+(Font)              scaled to size 5.00046pt on input line 366.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 307.
+(Font)              scaled to size 9.99893pt on input line 366.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 307.
+(Font)              scaled to size 6.99925pt on input line 366.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 307.
-[2] [3]
+(Font)              scaled to size 4.99947pt on input line 366.
+[3]
+Missing character: There is no 🗓 (U+1F5D3) in font [lmroman12-bold]:mapping=tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman12-bold]:mapping=tex-text;!
+Missing character: There is no 📅 (U+1F4C5) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ⏲ (U+23F2) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 🗣 (U+1F5E3) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 🎥 (U+1F3A5) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 📓 (U+1F4D3) in font [lmroman10-regular]:mapping=tex-text;!
+
+LaTeX Warning: Reference `sec-intro' on page 4 undefined on input line 486.
+
+Missing character: There is no 📅 (U+1F4C5) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ⏲ (U+23F2) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 🗣 (U+1F5E3) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 🎥 (U+1F3A5) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 📓 (U+1F4D3) in font [lmroman10-regular]:mapping=tex-text;!
+
+LaTeX Warning: Reference `sec-osf' on page 4 undefined on input line 487.
+
+Missing character: There is no 📅 (U+1F4C5) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ⏲ (U+23F2) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 🗣 (U+1F5E3) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 🎥 (U+1F3A5) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 📓 (U+1F4D3) in font [lmroman10-regular]:mapping=tex-text;!
+
+LaTeX Warning: Reference `sec-zotero' on page 4 undefined on input line 488.
+
+Missing character: There is no 📅 (U+1F4C5) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ⏲ (U+23F2) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 🗣 (U+1F5E3) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 🎥 (U+1F3A5) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 📓 (U+1F4D3) in font [lmroman10-regular]:mapping=tex-text;!
+
+LaTeX Warning: Reference `sec-project' on page 4 undefined on input line 489.
+
+Missing character: There is no 📅 (U+1F4C5) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ⏲ (U+23F2) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 🗣 (U+1F5E3) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 🎥 (U+1F3A5) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 📓 (U+1F4D3) in font [lmroman10-regular]:mapping=tex-text;!
+
+LaTeX Warning: Reference `sec-git' on page 4 undefined on input line 490.
+
+Missing character: There is no 📅 (U+1F4C5) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ⏲ (U+23F2) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 🗣 (U+1F5E3) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 🎥 (U+1F3A5) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 📓 (U+1F4D3) in font [lmroman10-regular]:mapping=tex-text;!
+
+LaTeX Warning: Reference `sec-quarto' on page 4 undefined on input line 491.
+
+Missing character: There is no 📅 (U+1F4C5) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ⏲ (U+23F2) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 🗣 (U+1F5E3) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 🎥 (U+1F3A5) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 📓 (U+1F4D3) in font [lmroman10-regular]:mapping=tex-text;!
+
+LaTeX Warning: Reference `sec-docker' on page 4 undefined on input line 492.
+
+Missing character: There is no 📅 (U+1F4C5) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ⏲ (U+23F2) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 🗣 (U+1F5E3) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 🎥 (U+1F3A5) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 📓 (U+1F4D3) in font [lmroman10-regular]:mapping=tex-text;!
+
+LaTeX Warning: Reference `sec-AI' on page 4 undefined on input line 493.
+
+Missing character: There is no 📅 (U+1F4C5) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ⏲ (U+23F2) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 🗣 (U+1F5E3) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 🎥 (U+1F3A5) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 📓 (U+1F4D3) in font [lmroman10-regular]:mapping=tex-text;!
+[4]
 
 ! LaTeX Error: Something's wrong--perhaps a missing \item.
 
@@ -846,15 +1176,15 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.455 \end{CSLReferences}
+l.537 \end{CSLReferences}
                           
 Here is how much of TeX's memory you used:
- 20873 strings out of 476773
- 386286 string characters out of 5800839
- 1934842 words of memory out of 5000000
- 42621 multiletter control sequences out of 15000+600000
- 564472 words of font info for 83 fonts, out of 8000000 for 9000
+ 36013 strings out of 476773
+ 728127 string characters out of 5800839
+ 1938842 words of memory out of 5000000
+ 57491 multiletter control sequences out of 15000+600000
+ 564496 words of font info for 86 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,6n,121p,1002b,431s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,5n,121p,1002b,1030s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on index.pdf (3 pages).
+Output written on index.pdf (4 pages).

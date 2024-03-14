@@ -1,14 +1,12 @@
-# HOME {.unnumbered .unlisted}
+# Home 🏢 {#sec-home .unnumbered .unlisted}
 
-## Sobre essa página {.unnumbered .unlisted}
+Página do curso **"Artigo à Prova de Futuro: Jornada de Open Science na Prática"**. Aqui você encontrará informações sobre o programa do curso, materiais para seu acompanhamento e sugestões de leituras sobre a prática da ciência aberta (artigos, notas de aulas, blogs, vídeos, etc.). teste
 
-Página do curso **"Artigo à Prova de Futuro: Jornada de Open Science na Prática"**. Aqui você encontrará informações sobre o programa do curso, materiais para seu acompanhamento e sugestões de leituras sobre a prática da ciência aberta (artigos, notas de aulas, blogs, vídeos, etc.).
-
-## Sobre o instrutor {.unnumbered .unlisted}
+## Sobre o instrutor {#sec-instrutor .unnumbered .unlisted}
 
 O curso será ministrado por Pablo Rogers, doutor em administração pela Universidade de São Paulo (FEA/USP) e professor de métodos quantitativos desde 2007. Na [página de perfil do Github](https://github.com/phdpablo) do instrutor você pode encontrar informações de trabalhos recentes, e no seu [site pessoal](https://phdpablo.com/), detalhes sobre suas formações, competências, trajetória e projetos.
 
-## Sobre o curso {.unnumbered .unlisted}
+## Sobre o curso {#sec-about .unnumbered .unlisted}
 
 O curso tem objetivo de introduzir os conceitos relacionados com a ciência aberta e a prática da pesquisa reprodutível. O curso aborda temas introdutórios sobre ciência aberta, com foco no ferramental disponível para tornar a pesquisa mais transparente, reprodutível e acessível. O curso é voltado para pesquisadores e estudantes de pós-graduação, mas aberto a qualquer pessoa interessada em aprender sobre a prática da ciência aberta. O protagonista do curso é o pesquisador brasileiro que deseja aprimorar a qualidade e a transparência de sua pesquisa, e que busca ferramentas para tornar-lá mais eficiente e acessível.
 
@@ -18,10 +16,10 @@ O curso é gratuito, com a possibilidade de certificado de extensão pela Univer
 
 As vagas são limitadas e a seleção será feita por ordem de inscrição. Após o preenchimento das vagas, os demais interessados poderão se inscrever em uma lista de espera, para serem avisados sobre a próxima edição do curso. Após selecionados, os inscritos receberão um e-mail com instruções para acesso à plataforma de aulas síncronas e para a realização das atividades prévias ao curso.
 
-## Ementa do curso {.unnumbered .unlisted}
+## Ementa do curso {#sec-ementa .unnumbered .unlisted}
 
 Introdução da Ciência Aberta / Repositórios da Ciência Aberta / Gerenciamento de Referências e Bibliotecas / Gestão de Dados e Projetos / Controle de Versão / Documentos Reprodutíveis / Controle de Ambiente (containers) / IA Aplicada à Pesquisa Científica
 
-## Metodologia {.unnumbered .unlisted}
+## Metodologia {#sec-method .unnumbered .unlisted}
 
 O curso sempre acontecerá de forma remota e síncrona, com aulas expositivas e práticas. As aulas serão gravadas e disponibilizadas no [canal do YouTube do projeto Psico&Econo_METRIA](https://www.youtube.com/c/PsicoEconoMETRIA). Nesse sentido, o material do curso organizado nessa página refere-se ao roteiro estruturado de tudo que se vê nas aulas síncronas e conteúdos adicionais (bibliografia, notas de aulas, links, etc).

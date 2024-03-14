@@ -113,6 +113,22 @@
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
 \@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
 \makeatother
 \makeatletter
@@ -165,7 +181,6 @@
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
   pdftitle={Artigo à Prova de Futuro},
-  pdfauthor={Pablo Rogers},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -181,29 +196,25 @@
 }
 \makeatother
 \subtitle{Jornada de Open Science na Prática}
-\author{Pablo Rogers}
-\date{March 1, 2024}
+\author{}
+\date{}
 
 \begin{document}
 \maketitle
 
 \bookmarksetup{startatroot}
 
-\section*{HOME}\label{home}
+\section*{Home 🏢}\label{sec-home}
 
-\markboth{HOME}{HOME}
-
-\subsection*{Sobre essa página}\label{sobre-essa-puxe1gina}
-
-\markright{Sobre essa página}
+\markboth{Home 🏢}{Home 🏢}
 
 Página do curso \textbf{``Artigo à Prova de Futuro: Jornada de Open
 Science na Prática''}. Aqui você encontrará informações sobre o programa
 do curso, materiais para seu acompanhamento e sugestões de leituras
 sobre a prática da ciência aberta (artigos, notas de aulas, blogs,
-vídeos, etc.).
+vídeos, etc.). teste
 
-\subsection*{Sobre o instrutor}\label{sobre-o-instrutor}
+\subsection*{Sobre o instrutor}\label{sec-instrutor}
 
 \markright{Sobre o instrutor}
 
@@ -214,7 +225,7 @@ Github} do instrutor você pode encontrar informações de trabalhos
 recentes, e no seu \href{https://phdpablo.com/}{site pessoal}, detalhes
 sobre suas formações, competências, trajetória e projetos.
 
-\subsection*{Sobre o curso}\label{sobre-o-curso}
+\subsection*{Sobre o curso}\label{sec-about}
 
 \markright{Sobre o curso}
 
@@ -248,7 +259,7 @@ edição do curso. Após selecionados, os inscritos receberão um e-mail com
 instruções para acesso à plataforma de aulas síncronas e para a
 realização das atividades prévias ao curso.
 
-\subsection*{Ementa do curso}\label{ementa-do-curso}
+\subsection*{Ementa do curso}\label{sec-ementa}
 
 \markright{Ementa do curso}
 
@@ -257,7 +268,7 @@ Gerenciamento de Referências e Bibliotecas / Gestão de Dados e Projetos
 / Controle de Versão / Documentos Reprodutíveis / Controle de Ambiente
 (containers) / IA Aplicada à Pesquisa Científica
 
-\subsection*{Metodologia}\label{metodologia}
+\subsection*{Metodologia}\label{sec-method}
 
 \markright{Metodologia}
 
@@ -271,9 +282,9 @@ aulas, links, etc).
 
 \bookmarksetup{startatroot}
 
-\section*{Pré-requisitos}\label{pruxe9-requisitos}
+\section*{Pré-requisitos 📇}\label{sec-prework}
 
-\markboth{Pré-requisitos}{Pré-requisitos}
+\markboth{Pré-requisitos 📇}{Pré-requisitos 📇}
 
 O curso não exige conhecimento prévio em programação, mas é recomendável
 que o aluno tenha familiaridade com o uso de computadores (ambiente
@@ -299,7 +310,55 @@ para as aulas remotas. Essas soluções na sua maioria requerem cadastros
 rápidos, e podem ser feitos de forma instantânea via conta
 Google/Microsoft/Apple.
 
-\subsection*{Github}\label{github}
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, leftrule=.75mm, opacityback=0, toprule=.15mm, breakable, toptitle=1mm, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, coltitle=black, colback=white, bottomtitle=1mm, titlerule=0mm, left=2mm, bottomrule=.15mm, arc=.35mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{ChatGPT para suas notas de leituras}, opacitybacktitle=0.6]
+
+Os resumos das bibliografias que apresento nas seções seguintes foram
+elaborados com o auxílio do ChatGPT 4, seja pelo o
+\href{https://chat.openai.com/}{webapp da OpenAI} ou pelo
+\href{https://copilot.microsoft.com/}{Copilot} (ou buscador Bing) da
+Microsoft.
+
+Eu destaco (seleciono através de marca texto no Zotero, por exemplo) as
+passagens que considero importante do artigo científico, tendo em vista
+a minha perspectiva e fins no momento da leitura, e posteriormente copio
+e colo as notas de leitura com a seguinte prompt:
+
+``\emph{Senteces in the text are reading notes, that is, what I found
+most important and interesting, from a scientific article on the topic
+open science. I would like you to summarize the notes in a descriptive
+text and concatenate the arguments highlighted in the notes. Give your
+answer in Portuguese}''
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, leftrule=.75mm, opacityback=0, toprule=.15mm, breakable, toptitle=1mm, colframe=quarto-callout-caution-color-frame, colbacktitle=quarto-callout-caution-color!10!white, coltitle=black, colback=white, bottomtitle=1mm, titlerule=0mm, left=2mm, bottomrule=.15mm, arc=.35mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Não confie cegamente na IA}, opacitybacktitle=0.6]
+
+Eu simplesmente copiei e colei os resultados do ChatGPT para compilar
+essas notas de leituras? Não. Após o resultado do ChatGPT eu reviso o
+sumário das notas de leituras e faço ajustes, que somente são possíveis
+porque li o artigo por completo. A despeito do ChatGPT fazer um bom
+serviço nesse sentido, ele ainda comete muitos deslizes. Deslizes esses
+que você não pode deixar passar num texto científico, e somente captaria
+a partir da leitura do artigo ou sendo conhecedor do assunto abordado.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, leftrule=.75mm, opacityback=0, toprule=.15mm, breakable, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, coltitle=black, colback=white, bottomtitle=1mm, titlerule=0mm, left=2mm, bottomrule=.15mm, arc=.35mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Outra curiosidade\ldots{}}, opacitybacktitle=0.6]
+
+A
+\href{https://phdpablo.github.io/curso-open-science/img/cover.png}{imagem
+cover desse curso} foi gerada por uma IA, com posteriores ajustes (off
+course!). Existem diversos geradores de imagens que você pode testar
+gratuitamente, mas eu costumo utilizar o i)
+\href{https://openai.com/dall-e/}{DALL-E}, que é uma solução da OpenAI
+que também pode ser utilizada no
+\href{https://copilot.microsoft.com/}{Copilot da Microsoft}; ii) o
+\href{https://playgroundai.com/}{PlaygroundAI}, e iii) o
+\href{https://gemini.google.com/app}{Gemini} do Google.
+
+\end{tcolorbox}
+
+\subsection*{Github}\label{sec-githubprework}
 \addcontentsline{toc}{subsection}{Github}
 
 \markright{Github}
@@ -316,7 +375,7 @@ módulo. Por isso, é importante que você se cadastre com um e-mail
 institucional. Use o mesmo e-mail para se cadastrar em todas
 plataformas.
 
-\subsection*{Git}\label{git}
+\subsection*{Git}\label{sec-gitprework}
 \addcontentsline{toc}{subsection}{Git}
 
 \markright{Git}
@@ -329,7 +388,7 @@ ferramenta essencial para a prática da ciência aberta, e é uma das
 ferramentas mais importantes para o pesquisador que deseja tornar sua
 pesquisa mais transparente e reprodutível.
 
-\subsection*{Zotero}\label{zotero}
+\subsection*{Zotero}\label{sec-zoteroprework}
 \addcontentsline{toc}{subsection}{Zotero}
 
 \markright{Zotero}
@@ -341,10 +400,10 @@ Zotero e diversos plugins que são úteis no dia-a-dia do pesquisador.
 Atualmente, o Zotero é a ferramenta mais completa para gerenciamento de
 referências e bibliotecas, e se integra nativamente com o RStudio.
 
-\subsection*{OSF}\label{osf}
-\addcontentsline{toc}{subsection}{OSF}
+\subsection*{OSFn}\label{sec-osfprework}
+\addcontentsline{toc}{subsection}{OSFn}
 
-\markright{OSF}
+\markright{OSFn}
 
 Cadastre no Open Science Framework (OSF):
 \url{https://osf.io/register/}. Como veremos, essa plataforma é uma das
@@ -352,7 +411,7 @@ mais importantes para a prática da ciência aberta. Ela está no começo
 (pré-registro) e no final (repositório de dados e pré-print) do ciclo de
 vida (workflow) de um projeto de pesquisa.
 
-\subsection*{Zenodo}\label{zenodo}
+\subsection*{Zenodo}\label{sec-zenodoprework}
 \addcontentsline{toc}{subsection}{Zenodo}
 
 \markright{Zenodo}
@@ -363,7 +422,7 @@ Cadastre no Zenodo: \url{https://zenodo.org/login/} e víncule sua conta
 com o Github. Isso será útil, principalmente, para geração de DOI de
 repositórios do Github.
 
-\subsection*{RStudio}\label{rstudio}
+\subsection*{RStudio}\label{sec-rstudioprework}
 \addcontentsline{toc}{subsection}{RStudio}
 
 \markright{RStudio}
@@ -379,7 +438,7 @@ desenvolvimento de ferramentas para R, incluindo Python e outras
 linguagens. Nesse mesmo link você pode baixar o R, que é a linguagem de
 programação que utilizaremos no curso.
 
-\subsection*{Quarto}\label{quarto}
+\subsection*{Quarto}\label{sec-quartoprework}
 \addcontentsline{toc}{subsection}{Quarto}
 
 \markright{Quarto}
@@ -393,7 +452,7 @@ possibilidade de criar documentos reprodutíveis em Python, Julia, etc.
 Se você já tem algum conhecimento de RMarkdown, não se preocupe, pois o
 Quarto é uma extensão natural.
 
-\subsection*{Docker}\label{docker}
+\subsection*{Docker}\label{sec-dockerprework}
 \addcontentsline{toc}{subsection}{Docker}
 
 \markright{Docker}
@@ -407,41 +466,64 @@ reprodutíveis.
 
 \bookmarksetup{startatroot}
 
-\section{Introdução à Ciência
-Aberta}\label{introduuxe7uxe3o-uxe0-ciuxeancia-aberta}
+\section*{Agenda 🗓️}\label{sec-schedule}
+
+\markboth{Agenda 🗓️}{Agenda 🗓️}
+
+Planejamento dos dias (📅) e horários das aulas (⏲️), conforme a ementa
+do curso. Na seção de cada uma das aulas temos materiais adicionais para
+o respectivo conteúdo. Quando disponível, por aqui, poderás acessar os
+slides utilizados nas aulas (🗣️), aulas gravadas ou indicações de vídeo
+(🎥) e leituras básica sobre os conteúdos (📓).
+
+\begin{longtable}[]{@{}lcc@{}}
+\toprule\noalign{}
+Aula/Conteúdo & Data & Material Principal \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Chapter~\ref{sec-intro} & 📅⏲️ & 🗣️🎥📓 \\
+Chapter~\ref{sec-osf} & 📅⏲️ & 🗣️🎥📓 \\
+Chapter~\ref{sec-zotero} & 📅⏲️ & 🗣️🎥📓 \\
+Chapter~\ref{sec-project} & 📅⏲️ & 🗣️🎥📓 \\
+Chapter~\ref{sec-git} & 📅⏲️ & 🗣️🎥📓 \\
+Chapter~\ref{sec-quarto} & 📅⏲️ & 🗣️🎥📓 \\
+Chapter~\ref{sec-docker} & 📅⏲️ & 🗣️🎥📓 \\
+Chapter~\ref{sec-AI} & 📅⏲️ & 🗣️🎥📓 \\
+\end{longtable}
 
 \bookmarksetup{startatroot}
 
-\section{Repositórios da Ciência
-Aberta}\label{reposituxf3rios-da-ciuxeancia-aberta}
+\section{Introdução à Ciência Aberta}\label{sec-intro}
 
 \bookmarksetup{startatroot}
 
-\section{Gerenciamento de Referências e
-Bibliotecas}\label{gerenciamento-de-referuxeancias-e-bibliotecas}
+\section{Repositórios da Ciência Aberta}\label{sec-osf}
 
 \bookmarksetup{startatroot}
 
-\section{Gestão de Dados e
-Projetos}\label{gestuxe3o-de-dados-e-projetos}
+\section{Gerenciamento de Referências e Bibliotecas}\label{sec-zotero}
 
 \bookmarksetup{startatroot}
 
-\section{Controle de versão}\label{controle-de-versuxe3o}
+\section{Gestão de Dados e Projetos}\label{sec-project}
 
 \bookmarksetup{startatroot}
 
-\section{Documentos Reprodutíveis}\label{documentos-reprodutuxedveis}
+\section{Controle de versão}\label{sec-git}
 
 \bookmarksetup{startatroot}
 
-\section{Controle de Ambiente
-(Containers)}\label{controle-de-ambiente-containers}
+\section{Documentos Reprodutíveis}\label{sec-quarto}
 
 \bookmarksetup{startatroot}
 
-\section{IA Aplicada à Pesquisa
-Científica}\label{ia-aplicada-uxe0-pesquisa-cientuxedfica}
+\section{Controle de Ambiente (Containers)}\label{sec-docker}
+
+\bookmarksetup{startatroot}
+
+\section{IA Aplicada à Pesquisa Científica}\label{sec-AI}
 
 \bookmarksetup{startatroot}
 

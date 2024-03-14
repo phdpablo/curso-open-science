@@ -4,139 +4,59 @@
     "href": "index.html",
     "title": "Artigo à Prova de Futuro",
     "section": "",
-    "text": "HOME",
+    "text": "Home 🏢\nPágina do curso “Artigo à Prova de Futuro: Jornada de Open Science na Prática”. Aqui você encontrará informações sobre o programa do curso, materiais para seu acompanhamento e sugestões de leituras sobre a prática da ciência aberta (artigos, notas de aulas, blogs, vídeos, etc.). teste",
     "crumbs": [
-      "HOME"
+      "Home 🏢"
     ]
   },
   {
-    "objectID": "index.html#sobre-essa-página",
-    "href": "index.html#sobre-essa-página",
-    "title": "Artigo à Prova de Futuro",
-    "section": "Sobre essa página",
-    "text": "Sobre essa página\nPágina do curso “Artigo à Prova de Futuro: Jornada de Open Science na Prática”. Aqui você encontrará informações sobre o programa do curso, materiais para seu acompanhamento e sugestões de leituras sobre a prática da ciência aberta (artigos, notas de aulas, blogs, vídeos, etc.).",
-    "crumbs": [
-      "HOME"
-    ]
-  },
-  {
-    "objectID": "index.html#sobre-o-instrutor",
-    "href": "index.html#sobre-o-instrutor",
+    "objectID": "index.html#sec-instrutor",
+    "href": "index.html#sec-instrutor",
     "title": "Artigo à Prova de Futuro",
     "section": "Sobre o instrutor",
     "text": "Sobre o instrutor\nO curso será ministrado por Pablo Rogers, doutor em administração pela Universidade de São Paulo (FEA/USP) e professor de métodos quantitativos desde 2007. Na página de perfil do Github do instrutor você pode encontrar informações de trabalhos recentes, e no seu site pessoal, detalhes sobre suas formações, competências, trajetória e projetos.",
     "crumbs": [
-      "HOME"
+      "Home 🏢"
     ]
   },
   {
-    "objectID": "index.html#sobre-o-curso",
-    "href": "index.html#sobre-o-curso",
+    "objectID": "index.html#sec-about",
+    "href": "index.html#sec-about",
     "title": "Artigo à Prova de Futuro",
     "section": "Sobre o curso",
     "text": "Sobre o curso\nO curso tem objetivo de introduzir os conceitos relacionados com a ciência aberta e a prática da pesquisa reprodutível. O curso aborda temas introdutórios sobre ciência aberta, com foco no ferramental disponível para tornar a pesquisa mais transparente, reprodutível e acessível. O curso é voltado para pesquisadores e estudantes de pós-graduação, mas aberto a qualquer pessoa interessada em aprender sobre a prática da ciência aberta. O protagonista do curso é o pesquisador brasileiro que deseja aprimorar a qualidade e a transparência de sua pesquisa, e que busca ferramentas para tornar-lá mais eficiente e acessível.\nTrata-se de um curso intermitente programado para acontecer em 4 encontros de 4 horas cada (ou 8 encontros de 2 horas cada), totalizando 16 horas de aulas síncronas. Ele acontecerá algumas vezes ao ano, com datas e horários a serem definidos.\nO curso é gratuito, com a possibilidade de certificado de extensão pela Universidade Federal de Uberlândia (UFU), e as inscrições serão feitas por meio de formulário disponibilizado no site do projeto Psico&Econo_METRIA. Quando da previsão das datas, uma campanha de e-mail marketing divulgará o link para a inscrição através de coordenações de pós-graduações selecionadas.\nAs vagas são limitadas e a seleção será feita por ordem de inscrição. Após o preenchimento das vagas, os demais interessados poderão se inscrever em uma lista de espera, para serem avisados sobre a próxima edição do curso. Após selecionados, os inscritos receberão um e-mail com instruções para acesso à plataforma de aulas síncronas e para a realização das atividades prévias ao curso.",
     "crumbs": [
-      "HOME"
+      "Home 🏢"
     ]
   },
   {
-    "objectID": "index.html#ementa-do-curso",
-    "href": "index.html#ementa-do-curso",
+    "objectID": "index.html#sec-ementa",
+    "href": "index.html#sec-ementa",
     "title": "Artigo à Prova de Futuro",
     "section": "Ementa do curso",
     "text": "Ementa do curso\nIntrodução da Ciência Aberta / Repositórios da Ciência Aberta / Gerenciamento de Referências e Bibliotecas / Gestão de Dados e Projetos / Controle de Versão / Documentos Reprodutíveis / Controle de Ambiente (containers) / IA Aplicada à Pesquisa Científica",
     "crumbs": [
-      "HOME"
+      "Home 🏢"
     ]
   },
   {
-    "objectID": "index.html#metodologia",
-    "href": "index.html#metodologia",
+    "objectID": "index.html#sec-method",
+    "href": "index.html#sec-method",
     "title": "Artigo à Prova de Futuro",
     "section": "Metodologia",
     "text": "Metodologia\nO curso sempre acontecerá de forma remota e síncrona, com aulas expositivas e práticas. As aulas serão gravadas e disponibilizadas no canal do YouTube do projeto Psico&Econo_METRIA. Nesse sentido, o material do curso organizado nessa página refere-se ao roteiro estruturado de tudo que se vê nas aulas síncronas e conteúdos adicionais (bibliografia, notas de aulas, links, etc).",
     "crumbs": [
-      "HOME"
+      "Home 🏢"
     ]
   },
   {
-    "objectID": "00-prework.html",
-    "href": "00-prework.html",
-    "title": "Pré-requisitos",
+    "objectID": "00-schedule.html",
+    "href": "00-schedule.html",
+    "title": "Agenda 🗓️",
     "section": "",
-    "text": "Github\nPrimeiramente, se cadastre no Github: https://github.com/signup, pois com ele você poderá acessar o material do curso e interagir com os demais participantes. E com a conta do Github você também poderá se cadastrar em outras plataformas, como o Zenodo, OSF, etc. Algumas features que aprenderemos no curso exigem o vínculo entre as contas. Se for professor ou estudante, você pode solicitar o GitHub Education e ter acesso, por exemplo, ao Copilot, uma das ferramentas de IA que abordaremos no último módulo. Por isso, é importante que você se cadastre com um e-mail institucional. Use o mesmo e-mail para se cadastrar em todas plataformas.",
+    "text": "Planejamento dos dias (📅) e horários das aulas (⏲️), conforme a ementa do curso. Na seção de cada uma das aulas temos materiais adicionais para o respectivo conteúdo. Quando disponível, por aqui, poderás acessar os slides utilizados nas aulas (🗣️), aulas gravadas ou indicações de vídeo (🎥) e leituras básica sobre os conteúdos (📓).\n\n\n\nAula/Conteúdo\nData\nMaterial Principal\n\n\n\n\n1  Introdução à Ciência Aberta\n📅⏲️\n🗣️🎥📓\n\n\n2  Repositórios da Ciência Aberta\n📅⏲️\n🗣️🎥📓\n\n\n3  Gerenciamento de Referências e Bibliotecas\n📅⏲️\n🗣️🎥📓\n\n\n4  Gestão de Dados e Projetos\n📅⏲️\n🗣️🎥📓\n\n\n5  Controle de versão\n📅⏲️\n🗣️🎥📓\n\n\n6  Documentos Reprodutíveis\n📅⏲️\n🗣️🎥📓\n\n\n7  Controle de Ambiente (Containers)\n📅⏲️\n🗣️🎥📓\n\n\n8  IA Aplicada à Pesquisa Científica\n📅⏲️\n🗣️🎥📓",
     "crumbs": [
-      "Pré-requisitos"
-    ]
-  },
-  {
-    "objectID": "00-prework.html#git",
-    "href": "00-prework.html#git",
-    "title": "Pré-requisitos",
-    "section": "Git",
-    "text": "Git\nGithub não é a mesma coisa que Git. O Github é uma plataforma, e o Git é uma ferramenta. Instale a versão mais recente do Git: https://git-scm.com/downloads. O Git é uma ferramenta de controle de versão, e o Github é uma plataforma que utiliza o Git. O Git é uma ferramenta essencial para a prática da ciência aberta, e é uma das ferramentas mais importantes para o pesquisador que deseja tornar sua pesquisa mais transparente e reprodutível.",
-    "crumbs": [
-      "Pré-requisitos"
-    ]
-  },
-  {
-    "objectID": "00-prework.html#zotero",
-    "href": "00-prework.html#zotero",
-    "title": "Pré-requisitos",
-    "section": "Zotero",
-    "text": "Zotero\nBaixe a versão mais recente do Zotero: https://www.zotero.org/download/ e cadastre uma conta: https://www.zotero.org/user/register/. Vamos discutir sobre o Zotero e diversos plugins que são úteis no dia-a-dia do pesquisador. Atualmente, o Zotero é a ferramenta mais completa para gerenciamento de referências e bibliotecas, e se integra nativamente com o RStudio.",
-    "crumbs": [
-      "Pré-requisitos"
-    ]
-  },
-  {
-    "objectID": "00-prework.html#osf",
-    "href": "00-prework.html#osf",
-    "title": "Pré-requisitos",
-    "section": "OSF",
-    "text": "OSF\nCadastre no Open Science Framework (OSF): https://osf.io/register/. Como veremos, essa plataforma é uma das mais importantes para a prática da ciência aberta. Ela está no começo (pré-registro) e no final (repositório de dados e pré-print) do ciclo de vida (workflow) de um projeto de pesquisa.",
-    "crumbs": [
-      "Pré-requisitos"
-    ]
-  },
-  {
-    "objectID": "00-prework.html#zenodo",
-    "href": "00-prework.html#zenodo",
-    "title": "Pré-requisitos",
-    "section": "Zenodo",
-    "text": "Zenodo\nApesar do Zenodo cumprir funções similares ao OSF e até mesmo ao Github, ele é mais voltado para a publicação de dados e publicações científicas. Cadastre no Zenodo: https://zenodo.org/login/ e víncule sua conta com o Github. Isso será útil, principalmente, para geração de DOI de repositórios do Github.",
-    "crumbs": [
-      "Pré-requisitos"
-    ]
-  },
-  {
-    "objectID": "00-prework.html#rstudio",
-    "href": "00-prework.html#rstudio",
-    "title": "Pré-requisitos",
-    "section": "RStudio",
-    "text": "RStudio\nBaixe a versão mais recente do RStudio: https://posit.co/download/rstudio-desktop/. O RStudio é uma Integrated Development Environment (IDE) para a linguagem R. O RStudio é uma ferramenta essencial para a prática da ciência aberta em R, pois integra as principais soluções que abordaremos no curso (Zotero, Quarto, Git/Github, etc.). A empresa RStudio recentemente mudou o nome para Posit, com o objetivo refletir melhor a expansão da empresa para além do desenvolvimento de ferramentas para R, incluindo Python e outras linguagens. Nesse mesmo link você pode baixar o R, que é a linguagem de programação que utilizaremos no curso.",
-    "crumbs": [
-      "Pré-requisitos"
-    ]
-  },
-  {
-    "objectID": "00-prework.html#quarto",
-    "href": "00-prework.html#quarto",
-    "title": "Pré-requisitos",
-    "section": "Quarto",
-    "text": "Quarto\nBaixe a versão mais recente do Quarto: https://www.quarto.org/. O Quarto é uma linguagem de marcação que permite a criação de documentos reprodutíveis e dinâmicos. Ele é uma evolução e tende a substituir o RMarkdown, que é a principal linguagem de marcação do R. O Quarto engloba e adiciona diversas outras vantagens ao RMarkdown, tal como a possibilidade de criar documentos reprodutíveis em Python, Julia, etc. Se você já tem algum conhecimento de RMarkdown, não se preocupe, pois o Quarto é uma extensão natural.",
-    "crumbs": [
-      "Pré-requisitos"
-    ]
-  },
-  {
-    "objectID": "00-prework.html#docker",
-    "href": "00-prework.html#docker",
-    "title": "Pré-requisitos",
-    "section": "Docker",
-    "text": "Docker\nBaixe a versão mais recente do Docker: https://www.docker.com/products/docker-desktop. Nesse mesmo link você cria uma conta. O Docker é uma plataforma para desenvolvimento, envio e execução de aplicativos. O Docker é uma ferramenta essencial para a prática da ciência aberta, pois permite a criação de ambientes reprodutíveis.",
-    "crumbs": [
-      "Pré-requisitos"
+      "Agenda 🗓️"
     ]
   }
 ]

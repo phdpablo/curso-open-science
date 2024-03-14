@@ -1,0 +1,14 @@
+# Agenda 🗓️ {#sec-schedule .unnumbered .unlisted}
+
+Planejamento dos dias (📅) e horários das aulas (⏲️), conforme a ementa do curso. Na seção de cada uma das aulas temos materiais adicionais para o respectivo conteúdo. Quando disponível, por aqui, poderás acessar os slides utilizados nas aulas (🗣️), aulas gravadas ou indicações de vídeo (🎥) e leituras básica sobre os conteúdos (📓).
+
+| Aula/Conteúdo | Data | Material Principal |
+|:--------------|:----:|:------------------:|
+| @sec-intro    | 📅⏲️ |       🗣️🎥📓       |
+| @sec-osf      | 📅⏲️ |       🗣️🎥📓       |
+| @sec-zotero   | 📅⏲️ |       🗣️🎥📓       |
+| @sec-project  | 📅⏲️ |       🗣️🎥📓       |
+| @sec-git      | 📅⏲️ |       🗣️🎥📓       |
+| @sec-quarto   | 📅⏲️ |       🗣️🎥📓       |
+| @sec-docker   | 📅⏲️ |       🗣️🎥📓       |
+| @sec-AI       | 📅⏲️ |       🗣️🎥📓       |

@@ -2,10 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://phdpablo.github.io/curso-open-science/index.html</loc>
-    <lastmod>2024-03-01T21:07:38.481Z</lastmod>
+    <lastmod>2024-03-14T21:37:30.877Z</lastmod>
   </url>
   <url>
-    <loc>https://phdpablo.github.io/curso-open-science/00-prework.html</loc>
-    <lastmod>2024-03-01T21:01:26.368Z</lastmod>
+    <loc>https://phdpablo.github.io/curso-open-science/00-schedule.html</loc>
+    <lastmod>2024-03-14T21:31:50.301Z</lastmod>
+  </url>
+  <url>
+    <loc>https://phdpablo.github.io/curso-open-science/08-AI.html</loc>
+    <lastmod>2024-03-14T18:44:48.480Z</lastmod>
+  </url>
+  <url>
+    <loc>https://phdpablo.github.io/curso-open-science/07-docker.html</loc>
+    <lastmod>2024-03-14T18:44:30.616Z</lastmod>
+  </url>
+  <url>
+    <loc>https://phdpablo.github.io/curso-open-science/06-quarto.html</loc>
+    <lastmod>2024-03-14T18:44:09.315Z</lastmod>
   </url>
 </urlset>

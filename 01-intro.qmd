@@ -1,2 +1,1 @@
-# Introdução à Ciência Aberta
-
+# Introdução à Ciência Aberta {#sec-intro}
