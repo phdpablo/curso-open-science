@@ -1,23 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://phdpablo.github.io/curso-open-science/index.html</loc>
-    <lastmod>2024-03-14T21:37:30.877Z</lastmod>
-  </url>
-  <url>
     <loc>https://phdpablo.github.io/curso-open-science/00-schedule.html</loc>
-    <lastmod>2024-03-14T21:31:50.301Z</lastmod>
+    <lastmod>2024-05-14T15:14:45.019Z</lastmod>
   </url>
   <url>
-    <loc>https://phdpablo.github.io/curso-open-science/08-AI.html</loc>
-    <lastmod>2024-03-14T18:44:48.480Z</lastmod>
+    <loc>https://phdpablo.github.io/curso-open-science/index.html</loc>
+    <lastmod>2024-05-14T15:00:22.043Z</lastmod>
+  </url>
+  <url>
+    <loc>https://phdpablo.github.io/curso-open-science/00-prework.html</loc>
+    <lastmod>2024-05-14T14:47:57.147Z</lastmod>
+  </url>
+  <url>
+    <loc>https://phdpablo.github.io/curso-open-science/01-intro.html</loc>
+    <lastmod>2024-05-14T14:38:59.516Z</lastmod>
+  </url>
+  <url>
+    <loc>https://phdpablo.github.io/curso-open-science/02-osf.html</loc>
+    <lastmod>2024-03-14T18:42:56.874Z</lastmod>
+  </url>
+  <url>
+    <loc>https://phdpablo.github.io/curso-open-science/03-zotero.html</loc>
+    <lastmod>2024-03-14T18:42:59.903Z</lastmod>
+  </url>
+  <url>
+    <loc>https://phdpablo.github.io/curso-open-science/05-git.html</loc>
+    <lastmod>2024-03-14T18:43:51.128Z</lastmod>
   </url>
   <url>
     <loc>https://phdpablo.github.io/curso-open-science/07-docker.html</loc>
     <lastmod>2024-03-14T18:44:30.616Z</lastmod>
   </url>
   <url>
-    <loc>https://phdpablo.github.io/curso-open-science/06-quarto.html</loc>
-    <lastmod>2024-03-14T18:44:09.315Z</lastmod>
+    <loc>https://phdpablo.github.io/curso-open-science/08-AI.html</loc>
+    <lastmod>2024-03-14T18:44:48.480Z</lastmod>
+  </url>
+  <url>
+    <loc>https://phdpablo.github.io/curso-open-science/04-project.html</loc>
+    <lastmod>2024-03-14T18:43:25.539Z</lastmod>
   </url>
 </urlset>

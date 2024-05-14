@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.1)  14 MAR 2024 18:35
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.1)  14 MAY 2024 12:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1063,24 +1063,23 @@ Missing character: There is no 📇 (U+1F4C7) in font [lmroman12-bold]:mapping=t
 File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonstandard glyph set (RS)
 ) [2]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 366.
+(Font)              scaled to size 7.0pt on input line 387.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 366.
+(Font)              scaled to size 5.0pt on input line 387.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 366.
+(Font)              scaled to size 10.00092pt on input line 387.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 366.
+(Font)              scaled to size 7.00064pt on input line 387.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 366.
+(Font)              scaled to size 5.00046pt on input line 387.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 366.
+(Font)              scaled to size 9.99893pt on input line 387.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 366.
+(Font)              scaled to size 6.99925pt on input line 387.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 366.
-[3]
-Missing character: There is no 🗓 (U+1F5D3) in font [lmroman12-bold]:mapping=tex-text;!
-Missing character: There is no ️ (U+FE0F) in font [lmroman12-bold]:mapping=tex-text;!
+(Font)              scaled to size 4.99947pt on input line 387.
+[3] [4]
+Missing character: There is no 📅 (U+1F4C5) in font [lmroman12-bold]:mapping=tex-text;!
 Missing character: There is no 📅 (U+1F4C5) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no ⏲ (U+23F2) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
@@ -1089,17 +1088,7 @@ Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=
 Missing character: There is no 🎥 (U+1F3A5) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 📓 (U+1F4D3) in font [lmroman10-regular]:mapping=tex-text;!
 
-LaTeX Warning: Reference `sec-intro' on page 4 undefined on input line 486.
-
-Missing character: There is no 📅 (U+1F4C5) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ⏲ (U+23F2) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 🗣 (U+1F5E3) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 🎥 (U+1F3A5) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 📓 (U+1F4D3) in font [lmroman10-regular]:mapping=tex-text;!
-
-LaTeX Warning: Reference `sec-osf' on page 4 undefined on input line 487.
+LaTeX Warning: Reference `sec-intro' on page 5 undefined on input line 507.
 
 Missing character: There is no 📅 (U+1F4C5) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no ⏲ (U+23F2) in font [lmroman10-regular]:mapping=tex-text;!
@@ -1109,7 +1098,7 @@ Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=
 Missing character: There is no 🎥 (U+1F3A5) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 📓 (U+1F4D3) in font [lmroman10-regular]:mapping=tex-text;!
 
-LaTeX Warning: Reference `sec-zotero' on page 4 undefined on input line 488.
+LaTeX Warning: Reference `sec-osf' on page 5 undefined on input line 508.
 
 Missing character: There is no 📅 (U+1F4C5) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no ⏲ (U+23F2) in font [lmroman10-regular]:mapping=tex-text;!
@@ -1119,7 +1108,7 @@ Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=
 Missing character: There is no 🎥 (U+1F3A5) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 📓 (U+1F4D3) in font [lmroman10-regular]:mapping=tex-text;!
 
-LaTeX Warning: Reference `sec-project' on page 4 undefined on input line 489.
+LaTeX Warning: Reference `sec-zotero' on page 5 undefined on input line 509.
 
 Missing character: There is no 📅 (U+1F4C5) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no ⏲ (U+23F2) in font [lmroman10-regular]:mapping=tex-text;!
@@ -1129,7 +1118,7 @@ Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=
 Missing character: There is no 🎥 (U+1F3A5) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 📓 (U+1F4D3) in font [lmroman10-regular]:mapping=tex-text;!
 
-LaTeX Warning: Reference `sec-git' on page 4 undefined on input line 490.
+LaTeX Warning: Reference `sec-project' on page 5 undefined on input line 510.
 
 Missing character: There is no 📅 (U+1F4C5) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no ⏲ (U+23F2) in font [lmroman10-regular]:mapping=tex-text;!
@@ -1139,7 +1128,7 @@ Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=
 Missing character: There is no 🎥 (U+1F3A5) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 📓 (U+1F4D3) in font [lmroman10-regular]:mapping=tex-text;!
 
-LaTeX Warning: Reference `sec-quarto' on page 4 undefined on input line 491.
+LaTeX Warning: Reference `sec-git' on page 5 undefined on input line 511.
 
 Missing character: There is no 📅 (U+1F4C5) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no ⏲ (U+23F2) in font [lmroman10-regular]:mapping=tex-text;!
@@ -1149,7 +1138,7 @@ Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=
 Missing character: There is no 🎥 (U+1F3A5) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 📓 (U+1F4D3) in font [lmroman10-regular]:mapping=tex-text;!
 
-LaTeX Warning: Reference `sec-docker' on page 4 undefined on input line 492.
+LaTeX Warning: Reference `sec-quarto' on page 5 undefined on input line 512.
 
 Missing character: There is no 📅 (U+1F4C5) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no ⏲ (U+23F2) in font [lmroman10-regular]:mapping=tex-text;!
@@ -1159,7 +1148,7 @@ Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=
 Missing character: There is no 🎥 (U+1F3A5) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 📓 (U+1F4D3) in font [lmroman10-regular]:mapping=tex-text;!
 
-LaTeX Warning: Reference `sec-AI' on page 4 undefined on input line 493.
+LaTeX Warning: Reference `sec-docker' on page 5 undefined on input line 513.
 
 Missing character: There is no 📅 (U+1F4C5) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no ⏲ (U+23F2) in font [lmroman10-regular]:mapping=tex-text;!
@@ -1168,7 +1157,20 @@ Missing character: There is no 🗣 (U+1F5E3) in font [lmroman10-regular]:mappin
 Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 🎥 (U+1F3A5) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 📓 (U+1F4D3) in font [lmroman10-regular]:mapping=tex-text;!
-[4]
+
+LaTeX Warning: Reference `sec-AI' on page 5 undefined on input line 514.
+
+Missing character: There is no 📅 (U+1F4C5) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ⏲ (U+23F2) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 🗣 (U+1F5E3) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no ️ (U+FE0F) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 🎥 (U+1F3A5) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no 📓 (U+1F4D3) in font [lmroman10-regular]:mapping=tex-text;!
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 1 on input line 515.
+
 
 ! LaTeX Error: Something's wrong--perhaps a missing \item.
 
@@ -1176,15 +1178,15 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.537 \end{CSLReferences}
+l.558 \end{CSLReferences}
                           
 Here is how much of TeX's memory you used:
- 36013 strings out of 476773
- 728127 string characters out of 5800839
+ 36002 strings out of 476773
+ 727817 string characters out of 5800839
  1938842 words of memory out of 5000000
- 57491 multiletter control sequences out of 15000+600000
+ 57480 multiletter control sequences out of 15000+600000
  564496 words of font info for 86 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,5n,121p,1002b,1030s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,6n,121p,1002b,924s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on index.pdf (4 pages).

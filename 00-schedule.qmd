@@ -1,14 +1,14 @@
-# Agenda 🗓️ {#sec-schedule .unnumbered .unlisted}
+# Agenda 📅 {#sec-schedule .unnumbered .unlisted}
 
 Planejamento dos dias (📅) e horários das aulas (⏲️), conforme a ementa do curso. Na seção de cada uma das aulas temos materiais adicionais para o respectivo conteúdo. Quando disponível, por aqui, poderás acessar os slides utilizados nas aulas (🗣️), aulas gravadas ou indicações de vídeo (🎥) e leituras básica sobre os conteúdos (📓).
 
-| Aula/Conteúdo | Data | Material Principal |
-|:--------------|:----:|:------------------:|
-| @sec-intro    | 📅⏲️ |       🗣️🎥📓       |
-| @sec-osf      | 📅⏲️ |       🗣️🎥📓       |
-| @sec-zotero   | 📅⏲️ |       🗣️🎥📓       |
-| @sec-project  | 📅⏲️ |       🗣️🎥📓       |
-| @sec-git      | 📅⏲️ |       🗣️🎥📓       |
-| @sec-quarto   | 📅⏲️ |       🗣️🎥📓       |
-| @sec-docker   | 📅⏲️ |       🗣️🎥📓       |
-| @sec-AI       | 📅⏲️ |       🗣️🎥📓       |
+| Aula/Conteúdo |       Data        | Material Principal |    Instrutor    |
+|:--------------|:-----------------:|:------------------:|:---------------:|
+| @sec-intro    | 📅04/06/24⏲️19:00 |       🗣️🎥📓       | Ricardo Limongi |
+| @sec-osf      | 📅06/06/24⏲️19:00 |       🗣️🎥📓       |  Pablo Rogers   |
+| @sec-zotero   | 📅11/06/24⏲️19:00 |       🗣️🎥📓       |  Pablo Rogers   |
+| @sec-project  | 📅13/06/24⏲️19:00 |       🗣️🎥📓       |  Pablo Rogers   |
+| @sec-git      | 📅18/06/24⏲️19:00 |       🗣️🎥📓       |  Pablo Rogers   |
+| @sec-quarto   | 📅20/06/24⏲️19:00 |       🗣️🎥📓       |  Pablo Rogers   |
+| @sec-docker   | 📅25/06/24⏲️19:00 |       🗣️🎥📓       |  Pablo Rogers   |
+| @sec-AI       | 📅27/06/24⏲️19:00 |       🗣️🎥📓       | Ricardo Limongi |
