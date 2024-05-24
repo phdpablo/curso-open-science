@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -73,6 +93,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta property="og:title" content="Artigo à Prova de Futuro - 2&nbsp; Repositórios da Ciência Aberta">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="Artigo à Prova de Futuro">
 </head>
 
@@ -220,7 +241,13 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#open-science-framework-osf" id="toc-open-science-framework-osf" class="nav-link active" data-scroll-target="#open-science-framework-osf"><span class="header-section-number">2.1</span> Open Science Framework (OSF)</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -231,8 +258,97 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>No contexto da ciência aberta, existem diversos repositórios disponíveis, cada um com suas funções e propósitos específicos. Esses repositórios são essenciais para promover a transparência, acessibilidade e colaboração na pesquisa científica. Eles assumem um papel crucial na democratização do conhecimento e na promoção da colaboração científica. Cada qual com suas particularidades, oferecem aos pesquisadores ferramentas para armazenar, compartilhar e gerenciar dados, publicações e outros materiais de pesquisa, ou se preferir, todo o ciclo de vida da pesquisa.</p>
+<ul>
+<li><a href="www.zenodo.org"><strong>Zenodo</strong></a>: é um repositório gerido pelo CERN em colaboração com o projeto <a href="https://www.openaire.eu/">OpenAIRE</a> da União Europeia. Oferece armazenamento gratuito e seguro para dados de pesquisa, com a capacidade de gerar DOIs para facilitar a citação dos dados.</li>
+<li><a href="www.figshare.com"><strong>Figshare</strong></a>: é um repositório comercial que permite aos pesquisadores armazenar, compartilhar e descobrir dados de pesquisa. Oferece ferramentas para visualização de documentos, gráficos e outros tipos de dados diretamente no navegador, além de gerar DOIs para os projetos.</li>
+<li><a href="data.mendeley.com"><strong>Mendeley Data</strong></a>: é um repositório de dados de pesquisa da Elsevier, permitindo o armazenamento, compartilhamento e citação de conjuntos de dados. Ele suporta uma ampla gama de tipos de dados e está integrado com a plataforma de referência Mendeley.</li>
+<li><a href="dataverse.harvard.edu"><strong>Harvard Dataverse</strong></a>: é uma rede de repositórios que permite aos pesquisadores compartilhar, armazenar e citar dados de pesquisa. Ele oferece ferramentas avançadas para a gestão de dados, incluindo controle de versões e metadados ricos, essenciais para o gerenciamento do ciclo de vida da pesquisa.</li>
+<li><a href="arxiv.org"><strong>arXiv</strong></a>: é um repositório de pré-impressões de artigos científicos em física, matemática, ciência da computação e outras áreas. Ele permite aos pesquisadores compartilhar seus trabalhos antes da revisão por pares, facilitando o acesso à pesquisa em estágios iniciais.</li>
+<li><a href="github.com"><strong>Github</strong></a>: é uma plataforma de desenvolvimento colaborativo baseada em Git, amplamente utilizada por pesquisadores para compartilhar código, documentos e outros materiais de pesquisa. Ele oferece controle de versões, rastreamento de problemas e integração com outras ferramentas de desenvolvimento.</li>
+</ul>
+<p>Além desses exemplos, poderíamos citar outras soluções que cumprem papeis semelhantes ou focado em certas disciplinas: <a href="databrary.org">Databrary</a>, <a href="dataverse.no">DataverseNO</a>, <a href="dataone.org">DataONE</a>, <a href="datacite.org">DataCite</a>, <a href="datahub.io">DataHub</a>, <a href="datamed.org">DataMed</a>, <a href="datashare.is.ed.ac.uk">DataShare</a>, <a href="dataverse.org">DataVerse</a>, <a href="datadryad.org">Dryad</a>, <a href="earthchem.org">EarthChem</a>, <a href="eudat.eu">EUDAT</a>, <a href="www.ebi.ac.uk/ena/browser/home">European Nucleotide Archive (ENA)</a>, <a href="ncbi.nlm.nih.gov/genbank">GenBank</a>, <a href="datasetsearch.research.google.com">Google Dataset Search</a>, <a href="hathitrust.org">HathiTrust Research Center</a>, <a href="icpsr.umich.edu">ICPSR</a>, <a href="jstor.org">JSTOR Data for Research</a>, <a href="ncbi.nlm.nih.gov">National Center for Biotechnology Information (NCBI)</a>, <a href="nih.gov">National Institutes of Health (NIH) Data Sharing Repositories</a>, <a href="data.noaa.gov">National Oceanographic Data Center (NODC)</a>, <a href="plos.org">PLOS ONE</a>, <a href="ncbi.nlm.nih.gov/pmc">PubMed Central</a>, <a href="researchdata.ands.org.au">Research Data Australia</a> e <a href="ukdataservice.ac.uk">UK Data Service</a>; e em última instância, as redes sociais acadêmicas como <a href="academia.edu">Academia.edu</a>, <a href="scholar.google.com">Google Scholar</a>, <a href="orcid.org">ORCID</a> e <a href="researchgate.net">ResearchGate</a>, também podem ser usadas para compartilhar e descobrir pesquisas.</p>
+<p>A despeito de todas essas opções, vamos focar na plataforma <a href="https://osf.io/"><strong>Open Science Framework (OSF)</strong></a> para a realização do nosso curso. O <strong>OSF</strong> é uma plataforma de código aberto para colaboração em pesquisa, que oferece uma estrutura para conectar os fluxos de trabalho de pesquisa, desde a concepção do projeto até a publicação. O <strong>OSF</strong> é mantido pelo <a href="https://www.cos.io/">Center for Open Science (COS)</a>, uma organização sem fins lucrativos com sede nos Estados Unidos. O <strong>OSF</strong> é um dos principais produtos do COS e é usado por pesquisadores de todo o mundo para colaborar em projetos de pesquisa.</p>
+<p>O <strong>OSF</strong> oferece uma série de recursos para ajudar os pesquisadores a gerenciar seus projetos de pesquisa, incluindo:</p>
+<ul>
+<li><strong>Criar projetos de pesquisa</strong>: organizar seus estudos, incluindo metadados, datasets, materiais de pesquisa e publicações.</li>
+<li><strong>Carregar e publicar dados</strong>: armazenar e compartilhar seus dados de forma segura e acessível.</li>
+<li><strong>Colaboração em equipe</strong>: convidar colaboradores para participar do projeto, atribuir tarefas e acompanhar o progresso.</li>
+<li><strong>Integração com outras ferramentas</strong>: conectar a armazenamentos nas nuvens (Box, DropBox, Google Drive e OneDrive), gerenciadores de referências (Zotero e Mendeley) e outros repositórios (Dataverse, Github, figsahre, etc).</li>
+</ul>
+<p>O <strong>OSF</strong> tem um foco mais amplo em todo o ciclo de vida da pesquisa, desde a concepção da ideia até a publicação dos resultados. Já algumas das soluções citadas foca principalmente no compartilhamento de dados e publicações. O <strong>OSF</strong> oferece ferramentas mais robustas para colaboração em equipe, como wikis, painéis de discussão e ferramentas de gerenciamento de tarefas, e principalmente, possui uma comunidade mais ativa de pesquisadores e colaboradores.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/osf-researchcycle.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="OSF Reserach Lifecycle"></p>
+</figure>
+</div>
+<section id="open-science-framework-osf" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="open-science-framework-osf"><span class="header-section-number">2.1</span> Open Science Framework (OSF)</h2>
+<p>O material utilizado nesse módulo do curso segue de perto a proposta de <span class="citation" data-cites="olson2022">Olson et al. (<a href="references.html#ref-olson2022" role="doc-biblioref">2022</a>)</span>, um <a href="https://osf.io/yaqe8/">projeto oficial do COS</a> que possui recursos, modelos e práticas para ajudar os pesquisadores a iniciar sua jornada <strong>OSF</strong>. Claro que ele foi adaptado para nossos fins, principalmente, em decorrência do tempo destinado ao módulo.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Bifurcando ou duplicando um projeto
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Você sabia que é possível executar um “<em>forking</em>” (criar uma cópia do projeto existente) ou “<em>duplicate as template</em>” (duplicar apenas a estrutura do projeto e seus componentes) de um projeto público no OSF?</p>
+<p>Você que se interessa em iniciar seu próprio projeto OSF com um modelo, pode criar sua própria duplicata do projeto <span class="citation" data-cites="olson2022">Olson et al. (<a href="references.html#ref-olson2022" role="doc-biblioref">2022</a>)</span> para começar!</p>
+<p>Neste <a href="https://osf.io/yaqe8/">projeto</a>, existem templates e recursos básicos para diversos casos de uso encontrados no OSF; coordenação de equipes de pesquisa, planejamento de gerenciamento de dados, documentos reprodutíveis e até mesmo gerenciamento de cursos.</p>
+</div>
+</div>
+</div>
+<p>Para os alunos que desejam uma leitura sobre o <strong>OSF</strong> na prática, indico os artigos de <span class="citation" data-cites="sullivan2019">Sullivan, DeHaven, and Mellor (<a href="references.html#ref-sullivan2019" role="doc-biblioref">2019</a>)</span> e <span class="citation" data-cites="soderberg2018">Soderberg (<a href="references.html#ref-soderberg2018" role="doc-biblioref">2018</a>)</span>. Apesar de o leitor poder encontrar <em>prints</em> das telas da plataforma desatualizadas, esses dois artigos podem ser um bom começo para entender a lógica da plataforma. E <em>off course</em>, recomendo fortemente você dar uma olhada no <a href="https://help.osf.io/article/342-getting-started-on-the-osf">suporte do <strong>OSF</strong></a>, onde podemos encontrar vídeos introdutórios excelentes.</p>
+<p>Esse curso poderia ter sido concebido e gerenciado dentro do <strong>OSF</strong>, no entanto, devido a proposta de apresentarmos também o <a href="https://phdpablo.github.io/curso-open-science/05-git.html">Git/Github</a> e sua integração com documentos reprodutíveis no <a href="https://phdpablo.github.io/curso-open-science/06-quarto.html">RStudio/Quarto</a> (como esse que está lendo 😁), optamos por priorizar o repositório do Github. Por isso, que também nesse módulo passamos pelo <a href="https://phdpablo.github.io/curso-open-science/00-prework.html#sec-zenodoprework">Zenodo</a>, que integra com o Github e tem a capacidade de gerar DOIs para as versões dos repositórios.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="citation" data-cites="sullivan2019">Sullivan, DeHaven, and Mellor (<a href="references.html#ref-sullivan2019" role="doc-biblioref">2019</a>)</span> <em>Reading Note</em>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>O artigo apresenta um protocolo para a implementação de práticas de Ciência Aberta (CA), com foco no uso do Open Science Framework (OSF). As principais ideias do texto são as seguintes:</p>
+<ul>
+<li><p>A CA é um movimento que promove a transparência, a reprodutibilidade e a acessibilidade dos resultados de pesquisa;</p></li>
+<li><p>As práticas de CA podem contribuir para a melhoria da qualidade da pesquisa científica, tornando-a mais confiável e robusta;</p></li>
+<li><p>O OSF é uma plataforma gratuita e de código aberto que pode ser usada para implementar práticas de CA;</p></li>
+</ul>
+<p>O protocolo apresentado no texto fornece instruções passo a passo para as seguintes práticas de CA:</p>
+<ul>
+<li><p><strong>Planejamento de gerenciamento de dados</strong>: O planejamento de gerenciamento de dados é essencial para garantir que os dados de pesquisa sejam armazenados, organizados e gerenciados de forma eficiente e eficaz. O OSF fornece ferramentas para ajudar os pesquisadores a planejar e implementar seus planos de gerenciamento de dados.</p></li>
+<li><p><strong>Pré-registro de estudos</strong>: O pré-registro de estudos é uma prática que consiste em publicar um plano de pesquisa antes de iniciar o estudo. Isso ajuda a garantir que o estudo seja realizado de forma objetiva e transparente. O OSF fornece um recurso para pré-registrar estudos.</p></li>
+<li><p><strong>Controle de versão</strong>: O controle de versão é uma prática que consiste em rastrear as alterações feitas em arquivos de texto. Isso ajuda a garantir que os resultados de pesquisa sejam reprodutíveis e que as alterações feitas nos dados sejam rastreáveis. O OSF fornece ferramentas para gerenciar o controle de versão de arquivos de pesquisa.</p></li>
+<li><p><strong>Compartilhamento de dados e materias</strong>: O compartilhamento de dados e materiais de pesquisa é uma prática importante para aumentar a transparência e a reprodutibilidade da pesquisa. O OSF fornece um repositório para compartilhar dados e materiais de pesquisa.</p></li>
+<li><p><strong>Publicação de pré-impressões</strong>: As pré-impressões são versões preliminares de artigos científicos que são publicadas online antes de serem revisados por pares. As pré-impressões podem ajudar a acelerar a divulgação da pesquisa e a promover o debate científico. O OSF fornece um repositório para publicar pré-impressões.</p></li>
+</ul>
+<p>O artigo fornece informações valiosas para os pesquisadores que desejam implementar práticas de CA. O protocolo apresentado pode ser usado como um guia para implementar essas práticas de forma eficaz.</p>
+</div>
+</div>
+</div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-olson2022" class="csl-entry" role="listitem">
+Olson, Eric, Nicole Pfeiffer, Mark Call, and Daniel Steger. 2022. <span>“Getting Started on OSF,”</span> August. <a href="https://doi.org/10.17605/OSF.IO/YAQE8">https://doi.org/10.17605/OSF.IO/YAQE8</a>.
+</div>
+<div id="ref-soderberg2018" class="csl-entry" role="listitem">
+Soderberg, Courtney K. 2018. <span>“Using OSF to Share Data: A Step-by-Step Guide.”</span> <em>Advances in Methods and Practices in Psychological Science</em> 1 (1): 115–20. <a href="https://doi.org/10.1177/2515245918757689">https://doi.org/10.1177/2515245918757689</a>.
+</div>
+<div id="ref-sullivan2019" class="csl-entry" role="listitem">
+Sullivan, Ian, Alexander DeHaven, and David Mellor. 2019. <span>“Open and Reproducible Research on Open Science Framework.”</span> <em>Current Protocols Essential Laboratory Techniques</em> 18 (1): e32. <a href="https://doi.org/10.1002/cpet.32">https://doi.org/10.1002/cpet.32</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

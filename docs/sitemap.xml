@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://phdpablo.github.io/curso-open-science/00-schedule.html</loc>
-    <lastmod>2024-05-14T15:14:45.019Z</lastmod>
-  </url>
-  <url>
     <loc>https://phdpablo.github.io/curso-open-science/index.html</loc>
     <lastmod>2024-05-14T15:00:22.043Z</lastmod>
   </url>
@@ -13,20 +9,32 @@
     <lastmod>2024-05-20T13:18:36.936Z</lastmod>
   </url>
   <url>
+    <loc>https://phdpablo.github.io/curso-open-science/00-schedule.html</loc>
+    <lastmod>2024-05-14T15:14:45.019Z</lastmod>
+  </url>
+  <url>
     <loc>https://phdpablo.github.io/curso-open-science/01-intro.html</loc>
     <lastmod>2024-05-14T14:38:59.516Z</lastmod>
   </url>
   <url>
     <loc>https://phdpablo.github.io/curso-open-science/02-osf.html</loc>
-    <lastmod>2024-03-14T18:42:56.874Z</lastmod>
+    <lastmod>2024-05-24T15:05:31.867Z</lastmod>
   </url>
   <url>
     <loc>https://phdpablo.github.io/curso-open-science/03-zotero.html</loc>
     <lastmod>2024-03-14T18:42:59.903Z</lastmod>
   </url>
   <url>
+    <loc>https://phdpablo.github.io/curso-open-science/04-project.html</loc>
+    <lastmod>2024-03-14T18:43:25.539Z</lastmod>
+  </url>
+  <url>
     <loc>https://phdpablo.github.io/curso-open-science/05-git.html</loc>
     <lastmod>2024-03-14T18:43:51.128Z</lastmod>
+  </url>
+  <url>
+    <loc>https://phdpablo.github.io/curso-open-science/06-quarto.html</loc>
+    <lastmod>2024-03-14T18:44:09.315Z</lastmod>
   </url>
   <url>
     <loc>https://phdpablo.github.io/curso-open-science/07-docker.html</loc>
@@ -37,7 +45,11 @@
     <lastmod>2024-03-14T18:44:48.480Z</lastmod>
   </url>
   <url>
-    <loc>https://phdpablo.github.io/curso-open-science/04-project.html</loc>
-    <lastmod>2024-03-14T18:43:25.539Z</lastmod>
+    <loc>https://phdpablo.github.io/curso-open-science/references.html</loc>
+    <lastmod>2024-03-01T21:00:11.697Z</lastmod>
+  </url>
+  <url>
+    <loc>https://phdpablo.github.io/curso-open-science/Artigo-à-Prova-de-Futuro.pdf</loc>
+    <lastmod>2024-05-24T15:10:03.257Z</lastmod>
   </url>
 </urlset>
