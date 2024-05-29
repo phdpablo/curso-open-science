@@ -15,7 +15,7 @@ book:
   #date-format: long
   #doi: 10.5281/zenodo.10443128
   cover-image: img/cover.png
-  # downloads: pdf
+  downloads: pdf
   reader-mode: true
   sidebar:
     align: left

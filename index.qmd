@@ -2,6 +2,8 @@
 
 Página do curso **"Artigo à Prova de Futuro: Jornada de Open Science na Prática"**. Aqui você encontrará informações sobre o programa do curso, materiais para seu acompanhamento e sugestões de leituras sobre a prática da ciência aberta (artigos, notas de aulas, blogs, vídeos, etc.).
 
+Caso você caiu nessa página por acaso (🤣😁😉), saiba que o poderá se inscrever no curso [aqui](https://forms.gle/b6Zio7oL8XxxhhtS9): independente se ele estiver acontecendo no momento, será convidado a participar da próxima versão.
+
 ## Sobre os instrutores {#sec-instrutor .unnumbered .unlisted}
 
 O curso é coordenado e ministrado por Pablo Rogers, doutor em administração pela Universidade de São Paulo (FEA/USP) e professor de finanças e métodos quantitativos desde 2005. Em sua [página de perfil do Github](https://github.com/phdpablo) temos informações de seus trabalhos recentes, e no seu [site pessoal](https://phdpablo.com/), detalhes sobre suas formações, competências, trajetória e projetos.
@@ -27,3 +29,11 @@ Introdução da Ciência Aberta / Repositórios da Ciência Aberta / Gerenciamen
 Num primeiro momento, o curso foi concebido para acontecer de forma remota e síncrona, com aulas expositivas e teóricas, porém em grande medida, o conteúdo é essencialmente prático. Algumas aulas poderão ser gravadas e disponibilizadas no [canal do YouTube do projeto Psico&Econo_METRIA](https://www.youtube.com/c/PsicoEconoMETRIA), mas a intenção é que o conteúdo principal seja síncrono, para uma maior interação entre os participantes.
 
 Nesse sentido, o material do curso organizado nessa página refere-se ao roteiro estruturado de tudo que se vê nas aulas síncronas e conteúdos adicionais (bibliografia, notas de aulas, links, etc).
+
+
+
+<p xmlns:cc="http://creativecommons.org/ns#"
+
+xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://phdpablo.github.io/curso-open-science/">Artigo à Prova de Futuro: Jornada de Open Science na Prática</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/phdpablo/">Pablo Rogers</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a>
+
+</p>
