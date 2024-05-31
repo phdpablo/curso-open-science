@@ -6,10 +6,10 @@ Abaixo eu descrevo sucintamente o que é cada uma dessas ferramentas e plataform
 
 Outras soluções que iremos discutir e testar durante o curso, como alguns pacotes do R, e aplicações de IA no último módulo, deixaremos para as aulas remotas. Essas soluções na sua maioria requerem cadastros rápidos, e podem ser feitos de forma instantânea via conta Google/Microsoft/Apple.
 
-::: {.callout-important collapse="true"}
+::: {#tip-prompt .callout-important collapse="true"}
 ## ChatGPT para suas notas de leituras
 
-Os resumos das bibliografias que apresento nas seções seguintes foram elaborados com o auxílio do ChatGPT 4, seja pelo o [webapp da OpenAI](https://chat.openai.com/) ou pelo [Copilot](https://copilot.microsoft.com/) (ou buscador Bing) da Microsoft.
+Os resumos das bibliografias que apresento em cada uma das seções foram elaborados com o auxílio do ChatGPT 4, seja pelo o [webapp da OpenAI](https://chat.openai.com/) ou pelo [Copilot](https://copilot.microsoft.com/) (ou buscador Bing) da Microsoft.
 
 Eu destaco (seleciono através de marca texto no Zotero, por exemplo) as passagens que considero importante do artigo científico, tendo em vista a minha perspectiva e fins no momento da leitura, e posteriormente copio e colo as notas de leitura com a seguinte prompt:
 

@@ -172,6 +172,8 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
+\newcounter{quartocallouttipno}
+\newcommand{\quartocallouttip}[1]{\refstepcounter{quartocallouttipno}\label{#1}}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -306,6 +308,16 @@ Nesse sentido, o material do curso organizado nessa página refere-se ao
 roteiro estruturado de tudo que se vê nas aulas síncronas e conteúdos
 adicionais (bibliografia, notas de aulas, links, etc).
 
+A proposta do curso busca seguir de perto a mensagem de Dogucu and
+Çetinkaya-Rundel (2022). Nesse artigo as autoras abordam a importância
+da reprodutibilidade na ciência de dados, tanto na pesquisa quanto no
+ensino. Elas recomendam que os professores-pesquisadores adotem fluxos
+de trabalho reprodutíveis em suas pesquisas e ensinem esses fluxos de
+trabalho aos seus alunos. Elas propõem uma dimensão para as práticas de
+reprodutibilidade, focada exclusivamente nas ferramentas para o ensino
+(todos os materiais de ensino devem ser computacionalmente
+reprodutíveis, bem documentados e abertos).
+
 Artigo à Prova de Futuro: Jornada de Open Science na Prática by Pablo
 Rogers is licensed under CC BY-NC-SA 4.0
 
@@ -339,9 +351,11 @@ para as aulas remotas. Essas soluções na sua maioria requerem cadastros
 rápidos, e podem ser feitos de forma instantânea via conta
 Google/Microsoft/Apple.
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, left=2mm, toprule=.15mm, opacitybacktitle=0.6, colback=white, titlerule=0mm, colbacktitle=quarto-callout-important-color!10!white, bottomtitle=1mm, bottomrule=.15mm, opacityback=0, rightrule=.15mm, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{ChatGPT para suas notas de leituras}, colframe=quarto-callout-important-color-frame, arc=.35mm, breakable, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, rightrule=.15mm, opacitybacktitle=0.6, opacityback=0, bottomrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Tip \ref*{tip-prompt}: ChatGPT para suas notas de leituras}, coltitle=black, colbacktitle=quarto-callout-important-color!10!white, bottomtitle=1mm, breakable, arc=.35mm, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-important-color-frame, leftrule=.75mm, left=2mm, colback=white]
 
-Os resumos das bibliografias que apresento nas seções seguintes foram
+\quartocallouttip{tip-prompt} 
+
+Os resumos das bibliografias que apresento em cada uma das seções foram
 elaborados com o auxílio do ChatGPT 4, seja pelo o
 \href{https://chat.openai.com/}{webapp da OpenAI} ou pelo
 \href{https://copilot.microsoft.com/}{Copilot} (ou buscador Bing) da
@@ -360,7 +374,7 @@ answer in Portuguese}''
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, left=2mm, toprule=.15mm, opacitybacktitle=0.6, colback=white, titlerule=0mm, colbacktitle=quarto-callout-caution-color!10!white, bottomtitle=1mm, bottomrule=.15mm, opacityback=0, rightrule=.15mm, toptitle=1mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Não confie cegamente na IA}, colframe=quarto-callout-caution-color-frame, arc=.35mm, breakable, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, rightrule=.15mm, opacitybacktitle=0.6, opacityback=0, bottomrule=.15mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Não confie cegamente na IA}, coltitle=black, colbacktitle=quarto-callout-caution-color!10!white, bottomtitle=1mm, breakable, arc=.35mm, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-caution-color-frame, leftrule=.75mm, left=2mm, colback=white]
 
 Eu simplesmente copiei e colei os resultados do ChatGPT para compilar
 essas notas de leituras? Não. Após o resultado do ChatGPT eu reviso o
@@ -372,7 +386,7 @@ a partir da leitura do artigo ou sendo conhecedor do assunto abordado.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, left=2mm, toprule=.15mm, opacitybacktitle=0.6, colback=white, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, bottomtitle=1mm, bottomrule=.15mm, opacityback=0, rightrule=.15mm, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Outra curiosidade\ldots{}}, colframe=quarto-callout-note-color-frame, arc=.35mm, breakable, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, rightrule=.15mm, opacitybacktitle=0.6, opacityback=0, bottomrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Outra curiosidade\ldots{}}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, bottomtitle=1mm, breakable, arc=.35mm, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, left=2mm, colback=white]
 
 A
 \href{https://phdpablo.github.io/curso-open-science/img/cover.png}{imagem
@@ -555,6 +569,372 @@ Chapter~\ref{sec-AI} & 📅27/06/24⏲️19:00 & 🗣️🎥📓 & Ricardo Limon
 
 \section{Introdução à Ciência Aberta}\label{sec-intro}
 
+A pesquisa científica atual\footnote{O texto apresentado nessa seção é
+  uma compilação de fragmentos do Projeto APQ-01225-24 submetido ao
+  Edital Nº 001/2024 - Demanda Universal, da FAPEMIG, ainda em análise.
+  O detalhamento desse projeto, quando se tornar público, poderá ser
+  acompanhado no \href{osf.io/dnrgf}{OSF}: Rogers, P., Limongi, R., \&
+  Barboza, F. (2024, May 29). The Practice of Open Science in Brazil.
+  Retrieved from osf.io/dnrgf} enfrenta vários desafios (Munafò et al.
+2017). Problemas como o pequeno tamanho da amostra, pequenos tamanhos de
+efeito, p-hacking e HARKing (viés positivo de publicação), conflitos de
+interesse e a competição entre cientistas que trabalham isoladamente sem
+combinar seus esforços, têm sido apontados como catalizadores do que se
+convencionou chamar de ``crise de reprodutibilidade'' na ciência (M.
+Baker 2016; Munafò et al. 2017).
+
+Pesquisas apontam que mais de 70\% de pesquisadores que tentaram,
+falharam em reproduzir os experimentos de outros cientistas, e mais da
+metade falhou em reproduzir seus próprios experimentos (M. Baker 2016),
+com estimativa de que 85\% dos esforços de pesquisas estejam sendo
+desperdiçados (Munafò et al. 2017), gerando custos econômicos
+bilionários (Freedman, Cockburn, and Simcoe 2015).
+
+A despeito daqueles que advogam que não existe essa tal ``crise de
+reprodutibilidade'' (Bernard 2023; Fanelli 2018; Protzko et al. 2023), a
+grande maioria da comunidade científica concorda com sua existência e
+defende a melhoria da transparência, reprodutibilidade e eficiência na
+ciência (M. Baker 2016).
+
+Nesse contexto, o movimento da Ciência Aberta (CA) tem ganhado
+notoriedade e mudado a percepção sobre o cenário científico global
+(Crüwell et al. 2019). Ele busca tornar o conhecimento científico mais
+acessível, transparente e colaborativo. Se apresenta como uma coleção de
+práticas de democratização do conhecimento e ruptura com o formato único
+de divulgação do conhecimento científico (Crüwell et al. 2019; Heinz and
+Miranda 2024; Munafò et al. 2017). Ele surge do embate entre aqueles que
+buscam compartilhar o conhecimento e aqueles que defendem mecanismos de
+apropriação privada para a produção científica (Heinz and Miranda 2024).
+
+A CA é um termo múltiplo e genérico (Vicente-Saez and Martinez-Fuentes
+2018), que representa diversas interpretações, e é considerada um novo
+modelo de divulgação e produção de resultados científicos por meio do
+acesso livre e irrestrito ao conhecimento (Heinz and Miranda 2024). A CA
+não é apenas um conceito, mas uma prática multifacetada que influencia o
+ciclo de vida da pesquisa, desde a concepção até a disseminação dos
+resultados (Silva and Silveira 2019).
+
+Existem pelo menos cinco escolas de pensamento dentro da CA. Estas
+escolas abrangem desde a arquitetura tecnológica necessária para
+suportar a ciência até a inclusão do público geral na criação de
+conhecimento, passando pela medição do impacto alternativo, acesso ao
+conhecimento como um direito humano, e a pesquisa colaborativa como
+inovação aberta (Silva and Silveira 2019).
+
+A taxonomia proposta pela
+\href{https://www.fosteropenscience.eu/foster-taxonomy/open-workflow-tools}{FOSTER}
+(Facilitate Open Science Training for Eurpean Research), e sua releitura
+revisada e ampliada para o contexto latino americano por Silveira et al.
+(2023), tendo em vista as recomendações da UNESCO (2021), nos dá uma
+dimensão da complexidade do assunto (vide ilustração em:
+\url{https://doi.org/10.5281/zenodo.7836884}).
+
+Existem vários argumentos que sustentam a importância da CA (Heinz and
+Miranda 2024). Primeiramente, a CA pode trazer benefícios sociais
+significativos, pois contribui para o avanço do conhecimento, a
+inovação, a educação, a transparência e a participação cidadã. Além
+disso, a CA pode trazer benefícios científicos ao aumentar a qualidade,
+a reprodutibilidade, a eficiência e o impacto da pesquisa científica.
+Ela também facilita a colaboração, a comunicação e a
+interdisciplinaridade entre os pesquisadores. Por fim, a CA pode trazer
+benefícios éticos ao promover a integridade, a responsabilidade, a
+equidade e a diversidade na ciência, além de respeitar os direitos dos
+autores, dos participantes e da sociedade como um todo.
+
+Esses argumentos são fundamentais para legitimar a CA e destacar sua
+importância no mundo atual (Heinz and Miranda 2024), principalmente,
+como potencial transformador para reduzir desigualdades existentes em
+tecnologias de informação e comunicação -- reduzir exclusões digitais,
+tecnológicas e de conhecimento --, e acelerar o progresso rumo à
+implementação da Agenda 2030 e realização dos Objetivos de
+Desenvolvimento Sustentável (UNESCO 2021).
+
+O movimento da CA no Brasil está em uma fase transitória (Rezende and
+Falgueras 2020) -- ainda consolidando o acesso aberto -- com o governo
+desempenhando um papel crucial nesse processo. O Brasil tem ganhado
+destaque por sua abordagem única na implementação da CA. Esta abordagem
+é moldada por marcos regulatórios que se estendem desde o governo até as
+instituições e agências de financiamento. Os regulamentos brasileiros,
+particularmente aqueles que promovem a abertura de dados governamentais,
+têm um impacto direto na prática científica. Eles incentivam a
+transparência e facilitam o acesso a dados científicos originados de
+instituições públicas (Rezende and Falgueras 2020).
+
+A trajetória brasileira rumo à CA inicia com a abertura de dados na
+esfera governamental entre 2009 e 2016, evoluindo para a criação de um
+grupo de trabalho em 2017 pelo Ministério da Ciência, Tecnologia,
+Inovações e Comunicações (MCTIC) para desenvolver uma política nacional
+para a CA. Este esforço concentrou ênfase no reconhecimento dos dados de
+pesquisa como ativos de desenvolvimento científico, econômico e social,
+buscando facilitar seu acesso, compartilhamento e reutilização (Rezende
+and Falgueras 2020).
+
+Talvez por esse motivo, as políticas institucionais brasileiras revelam
+um cenário ainda muito influenciado pela ``via verde'' do movimento de
+acesso aberto, caracterizado pelo depósito de dados em repositórios
+digitais abertos, e que o comprometimento efetivo do Brasil com a CA
+ainda é incipiente. As regulamentações atuais favorecem principalmente o
+acesso aberto, sem abordar de maneira abrangente outros aspectos da CA
+(Rezende and Falgueras 2020). O Brasil é um dos líderes mundiais no
+fornecimento de acesso universal às suas pesquisas e estudos (Neto,
+Willinsky, and Alperin 2016), com crescimento estável de sua produção
+científica disponível em acesso aberto, principalmente, as áreas de
+Agricultura e Ciência \& Tecnologia (Caballero-Rivero, Sánchez-Tarragó,
+and Santos 2019).
+
+Em termos de pesquisa acadêmica sobre o tema no Brasil, os estudos são
+precoces e concentrados na área de Ciência da Informação (Albano,
+Pedroso, and Caetano 2023). A despeito da maturidade da CA no Brasil, a
+importância do tema -- materializada na quantidade de produção acadêmica
+-- tem aumentado vertiginosamente (Albano, Pedroso, and Caetano 2023), e
+a dispersão de autores e respectivas instituições que publicam sobre o
+assunto, parece ser a situação predominante.
+
+Apesar de importantes atores nacionais, tais como CAPES, CNPq e Scielo,
+defenderem o crescimento de iniciativas de CA (Mendes-Da-Silva 2023), o
+assunto no Brasil parece estar circunscrito em iniciativas de
+importantes periódicos nacionais sobre dados aberto, capitaneados pelas
+orientações da Scielo. Não foi encontrada nenhuma pesquisa empírica,
+sobre a prática da CA no Brasil.
+
+Por prática de CA entende-se a perspectiva micro da CA, relacionadas com
+as terminologias e conhecimento em torno do fluxo de trabalho do gerador
+de conhecimento científico aberto (Figure~\ref{fig-ca-micro}), ou seja,
+o cientista que se propõe tornar sua pesquisa transparente, reprodutível
+e replicável.
+
+\begin{figure}
+
+\includegraphics{img/ca-micro.png}
+
+\caption{\label{fig-ca-micro}Perspectiva micro da CA. Taxonomia
+relacionada com terminologias e conhecimento em torno da prática (fluxo
+de trabalho) do gerador de conhecimento científico aberto. Ilustração
+disponível em: \url{https://doi.org/10.5281/zenodo.10835001}.}
+
+\end{figure}%
+
+Exclui-se a perspectiva macro, relacionadas com as ramificações
+conceituais da CA concernentes às políticas públicas, infraestrutura,
+envolvimento aberto de atores sociais e diálogo aberto com outros
+sistemas de conhecimento (Figure~\ref{fig-ca-macro}). Essa última
+perspectiva está fora do escopo da discussão do curso, que se concentra
+em algumas das dimensões da perspectiva micro, particularmente, as
+ferramentas disponíveis para compilação dos produtos científicos que
+integram a publicação científica (UNESCO 2021).
+
+\begin{figure}
+
+\includegraphics{img/ca-macro.png}
+
+\caption{\label{fig-ca-macro}Perspectiva macro da CA. Taxonomia
+relacionada com as ramificações conceituais da CA concernentes às
+políticas (públicas), infraestrutura, envolvimento aberto de atores
+sociais (sociedade) e diálogo aberto com outros sistemas de
+conhecimento. Ilustração disponível em:
+\url{https://doi.org/10.5281/zenodo.10835001}}
+
+\end{figure}%
+
+Apesar de uma verossímil expectativa desabonadora, tendo em vista o
+contexto da CA no Brasil, o diagnóstico da situação da prática da CA se
+mostra importante, \emph{per si}, pois:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  ajuda a compreender a natureza exata do problema, suas causas, efeitos
+  e riscos;
+\item
+  auxilia a alocação eficiente de recursos pelos atores envolvidos
+  (e.g., os programas de pós-graduação podem direcionar os recursos para
+  onde eles são mais necessários e onde terão o maior impacto;
+\item
+  orienta indicadores de desempenho e metas realistas, o que facilita a
+  avaliação do progresso e a eficácia das ações tomadas;
+\item
+  permite que os atores envolvidos aprendam com os problemas
+  enfrentados, adaptando-se e melhorando suas estratégias e processos
+  para o futuro; e
+\item
+  torna possível desenvolver soluções ou intervenções que sejam
+  diretamente direcionadas ao problema em questão, aumentando as chances
+  de sucesso.
+\end{enumerate}
+
+Sobre esse último ponto, até para aqueles que não reconhecem a ``crise
+de reprodutibilidade'' na ciência (Bernard 2023), a comunidade
+científica e atores importantes do cenário advogam que a solução inclui
+educar os estudantes e pesquisadores desde cedo em todas as questões da
+CA (D. H. Baker et al. 2023; Bezjak et al. 2018; Chopik et al. 2018;
+Crüwell et al. 2019; Dogucu and Çetinkaya-Rundel 2022; Janz 2015;
+McAleer et al. 2022; Munafò et al. 2017; Toelch and Ostwald 2018).
+
+A referida crise não deriva de má conduta científica, mas principalmente
+da confusão entre replicar conclusões, replicar resultados, falta de
+educação em estatística, lógica científica, método científico,
+alfabetização de dados, etc. Para combater essas questões é necessário
+investir em educação e disseminação de boas práticas de investigação
+para uma mudança de cultura (D. H. Baker et al. 2023; Bezjak et al.
+2018; Chopik et al. 2018; Crüwell et al. 2019; Dogucu and
+Çetinkaya-Rundel 2022; Janz 2015; McAleer et al. 2022; Munafò et al.
+2017; Toelch and Ostwald 2018).
+
+Investir em recursos humanos, treinamento, educação, alfabetização
+digital, capacitação sistemática e contínua, e fomentar uma cultura
+científica de CA, têm sido apresentadas como algumas das principais
+medidas simultâneas para superar o cenário atual (Committee on
+Reproducibility and Replicability in Science et al. 2019; European
+Commission. Directorate General for Research and Innovation. 2017;
+UNESCO 2021). A proposta do curso pode contribuir para a literatura da
+CA no Brasil, pois pretende perseguir dois objetivos concomitantes: 1)
+diagnosticar sua prática junto aos pesquisadores brasileiros; e 2)
+promover o desenvolvimento de uma intervenção educacional sobre a
+prática (workflow) e principais ferramentas para compilação dos produtos
+científicos que integram uma publicação científica aberta.
+
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, rightrule=.15mm, opacitybacktitle=0.6, opacityback=0, bottomrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@klein2018 \emph{Reading Note} (Tip~\ref{tip-prompt})}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, bottomtitle=1mm, breakable, arc=.35mm, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, left=2mm, colback=white]
+
+O artigo é um guia prático para pesquisadores que desejam compartilhar
+os produtos de sua pesquisa. Os autores argumentam que as práticas de
+pesquisa transparentes são essenciais para melhorar a credibilidade e a
+cumulatividade da ciência.
+
+O artigo fornece recomendações específicas sobre como compartilhar os
+seguintes produtos de pesquisa:
+
+\begin{itemize}
+\tightlist
+\item
+  Protocolo de estudo
+\item
+  Materiais
+\item
+  Dados e metadados
+\item
+  Procedimento de análise
+\item
+  Relatórios de pesquisa
+\end{itemize}
+
+As recomendações gerais dos autores são as seguintes:
+
+\begin{itemize}
+\item
+  \textbf{Torne a transparência um padrão}: isso significa compartilhar
+  o máximo possível de informações sobre sua pesquisa, desde o início do
+  processo.
+\item
+  \textbf{Não deixe que o perfeito seja inimigo do bom}: mesmo que você
+  não possa compartilhar todos os detalhes de sua pesquisa, compartilhar
+  alguma coisa é melhor do que nada.
+\item
+  \textbf{Compartilhe e documente o que puder}: isso ajudará a garantir
+  que sua pesquisa seja reproduzível e confiável.
+\item
+  \textbf{Comece cedo}: começar a compartilhar informações sobre sua
+  pesquisa no início do processo pode ajudá-lo a evitar problemas e
+  economizar tempo.
+\end{itemize}
+
+Os autores também discutem algumas preocupações comuns que os
+pesquisadores têm sobre as práticas de pesquisa transparentes. Eles
+argumentam que essas preocupações são geralmente infundadas e que as
+práticas transparentes têm muitos benefícios.
+
+Os principais benefícios das práticas de pesquisa transparentes são:
+
+\begin{itemize}
+\item
+  \textbf{Melhor credibilidade da pesquisa}: os pesquisadores
+  transparentes são mais propensos a serem vistos como confiáveis e
+  honestos.
+\item
+  \textbf{Maior cumulatividade da ciência}: os pesquisadores
+  transparentes tornam mais fácil para outros pesquisadores construir
+  sobre seu trabalho.
+\item
+  \textbf{Mais oportunidades de colaboração e financiamento}: os
+  pesquisadores transparentes são mais propensos a serem convidados para
+  colaborar com outros pesquisadores e a receber financiamento.
+\item
+  \textbf{Maior eficiência da pesquisa}: as práticas transparentes podem
+  ajudar os pesquisadores a economizar tempo e recursos.
+\end{itemize}
+
+Em conclusão, o artigo fornece informações valiosas para pesquisadores
+que desejam compartilhar os produtos de sua pesquisa. As recomendações
+dos autores são baseadas em evidências e podem ajudar os pesquisadores a
+melhorar a qualidade e a credibilidade de seu trabalho.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, rightrule=.15mm, opacitybacktitle=0.6, opacityback=0, bottomrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@kathawalla2021 \emph{Reading Note} (Tip~\ref{tip-prompt})}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, bottomtitle=1mm, breakable, arc=.35mm, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, left=2mm, colback=white]
+
+Este artigo fornece um guia para ajudar estudantes de pós-graduação e
+seus orientadores a se envolverem na prática da ciência aberta (CA). A
+CA é descrita como um termo amplo que se refere a uma variedade de
+princípios e comportamentos relacionados à transparência, credibilidade,
+reprodutibilidade e acessibilidade.
+
+O artigo sugere oito práticas de CA (das quais destaco sete) que
+estudantes de pós-graduação iniciantes podem começar a adotar hoje. Cada
+comportamento é classificado em termos de dificuldade (fácil, médio,
+difícil) e apresentado em ordem de adoção sugerida. Em cada prática,
+eles seguem o formato de o quê, por quê, como e preocupações.
+
+Algumas das práticas sugeridas incluem:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Fluxo de Trabalho do Projeto (Nível Fácil)}: isso inclui a
+  estrutura da pasta do arquivo, convenções de nomenclatura de
+  documentos, controle de versão, armazenamento em nuvem e outros
+  detalhes. Ter um sistema de fluxo de trabalho de projeto dedicado
+  ajuda a manter sua pesquisa organizada, melhorando a
+  reprodutibilidade, minimizando erros e facilitando colaborações com
+  outros e com você no futuro.
+\item
+  \textbf{Preprints (Nível Fácil)}: postar um manuscrito antes de
+  submetê-lo a uma revista permite um feedback mais amplo do que o que é
+  proporcionado pela revisão por pares e pode ajudar a melhorar um
+  artigo antes da submissão, identificando quaisquer falhas importantes.
+\item
+  \textbf{Código Reprodutível (Nível Médio)}: o código reprodutível para
+  análise de dados e visualizações (por exemplo, tabelas, figuras)
+  refere-se a uma versão detalhada e escrita do seu código que
+  permitiria a outra pessoa (ou a você no futuro) gerar a mesma saída
+  relatada em seu manuscrito.
+\item
+  \textbf{Compartilhamento de Dados (Nível Médio)}: compartilhar dados
+  refere-se a tornar o conjunto de dados desidentificado usado para um
+  projeto disponível para outros pesquisadores.
+\item
+  \textbf{Escrita de Manuscrito Transparente (Nível Médio)}: Para
+  escrever um manuscrito transparente, claro e reprodutível, é útil
+  seguir as diretrizes ou padrões de escrita de manuscritos.
+\item
+  \textbf{Pré-registro (Nível Médio)}: o pré-registro refere-se à
+  postagem de um esboço cronometrado das perguntas de pesquisa,
+  hipóteses, método e plano de análise para um projeto específico antes
+  da coleta de dados e/ou análise.
+\item
+  \textbf{Relatório Registrado (Nível Difícil)}: os Relatórios
+  Registrados envolvem um processo de submissão em duas partes, onde os
+  autores primeiro enviam uma proposta de Estágio 1, que inclui a
+  introdução, método e plano de análise - tudo antes que a coleta de
+  dados e/ou análise tenha sido feita.
+\end{enumerate}
+
+O artigo enfatiza que se envolver em uma prática de CA é melhor do que
+nenhuma e que a CA é apenas uma boa ciência. Além disso, sugere-se que
+se construa sobre o trabalho que já foi feito em vez de reinventar a
+roda. A maioria das práticas sugeridas se concentra no uso do
+\href{https://osf.io}{Open Science Framework}.
+
+\end{tcolorbox}
+
 \bookmarksetup{startatroot}
 
 \section{Repositórios da Ciência Aberta}\label{sec-osf}
@@ -667,16 +1047,21 @@ pesquisadores a gerenciar seus projetos de pesquisa, incluindo:
 \end{itemize}
 
 O \textbf{OSF} tem um foco mais amplo em todo o ciclo de vida da
-pesquisa, desde a concepção da ideia até a publicação dos resultados. Já
-algumas das soluções citadas foca principalmente no compartilhamento de
-dados e publicações. O \textbf{OSF} oferece ferramentas mais robustas
-para colaboração em equipe, como wikis, painéis de discussão e
-ferramentas de gerenciamento de tarefas, e principalmente, possui uma
-comunidade mais ativa de pesquisadores e colaboradores.
+pesquisa, desde a concepção da ideia até a publicação dos resultados
+(Figure~\ref{fig-osf-researchcycle}). Já algumas das soluções citadas
+foca principalmente no compartilhamento de dados e publicações. O
+\textbf{OSF} oferece ferramentas mais robustas para colaboração em
+equipe, como wikis, painéis de discussão e ferramentas de gerenciamento
+de tarefas, e principalmente, possui uma comunidade mais ativa de
+pesquisadores e colaboradores.
 
-\begin{center}
+\begin{figure}
+
 \includegraphics{img/osf-researchcycle.png}
-\end{center}
+
+\caption{\label{fig-osf-researchcycle}OSF Research Lifecycle}
+
+\end{figure}%
 
 \subsection{Open Science Framework
 (OSF)}\label{open-science-framework-osf}
@@ -688,7 +1073,7 @@ pesquisadores a iniciar sua jornada \textbf{OSF}. Claro que ele foi
 adaptado para nossos fins, principalmente, em decorrência do tempo
 destinado ao módulo.
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, left=2mm, toprule=.15mm, opacitybacktitle=0.6, colback=white, titlerule=0mm, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, bottomrule=.15mm, opacityback=0, rightrule=.15mm, toptitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Bifurcando ou duplicando um projeto}, colframe=quarto-callout-tip-color-frame, arc=.35mm, breakable, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, rightrule=.15mm, opacitybacktitle=0.6, opacityback=0, bottomrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Bifurcando ou duplicando um projeto}, coltitle=black, colbacktitle=quarto-callout-tip-color!10!white, bottomtitle=1mm, breakable, arc=.35mm, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, leftrule=.75mm, left=2mm, colback=white]
 
 Você sabia que é possível executar um ``\emph{forking}'' (criar uma
 cópia do projeto existente) ou ``\emph{duplicate as template}''
@@ -727,7 +1112,7 @@ Github. Por isso, que também nesse módulo passamos pelo
 que integra com o Github e tem a capacidade de gerar DOIs para as
 versões dos repositórios.
 
-\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, left=2mm, toprule=.15mm, opacitybacktitle=0.6, colback=white, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, bottomtitle=1mm, bottomrule=.15mm, opacityback=0, rightrule=.15mm, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@sullivan2019 \emph{Reading Note}}, colframe=quarto-callout-note-color-frame, arc=.35mm, breakable, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, rightrule=.15mm, opacitybacktitle=0.6, opacityback=0, bottomrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@sullivan2019 \emph{Reading Note} (Tip~\ref{tip-prompt})}, coltitle=black, colbacktitle=quarto-callout-note-color!10!white, bottomtitle=1mm, breakable, arc=.35mm, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, left=2mm, colback=white]
 
 O artigo apresenta um protocolo para a implementação de práticas de
 Ciência Aberta (CA), com foco no uso do Open Science Framework (OSF). As
@@ -821,10 +1206,157 @@ um guia para implementar essas práticas de forma eficaz.
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-albano2023}
+Albano, Cláudio Sonáglio, Paula de Oliveira Pedroso, and Doriedson
+Oliveira Caetano. 2023. {``Ci{ê}ncia {Aberta}: {Um Panorama} Sobre as
+{Publica{ç}{õ}es} No {Cen{á}rio Brasileiro}.''} \emph{Saber
+Cient{í}fico} 12 (1): 1--12.
+
+\bibitem[\citeproctext]{ref-baker2023}
+Baker, Daniel H, Mareike Berg, Kirralise Hansford, Bartholomew Patrick
+Anselm Quinn, Federico Gabriele Segala, and Erin English. 2023.
+{``{ReproduceMe}: Lessons from a Pilot Project on Computational
+Reproducibility.''} Preprint. PsyArXiv.
+\url{https://doi.org/10.31234/osf.io/k8d4u}.
+
+\bibitem[\citeproctext]{ref-baker2016}
+Baker, Monya. 2016. {``1,500 Scientists Lift the Lid on
+Reproducibility.''} \emph{Nature} 533 (7604): 452--54.
+\url{https://doi.org/10.1038/533452a}.
+
+\bibitem[\citeproctext]{ref-bernard2023}
+Bernard, Christophe. 2023. {``Stop {Reproducing} the {Reproducibility
+Crisis}.''} \emph{Eneuro} 10 (2): ENEURO.0032--23.2023.
+\url{https://doi.org/10.1523/ENEURO.0032-23.2023}.
+
+\bibitem[\citeproctext]{ref-bezjak2018}
+Bezjak, Sonja, April Clyburne-Sherin, Philipp Conzett, Pedro Fernandes,
+Edit Görögh, Kerstin Helbig, Bianca Kramer, et al. 2018. \emph{Open
+{Science Training Handbook}}. Zenodo.
+\url{https://doi.org/10.5281/ZENODO.1212496}.
+
+\bibitem[\citeproctext]{ref-caballero-rivero2019}
+Caballero-Rivero, Alejandro, Nancy Sánchez-Tarragó, and Raimundo Nonato
+Macedo dos Santos. 2019. {``{Pr{á}ticas de Ci{ê}ncia Aberta da
+comunidade acad{ê}mica brasileira: estudo a partir da produ{ç}{ã}o
+cient{í}fica}.''} \emph{Transinforma{ç}{ã}o} 31 (November): e190029.
+\url{https://doi.org/10.1590/2318-0889201931e190029}.
+
+\bibitem[\citeproctext]{ref-chopik2018}
+Chopik, William J., Ryan H. Bremner, Andrew M. Defever, and Victor N.
+Keller. 2018. {``How (and {Whether}) to {Teach Undergraduates About} the
+{Replication Crisis} in {Psychological Science}.''} \emph{Teaching of
+Psychology} 45 (2): 158--63.
+\url{https://doi.org/10.1177/0098628318762900}.
+
+\bibitem[\citeproctext]{ref-crrs2019}
+Committee on Reproducibility and Replicability in Science, Board on
+Behavioral, Cognitive, and Sensory Sciences, Committee on National
+Statistics, Division of Behavioral and Social Sciences and Education,
+Nuclear and Radiation Studies Board, Division on Earth and Life Studies,
+Board on Mathematical Sciences and Analytics, et al. 2019.
+\emph{Reproducibility and {Replicability} in {Science}}. Washington,
+D.C.: National Academies Press. \url{https://doi.org/10.17226/25303}.
+
+\bibitem[\citeproctext]{ref-cruwell2019}
+Crüwell, Sophia, Johnny Van Doorn, Alexander Etz, Matthew C. Makel,
+Hannah Moshontz, Jesse C. Niebaum, Amy Orben, Sam Parsons, and Michael
+Schulte-Mecklenbeck. 2019. {``Seven {Easy Steps} to {Open Science}: {An
+Annotated Reading List}.''} \emph{Zeitschrift f{ü}r Psychologie} 227
+(4): 237--48. \url{https://doi.org/10.1027/2151-2604/a000387}.
+
+\bibitem[\citeproctext]{ref-dogucu2022}
+Dogucu, Mine, and Mine Çetinkaya-Rundel. 2022. {``Tools and
+{Recommendations} for {Reproducible Teaching}.''} \emph{Journal of
+Statistics and Data Science Education} 30 (3): 251--60.
+\url{https://doi.org/10.1080/26939169.2022.2138645}.
+
+\bibitem[\citeproctext]{ref-EU2017}
+European Commission. Directorate General for Research and Innovation.
+2017. \emph{Providing Researchers with the Skills and Competencies They
+Need to Practise {Open Science}.} LU: Publications Office.
+\url{https://data.europa.eu/doi/10.2777/121253}.
+
+\bibitem[\citeproctext]{ref-fanelli2018}
+Fanelli, Daniele. 2018. {``Is Science Really Facing a Reproducibility
+Crisis, and Do We Need It To?''} \emph{Proceedings of the National
+Academy of Sciences} 115 (11): 2628--31.
+\url{https://doi.org/10.1073/pnas.1708272114}.
+
+\bibitem[\citeproctext]{ref-freedman2015}
+Freedman, Leonard P., Iain M. Cockburn, and Timothy S. Simcoe. 2015.
+{``The {Economics} of {Reproducibility} in {Preclinical Research}.''}
+\emph{PLOS Biology} 13 (6): e1002165.
+\url{https://doi.org/10.1371/journal.pbio.1002165}.
+
+\bibitem[\citeproctext]{ref-heinz2024}
+Heinz, Michele, and Miranda Miranda. 2024. {``Ci{ê}ncia {Aberta}:
+Argumentos e Desafios Para Sua Legitima{ç}{ã}o Cient{í}fica.''} \emph{Em
+Quest{ã}o} 30. \url{https://doi.org/10.1590/1808-5245.30.135618}.
+
+\bibitem[\citeproctext]{ref-janz2015}
+Janz, Nicole. 2015. {``Bringing the {Gold Standard} into the
+{Classroom}: {Replication} in {University Teaching}.''}
+\emph{International Studies Perspectives}, March, n/a--.
+\url{https://doi.org/10.1111/insp.12104}.
+
+\bibitem[\citeproctext]{ref-mcaleer2022}
+McAleer, Phil, Niamh Stack, Heather Woods, Lisa Marie DeBruine, Helena
+Paterson, Emily Nordmann, Carolina Ellen Kuepper-Tetzel, and Dale J.
+Barr. 2022. {``Embedding {Data Skills} in {Research Methods Education}:
+{Preparing Students} for {Reproducible Research}.''} Preprint. PsyArXiv.
+\url{https://doi.org/10.31234/osf.io/hq68s}.
+
+\bibitem[\citeproctext]{ref-mendes-da-silva2023}
+Mendes-Da-Silva, Wesley. 2023. {``What {Lectures} and {Research} in
+{Business Management Need} to {Know About Open Science}.''}
+\emph{Revista de Administra{ç}{ã}o de Empresas} 63 (4): e0000--0033.
+\url{https://doi.org/10.1590/s0034-759020230408x}.
+
+\bibitem[\citeproctext]{ref-munafo2017}
+Munafò, Marcus R., Brian A. Nosek, Dorothy V. M. Bishop, Katherine S.
+Button, Christopher D. Chambers, Nathalie Percie Du Sert, Uri Simonsohn,
+Eric-Jan Wagenmakers, Jennifer J. Ware, and John P. A. Ioannidis. 2017.
+{``A Manifesto for Reproducible Science.''} \emph{Nature Human
+Behaviour} 1 (1): 0021. \url{https://doi.org/10.1038/s41562-016-0021}.
+
+\bibitem[\citeproctext]{ref-neto2016}
+Neto, Silvio Carvalho, John Willinsky, and Juan Pablo Alperin. 2016.
+{``Measuring, Rating, Supporting, and Strengthening Open Access
+Scholarly Publishing in {Brazil}.''} \emph{Education Policy Analysis
+Archives} 24 (May): 54--54. \url{https://doi.org/10.14507/epaa.24.2391}.
+
 \bibitem[\citeproctext]{ref-olson2022}
 Olson, Eric, Nicole Pfeiffer, Mark Call, and Daniel Steger. 2022.
 {``Getting Started on OSF,''} August.
 \url{https://doi.org/10.17605/OSF.IO/YAQE8}.
+
+\bibitem[\citeproctext]{ref-protzko2023}
+Protzko, John, Jon Krosnick, Leif Nelson, Brian A. Nosek, Jordan Axt,
+Matt Berent, Nicholas Buttrick, et al. 2023. {``High Replicability of
+Newly Discovered Social-Behavioural Findings Is Achievable.''}
+\emph{Nature Human Behaviour}, November.
+\url{https://doi.org/10.1038/s41562-023-01749-9}.
+
+\bibitem[\citeproctext]{ref-rezende2020}
+Rezende, Laura Vilela Rodrigues, and Ernest Abadal Falgueras. 2020.
+{``Estado Da Arte Dos Marcos Regulat{ó}rios Brasileiros Rumo {à}
+{Ci{ê}ncia Aberta}.''} \emph{Encontros Bibli: Revista Eletr{ô}nica de
+Biblioteconomia e Ci{ê}ncia Da Informa{ç}{ã}o} 25 (September): 01--25.
+\url{https://doi.org/10.5007/1518-2924.2020.e71370}.
+
+\bibitem[\citeproctext]{ref-silva2019}
+Silva, Fabiano Couto Corrêa Da, and Lúcia Da Silveira. 2019. {``O
+Ecossistema Da {Ci{ê}ncia Aberta}.''} \emph{Transinforma{ç}{ã}o} 31:
+e190001. \url{https://doi.org/10.1590/2318-0889201931e190001}.
+
+\bibitem[\citeproctext]{ref-silveira2023}
+Silveira, Lúcia Da, Nivaldo Calixto Ribeiro, Remedios Melero, Andrea
+Mora-Campos, Daniel Fernando Piraquive-Piraquive, Alejandro Uribe
+Tirado, Priscila Machado Borges Sena, et al. 2023. {``Taxonomia Da
+{Ci{ê}ncia Aberta}: Revisada e Ampliada.''} \emph{Encontros Bibli:
+Revista Eletr{ô}nica de Biblioteconomia e Ci{ê}ncia Da Informa{ç}{ã}o}
+28 (June). \url{https://doi.org/10.5007/1518-2924.2023.e91712}.
 
 \bibitem[\citeproctext]{ref-soderberg2018}
 Soderberg, Courtney K. 2018. {``Using OSF to Share Data: A Step-by-Step
@@ -836,6 +1368,22 @@ Sullivan, Ian, Alexander DeHaven, and David Mellor. 2019. {``Open and
 Reproducible Research on Open Science Framework.''} \emph{Current
 Protocols Essential Laboratory Techniques} 18 (1): e32.
 \url{https://doi.org/10.1002/cpet.32}.
+
+\bibitem[\citeproctext]{ref-toelch2018}
+Toelch, Ulf, and Dirk Ostwald. 2018. {``Digital Open
+Science---{Teaching} Digital Tools for Reproducible and Transparent
+Research.''} \emph{PLOS Biology} 16 (7): e2006022.
+\url{https://doi.org/10.1371/journal.pbio.2006022}.
+
+\bibitem[\citeproctext]{ref-unesco2021}
+UNESCO. 2021. {``{UNESCO Recommendation} on {Open Science}.''} UNESCO.
+\url{https://doi.org/10.54677/MNMH8546}.
+
+\bibitem[\citeproctext]{ref-vicente-saez2018}
+Vicente-Saez, Ruben, and Clara Martinez-Fuentes. 2018. {``Open {Science}
+Now: {A} Systematic Literature Review for an Integrated Definition.''}
+\emph{Journal of Business Research} 88 (July): 428--36.
+\url{https://doi.org/10.1016/j.jbusres.2017.12.043}.
 
 \end{CSLReferences}
 

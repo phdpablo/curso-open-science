@@ -20,9 +20,9 @@ O **OSF** oferece uma série de recursos para ajudar os pesquisadores a gerencia
 -   **Colaboração em equipe**: convidar colaboradores para participar do projeto, atribuir tarefas e acompanhar o progresso.
 -   **Integração com outras ferramentas**: conectar a armazenamentos nas nuvens (Box, DropBox, Google Drive e OneDrive), gerenciadores de referências (Zotero e Mendeley) e outros repositórios (Dataverse, Github, figsahre, etc).
 
-O **OSF** tem um foco mais amplo em todo o ciclo de vida da pesquisa, desde a concepção da ideia até a publicação dos resultados. Já algumas das soluções citadas foca principalmente no compartilhamento de dados e publicações. O **OSF** oferece ferramentas mais robustas para colaboração em equipe, como wikis, painéis de discussão e ferramentas de gerenciamento de tarefas, e principalmente, possui uma comunidade mais ativa de pesquisadores e colaboradores.
+O **OSF** tem um foco mais amplo em todo o ciclo de vida da pesquisa, desde a concepção da ideia até a publicação dos resultados (@fig-osf-researchcycle). Já algumas das soluções citadas foca principalmente no compartilhamento de dados e publicações. O **OSF** oferece ferramentas mais robustas para colaboração em equipe, como wikis, painéis de discussão e ferramentas de gerenciamento de tarefas, e principalmente, possui uma comunidade mais ativa de pesquisadores e colaboradores.
 
-![](img/osf-researchcycle.png){fig-alt="OSF Reserach Lifecycle" fig-align="center"}
+![OSF Research Lifecycle](img/osf-researchcycle.png){#fig-osf-researchcycle fig-align="left"}
 
 ## Open Science Framework (OSF)
 
@@ -43,7 +43,7 @@ Para os alunos que desejam uma leitura sobre o **OSF** na prática, indico os ar
 Esse curso poderia ter sido concebido e gerenciado dentro do **OSF**, no entanto, devido a proposta de apresentarmos também o [Git/Github](https://phdpablo.github.io/curso-open-science/05-git.html) e sua integração com documentos reprodutíveis no [RStudio/Quarto](https://phdpablo.github.io/curso-open-science/06-quarto.html) (como esse que está lendo 😁), optamos por priorizar o repositório do Github. Por isso, que também nesse módulo passamos pelo [Zenodo](https://phdpablo.github.io/curso-open-science/00-prework.html#sec-zenodoprework), que integra com o Github e tem a capacidade de gerar DOIs para as versões dos repositórios.
 
 ::: {.callout-note collapse="true"}
-## @sullivan2019 *Reading Note*
+## @sullivan2019 *Reading Note* (@tip-prompt)
 
 O artigo apresenta um protocolo para a implementação de práticas de Ciência Aberta (CA), com foco no uso do Open Science Framework (OSF). As principais ideias do texto são as seguintes:
 

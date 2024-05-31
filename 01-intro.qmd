@@ -1,1 +1,121 @@
 # Introdução à Ciência Aberta {#sec-intro}
+
+A pesquisa científica atual[^01-intro-1] enfrenta vários desafios [@munafo2017]. Problemas como o pequeno tamanho da amostra, pequenos tamanhos de efeito, p-hacking e HARKing (viés positivo de publicação), conflitos de interesse e a competição entre cientistas que trabalham isoladamente sem combinar seus esforços, têm sido apontados como catalizadores do que se convencionou chamar de “crise de reprodutibilidade” na ciência [@baker2016; @munafo2017].
+
+[^01-intro-1]: O texto apresentado nessa seção é uma compilação de fragmentos do Projeto APQ-01225-24 submetido ao Edital Nº 001/2024 - Demanda Universal, da FAPEMIG, ainda em análise. O detalhamento desse projeto, quando se tornar público, poderá ser acompanhado no [OSF](osf.io/dnrgf): Rogers, P., Limongi, R., & Barboza, F. (2024, May 29). The Practice of Open Science in Brazil. Retrieved from osf.io/dnrgf
+
+Pesquisas apontam que mais de 70% de pesquisadores que tentaram, falharam em reproduzir os experimentos de outros cientistas, e mais da metade falhou em reproduzir seus próprios experimentos [@baker2016], com estimativa de que 85% dos esforços de pesquisas estejam sendo desperdiçados [@munafo2017], gerando custos econômicos bilionários [@freedman2015].
+
+A despeito daqueles que advogam que não existe essa tal “crise de reprodutibilidade” [@bernard2023; @fanelli2018; @protzko2023], a grande maioria da comunidade científica concorda com sua existência e defende a melhoria da transparência, reprodutibilidade e eficiência na ciência [@baker2016].
+
+Nesse contexto, o movimento da Ciência Aberta (CA) tem ganhado notoriedade e mudado a percepção sobre o cenário científico global [@cruwell2019]. Ele busca tornar o conhecimento científico mais acessível, transparente e colaborativo. Se apresenta como uma coleção de práticas de democratização do conhecimento e ruptura com o formato único de divulgação do conhecimento científico [@cruwell2019; @heinz2024; @munafo2017]. Ele surge do embate entre aqueles que buscam compartilhar o conhecimento e aqueles que defendem mecanismos de apropriação privada para a produção científica [@heinz2024].
+
+A CA é um termo múltiplo e genérico [@vicente-saez2018], que representa diversas interpretações, e é considerada um novo modelo de divulgação e produção de resultados científicos por meio do acesso livre e irrestrito ao conhecimento [@heinz2024]. A CA não é apenas um conceito, mas uma prática multifacetada que influencia o ciclo de vida da pesquisa, desde a concepção até a disseminação dos resultados [@silva2019].
+
+Existem pelo menos cinco escolas de pensamento dentro da CA. Estas escolas abrangem desde a arquitetura tecnológica necessária para suportar a ciência até a inclusão do público geral na criação de conhecimento, passando pela medição do impacto alternativo, acesso ao conhecimento como um direito humano, e a pesquisa colaborativa como inovação aberta [@silva2019].
+
+A taxonomia proposta pela [FOSTER](https://www.fosteropenscience.eu/foster-taxonomy/open-workflow-tools) (Facilitate Open Science Training for Eurpean Research), e sua releitura revisada e ampliada para o contexto latino americano por @silveira2023, tendo em vista as recomendações da @unesco2021, nos dá uma dimensão da complexidade do assunto (vide ilustração em: <https://doi.org/10.5281/zenodo.7836884>).
+
+Existem vários argumentos que sustentam a importância da CA [@heinz2024]. Primeiramente, a CA pode trazer benefícios sociais significativos, pois contribui para o avanço do conhecimento, a inovação, a educação, a transparência e a participação cidadã. Além disso, a CA pode trazer benefícios científicos ao aumentar a qualidade, a reprodutibilidade, a eficiência e o impacto da pesquisa científica. Ela também facilita a colaboração, a comunicação e a interdisciplinaridade entre os pesquisadores. Por fim, a CA pode trazer benefícios éticos ao promover a integridade, a responsabilidade, a equidade e a diversidade na ciência, além de respeitar os direitos dos autores, dos participantes e da sociedade como um todo.
+
+Esses argumentos são fundamentais para legitimar a CA e destacar sua importância no mundo atual [@heinz2024], principalmente, como potencial transformador para reduzir desigualdades existentes em tecnologias de informação e comunicação – reduzir exclusões digitais, tecnológicas e de conhecimento –, e acelerar o progresso rumo à implementação da Agenda 2030 e realização dos Objetivos de Desenvolvimento Sustentável [@unesco2021].
+
+O movimento da CA no Brasil está em uma fase transitória [@rezende2020] – ainda consolidando o acesso aberto – com o governo desempenhando um papel crucial nesse processo. O Brasil tem ganhado destaque por sua abordagem única na implementação da CA. Esta abordagem é moldada por marcos regulatórios que se estendem desde o governo até as instituições e agências de financiamento. Os regulamentos brasileiros, particularmente aqueles que promovem a abertura de dados governamentais, têm um impacto direto na prática científica. Eles incentivam a transparência e facilitam o acesso a dados científicos originados de instituições públicas [@rezende2020].
+
+A trajetória brasileira rumo à CA inicia com a abertura de dados na esfera governamental entre 2009 e 2016, evoluindo para a criação de um grupo de trabalho em 2017 pelo Ministério da Ciência, Tecnologia, Inovações e Comunicações (MCTIC) para desenvolver uma política nacional para a CA. Este esforço concentrou ênfase no reconhecimento dos dados de pesquisa como ativos de desenvolvimento científico, econômico e social, buscando facilitar seu acesso, compartilhamento e reutilização [@rezende2020].
+
+Talvez por esse motivo, as políticas institucionais brasileiras revelam um cenário ainda muito influenciado pela "via verde" do movimento de acesso aberto, caracterizado pelo depósito de dados em repositórios digitais abertos, e que o comprometimento efetivo do Brasil com a CA ainda é incipiente. As regulamentações atuais favorecem principalmente o acesso aberto, sem abordar de maneira abrangente outros aspectos da CA [@rezende2020]. O Brasil é um dos líderes mundiais no fornecimento de acesso universal às suas pesquisas e estudos [@neto2016], com crescimento estável de sua produção científica disponível em acesso aberto, principalmente, as áreas de Agricultura e Ciência & Tecnologia [@caballero-rivero2019].
+
+Em termos de pesquisa acadêmica sobre o tema no Brasil, os estudos são precoces e concentrados na área de Ciência da Informação [@albano2023]. A despeito da maturidade da CA no Brasil, a importância do tema – materializada na quantidade de produção acadêmica – tem aumentado vertiginosamente [@albano2023], e a dispersão de autores e respectivas instituições que publicam sobre o assunto, parece ser a situação predominante.
+
+Apesar de importantes atores nacionais, tais como CAPES, CNPq e Scielo, defenderem o crescimento de iniciativas de CA [@mendes-da-silva2023], o assunto no Brasil parece estar circunscrito em iniciativas de importantes periódicos nacionais sobre dados aberto, capitaneados pelas orientações da Scielo. Não foi encontrada nenhuma pesquisa empírica, sobre a prática da CA no Brasil.
+
+Por prática de CA entende-se a perspectiva micro da CA, relacionadas com as terminologias e conhecimento em torno do fluxo de trabalho do gerador de conhecimento científico aberto (@fig-ca-micro), ou seja, o cientista que se propõe tornar sua pesquisa transparente, reprodutível e replicável.
+
+![Perspectiva micro da CA. Taxonomia relacionada com terminologias e conhecimento em torno da prática (fluxo de trabalho) do gerador de conhecimento científico aberto. Ilustração disponível em: <https://doi.org/10.5281/zenodo.10835001>.](img/ca-micro.png){#fig-ca-micro fig-alt="Perspectiva micro da CA" fig-align="left"}
+
+Exclui-se a perspectiva macro, relacionadas com as ramificações conceituais da CA concernentes às políticas públicas, infraestrutura, envolvimento aberto de atores sociais e diálogo aberto com outros sistemas de conhecimento (@fig-ca-macro). Essa última perspectiva está fora do escopo da discussão do curso, que se concentra em algumas das dimensões da perspectiva micro, particularmente, as ferramentas disponíveis para compilação dos produtos científicos que integram a publicação científica [@unesco2021].
+
+![Perspectiva macro da CA. Taxonomia relacionada com as ramificações conceituais da CA concernentes às políticas (públicas), infraestrutura, envolvimento aberto de atores sociais (sociedade) e diálogo aberto com outros sistemas de conhecimento. Ilustração disponível em: <https://doi.org/10.5281/zenodo.10835001>](img/ca-macro.png){#fig-ca-macro fig-alt="Perspectiva macro da CA" fig-align="left"}
+
+Apesar de uma verossímil expectativa desabonadora, tendo em vista o contexto da CA no Brasil, o diagnóstico da situação da prática da CA se mostra importante, *per si*, pois:
+
+1.  ajuda a compreender a natureza exata do problema, suas causas, efeitos e riscos;
+
+2.  auxilia a alocação eficiente de recursos pelos atores envolvidos (e.g., os programas de pós-graduação podem direcionar os recursos para onde eles são mais necessários e onde terão o maior impacto;
+
+3.  orienta indicadores de desempenho e metas realistas, o que facilita a avaliação do progresso e a eficácia das ações tomadas;
+
+4.  permite que os atores envolvidos aprendam com os problemas enfrentados, adaptando-se e melhorando suas estratégias e processos para o futuro; e
+
+5.  torna possível desenvolver soluções ou intervenções que sejam diretamente direcionadas ao problema em questão, aumentando as chances de sucesso.
+
+Sobre esse último ponto, até para aqueles que não reconhecem a “crise de reprodutibilidade” na ciência [@bernard2023], a comunidade científica e atores importantes do cenário advogam que a solução inclui educar os estudantes e pesquisadores desde cedo em todas as questões da CA [@baker2023; @bezjak2018; @chopik2018; @cruwell2019; @dogucu2022; @janz2015; @mcaleer2022; @munafo2017; @toelch2018].
+
+A referida crise não deriva de má conduta científica, mas principalmente da confusão entre replicar conclusões, replicar resultados, falta de educação em estatística, lógica científica, método científico, alfabetização de dados, etc. Para combater essas questões é necessário investir em educação e disseminação de boas práticas de investigação para uma mudança de cultura [@baker2023; @bezjak2018; @chopik2018; @cruwell2019; @dogucu2022; @janz2015; @mcaleer2022; @munafo2017; @toelch2018].
+
+Investir em recursos humanos, treinamento, educação, alfabetização digital, capacitação sistemática e contínua, e fomentar uma cultura científica de CA, têm sido apresentadas como algumas das principais medidas simultâneas para superar o cenário atual [@crrs2019; @EU2017; @unesco2021]. A proposta do curso pode contribuir para a literatura da CA no Brasil, pois pretende perseguir dois objetivos concomitantes: 1) diagnosticar sua prática junto aos pesquisadores brasileiros; e 2) promover o desenvolvimento de uma intervenção educacional sobre a prática (workflow) e principais ferramentas para compilação dos produtos científicos que integram uma publicação científica aberta.
+
+::: {.callout-note collapse="true"}
+## @klein2018 *Reading Note* (@tip-prompt)
+
+O artigo é um guia prático para pesquisadores que desejam compartilhar os produtos de sua pesquisa. Os autores argumentam que as práticas de pesquisa transparentes são essenciais para melhorar a credibilidade e a cumulatividade da ciência.
+
+O artigo fornece recomendações específicas sobre como compartilhar os seguintes produtos de pesquisa:
+
+-   Protocolo de estudo
+-   Materiais
+-   Dados e metadados
+-   Procedimento de análise
+-   Relatórios de pesquisa
+
+As recomendações gerais dos autores são as seguintes:
+
+-   **Torne a transparência um padrão**: isso significa compartilhar o máximo possível de informações sobre sua pesquisa, desde o início do processo.
+
+-   **Não deixe que o perfeito seja inimigo do bom**: mesmo que você não possa compartilhar todos os detalhes de sua pesquisa, compartilhar alguma coisa é melhor do que nada.
+
+-   **Compartilhe e documente o que puder**: isso ajudará a garantir que sua pesquisa seja reproduzível e confiável.
+
+-   **Comece cedo**: começar a compartilhar informações sobre sua pesquisa no início do processo pode ajudá-lo a evitar problemas e economizar tempo.
+
+Os autores também discutem algumas preocupações comuns que os pesquisadores têm sobre as práticas de pesquisa transparentes. Eles argumentam que essas preocupações são geralmente infundadas e que as práticas transparentes têm muitos benefícios.
+
+Os principais benefícios das práticas de pesquisa transparentes são:
+
+-   **Melhor credibilidade da pesquisa**: os pesquisadores transparentes são mais propensos a serem vistos como confiáveis e honestos.
+
+-   **Maior cumulatividade da ciência**: os pesquisadores transparentes tornam mais fácil para outros pesquisadores construir sobre seu trabalho.
+
+-   **Mais oportunidades de colaboração e financiamento**: os pesquisadores transparentes são mais propensos a serem convidados para colaborar com outros pesquisadores e a receber financiamento.
+
+-   **Maior eficiência da pesquisa**: as práticas transparentes podem ajudar os pesquisadores a economizar tempo e recursos.
+
+Em conclusão, o artigo fornece informações valiosas para pesquisadores que desejam compartilhar os produtos de sua pesquisa. As recomendações dos autores são baseadas em evidências e podem ajudar os pesquisadores a melhorar a qualidade e a credibilidade de seu trabalho.
+:::
+
+::: {.callout-note collapse="true"}
+## @kathawalla2021 *Reading Note* (@tip-prompt)
+
+Este artigo fornece um guia para ajudar estudantes de pós-graduação e seus orientadores a se envolverem na prática da ciência aberta (CA). A CA é descrita como um termo amplo que se refere a uma variedade de princípios e comportamentos relacionados à transparência, credibilidade, reprodutibilidade e acessibilidade.
+
+O artigo sugere oito práticas de CA (das quais destaco sete) que estudantes de pós-graduação iniciantes podem começar a adotar hoje. Cada comportamento é classificado em termos de dificuldade (fácil, médio, difícil) e apresentado em ordem de adoção sugerida. Em cada prática, eles seguem o formato de o quê, por quê, como e preocupações.
+
+Algumas das práticas sugeridas incluem:
+
+1. **Fluxo de Trabalho do Projeto (Nível Fácil)**: isso inclui a estrutura da pasta do arquivo, convenções de nomenclatura de documentos, controle de versão, armazenamento em nuvem e outros detalhes. Ter um sistema de fluxo de trabalho de projeto dedicado ajuda a manter sua pesquisa organizada, melhorando a reprodutibilidade, minimizando erros e facilitando colaborações com outros e com você no futuro.
+
+2. **Preprints (Nível Fácil)**: postar um manuscrito antes de submetê-lo a uma revista permite um feedback mais amplo do que o que é proporcionado pela revisão por pares e pode ajudar a melhorar um artigo antes da submissão, identificando quaisquer falhas importantes.
+
+3. **Código Reprodutível (Nível Médio)**: o código reprodutível para análise de dados e visualizações (por exemplo, tabelas, figuras) refere-se a uma versão detalhada e escrita do seu código que permitiria a outra pessoa (ou a você no futuro) gerar a mesma saída relatada em seu manuscrito.
+
+4. **Compartilhamento de Dados (Nível Médio)**: compartilhar dados refere-se a tornar o conjunto de dados desidentificado usado para um projeto disponível para outros pesquisadores.
+
+5. **Escrita de Manuscrito Transparente (Nível Médio)**: Para escrever um manuscrito transparente, claro e reprodutível, é útil seguir as diretrizes ou padrões de escrita de manuscritos.
+
+6. **Pré-registro (Nível Médio)**: o pré-registro refere-se à postagem de um esboço cronometrado das perguntas de pesquisa, hipóteses, método e plano de análise para um projeto específico antes da coleta de dados e/ou análise.
+
+7. **Relatório Registrado (Nível Difícil)**: os Relatórios Registrados envolvem um processo de submissão em duas partes, onde os autores primeiro enviam uma proposta de Estágio 1, que inclui a introdução, método e plano de análise - tudo antes que a coleta de dados e/ou análise tenha sido feita.
+
+O artigo enfatiza que se envolver em uma prática de CA é melhor do que nenhuma e que a CA é apenas uma boa ciência. Além disso, sugere-se que se construa sobre o trabalho que já foi feito em vez de reinventar a roda. A maioria das práticas sugeridas se concentra no uso do [Open Science Framework](https://osf.io).
+:::

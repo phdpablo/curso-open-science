@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -73,6 +93,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta property="og:title" content="Artigo à Prova de Futuro - 1&nbsp; Introdução à Ciência Aberta">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="Artigo à Prova de Futuro">
 </head>
 
@@ -232,8 +253,215 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>A pesquisa científica atual<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> enfrenta vários desafios <span class="citation" data-cites="munafo2017">(<a href="references.html#ref-munafo2017" role="doc-biblioref">Munafò et al. 2017</a>)</span>. Problemas como o pequeno tamanho da amostra, pequenos tamanhos de efeito, p-hacking e HARKing (viés positivo de publicação), conflitos de interesse e a competição entre cientistas que trabalham isoladamente sem combinar seus esforços, têm sido apontados como catalizadores do que se convencionou chamar de “crise de reprodutibilidade” na ciência <span class="citation" data-cites="baker2016 munafo2017">(<a href="references.html#ref-baker2016" role="doc-biblioref">M. Baker 2016</a>; <a href="references.html#ref-munafo2017" role="doc-biblioref">Munafò et al. 2017</a>)</span>.</p>
+<p>Pesquisas apontam que mais de 70% de pesquisadores que tentaram, falharam em reproduzir os experimentos de outros cientistas, e mais da metade falhou em reproduzir seus próprios experimentos <span class="citation" data-cites="baker2016">(<a href="references.html#ref-baker2016" role="doc-biblioref">M. Baker 2016</a>)</span>, com estimativa de que 85% dos esforços de pesquisas estejam sendo desperdiçados <span class="citation" data-cites="munafo2017">(<a href="references.html#ref-munafo2017" role="doc-biblioref">Munafò et al. 2017</a>)</span>, gerando custos econômicos bilionários <span class="citation" data-cites="freedman2015">(<a href="references.html#ref-freedman2015" role="doc-biblioref">Freedman, Cockburn, and Simcoe 2015</a>)</span>.</p>
+<p>A despeito daqueles que advogam que não existe essa tal “crise de reprodutibilidade” <span class="citation" data-cites="bernard2023 fanelli2018 protzko2023">(<a href="references.html#ref-bernard2023" role="doc-biblioref">Bernard 2023</a>; <a href="references.html#ref-fanelli2018" role="doc-biblioref">Fanelli 2018</a>; <a href="references.html#ref-protzko2023" role="doc-biblioref">Protzko et al. 2023</a>)</span>, a grande maioria da comunidade científica concorda com sua existência e defende a melhoria da transparência, reprodutibilidade e eficiência na ciência <span class="citation" data-cites="baker2016">(<a href="references.html#ref-baker2016" role="doc-biblioref">M. Baker 2016</a>)</span>.</p>
+<p>Nesse contexto, o movimento da Ciência Aberta (CA) tem ganhado notoriedade e mudado a percepção sobre o cenário científico global <span class="citation" data-cites="cruwell2019">(<a href="references.html#ref-cruwell2019" role="doc-biblioref">Crüwell et al. 2019</a>)</span>. Ele busca tornar o conhecimento científico mais acessível, transparente e colaborativo. Se apresenta como uma coleção de práticas de democratização do conhecimento e ruptura com o formato único de divulgação do conhecimento científico <span class="citation" data-cites="cruwell2019 heinz2024 munafo2017">(<a href="references.html#ref-cruwell2019" role="doc-biblioref">Crüwell et al. 2019</a>; <a href="references.html#ref-heinz2024" role="doc-biblioref">Heinz and Miranda 2024</a>; <a href="references.html#ref-munafo2017" role="doc-biblioref">Munafò et al. 2017</a>)</span>. Ele surge do embate entre aqueles que buscam compartilhar o conhecimento e aqueles que defendem mecanismos de apropriação privada para a produção científica <span class="citation" data-cites="heinz2024">(<a href="references.html#ref-heinz2024" role="doc-biblioref">Heinz and Miranda 2024</a>)</span>.</p>
+<p>A CA é um termo múltiplo e genérico <span class="citation" data-cites="vicente-saez2018">(<a href="references.html#ref-vicente-saez2018" role="doc-biblioref">Vicente-Saez and Martinez-Fuentes 2018</a>)</span>, que representa diversas interpretações, e é considerada um novo modelo de divulgação e produção de resultados científicos por meio do acesso livre e irrestrito ao conhecimento <span class="citation" data-cites="heinz2024">(<a href="references.html#ref-heinz2024" role="doc-biblioref">Heinz and Miranda 2024</a>)</span>. A CA não é apenas um conceito, mas uma prática multifacetada que influencia o ciclo de vida da pesquisa, desde a concepção até a disseminação dos resultados <span class="citation" data-cites="silva2019">(<a href="references.html#ref-silva2019" role="doc-biblioref">Silva and Silveira 2019</a>)</span>.</p>
+<p>Existem pelo menos cinco escolas de pensamento dentro da CA. Estas escolas abrangem desde a arquitetura tecnológica necessária para suportar a ciência até a inclusão do público geral na criação de conhecimento, passando pela medição do impacto alternativo, acesso ao conhecimento como um direito humano, e a pesquisa colaborativa como inovação aberta <span class="citation" data-cites="silva2019">(<a href="references.html#ref-silva2019" role="doc-biblioref">Silva and Silveira 2019</a>)</span>.</p>
+<p>A taxonomia proposta pela <a href="https://www.fosteropenscience.eu/foster-taxonomy/open-workflow-tools">FOSTER</a> (Facilitate Open Science Training for Eurpean Research), e sua releitura revisada e ampliada para o contexto latino americano por <span class="citation" data-cites="silveira2023">Silveira et al. (<a href="references.html#ref-silveira2023" role="doc-biblioref">2023</a>)</span>, tendo em vista as recomendações da <span class="citation" data-cites="unesco2021">UNESCO (<a href="references.html#ref-unesco2021" role="doc-biblioref">2021</a>)</span>, nos dá uma dimensão da complexidade do assunto (vide ilustração em: <a href="https://doi.org/10.5281/zenodo.7836884" class="uri">https://doi.org/10.5281/zenodo.7836884</a>).</p>
+<p>Existem vários argumentos que sustentam a importância da CA <span class="citation" data-cites="heinz2024">(<a href="references.html#ref-heinz2024" role="doc-biblioref">Heinz and Miranda 2024</a>)</span>. Primeiramente, a CA pode trazer benefícios sociais significativos, pois contribui para o avanço do conhecimento, a inovação, a educação, a transparência e a participação cidadã. Além disso, a CA pode trazer benefícios científicos ao aumentar a qualidade, a reprodutibilidade, a eficiência e o impacto da pesquisa científica. Ela também facilita a colaboração, a comunicação e a interdisciplinaridade entre os pesquisadores. Por fim, a CA pode trazer benefícios éticos ao promover a integridade, a responsabilidade, a equidade e a diversidade na ciência, além de respeitar os direitos dos autores, dos participantes e da sociedade como um todo.</p>
+<p>Esses argumentos são fundamentais para legitimar a CA e destacar sua importância no mundo atual <span class="citation" data-cites="heinz2024">(<a href="references.html#ref-heinz2024" role="doc-biblioref">Heinz and Miranda 2024</a>)</span>, principalmente, como potencial transformador para reduzir desigualdades existentes em tecnologias de informação e comunicação – reduzir exclusões digitais, tecnológicas e de conhecimento –, e acelerar o progresso rumo à implementação da Agenda 2030 e realização dos Objetivos de Desenvolvimento Sustentável <span class="citation" data-cites="unesco2021">(<a href="references.html#ref-unesco2021" role="doc-biblioref">UNESCO 2021</a>)</span>.</p>
+<p>O movimento da CA no Brasil está em uma fase transitória <span class="citation" data-cites="rezende2020">(<a href="references.html#ref-rezende2020" role="doc-biblioref">Rezende and Falgueras 2020</a>)</span> – ainda consolidando o acesso aberto – com o governo desempenhando um papel crucial nesse processo. O Brasil tem ganhado destaque por sua abordagem única na implementação da CA. Esta abordagem é moldada por marcos regulatórios que se estendem desde o governo até as instituições e agências de financiamento. Os regulamentos brasileiros, particularmente aqueles que promovem a abertura de dados governamentais, têm um impacto direto na prática científica. Eles incentivam a transparência e facilitam o acesso a dados científicos originados de instituições públicas <span class="citation" data-cites="rezende2020">(<a href="references.html#ref-rezende2020" role="doc-biblioref">Rezende and Falgueras 2020</a>)</span>.</p>
+<p>A trajetória brasileira rumo à CA inicia com a abertura de dados na esfera governamental entre 2009 e 2016, evoluindo para a criação de um grupo de trabalho em 2017 pelo Ministério da Ciência, Tecnologia, Inovações e Comunicações (MCTIC) para desenvolver uma política nacional para a CA. Este esforço concentrou ênfase no reconhecimento dos dados de pesquisa como ativos de desenvolvimento científico, econômico e social, buscando facilitar seu acesso, compartilhamento e reutilização <span class="citation" data-cites="rezende2020">(<a href="references.html#ref-rezende2020" role="doc-biblioref">Rezende and Falgueras 2020</a>)</span>.</p>
+<p>Talvez por esse motivo, as políticas institucionais brasileiras revelam um cenário ainda muito influenciado pela “via verde” do movimento de acesso aberto, caracterizado pelo depósito de dados em repositórios digitais abertos, e que o comprometimento efetivo do Brasil com a CA ainda é incipiente. As regulamentações atuais favorecem principalmente o acesso aberto, sem abordar de maneira abrangente outros aspectos da CA <span class="citation" data-cites="rezende2020">(<a href="references.html#ref-rezende2020" role="doc-biblioref">Rezende and Falgueras 2020</a>)</span>. O Brasil é um dos líderes mundiais no fornecimento de acesso universal às suas pesquisas e estudos <span class="citation" data-cites="neto2016">(<a href="references.html#ref-neto2016" role="doc-biblioref">Neto, Willinsky, and Alperin 2016</a>)</span>, com crescimento estável de sua produção científica disponível em acesso aberto, principalmente, as áreas de Agricultura e Ciência &amp; Tecnologia <span class="citation" data-cites="caballero-rivero2019">(<a href="references.html#ref-caballero-rivero2019" role="doc-biblioref">Caballero-Rivero, Sánchez-Tarragó, and Santos 2019</a>)</span>.</p>
+<p>Em termos de pesquisa acadêmica sobre o tema no Brasil, os estudos são precoces e concentrados na área de Ciência da Informação <span class="citation" data-cites="albano2023">(<a href="references.html#ref-albano2023" role="doc-biblioref">Albano, Pedroso, and Caetano 2023</a>)</span>. A despeito da maturidade da CA no Brasil, a importância do tema – materializada na quantidade de produção acadêmica – tem aumentado vertiginosamente <span class="citation" data-cites="albano2023">(<a href="references.html#ref-albano2023" role="doc-biblioref">Albano, Pedroso, and Caetano 2023</a>)</span>, e a dispersão de autores e respectivas instituições que publicam sobre o assunto, parece ser a situação predominante.</p>
+<p>Apesar de importantes atores nacionais, tais como CAPES, CNPq e Scielo, defenderem o crescimento de iniciativas de CA <span class="citation" data-cites="mendes-da-silva2023">(<a href="references.html#ref-mendes-da-silva2023" role="doc-biblioref">Mendes-Da-Silva 2023</a>)</span>, o assunto no Brasil parece estar circunscrito em iniciativas de importantes periódicos nacionais sobre dados aberto, capitaneados pelas orientações da Scielo. Não foi encontrada nenhuma pesquisa empírica, sobre a prática da CA no Brasil.</p>
+<p>Por prática de CA entende-se a perspectiva micro da CA, relacionadas com as terminologias e conhecimento em torno do fluxo de trabalho do gerador de conhecimento científico aberto (<a href="#fig-ca-micro" class="quarto-xref">Figure&nbsp;<span>1.1</span></a>), ou seja, o cientista que se propõe tornar sua pesquisa transparente, reprodutível e replicável.</p>
+<div id="fig-ca-micro" class="quarto-figure quarto-figure-left quarto-float anchored" data-fig-align="left" alt="Perspectiva micro da CA">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ca-micro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/ca-micro.png" class="img-fluid quarto-figure quarto-figure-left figure-img" alt="Perspectiva micro da CA">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ca-micro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.1: Perspectiva micro da CA. Taxonomia relacionada com terminologias e conhecimento em torno da prática (fluxo de trabalho) do gerador de conhecimento científico aberto. Ilustração disponível em: <a href="https://doi.org/10.5281/zenodo.10835001" class="uri">https://doi.org/10.5281/zenodo.10835001</a>.
+</figcaption>
+</figure>
+</div>
+<p>Exclui-se a perspectiva macro, relacionadas com as ramificações conceituais da CA concernentes às políticas públicas, infraestrutura, envolvimento aberto de atores sociais e diálogo aberto com outros sistemas de conhecimento (<a href="#fig-ca-macro" class="quarto-xref">Figure&nbsp;<span>1.2</span></a>). Essa última perspectiva está fora do escopo da discussão do curso, que se concentra em algumas das dimensões da perspectiva micro, particularmente, as ferramentas disponíveis para compilação dos produtos científicos que integram a publicação científica <span class="citation" data-cites="unesco2021">(<a href="references.html#ref-unesco2021" role="doc-biblioref">UNESCO 2021</a>)</span>.</p>
+<div id="fig-ca-macro" class="quarto-figure quarto-figure-left quarto-float anchored" data-fig-align="left" alt="Perspectiva macro da CA">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ca-macro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/ca-macro.png" class="img-fluid quarto-figure quarto-figure-left figure-img" alt="Perspectiva macro da CA">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ca-macro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.2: Perspectiva macro da CA. Taxonomia relacionada com as ramificações conceituais da CA concernentes às políticas (públicas), infraestrutura, envolvimento aberto de atores sociais (sociedade) e diálogo aberto com outros sistemas de conhecimento. Ilustração disponível em: <a href="https://doi.org/10.5281/zenodo.10835001" class="uri">https://doi.org/10.5281/zenodo.10835001</a>
+</figcaption>
+</figure>
+</div>
+<p>Apesar de uma verossímil expectativa desabonadora, tendo em vista o contexto da CA no Brasil, o diagnóstico da situação da prática da CA se mostra importante, <em>per si</em>, pois:</p>
+<ol type="1">
+<li><p>ajuda a compreender a natureza exata do problema, suas causas, efeitos e riscos;</p></li>
+<li><p>auxilia a alocação eficiente de recursos pelos atores envolvidos (e.g., os programas de pós-graduação podem direcionar os recursos para onde eles são mais necessários e onde terão o maior impacto;</p></li>
+<li><p>orienta indicadores de desempenho e metas realistas, o que facilita a avaliação do progresso e a eficácia das ações tomadas;</p></li>
+<li><p>permite que os atores envolvidos aprendam com os problemas enfrentados, adaptando-se e melhorando suas estratégias e processos para o futuro; e</p></li>
+<li><p>torna possível desenvolver soluções ou intervenções que sejam diretamente direcionadas ao problema em questão, aumentando as chances de sucesso.</p></li>
+</ol>
+<p>Sobre esse último ponto, até para aqueles que não reconhecem a “crise de reprodutibilidade” na ciência <span class="citation" data-cites="bernard2023">(<a href="references.html#ref-bernard2023" role="doc-biblioref">Bernard 2023</a>)</span>, a comunidade científica e atores importantes do cenário advogam que a solução inclui educar os estudantes e pesquisadores desde cedo em todas as questões da CA <span class="citation" data-cites="baker2023 bezjak2018 chopik2018 cruwell2019 dogucu2022 janz2015 mcaleer2022 munafo2017 toelch2018">(<a href="references.html#ref-baker2023" role="doc-biblioref">D. H. Baker et al. 2023</a>; <a href="references.html#ref-bezjak2018" role="doc-biblioref">Bezjak et al. 2018</a>; <a href="references.html#ref-chopik2018" role="doc-biblioref">Chopik et al. 2018</a>; <a href="references.html#ref-cruwell2019" role="doc-biblioref">Crüwell et al. 2019</a>; <a href="references.html#ref-dogucu2022" role="doc-biblioref">Dogucu and Çetinkaya-Rundel 2022</a>; <a href="references.html#ref-janz2015" role="doc-biblioref">Janz 2015</a>; <a href="references.html#ref-mcaleer2022" role="doc-biblioref">McAleer et al. 2022</a>; <a href="references.html#ref-munafo2017" role="doc-biblioref">Munafò et al. 2017</a>; <a href="references.html#ref-toelch2018" role="doc-biblioref">Toelch and Ostwald 2018</a>)</span>.</p>
+<p>A referida crise não deriva de má conduta científica, mas principalmente da confusão entre replicar conclusões, replicar resultados, falta de educação em estatística, lógica científica, método científico, alfabetização de dados, etc. Para combater essas questões é necessário investir em educação e disseminação de boas práticas de investigação para uma mudança de cultura <span class="citation" data-cites="baker2023 bezjak2018 chopik2018 cruwell2019 dogucu2022 janz2015 mcaleer2022 munafo2017 toelch2018">(<a href="references.html#ref-baker2023" role="doc-biblioref">D. H. Baker et al. 2023</a>; <a href="references.html#ref-bezjak2018" role="doc-biblioref">Bezjak et al. 2018</a>; <a href="references.html#ref-chopik2018" role="doc-biblioref">Chopik et al. 2018</a>; <a href="references.html#ref-cruwell2019" role="doc-biblioref">Crüwell et al. 2019</a>; <a href="references.html#ref-dogucu2022" role="doc-biblioref">Dogucu and Çetinkaya-Rundel 2022</a>; <a href="references.html#ref-janz2015" role="doc-biblioref">Janz 2015</a>; <a href="references.html#ref-mcaleer2022" role="doc-biblioref">McAleer et al. 2022</a>; <a href="references.html#ref-munafo2017" role="doc-biblioref">Munafò et al. 2017</a>; <a href="references.html#ref-toelch2018" role="doc-biblioref">Toelch and Ostwald 2018</a>)</span>.</p>
+<p>Investir em recursos humanos, treinamento, educação, alfabetização digital, capacitação sistemática e contínua, e fomentar uma cultura científica de CA, têm sido apresentadas como algumas das principais medidas simultâneas para superar o cenário atual <span class="citation" data-cites="crrs2019 EU2017 unesco2021">(<a href="references.html#ref-crrs2019" role="doc-biblioref">Committee on Reproducibility and Replicability in Science et al. 2019</a>; <a href="references.html#ref-EU2017" role="doc-biblioref">European Commission. Directorate General for Research and Innovation. 2017</a>; <a href="references.html#ref-unesco2021" role="doc-biblioref">UNESCO 2021</a>)</span>. A proposta do curso pode contribuir para a literatura da CA no Brasil, pois pretende perseguir dois objetivos concomitantes: 1) diagnosticar sua prática junto aos pesquisadores brasileiros; e 2) promover o desenvolvimento de uma intervenção educacional sobre a prática (workflow) e principais ferramentas para compilação dos produtos científicos que integram uma publicação científica aberta.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="citation" data-cites="klein2018">Klein et al. (<a href="references.html#ref-klein2018" role="doc-biblioref">2018</a>)</span> <em>Reading Note</em> (<a href="00-prework.html#tip-prompt" class="quarto-xref">Tip&nbsp;<span>1</span></a>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>O artigo é um guia prático para pesquisadores que desejam compartilhar os produtos de sua pesquisa. Os autores argumentam que as práticas de pesquisa transparentes são essenciais para melhorar a credibilidade e a cumulatividade da ciência.</p>
+<p>O artigo fornece recomendações específicas sobre como compartilhar os seguintes produtos de pesquisa:</p>
+<ul>
+<li>Protocolo de estudo</li>
+<li>Materiais</li>
+<li>Dados e metadados</li>
+<li>Procedimento de análise</li>
+<li>Relatórios de pesquisa</li>
+</ul>
+<p>As recomendações gerais dos autores são as seguintes:</p>
+<ul>
+<li><p><strong>Torne a transparência um padrão</strong>: isso significa compartilhar o máximo possível de informações sobre sua pesquisa, desde o início do processo.</p></li>
+<li><p><strong>Não deixe que o perfeito seja inimigo do bom</strong>: mesmo que você não possa compartilhar todos os detalhes de sua pesquisa, compartilhar alguma coisa é melhor do que nada.</p></li>
+<li><p><strong>Compartilhe e documente o que puder</strong>: isso ajudará a garantir que sua pesquisa seja reproduzível e confiável.</p></li>
+<li><p><strong>Comece cedo</strong>: começar a compartilhar informações sobre sua pesquisa no início do processo pode ajudá-lo a evitar problemas e economizar tempo.</p></li>
+</ul>
+<p>Os autores também discutem algumas preocupações comuns que os pesquisadores têm sobre as práticas de pesquisa transparentes. Eles argumentam que essas preocupações são geralmente infundadas e que as práticas transparentes têm muitos benefícios.</p>
+<p>Os principais benefícios das práticas de pesquisa transparentes são:</p>
+<ul>
+<li><p><strong>Melhor credibilidade da pesquisa</strong>: os pesquisadores transparentes são mais propensos a serem vistos como confiáveis e honestos.</p></li>
+<li><p><strong>Maior cumulatividade da ciência</strong>: os pesquisadores transparentes tornam mais fácil para outros pesquisadores construir sobre seu trabalho.</p></li>
+<li><p><strong>Mais oportunidades de colaboração e financiamento</strong>: os pesquisadores transparentes são mais propensos a serem convidados para colaborar com outros pesquisadores e a receber financiamento.</p></li>
+<li><p><strong>Maior eficiência da pesquisa</strong>: as práticas transparentes podem ajudar os pesquisadores a economizar tempo e recursos.</p></li>
+</ul>
+<p>Em conclusão, o artigo fornece informações valiosas para pesquisadores que desejam compartilhar os produtos de sua pesquisa. As recomendações dos autores são baseadas em evidências e podem ajudar os pesquisadores a melhorar a qualidade e a credibilidade de seu trabalho.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="citation" data-cites="kathawalla2021">Kathawalla, Silverstein, and Syed (<a href="references.html#ref-kathawalla2021" role="doc-biblioref">2021</a>)</span> <em>Reading Note</em> (<a href="00-prework.html#tip-prompt" class="quarto-xref">Tip&nbsp;<span>1</span></a>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Este artigo fornece um guia para ajudar estudantes de pós-graduação e seus orientadores a se envolverem na prática da ciência aberta (CA). A CA é descrita como um termo amplo que se refere a uma variedade de princípios e comportamentos relacionados à transparência, credibilidade, reprodutibilidade e acessibilidade.</p>
+<p>O artigo sugere oito práticas de CA (das quais destaco sete) que estudantes de pós-graduação iniciantes podem começar a adotar hoje. Cada comportamento é classificado em termos de dificuldade (fácil, médio, difícil) e apresentado em ordem de adoção sugerida. Em cada prática, eles seguem o formato de o quê, por quê, como e preocupações.</p>
+<p>Algumas das práticas sugeridas incluem:</p>
+<ol type="1">
+<li><p><strong>Fluxo de Trabalho do Projeto (Nível Fácil)</strong>: isso inclui a estrutura da pasta do arquivo, convenções de nomenclatura de documentos, controle de versão, armazenamento em nuvem e outros detalhes. Ter um sistema de fluxo de trabalho de projeto dedicado ajuda a manter sua pesquisa organizada, melhorando a reprodutibilidade, minimizando erros e facilitando colaborações com outros e com você no futuro.</p></li>
+<li><p><strong>Preprints (Nível Fácil)</strong>: postar um manuscrito antes de submetê-lo a uma revista permite um feedback mais amplo do que o que é proporcionado pela revisão por pares e pode ajudar a melhorar um artigo antes da submissão, identificando quaisquer falhas importantes.</p></li>
+<li><p><strong>Código Reprodutível (Nível Médio)</strong>: o código reprodutível para análise de dados e visualizações (por exemplo, tabelas, figuras) refere-se a uma versão detalhada e escrita do seu código que permitiria a outra pessoa (ou a você no futuro) gerar a mesma saída relatada em seu manuscrito.</p></li>
+<li><p><strong>Compartilhamento de Dados (Nível Médio)</strong>: compartilhar dados refere-se a tornar o conjunto de dados desidentificado usado para um projeto disponível para outros pesquisadores.</p></li>
+<li><p><strong>Escrita de Manuscrito Transparente (Nível Médio)</strong>: Para escrever um manuscrito transparente, claro e reprodutível, é útil seguir as diretrizes ou padrões de escrita de manuscritos.</p></li>
+<li><p><strong>Pré-registro (Nível Médio)</strong>: o pré-registro refere-se à postagem de um esboço cronometrado das perguntas de pesquisa, hipóteses, método e plano de análise para um projeto específico antes da coleta de dados e/ou análise.</p></li>
+<li><p><strong>Relatório Registrado (Nível Difícil)</strong>: os Relatórios Registrados envolvem um processo de submissão em duas partes, onde os autores primeiro enviam uma proposta de Estágio 1, que inclui a introdução, método e plano de análise - tudo antes que a coleta de dados e/ou análise tenha sido feita.</p></li>
+</ol>
+<p>O artigo enfatiza que se envolver em uma prática de CA é melhor do que nenhuma e que a CA é apenas uma boa ciência. Além disso, sugere-se que se construa sobre o trabalho que já foi feito em vez de reinventar a roda. A maioria das práticas sugeridas se concentra no uso do <a href="https://osf.io">Open Science Framework</a>.</p>
+</div>
+</div>
+</div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-albano2023" class="csl-entry" role="listitem">
+Albano, Cláudio Sonáglio, Paula de Oliveira Pedroso, and Doriedson Oliveira Caetano. 2023. <span>“Ci<span>ê</span>ncia <span>Aberta</span>: <span>Um Panorama</span> Sobre as <span class="nocase">Publica<span class="nocase">ç</span><span class="nocase">õ</span>es</span> No <span class="nocase">Cen<span class="nocase">á</span>rio Brasileiro</span>.”</span> <em>Saber Cient<span>í</span>fico</em> 12 (1): 1–12.
+</div>
+<div id="ref-baker2023" class="csl-entry" role="listitem">
+Baker, Daniel H, Mareike Berg, Kirralise Hansford, Bartholomew Patrick Anselm Quinn, Federico Gabriele Segala, and Erin English. 2023. <span>“<span>ReproduceMe</span>: Lessons from a Pilot Project on Computational Reproducibility.”</span> Preprint. PsyArXiv. <a href="https://doi.org/10.31234/osf.io/k8d4u">https://doi.org/10.31234/osf.io/k8d4u</a>.
+</div>
+<div id="ref-baker2016" class="csl-entry" role="listitem">
+Baker, Monya. 2016. <span>“1,500 Scientists Lift the Lid on Reproducibility.”</span> <em>Nature</em> 533 (7604): 452–54. <a href="https://doi.org/10.1038/533452a">https://doi.org/10.1038/533452a</a>.
+</div>
+<div id="ref-bernard2023" class="csl-entry" role="listitem">
+Bernard, Christophe. 2023. <span>“Stop <span>Reproducing</span> the <span>Reproducibility Crisis</span>.”</span> <em>Eneuro</em> 10 (2): ENEURO.0032–23.2023. <a href="https://doi.org/10.1523/ENEURO.0032-23.2023">https://doi.org/10.1523/ENEURO.0032-23.2023</a>.
+</div>
+<div id="ref-bezjak2018" class="csl-entry" role="listitem">
+Bezjak, Sonja, April Clyburne-Sherin, Philipp Conzett, Pedro Fernandes, Edit Görögh, Kerstin Helbig, Bianca Kramer, et al. 2018. <em>Open <span>Science Training Handbook</span></em>. Zenodo. <a href="https://doi.org/10.5281/ZENODO.1212496">https://doi.org/10.5281/ZENODO.1212496</a>.
+</div>
+<div id="ref-caballero-rivero2019" class="csl-entry" role="listitem">
+Caballero-Rivero, Alejandro, Nancy Sánchez-Tarragó, and Raimundo Nonato Macedo dos Santos. 2019. <span>“<span>Pr<span>á</span>ticas de Ci<span>ê</span>ncia Aberta da comunidade acad<span>ê</span>mica brasileira: estudo a partir da produ<span>ç</span><span>ã</span>o cient<span>í</span>fica</span>.”</span> <em>Transinforma<span>ç</span><span>ã</span>o</em> 31 (November): e190029. <a href="https://doi.org/10.1590/2318-0889201931e190029">https://doi.org/10.1590/2318-0889201931e190029</a>.
+</div>
+<div id="ref-chopik2018" class="csl-entry" role="listitem">
+Chopik, William J., Ryan H. Bremner, Andrew M. Defever, and Victor N. Keller. 2018. <span>“How (and <span>Whether</span>) to <span>Teach Undergraduates About</span> the <span>Replication Crisis</span> in <span>Psychological Science</span>.”</span> <em>Teaching of Psychology</em> 45 (2): 158–63. <a href="https://doi.org/10.1177/0098628318762900">https://doi.org/10.1177/0098628318762900</a>.
+</div>
+<div id="ref-crrs2019" class="csl-entry" role="listitem">
+Committee on Reproducibility and Replicability in Science, Board on Behavioral, Cognitive, and Sensory Sciences, Committee on National Statistics, Division of Behavioral and Social Sciences and Education, Nuclear and Radiation Studies Board, Division on Earth and Life Studies, Board on Mathematical Sciences and Analytics, et al. 2019. <em>Reproducibility and <span>Replicability</span> in <span>Science</span></em>. Washington, D.C.: National Academies Press. <a href="https://doi.org/10.17226/25303">https://doi.org/10.17226/25303</a>.
+</div>
+<div id="ref-cruwell2019" class="csl-entry" role="listitem">
+Crüwell, Sophia, Johnny Van Doorn, Alexander Etz, Matthew C. Makel, Hannah Moshontz, Jesse C. Niebaum, Amy Orben, Sam Parsons, and Michael Schulte-Mecklenbeck. 2019. <span>“Seven <span>Easy Steps</span> to <span>Open Science</span>: <span>An Annotated Reading List</span>.”</span> <em>Zeitschrift f<span>ü</span>r Psychologie</em> 227 (4): 237–48. <a href="https://doi.org/10.1027/2151-2604/a000387">https://doi.org/10.1027/2151-2604/a000387</a>.
+</div>
+<div id="ref-dogucu2022" class="csl-entry" role="listitem">
+Dogucu, Mine, and Mine Çetinkaya-Rundel. 2022. <span>“Tools and <span>Recommendations</span> for <span>Reproducible Teaching</span>.”</span> <em>Journal of Statistics and Data Science Education</em> 30 (3): 251–60. <a href="https://doi.org/10.1080/26939169.2022.2138645">https://doi.org/10.1080/26939169.2022.2138645</a>.
+</div>
+<div id="ref-EU2017" class="csl-entry" role="listitem">
+European Commission. Directorate General for Research and Innovation. 2017. <em>Providing Researchers with the Skills and Competencies They Need to Practise <span>Open Science</span>.</em> LU: Publications Office. <a href="https://data.europa.eu/doi/10.2777/121253">https://data.europa.eu/doi/10.2777/121253</a>.
+</div>
+<div id="ref-fanelli2018" class="csl-entry" role="listitem">
+Fanelli, Daniele. 2018. <span>“Is Science Really Facing a Reproducibility Crisis, and Do We Need It To?”</span> <em>Proceedings of the National Academy of Sciences</em> 115 (11): 2628–31. <a href="https://doi.org/10.1073/pnas.1708272114">https://doi.org/10.1073/pnas.1708272114</a>.
+</div>
+<div id="ref-freedman2015" class="csl-entry" role="listitem">
+Freedman, Leonard P., Iain M. Cockburn, and Timothy S. Simcoe. 2015. <span>“The <span>Economics</span> of <span>Reproducibility</span> in <span>Preclinical Research</span>.”</span> <em>PLOS Biology</em> 13 (6): e1002165. <a href="https://doi.org/10.1371/journal.pbio.1002165">https://doi.org/10.1371/journal.pbio.1002165</a>.
+</div>
+<div id="ref-heinz2024" class="csl-entry" role="listitem">
+Heinz, Michele, and Miranda Miranda. 2024. <span>“Ci<span>ê</span>ncia <span>Aberta</span>: Argumentos e Desafios Para Sua Legitima<span>ç</span><span>ã</span>o Cient<span>í</span>fica.”</span> <em>Em Quest<span>ã</span>o</em> 30. <a href="https://doi.org/10.1590/1808-5245.30.135618">https://doi.org/10.1590/1808-5245.30.135618</a>.
+</div>
+<div id="ref-janz2015" class="csl-entry" role="listitem">
+Janz, Nicole. 2015. <span>“Bringing the <span>Gold Standard</span> into the <span>Classroom</span>: <span>Replication</span> in <span>University Teaching</span>.”</span> <em>International Studies Perspectives</em>, March, n/a–. <a href="https://doi.org/10.1111/insp.12104">https://doi.org/10.1111/insp.12104</a>.
+</div>
+<div id="ref-kathawalla2021" class="csl-entry" role="listitem">
+Kathawalla, Ummul-Kiram, Priya Silverstein, and Moin Syed. 2021. <span>“Easing <span>Into Open Science</span>: <span>A Guide</span> for <span>Graduate Students</span> and <span>Their Advisors</span>.”</span> <em>Collabra: Psychology</em> 7 (1): 18684. <a href="https://doi.org/10.1525/collabra.18684">https://doi.org/10.1525/collabra.18684</a>.
+</div>
+<div id="ref-klein2018" class="csl-entry" role="listitem">
+Klein, Olivier, Tom E. Hardwicke, Frederik Aust, Johannes Breuer, Henrik Danielsson, Alicia Hofelich Mohr, Hans IJzerman, Gustav Nilsonne, Wolf Vanpaemel, and Michael C. Frank. 2018. <span>“A <span>Practical Guide</span> for <span>Transparency</span> in <span>Psychological Science</span>.”</span> Edited by Michéle Nuijten and Simine Vazire. <em>Collabra: Psychology</em> 4 (1): 20. <a href="https://doi.org/10.1525/collabra.158">https://doi.org/10.1525/collabra.158</a>.
+</div>
+<div id="ref-mcaleer2022" class="csl-entry" role="listitem">
+McAleer, Phil, Niamh Stack, Heather Woods, Lisa Marie DeBruine, Helena Paterson, Emily Nordmann, Carolina Ellen Kuepper-Tetzel, and Dale J. Barr. 2022. <span>“Embedding <span>Data Skills</span> in <span>Research Methods Education</span>: <span>Preparing Students</span> for <span>Reproducible Research</span>.”</span> Preprint. PsyArXiv. <a href="https://doi.org/10.31234/osf.io/hq68s">https://doi.org/10.31234/osf.io/hq68s</a>.
+</div>
+<div id="ref-mendes-da-silva2023" class="csl-entry" role="listitem">
+Mendes-Da-Silva, Wesley. 2023. <span>“What <span>Lectures</span> and <span>Research</span> in <span>Business Management Need</span> to <span>Know About Open Science</span>.”</span> <em>Revista de Administra<span>ç</span><span>ã</span>o de Empresas</em> 63 (4): e0000–0033. <a href="https://doi.org/10.1590/s0034-759020230408x">https://doi.org/10.1590/s0034-759020230408x</a>.
+</div>
+<div id="ref-munafo2017" class="csl-entry" role="listitem">
+Munafò, Marcus R., Brian A. Nosek, Dorothy V. M. Bishop, Katherine S. Button, Christopher D. Chambers, Nathalie Percie Du Sert, Uri Simonsohn, Eric-Jan Wagenmakers, Jennifer J. Ware, and John P. A. Ioannidis. 2017. <span>“A Manifesto for Reproducible Science.”</span> <em>Nature Human Behaviour</em> 1 (1): 0021. <a href="https://doi.org/10.1038/s41562-016-0021">https://doi.org/10.1038/s41562-016-0021</a>.
+</div>
+<div id="ref-neto2016" class="csl-entry" role="listitem">
+Neto, Silvio Carvalho, John Willinsky, and Juan Pablo Alperin. 2016. <span>“Measuring, Rating, Supporting, and Strengthening Open Access Scholarly Publishing in <span>Brazil</span>.”</span> <em>Education Policy Analysis Archives</em> 24 (May): 54–54. <a href="https://doi.org/10.14507/epaa.24.2391">https://doi.org/10.14507/epaa.24.2391</a>.
+</div>
+<div id="ref-protzko2023" class="csl-entry" role="listitem">
+Protzko, John, Jon Krosnick, Leif Nelson, Brian A. Nosek, Jordan Axt, Matt Berent, Nicholas Buttrick, et al. 2023. <span>“High Replicability of Newly Discovered Social-Behavioural Findings Is Achievable.”</span> <em>Nature Human Behaviour</em>, November. <a href="https://doi.org/10.1038/s41562-023-01749-9">https://doi.org/10.1038/s41562-023-01749-9</a>.
+</div>
+<div id="ref-rezende2020" class="csl-entry" role="listitem">
+Rezende, Laura Vilela Rodrigues, and Ernest Abadal Falgueras. 2020. <span>“Estado Da Arte Dos Marcos Regulat<span>ó</span>rios Brasileiros Rumo <span class="nocase">à</span> <span class="nocase">Ci<span class="nocase">ê</span>ncia Aberta</span>.”</span> <em>Encontros Bibli: Revista Eletr<span>ô</span>nica de Biblioteconomia e Ci<span>ê</span>ncia Da Informa<span>ç</span><span>ã</span>o</em> 25 (September): 01–25. <a href="https://doi.org/10.5007/1518-2924.2020.e71370">https://doi.org/10.5007/1518-2924.2020.e71370</a>.
+</div>
+<div id="ref-silva2019" class="csl-entry" role="listitem">
+Silva, Fabiano Couto Corrêa Da, and Lúcia Da Silveira. 2019. <span>“O Ecossistema Da <span class="nocase">Ci<span class="nocase">ê</span>ncia Aberta</span>.”</span> <em>Transinforma<span>ç</span><span>ã</span>o</em> 31: e190001. <a href="https://doi.org/10.1590/2318-0889201931e190001">https://doi.org/10.1590/2318-0889201931e190001</a>.
+</div>
+<div id="ref-silveira2023" class="csl-entry" role="listitem">
+Silveira, Lúcia Da, Nivaldo Calixto Ribeiro, Remedios Melero, Andrea Mora-Campos, Daniel Fernando Piraquive-Piraquive, Alejandro Uribe Tirado, Priscila Machado Borges Sena, et al. 2023. <span>“Taxonomia Da <span class="nocase">Ci<span class="nocase">ê</span>ncia Aberta</span>: Revisada e Ampliada.”</span> <em>Encontros Bibli: Revista Eletr<span>ô</span>nica de Biblioteconomia e Ci<span>ê</span>ncia Da Informa<span>ç</span><span>ã</span>o</em> 28 (June). <a href="https://doi.org/10.5007/1518-2924.2023.e91712">https://doi.org/10.5007/1518-2924.2023.e91712</a>.
+</div>
+<div id="ref-toelch2018" class="csl-entry" role="listitem">
+Toelch, Ulf, and Dirk Ostwald. 2018. <span>“Digital Open Science—<span>Teaching</span> Digital Tools for Reproducible and Transparent Research.”</span> <em>PLOS Biology</em> 16 (7): e2006022. <a href="https://doi.org/10.1371/journal.pbio.2006022">https://doi.org/10.1371/journal.pbio.2006022</a>.
+</div>
+<div id="ref-unesco2021" class="csl-entry" role="listitem">
+UNESCO. 2021. <span>“<span>UNESCO Recommendation</span> on <span>Open Science</span>.”</span> UNESCO. <a href="https://doi.org/10.54677/MNMH8546">https://doi.org/10.54677/MNMH8546</a>.
+</div>
+<div id="ref-vicente-saez2018" class="csl-entry" role="listitem">
+Vicente-Saez, Ruben, and Clara Martinez-Fuentes. 2018. <span>“Open <span>Science</span> Now: <span>A</span> Systematic Literature Review for an Integrated Definition.”</span> <em>Journal of Business Research</em> 88 (July): 428–36. <a href="https://doi.org/10.1016/j.jbusres.2017.12.043">https://doi.org/10.1016/j.jbusres.2017.12.043</a>.
+</div>
+</div>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>O texto apresentado nessa seção é uma compilação de fragmentos do Projeto APQ-01225-24 submetido ao Edital Nº 001/2024 - Demanda Universal, da FAPEMIG, ainda em análise. O detalhamento desse projeto, quando se tornar público, poderá ser acompanhado no <a href="osf.io/dnrgf">OSF</a>: Rogers, P., Limongi, R., &amp; Barboza, F. (2024, May 29). The Practice of Open Science in Brazil. Retrieved from osf.io/dnrgf<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
