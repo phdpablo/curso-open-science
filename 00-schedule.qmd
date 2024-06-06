@@ -1,14 +1,16 @@
 # Agenda 📅 {#sec-schedule .unnumbered .unlisted}
 
-Planejamento dos dias (📅) e horários das aulas (⏲️), conforme a ementa do curso. Na seção de cada uma das aulas temos materiais adicionais para o respectivo conteúdo. Quando disponível, por aqui, poderás acessar os slides utilizados nas aulas (🗣️), aulas gravadas ou indicações de vídeo (🎥) e leituras básica sobre os conteúdos (📓).
+Planejamento dos dias (📅) e horários das aulas (⏲️), conforme a ementa do curso. Na seção de cada uma das aulas temos materiais adicionais para o respectivo conteúdo. Quando disponível, por aqui, poderás acessar os slides utilizados nas aulas (🗣️), aulas gravadas ou indicações de vídeo (🎥)[^00-schedule-1] e leituras básica sobre os conteúdos (📓).
 
-| Aula/Conteúdo |       Data        | Material Principal |    Instrutor    |
-|:--------------|:-----------------:|:------------------:|:---------------:|
-| @sec-intro    | 📅04/06/24⏲️19:00 |       🗣️🎥📓       | Ricardo Limongi |
-| @sec-osf      | 📅06/06/24⏲️19:00 |       🗣️🎥📓       |  Pablo Rogers   |
-| @sec-zotero   | 📅11/06/24⏲️19:00 |       🗣️🎥📓       |  Pablo Rogers   |
-| @sec-project  | 📅13/06/24⏲️19:00 |       🗣️🎥📓       |  Pablo Rogers   |
-| @sec-git      | 📅18/06/24⏲️19:00 |       🗣️🎥📓       |  Pablo Rogers   |
-| @sec-quarto   | 📅20/06/24⏲️19:00 |       🗣️🎥📓       |  Pablo Rogers   |
-| @sec-docker   | 📅25/06/24⏲️19:00 |       🗣️🎥📓       |  Pablo Rogers   |
-| @sec-AI       | 📅27/06/24⏲️19:00 |       🗣️🎥📓       | Ricardo Limongi |
+[^00-schedule-1]: Na primeira edição do curso a equipe organizadora decidiu não publicar as aulas. Elas estarão disponíveis apenas privativamente para os inscritos no curso, através da platorma de reuniões adotada (Microsoft Teams). No futuro, quando o coordenador considerar que o curso esteja efetivamente formatado, as aulas gravadas serão publicadas no canal [Psico&Econo_METRIA](https://www.youtube.com/c/PsicoEconoMETRIA)
+
+| Aula/Conteúdo |       Data        |                                                               Material Principal                                                                |    Instrutor    |
+|:----------|:---------:|:--------------------------------------:|:---------:|
+| @sec-intro    | 📅04/06/24⏲️19:00 | [🗣](/resources/01-intro.pptx)[🎥](https://www.youtube.com/live/7ewEcTATkZM?si=Lq40IAoDgsy_A619)[📓](https://doi.org/10.1590/S0034-759020230408) | Ricardo Limongi |
+| @sec-osf      | 📅06/06/24⏲️19:00 |                [🗣️](https://osf.io/wm8vs)[🎥](https://www.youtube.com/watch?v=B19MPDJX_vs)[📓](https://doi.org/10.1002/cpet.32)                 |  Pablo Rogers   |
+| @sec-zotero   | 📅11/06/24⏲️19:00 |                                                                     🗣️🎥📓                                                                      |  Pablo Rogers   |
+| @sec-project  | 📅13/06/24⏲️19:00 |                                                                     🗣️🎥📓                                                                      |  Pablo Rogers   |
+| @sec-git      | 📅18/06/24⏲️19:00 |                                                                     🗣️🎥📓                                                                      |  Pablo Rogers   |
+| @sec-quarto   | 📅20/06/24⏲️19:00 |                                                                     🗣️🎥📓                                                                      |  Pablo Rogers   |
+| @sec-docker   | 📅25/06/24⏲️19:00 |                                                                     🗣️🎥📓                                                                      |  Pablo Rogers   |
+| @sec-AI       | 📅27/06/24⏲️19:00 |                                                                     🗣️🎥📓                                                                      | Ricardo Limongi |
