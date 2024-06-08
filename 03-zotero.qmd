@@ -1,1 +1,29 @@
 # Gerenciamento de Referências e Bibliotecas {#sec-zotero}
+
+Existem mais de 30 diferentes[^03-zotero-1] gerenciadores de referências [@proske2023]. Entre eles podemos indicar o [Citavi](https://www.citavi.com/en) e o [RefWorks](https://refworks.proquest.com/learn-more/). No entanto, os mais populares são o [EndNote](https://endnote.com/), [Mendeley](https://www.mendeley.com/reference-management/reference-manager/) e [Zotero](https://www.zotero.org/). O primeiro é proprietário e descartamos enquanto opção para nosso workflow de Open Science. Os dois últimos são excelentes opções, no entanto, o Zotero se destaca por ser código aberto (totalmente gratuíto), enquanto o Mendeley, embora gratuito, é propriedade da Elsevier, uma editora comercial. Isso significa que o Zotero não tem restrições de uso e não exige pagamento por recursos adicionais, exceto por maior armazenamento na nuvem, que inclusive, é um destaque do Mendeley (2Gb *vs* 300Mb).
+
+[^03-zotero-1]: [Esta lista](https://en.wikipedia.org/wiki/Comparison_of_reference_management_software) no Wikipedia, que é atualizada constantemente, faz uma comparação entre eles.
+
+Além disso, o Zotero tem uma comunidade ativa e fóruns de suporte, o que pode ser útil para solucionar problemas e compartilhar conhecimento com outros usuários. Portanto, como aqui valorizamos a liberdade de código aberto e uma comunidade engajada, o Zotero é nossa escolha.
+
+Essa característica faz com que o Zotero se destaca em relação ao Mendeley, especialmente no que diz respeito ao **Ecossitema de Plugins**. O Zotero possui uma comunidade ativa de desenvolvedores e pesquisadores que criam e compartilham plugins. Esses plugins estendem as funcionalidades do Zotero, permitindo personalizações específicas e integrações com outras ferramentas [@prashantakumarbehera2023]. O plugin [Better BibTeX](https://retorque.re/zotero-better-bibtex/), por exemplo, oferece recursos avançados de exportação e formatação de bibliografias, tornando-o uma escolha popular para usuários que trabalham com LaTeX, Markdown, HTML, e outras linguagens de marcação. Outro exemplo é o [ZotFile](https://zotfile.com/), que permite gerenciar anexos de PDFs, renomeando arquivos automaticamente e organizando-os em pastas específicas [@prashantakumarbehera2023]. Assim, poderás estender o armazenamento do Zotero de 300Mb para o limite de seu serviço de armazenamento na nuvem (Google Drive, OneDrive, Dropbox, etc.)[^03-zotero-2].
+
+[^03-zotero-2]: Outro importante plugin é a integração com o [SciHub](https://github.com/ethanwillis/zotero-scihub) [@prashantakumarbehera2023]. Coloquei essa informação em nota, pois ele é questionável do ponto de vista ético (😬🫣), apesar de extensivamente utilizado no Brasil por estudantes de pós-graduação stricto sensu de diferentes áreas [@oddone2024]. Ou se enxergarmos o problema sob outro ponto de vista, a ampla adoção do SciHub no Brasil e em todo o mundo reflete a resposta dos cientistas ao desgastado sistema de comunicação científica mantido pelas editoras internacionais. Além disso, reforça a relevância dos princípios da Ciência Aberta [@oddone2024].
+
+Nesse sentido, uma recomendação importante é não deixar de dar uma olhada no [página de plugins](https://www.zotero.org/support/plugins) do Zotero no site oficial e uma [busca por Zotero](https://github.com/search?q=zotero&type=repositories) no Github. Com certeza você vai encontrar uma solução (plugin) interessante para potencializar as funcionalidades do Zotero. Algumas delas veremos ao longo do curso.
+
+A mensagem principal que pretendemos passar no curso sobre esse tópico é para você conceber os gerenciadores de referências e bibliotecas no contexto do processo de escrita, e não apenas como facilitadores operacionais ("*time saver*") de citações e bibliografias. Somente usuários avançados podem aproveitar o suporte que a maioria dos sistemas de gerenciamento de referências oferece para o processo de escrita [@proske2023].
+
+Atualmente, gerenciadores de referências mais populares oferecem funcionalidades básicas, que incluem:
+
+-   Recursos para coletar referências com textos completos e organizá-las em pastas e/ou (sub)coleções;
+
+-   Marcar entradas de referência, fazer anotações e destacar o texto completo por meio de visualizadores de PDF integrados;
+
+-   Citar referências em diferentes estilos de citação por meio de complementos para software de processamento de texto ou criando e atualizando automaticamente arquivos BIB para outras linguagens de marcação;
+
+-   Sincronizar referências entre o aplicativo de desktop e a versão móvel, bem como entre diferentes computadores; e
+
+-   Compartilhar referências com colegas [@proske2023]
+
+Esse conteúdo é abordado em detalhes no trabalho de @thomas2023, e veremos algumas dessas funcionalidades básica na aula, no entanto, daremos ênfase no Ecossitema de Plugins do Zotero.
