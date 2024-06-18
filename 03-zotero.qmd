@@ -27,3 +27,5 @@ Atualmente, gerenciadores de referências mais populares oferecem funcionalidade
 -   Compartilhar referências com colegas [@proske2023]
 
 Esse conteúdo é abordado em detalhes no trabalho de @thomas2023, e veremos algumas dessas funcionalidades básica na aula, no entanto, daremos ênfase no Ecossitema de Plugins do Zotero.
+
+Para um curso mais aprofundado sobre o Zotero, recomendamos a playlist de vídeos [Zotero do Zero](https://youtube.com/playlist?list=PLEbpo1iiweYXhQs1-yKJhTLPio1PlBD0i&si=bI3_sDEQe58XOCTf) da Biblioteca Ciências da Saúde UFES. Neles, você aprenderá praticamente tudo o que precisa saber para utilizar o Zotero de forma nativa, com muitas dicas ocultas e truques, e ainda, como instalar e configurar alguns plugins.

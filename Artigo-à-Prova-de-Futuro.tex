@@ -44,14 +44,28 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -351,7 +365,7 @@ para as aulas remotas. Essas soluções na sua maioria requerem cadastros
 rápidos, e podem ser feitos de forma instantânea via conta
 Google/Microsoft/Apple.
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, opacitybacktitle=0.6, arc=.35mm, breakable, bottomtitle=1mm, colback=white, opacityback=0, toprule=.15mm, colframe=quarto-callout-important-color-frame, left=2mm, bottomrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Tip \ref*{tip-prompt}: ChatGPT para suas notas de leituras}, toptitle=1mm, titlerule=0mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, bottomrule=.15mm, colback=white, opacityback=0, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Tip \ref*{tip-prompt}: ChatGPT para suas notas de leituras}, coltitle=black, arc=.35mm, colframe=quarto-callout-important-color-frame, opacitybacktitle=0.6, leftrule=.75mm, toptitle=1mm, titlerule=0mm, toprule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-important-color!10!white, left=2mm, breakable]
 
 \quartocallouttip{tip-prompt} 
 
@@ -374,7 +388,7 @@ answer in Portuguese}''
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, leftrule=.75mm, colbacktitle=quarto-callout-caution-color!10!white, opacitybacktitle=0.6, arc=.35mm, breakable, bottomtitle=1mm, colback=white, opacityback=0, toprule=.15mm, colframe=quarto-callout-caution-color-frame, left=2mm, bottomrule=.15mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Não confie cegamente na IA}, toptitle=1mm, titlerule=0mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, bottomrule=.15mm, colback=white, opacityback=0, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Não confie cegamente na IA}, coltitle=black, arc=.35mm, colframe=quarto-callout-caution-color-frame, opacitybacktitle=0.6, leftrule=.75mm, toptitle=1mm, titlerule=0mm, toprule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-caution-color!10!white, left=2mm, breakable]
 
 Eu simplesmente copiei e colei os resultados do ChatGPT para compilar
 essas notas de leituras? Não. Após o resultado do ChatGPT eu reviso o
@@ -386,7 +400,7 @@ a partir da leitura do artigo ou sendo conhecedor do assunto abordado.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, arc=.35mm, breakable, bottomtitle=1mm, colback=white, opacityback=0, toprule=.15mm, colframe=quarto-callout-note-color-frame, left=2mm, bottomrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Outra curiosidade\ldots{}}, toptitle=1mm, titlerule=0mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, bottomrule=.15mm, colback=white, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Outra curiosidade\ldots{}}, coltitle=black, arc=.35mm, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, leftrule=.75mm, toptitle=1mm, titlerule=0mm, toprule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, left=2mm, breakable]
 
 A
 \href{https://phdpablo.github.io/curso-open-science/img/cover.png}{imagem
@@ -543,10 +557,10 @@ slides utilizados nas aulas (🗣️), aulas gravadas ou indicações de vídeo
 e leituras básica sobre os conteúdos (📓).
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2027}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2027}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3919}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2027}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2361}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2361}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2917}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2361}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Aula/Conteúdo
@@ -562,7 +576,7 @@ Instrutor
 \bottomrule\noalign{}
 \endlastfoot
 Chapter~\ref{sec-intro} & 📅04/06/24⏲️19:00 &
-\href{./resources/01-intro.pptx}{🗣}\href{https://www.youtube.com/live/7ewEcTATkZM?si=Lq40IAoDgsy_A619}{🎥}\href{https://doi.org/10.1590/S0034-759020230408}{📓}
+\href{./resources/01-intro.pdf}{🗣}\href{https://www.youtube.com/live/7ewEcTATkZM?si=Lq40IAoDgsy_A619}{🎥}\href{https://doi.org/10.1590/S0034-759020230408}{📓}
 & Ricardo Limongi \\
 Chapter~\ref{sec-osf} & 📅06/06/24⏲️19:00 &
 \href{https://osf.io/wm8vs}{🗣️}\href{https://www.youtube.com/watch?v=B19MPDJX_vs}{🎥}\href{https://doi.org/10.1002/cpet.32}{📓}
@@ -570,8 +584,12 @@ Chapter~\ref{sec-osf} & 📅06/06/24⏲️19:00 &
 Chapter~\ref{sec-zotero} & 📅11/06/24⏲️19:00 &
 \href{https://osf.io/emxz8}{🗣️}\href{https://youtu.be/tnbwKj6-pD8?si=Yx9IC2LhrplvA6g1}{🎥}\href{https://kuscholarworks.ku.edu/handle/1808/34983}{📓}
 & Pablo Rogers \\
-Chapter~\ref{sec-project} & 📅13/06/24⏲️19:00 & 🗣️🎥📓 & Pablo Rogers \\
-Chapter~\ref{sec-git} & 📅18/06/24⏲️19:00 & 🗣️🎥📓 & Pablo Rogers \\
+Chapter~\ref{sec-project} & 📅13/06/24⏲️19:00 &
+\href{./resources/04-project.pdf}{🗣️}\href{https://youtu.be/l8yh3f8Tbv8?si=Yeq-xRxmffF7S1dk}{🎥}\href{https://doi.org/10.1371/journal.pcbi.1005510}{📓}
+& Pablo Rogers \\
+Chapter~\ref{sec-git} & 📅18/06/24⏲️19:00 &
+\href{./resources/05-git.pdf}{🗣️}\href{https://youtu.be/uQL6NOSd9cc?si=TIYenlvIzKpoQ2dQ&t=1775}{🎥}\href{https://doi.org/10.1177/2515245918754826}{📓}
+& Pablo Rogers \\
 Chapter~\ref{sec-quarto} & 📅20/06/24⏲️19:00 & 🗣️🎥📓 & Pablo Rogers \\
 Chapter~\ref{sec-docker} & 📅25/06/24⏲️19:00 & 🗣️🎥📓 & Pablo Rogers \\
 Chapter~\ref{sec-AI} & 📅27/06/24⏲️19:00 & 🗣️🎥📓 & Ricardo Limongi \\
@@ -805,7 +823,7 @@ promover o desenvolvimento de uma intervenção educacional sobre a
 prática (workflow) e principais ferramentas para compilação dos produtos
 científicos que integram uma publicação científica aberta.
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, arc=.35mm, breakable, bottomtitle=1mm, colback=white, opacityback=0, toprule=.15mm, colframe=quarto-callout-note-color-frame, left=2mm, bottomrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@klein2018 \emph{Reading Note} (Tip~\ref{tip-prompt})}, toptitle=1mm, titlerule=0mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, bottomrule=.15mm, colback=white, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@klein2018 \emph{Reading Note} (Tip~\ref{tip-prompt})}, coltitle=black, arc=.35mm, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, leftrule=.75mm, toptitle=1mm, titlerule=0mm, toprule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, left=2mm, breakable]
 
 O artigo é um guia prático para pesquisadores que desejam compartilhar
 os produtos de sua pesquisa. Os autores argumentam que as práticas de
@@ -881,7 +899,7 @@ melhorar a qualidade e a credibilidade de seu trabalho.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, arc=.35mm, breakable, bottomtitle=1mm, colback=white, opacityback=0, toprule=.15mm, colframe=quarto-callout-note-color-frame, left=2mm, bottomrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@kathawalla2021 \emph{Reading Note} (Tip~\ref{tip-prompt})}, toptitle=1mm, titlerule=0mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, bottomrule=.15mm, colback=white, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@kathawalla2021 \emph{Reading Note} (Tip~\ref{tip-prompt})}, coltitle=black, arc=.35mm, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, leftrule=.75mm, toptitle=1mm, titlerule=0mm, toprule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, left=2mm, breakable]
 
 Este artigo fornece um guia para ajudar estudantes de pós-graduação e
 seus orientadores a se envolverem na prática da ciência aberta (CA). A
@@ -1091,7 +1109,7 @@ pesquisadores a iniciar sua jornada \textbf{OSF}. Claro que ele foi
 adaptado para nossos fins, principalmente, em decorrência do tempo
 destinado ao módulo.
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, arc=.35mm, breakable, bottomtitle=1mm, colback=white, opacityback=0, toprule=.15mm, colframe=quarto-callout-tip-color-frame, left=2mm, bottomrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Bifurcando ou duplicando um projeto}, toptitle=1mm, titlerule=0mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, bottomrule=.15mm, colback=white, opacityback=0, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Bifurcando ou duplicando um projeto}, coltitle=black, arc=.35mm, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, leftrule=.75mm, toptitle=1mm, titlerule=0mm, toprule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, left=2mm, breakable]
 
 Você sabia que é possível executar um ``\emph{forking}'' (criar uma
 cópia do projeto existente) ou ``\emph{duplicate as template}''
@@ -1130,7 +1148,7 @@ Github. Por isso, que também nesse módulo passamos pelo
 que integra com o Github e tem a capacidade de gerar DOIs para as
 versões dos repositórios.
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, leftrule=.75mm, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, arc=.35mm, breakable, bottomtitle=1mm, colback=white, opacityback=0, toprule=.15mm, colframe=quarto-callout-note-color-frame, left=2mm, bottomrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@sullivan2019 \emph{Reading Note} (Tip~\ref{tip-prompt})}, toptitle=1mm, titlerule=0mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, bottomrule=.15mm, colback=white, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@sullivan2019 \emph{Reading Note} (Tip~\ref{tip-prompt})}, coltitle=black, arc=.35mm, colframe=quarto-callout-note-color-frame, opacitybacktitle=0.6, leftrule=.75mm, toptitle=1mm, titlerule=0mm, toprule=.15mm, bottomtitle=1mm, colbacktitle=quarto-callout-note-color!10!white, left=2mm, breakable]
 
 O artigo apresenta um protocolo para a implementação de práticas de
 Ciência Aberta (CA), com foco no uso do Open Science Framework (OSF). As
@@ -1286,6 +1304,14 @@ funcionalidades básicas, que incluem:
 Esse conteúdo é abordado em detalhes no trabalho de Thomas (2023), e
 veremos algumas dessas funcionalidades básica na aula, no entanto,
 daremos ênfase no Ecossitema de Plugins do Zotero.
+
+Para um curso mais aprofundado sobre o Zotero, recomendamos a playlist
+de vídeos
+\href{https://youtube.com/playlist?list=PLEbpo1iiweYXhQs1-yKJhTLPio1PlBD0i&si=bI3_sDEQe58XOCTf}{Zotero
+do Zero} da Biblioteca Ciências da Saúde UFES. Neles, você aprenderá
+praticamente tudo o que precisa saber para utilizar o Zotero de forma
+nativa, com muitas dicas ocultas e truques, e ainda, como instalar e
+configurar alguns plugins.
 
 \bookmarksetup{startatroot}
 
