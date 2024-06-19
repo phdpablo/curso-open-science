@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -73,6 +93,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta property="og:title" content="Artigo à Prova de Futuro - 5&nbsp; Controle de versão">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="Artigo à Prova de Futuro">
 </head>
 
@@ -232,8 +253,184 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Você<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> em algum grau utiliza um sistema para versionar seu trabalho. Seja ele um simples <code>Ctrl + Z</code> ou <code>Cmd + Z</code> para desfazer a última ação, ou sistemas mais elaborados, como i) o controle de alterações do seu processador de texto ou ii) o histórico de versões do seu aplicativo de armazenamento nas nuvens (<code>OneDrive</code>, <code>Google Drive</code> ou <code>Dropbox</code>), você já está familiarizado com a ideia de controle de versão. Qual estudante ou pesquisador nunca se deparou com uma situação parecida da <a href="#fig-funny-git" class="quarto-xref">Figure&nbsp;<span>5.1</span></a>?</p>
+<div id="fig-funny-git" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Situação engraçada de versionamento">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-funny-git-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/funny-git.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Situação engraçada de versionamento">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-funny-git-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.1: Situação amadora (e engraçada!) de controle de versão
+</figcaption>
+</figure>
+</div>
+<p>No entanto, essas soluções são limitadas e não são adequadas para gerenciar projetos de pesquisa complexos, ou mesmo simples, pois no contexto da Ciência Aberta (CA), falham nos quesitos para reprodutibilidade e transparência. Para isso, é necessário um sistema de controle de versão (VCS) mais robusto, como o Git. O Git é um VCS distribuído, ou seja, ele armazena o histórico de alterações em um repositório local e remoto, permitindo que você controle as versões de seus arquivos e compartilhe-os com outras pessoas. O Git é amplamente utilizado em projetos de desenvolvimento de software, mas também é uma ferramenta valiosa para pesquisadores que desejam gerenciar e compartilhar seus ativos de pesquisa.</p>
+<p>Os controles<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> de versionamento mais simples, como os oferecidos por processadores de texto e soluções de armazenamento em nuvem, são insuficientes para um workflow de pesquisa empírica no contexto da CA:</p>
+<ol type="1">
+<li><strong>Colaboração Extensiva</strong>:
+<ul>
+<li>Em projetos que envolvem múltiplos colaboradores, as ferramentas simples de versionamento podem dificultar o rastreamento e a fusão de contribuições de vários pesquisadores. O Git, por outro lado, oferece um sistema robusto de gerenciamento de branches e fusão de código, permitindo uma colaboração mais eficiente e organizada.</li>
+</ul></li>
+<li><strong>Rastreamento Detalhado de Mudanças</strong>:
+<ul>
+<li>Processadores de texto e armazenamento em nuvem geralmente oferecem um histórico de versões limitado e pouco detalhado. Em contraste, o Git permite um rastreamento minucioso de cada alteração, incluindo o autor e o propósito de cada mudança, facilitando auditorias e revisões.</li>
+</ul></li>
+<li><strong>Gerenciamento de Código e Dados</strong>:
+<ul>
+<li>Pesquisas empíricas frequentemente envolvem scripts de análise e grandes volumes de dados que necessitam de versionamento. Ferramentas simples de controle de versão não são otimizadas para esses tipos de arquivos, enquanto o Git é projetado para gerenciar código e dados de maneira eficiente, garantindo a integridade e reprodutibilidade das análises.</li>
+</ul></li>
+<li><strong>Automação e Integração Contínua</strong>:
+<ul>
+<li>Em um ambiente de ciência aberta, é crucial automatizar testes e validações para garantir a qualidade e a reprodutibilidade dos resultados. Soluções como GitHub Actions permitem a implementação de pipelines de integração contínua (CI), automatizando testes e outras tarefas, algo que não é possível com controles de versão simples.</li>
+</ul></li>
+<li><strong>Documentação e Transparência</strong>:
+<ul>
+<li>O Git e o GitHub incentivam a documentação detalhada através de commit messages e issues, promovendo a transparência e o entendimento do progresso e das decisões do projeto. Ferramentas simples de versionamento não oferecem mecanismos equivalentes para documentar o processo de desenvolvimento de forma estruturada.</li>
+</ul></li>
+<li><strong>Resolução de Conflitos</strong>:
+<ul>
+<li>Em projetos complexos, conflitos de versão são inevitáveis. Sistemas simples de versionamento podem não oferecer ferramentas adequadas para resolver esses conflitos de maneira eficiente. O Git proporciona ferramentas avançadas de merge e resolução de conflitos, minimizando o risco de perda de dados ou inconsistências.</li>
+</ul></li>
+<li><strong>Histórico Completo e Analítico</strong>:
+<ul>
+<li>Ferramentas simples geralmente mantêm um histórico limitado, focado em versões específicas de documentos. O Git mantém um histórico completo e analítico de todas as mudanças, permitindo análises detalhadas do desenvolvimento do projeto ao longo do tempo.</li>
+</ul></li>
+</ol>
+<p>Git e GitHub são ferramentas intimamente relacionadas, mas oferecem soluções distintas para o versionamento, atendendo a diferentes necessidades dos pesquisadores.</p>
+<p>Git é um sistema de controle de versão distribuído que permite aos usuários rastrear alterações em arquivos e coordenar o trabalho em projetos colaborativos. Uma das principais vantagens do Git é a capacidade de operar de forma totalmente local. Isso significa que os pesquisadores podem manter um histórico completo de alterações em seus arquivos sem a necessidade de conexão com a internet ou de um servidor externo. Essa funcionalidade é particularmente útil para aqueles que preferem manter seus dados em um ambiente controlado e privado.</p>
+<p>Além disso, Git oferece funcionalidades avançadas de branching e merging. Isso permite que diferentes linhas de trabalho sejam desenvolvidas simultaneamente e depois combinadas de maneira controlada. Essa flexibilidade é essencial para experimentações e desenvolvimentos paralelos, comuns em projetos de pesquisa. O rastreamento detalhado é outra característica fundamental do Git. Cada commit no sistema é identificado de forma única e inclui metadados sobre quem fez a alteração e uma mensagem descritiva, permitindo um histórico minucioso das mudanças. Caso seja necessário, Git permite reverter para estados anteriores do projeto, recuperando versões passadas sem perder o histórico de alterações. Como um sistema distribuído, Git realiza operações de controle de versão localmente, o que resulta em um desempenho rápido e eficiente, sem depender da latência de rede.</p>
+<p>Por outro lado, GitHub é uma plataforma baseada na web que utiliza o Git como backend e adiciona funcionalidades colaborativas e de gerenciamento de projetos. Uma das maiores vantagens do GitHub é a hospedagem de repositórios Git, permitindo que os pesquisadores façam backup de seus projetos na nuvem e colaborem com outros usuários de qualquer lugar do mundo. Isso facilita a colaboração extensiva, um aspecto crucial no contexto da CA.</p>
+<p>GitHub também fornece ferramentas como pull requests e reviews de código, que simplificam a colaboração entre diferentes pesquisadores. Essas ferramentas permitem que propostas de mudanças sejam discutidas, revisadas e integradas de forma estruturada, promovendo um fluxo de trabalho colaborativo e transparente. Além disso, GitHub Actions oferece suporte à automação de testes, builds e outras tarefas, garantindo que cada alteração seja verificada e validada automaticamente. Essa funcionalidade é vital para assegurar a reprodutibilidade e a qualidade do projeto, aspectos centrais da CA.</p>
+<p>A plataforma GitHub também se destaca em termos de documentação e comunicação. Issues, wikis e páginas de projetos proporcionam meios para uma documentação detalhada, rastreamento de problemas e comunicação eficiente entre os membros da equipe. O controle de acesso e permissões é outro ponto forte do GitHub, permitindo que os gestores de projetos configurem quem pode fazer alterações ou revisar o código, assegurando a integridade do trabalho.</p>
+<p>Além de todas essas funcionalidades, a hospedagem de projetos no GitHub aumenta significativamente a visibilidade da pesquisa. Isso facilita a disseminação de resultados e a colaboração com a comunidade científica global, promovendo uma cultura de transparência e compartilhamento de conhecimento.</p>
+<p>Em resumo, enquanto o Git fornece uma solução robusta para controle de versão local, ideal para quem necessita de um ambiente privado e eficiente, o GitHub expande essas capacidades com ferramentas que promovem a colaboração, automação, documentação e visibilidade pública. No contexto da CA, o GitHub se alinha melhor com os princípios de transparência, colaboração e reprodutibilidade, oferecendo um conjunto de ferramentas que suportam e amplificam as boas práticas da pesquisa científica.</p>
+<p>Git e GitHub têm sido fundamentais em projetos de grande escala, como o desenvolvimento do kernel do Linux e projetos de software de código aberto como o TensorFlow, mantido pelo Google. Estes projetos envolvem milhares de colaboradores ao redor do mundo, exigindo um sistema robusto de controle de versão que possa lidar com uma vasta quantidade de alterações simultâneas, fusões complexas e um alto nível de coordenação e colaboração. A capacidade do Git de gerenciar branches de forma eficiente e a integração contínua proporcionada pelo GitHub são elementos cruciais para o sucesso desses projetos. A <a href="#fig-gitflow" class="quarto-xref">Figure&nbsp;<span>5.2</span></a> ilustra um diagrama hipotético do fluxo de trabalho em um ambiente de desenvolvimento de software típico, com diversos ramos, e como a complexidade de gerenciamento de versões, apesar de tratada pelo Git e GitHub, pode escalar.</p>
+<div id="fig-gitflow" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left" alt="Diagrama Gitflow Hipotético">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gitflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/gitflow.jpg" class="img-fluid quarto-figure quarto-figure-left figure-img" alt="Diagrama Gitflow Hipotético">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gitflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.2: Diagrama GitFlow hipotético num ambiente de desenvolvimento de software típico
+</figcaption>
+</figure>
+</div>
+<p>No entanto, o Git/Github são igualmente valiosos para projetos de menor escala. Em um projeto de pesquisa envolvendo três pesquisadores, Git e GitHub facilitam a colaboração ao permitir que cada pesquisador trabalhe em diferentes partes do projeto simultaneamente. Eles podem criar branches individuais para testar novas hipóteses ou desenvolver partes do projeto de forma independente. Quando uma nova contribuição está pronta, ela pode ser integrada ao projeto principal através de um pull request no GitHub, permitindo uma revisão por pares antes da fusão. Isso não só mantém a qualidade do trabalho como também documenta o processo de desenvolvimento de maneira transparente.</p>
+<p>A <a href="#fig-git3autores" class="quarto-xref">Figure&nbsp;<span>5.3</span></a> ilustra um Gitflow hipotético para uma colaboração científica envolvendo três autores. Note que cada autor tem seu próprio branch de produção, que é integrado ao branch principal através de pull requests, administrado pelo autor principal. Essa estrutura permite que cada autor trabalhe de forma independente, mantendo um histórico detalhado de suas contribuições e facilitando a revisão e a fusão de alterações. Com apenas três branches, o gerenciamento dessa hipotética pesquisa não seria tão complexo com o Git e GitHub.</p>
+<div id="fig-git3autores" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left" alt="Gitflow hipotético para uma colaboração científica envolvendo três autores">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-git3autores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/git3autores.jpg" class="img-fluid quarto-figure quarto-figure-left figure-img" alt="Gitflow hipotético para uma colaboração científica envolvendo três autores">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-git3autores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.3: <strong>Um fluxo de trabalho hipotético do Git para uma colaboração científica envolvendo três autores</strong>. Cada círculo representa um commit e as cores indicam commits específicos do autor. Setas bidirecionais indicam uma sincronização (um push e pull na terminologia Git). Setas unidirecionais indicam uma atualização de uma ramificação para outra. As setas horizontais indicam o desenvolvimento ao longo de um ramo específico <span class="citation" data-cites="ram2013">(<a href="references.html#ref-ram2013" role="doc-biblioref">Ram 2013</a>)</span>. Ilustração disponível em: <a href="https://doi.org/10.5281/zenodo.12165926" class="uri">https://doi.org/10.5281/zenodo.12165926</a>.
+</figcaption>
+</figure>
+</div>
+<p>Para um único pesquisador, o Git oferece uma maneira eficaz de versionar seu trabalho, mantendo um histórico detalhado de todas as alterações. Isso pode ser especialmente útil para rastrear o progresso ao longo do tempo, revertendo alterações se necessário e experimentando diferentes abordagens sem o risco de perder trabalho anterior. Além disso, o GitHub fornece um backup seguro na nuvem, garantindo que os dados estejam protegidos contra perda.</p>
+<p>A <a href="#fig-gitautorbegin" class="quarto-xref">Figure&nbsp;<span>5.4</span></a> ilustra um Gitflow hipotético para um único pesquisador. Neste caso, o pesquisador mantém um branch principal para o desenvolvimento do projeto e cria branches individuais para experimentos ou novas ideias. Cada commit é documentado com uma mensagem descritiva, permitindo que o pesquisador rastreie o progresso e o propósito de cada alteração. Esse processo garante que o projeto seja desenvolvido de forma estruturada e transparente, com um histórico detalhado de todas as contribuições, que podem ser acompanhadas, revisadas e auditadas por qualquer pessoa interessada, se o repositório remoto for público.</p>
+<div id="fig-gitautorbegin" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left" alt="Gitflow hipotético para uma pesquisa solo">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gitautorbegin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/gitautorbegin.jpg" class="img-fluid quarto-figure quarto-figure-left figure-img" alt="Gitflow hipotético para uma pesquisa solo">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gitautorbegin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.4: <strong>Um fluxo de trabalho hipotético do Git para a execução de uma pesquisa solo.</strong> Cada círculo representa um commit específico do autor. Setas bidirecionais indicam uma sincronização (um push ou pull na terminologia Git). Setas unidirecionais indicam uma atualização de uma ramificação para outra. As setas horizontais indicam o desenvolvimento ao longo de um ramo específico. Nesse fluxo de trabalho o autor optou por sincronizar o repositório local com o repositório remoto (Github) desde as etapas iniciais da pesquisa. Nessa perspectiva o repositório remoto funciona como um armazenamento de backup, e se público, para tornar a evolução do trabalho do pesquisador disponível para quem deseja acompanhar. Ilustração disponível em: <a href="https://doi.org/10.5281/zenodo.12165926" class="uri">https://doi.org/10.5281/zenodo.12165926</a>
+</figcaption>
+</figure>
+</div>
+<p>Por outro lado, um pesquisador pode optar por tornar público seu trabalho (dados, materiais e histórico de mudanças) somente quando for submeter o artigo para publicação, como podemos ver na <a href="#fig-gitautorend" class="quarto-xref">Figure&nbsp;<span>5.5</span></a>. Essa figura ilustra um workflow em que o pesquisador desenvolveu seu trabalho localmente, fazendo uso do Git para seu controle de versões, e apenas quando da necessidade de tornar público, vinculou o repositório local com o repositório remoto.</p>
+<div id="fig-gitautorend" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left" alt="Gitflow hipotético para uma pesquisa solo">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gitautorend-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/gitautorend.jpg" class="img-fluid quarto-figure quarto-figure-left figure-img" alt="Gitflow hipotético para uma pesquisa solo">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gitautorend-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.5: <strong>Um fluxo de trabalho hipotético do Git para a execução de uma pesquisa solo.</strong> Cada círculo representa um commit específico do autor. Setas bidirecionais indicam uma sincronização (um push ou pull na terminologia Git). Setas unidirecionais indicam uma atualização de uma ramificação para outra. As setas horizontais indicam o desenvolvimento ao longo de um ramo específico. Nesse fluxo de trabalho o autor optou por sincronizar o repositório local com o repositório remoto (Github) somente quando finalizou o artigo. Nessa perspectiva o repositório remoto só faz sentido se para publicar os dados, materiais da pesquisa e o histórico de mudanças, pois como backup, o autor pode utilizar um serviço de armazenamento nas nuvens (OneDrive, GoogleDrive, DropBox, etc.). Ilustração disponível em: <a href="https://doi.org/10.5281/zenodo.12165926" class="uri">https://doi.org/10.5281/zenodo.12165926</a>
+</figcaption>
+</figure>
+</div>
+<p>Embora sejam projetadas para lidar com projetos extremamente complexos, as funcionalidades do Git/Github também se adaptam perfeitamente a projetos de pesquisa mais simples, seja com número pequeno de pesquisadores ou mesmo com um único pesquisador.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="citation" data-cites="vuorre2018">Vuorre and Curley (<a href="references.html#ref-vuorre2018" role="doc-biblioref">2018</a>)</span> <em>Reading Note</em> (<a href="00-prework.html#tip-prompt" class="quarto-xref">Tip&nbsp;<span>1</span></a>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Como uma tentativa de enfrentar os desafios da reprodutibilidade na ciência empírica, um fator específico que se destaca é a forma como os pesquisadores organizam, curam, compartilham e colaboram em seus ativos de pesquisa <span class="citation" data-cites="vuorre2018">(<a href="references.html#ref-vuorre2018" role="doc-biblioref">Vuorre and Curley 2018</a>)</span>. Para mitigar essas dificuldades, sistemas de controle de versão (VCS), como o Git, têm sido amplamente adotados, uma vez que facilitam o acompanhamento das mudanças, versões e colaboração em projetos científicos.</p>
+<p>O Git, inicialmente desenvolvido para a escrita colaborativa de código, agora é amplamente utilizado em diversas áreas além da ciência da computação. Isso se deve à sua capacidade de tratar qualquer texto digitado em um computador – manuscritos, scripts de análise estatística, código-fonte de experimentos computadorizados e até arquivos de dados – como código, gerenciando assim múltiplas versões e autores sem introduzir erros <span class="citation" data-cites="vuorre2018">(<a href="references.html#ref-vuorre2018" role="doc-biblioref">Vuorre and Curley 2018</a>)</span>.</p>
+<p>Ao trabalhar com Git, os usuários podem salvar versões intermediárias de seus arquivos no disco rígido e, subsequentemente, no histórico do VCS. Esse processo permite que todas as alterações sejam monitoradas e revertidas quando necessário. A instalação do Git e sua integração com ferramentas como o RStudio proporcionam uma interface gráfica amigável para gerenciar repositórios locais e remotos, facilitando o controle de versões e a colaboração <span class="citation" data-cites="vuorre2018">(<a href="references.html#ref-vuorre2018" role="doc-biblioref">Vuorre and Curley 2018</a>)</span>.</p>
+<p>A introdução do Git desde o início de um projeto científico torna o fluxo de trabalho mais eficiente e menos trabalhoso do que tentar incorporar práticas de reprodutibilidade após a conclusão do projeto. A organização clara de arquivos e pastas, seguindo diretrizes como as recomendações do Project TIER, é uma etapa inicial crucial para garantir a reprodutibilidade <span class="citation" data-cites="vuorre2018">(<a href="references.html#ref-vuorre2018" role="doc-biblioref">Vuorre and Curley 2018</a>)</span>.</p>
+<p>O GitHub, uma plataforma online para hospedagem de repositórios Git, permite a criação de repositórios centralizados que facilitam o trabalho colaborativo. Os usuários podem clonar esses repositórios para suas máquinas locais, fazer mudanças e enviar (push) essas alterações de volta para o repositório central, assim como obter (pull) as alterações feitas por outros colaboradores. Esse fluxo de trabalho centralizado evita problemas de sobrescrita de arquivos e mantém um histórico detalhado das contribuições de cada membro da equipe <span class="citation" data-cites="vuorre2018">(<a href="references.html#ref-vuorre2018" role="doc-biblioref">Vuorre and Curley 2018</a>)</span>.</p>
+<p>No entanto, é importante notar que o Git não é a única solução para colaboração e curadoria de materiais de pesquisa. Embora plataformas como Google Docs e Dropbox ofereçam funcionalidades de colaboração em tempo real e acesso ao histórico de arquivos, o Git proporciona vantagens significativas para projetos mais complexos. Ele permite o gerenciamento simultâneo de múltiplos componentes de um projeto, como dados, scripts de análise e manuscritos, reduzindo a possibilidade de erros associados ao uso de versões desatualizadas de arquivos <span class="citation" data-cites="vuorre2018">(<a href="references.html#ref-vuorre2018" role="doc-biblioref">Vuorre and Curley 2018</a>)</span>.</p>
+<p>Além disso, a utilização do Git com o RStudio é particularmente atrativa para psicólogos, pois o ambiente integrado de desenvolvimento (IDE) do RStudio, juntamente com os pacotes R Markdown (e Quarto, por minha conta 😁🤣) e knitr, oferece uma solução completa para gestão de projetos, análise de dados e preparação de manuscritos <span class="citation" data-cites="vuorre2018">(<a href="references.html#ref-vuorre2018" role="doc-biblioref">Vuorre and Curley 2018</a>)</span>. A integração com serviços como Zenodo, que permite a atribuição de DOIs (identificadores digitais) aos repositórios do GitHub, também facilita a citação dos materiais de pesquisa <span class="citation" data-cites="vuorre2018">(<a href="references.html#ref-vuorre2018" role="doc-biblioref">Vuorre and Curley 2018</a>)</span>.</p>
+<p>Em suma, a adoção de sistemas de controle de versão como o Git, especialmente quando integrados a plataformas como o RStudio e o GitHub, proporciona uma solução elegante para os desafios de curadoria, compartilhamento e colaboração em ativos de pesquisa, contribuindo significativamente para a melhoria da reprodutibilidade na ciência.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="citation" data-cites="gilroy2019">Gilroy and Kaplan (<a href="references.html#ref-gilroy2019" role="doc-biblioref">2019</a>)</span> <em>Reading Note</em> (<a href="00-prework.html#tip-prompt" class="quarto-xref">Tip&nbsp;<span>1</span></a>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Este tutorial revisa as diretrizes de Práticas Transparentes e Abertas fornecidas pela Open Science Foundation e explora como os pesquisadores podem utilizar a transparência do GitHub em suas pesquisas. Ele exemplifica como os pesquisadores podem usar o GitHub para compartilhar código, dados e materiais de pesquisa, permitindo a inspeção e replicação por parte de revisores e outros pesquisadores através do <strong>Github Desktop</strong>.</p>
+<p>As implicações do aumento da demanda por transparência e métodos estatísticos modernos são discutidas, e plataformas como o GitHub são revisadas como uma forma de apoiar a pesquisa transparente.</p>
+<p>A “crise de reprodutibilidade” é mencionada, referindo-se às tentativas malsucedidas de replicar efeitos estatisticamente significativos relatados em estudos psicológicos. As pressões para publicar em revistas prestigiadas e obter financiamento são destacadas como fatores que contribuem para a presença de práticas questionáveis de pesquisa em várias disciplinas, incluindo psicologia.</p>
+<p>A importância da transparência e da abertura é enfatizada como uma maneira de enfrentar essas questões. As diretrizes TOP (Transparent and Open Practices) são mencionadas, estabelecendo padrões para a transparência em citações, dados, análises, materiais de pesquisa, pré-registros e suporte para replicações. No entanto, é observado que poucos estudos utilizam o pré-registro dos métodos e planos analíticos.</p>
+<p>O OSF e o GitHub são apresentados como plataformas que oferecem recursos relacionados à pesquisa, como pré-registro e arquivamento público. O GitHub é descrito como um serviço amplamente utilizado para arquivar e gerenciar projetos de pesquisa. O controle de versão baseado em Git é destacado como uma ferramenta de arquivamento robusta para pesquisa analítica atual e futura. A importância de compartilhar o código-fonte, dados e materiais do estudo é mencionada, permitindo a inspeção e replicação por parte de revisores e outros pesquisadores. O foco do tutorial é na execução do Github Desktop, uma interface gráfica para o Git (Git Client), que facilita a colaboração e o controle de versão.</p>
+<p>A configuração adequada da máquina local é mencionada como necessária para executar os programas estatísticos e scripts de análise. O processo de bifurcação de um repositório no GitHub é explicado, assim como a importância de plataformas como o GitHub para fornecer maior visibilidade e facilitar a colaboração na pesquisa. Ao arquivar materiais de estudo publicamente no GitHub, os pesquisadores têm a oportunidade de interagir com os proprietários do repositório. Por fim, a transparência e a ciência aberta são reconhecidas, mas também representam desafios para a comunidade científica.</p>
+</div>
+</div>
+</div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-gilroy2019" class="csl-entry" role="listitem">
+Gilroy, Shawn P., and Brent A. Kaplan. 2019. <span>“Furthering <span>Open Science</span> in <span>Behavior Analysis</span>: <span>An Introduction</span> and <span>Tutorial</span> for <span>Using GitHub</span> in <span>Research</span>.”</span> <em>Perspectives on Behavior Science</em> 42 (3): 565–81. <a href="https://doi.org/10.1007/s40614-019-00202-5">https://doi.org/10.1007/s40614-019-00202-5</a>.
+</div>
+<div id="ref-ram2013" class="csl-entry" role="listitem">
+Ram, Karthik. 2013. <span>“Git Can Facilitate Greater Reproducibility and Increased Transparency in Science.”</span> <em>Source Code for Biology and Medicine</em> 8 (7): 8. <a href="https://doi.org/10.1186/1751-0473-8-7">https://doi.org/10.1186/1751-0473-8-7</a>.
+</div>
+<div id="ref-vuorre2018" class="csl-entry" role="listitem">
+Vuorre, Matti, and James P. Curley. 2018. <span>“Curating <span>Research Assets</span>: <span>A Tutorial</span> on the <span>Git Version Control System</span>.”</span> <em>Advances in Methods and Practices in Psychological Science</em> 1 (2): 219–36. <a href="https://doi.org/10.1177/2515245918754826">https://doi.org/10.1177/2515245918754826</a>.
+</div>
+</div>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>A <a href="https://git-scm.com/book/en/v2">literatura sobre controle de versão</a>, especialmente Git e Github, é “farta”. Tanto em inglês como em português. Uma pesquisa simples vai achar muitas referências a blogs e textos de profissionais especializados, inclusive, <a href="https://happygitwithr.com/">para os nossos fins</a>. No Youtube existem muitos vídeos sobre o tema. Seja o que eu escrevesse por aqui, seria de pouca contribuição. Dessa forma, busquei contextualizar o versionamento de arquivos num empreendimento de pesquisa de meu dia a dia: um pesquisador com viés quantitativo, envolvido em pesquisas sem pouca colaboração, mas que achou no controle de versão uma solução impar para diversas demandas preconizadas pela Ciência Aberta.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Como ressaltei na nota anterior… minha impressão era que não havia nada para dizer sobre o tema, haja vista a vasta literatura. Desse modo, resolvi fazer um experimento e nessa nota documento para vocês. Dentro do enredo que adotei para a aula e o roteiro dessa seção, conversei com o ChatGPT 4o (em 2024-06-19) e me apropriei de alguns de seus argumentos para escrever o resto dessa seção. Claro, com muitos, mas muitos ajustes! Inclusive, a parte final dessa seção, onde conversamos sobre um hipotético workflow (Gitflow) para uma colaboração científica é de minha propriedade. Seguem minhas prompts:</p>
+<ul>
+<li><em>Sou pesquisador em ciências sociais aplicadas e estou escrevendo um artigo em que discuto o controle de versão, através do Git e Github, como um importante aliado das boas práticas da Ciência Aberta. Comecei contextualizando os controles de versionamento mais simples, tais como o controle de alterações de um processador de texto e histórico de versões de soluções de armazenamento nas nuvens. Me indique situações em que esses tipos de versionamentos não atendem um fluxo de trabalho de uma pesquisa empírica no contexto da ciência aberta.</em></li>
+</ul>
+<p><strong>Continuando a conversa…</strong></p>
+<ul>
+<li><em>No meu enredo argumento que o Git e Github são “coisas” diferentes e o pesquisador, se quiser, desenvolve seu workflow apenas localmente com o Git. Compare o Git e Github em termos de soluções propostas para o versionamento para eu apresentar como exemplo de meus argumentos.</em></li>
+</ul>
+<p><strong>Continuando a conversa…</strong></p>
+<ul>
+<li><em>Certo, gostei da comparação, mas gostaria que desenvolvesse sua resposta na forma de um texto descritivo e não na forma de bullets points.</em></li>
+</ul>
+<p><strong>Continuando a conversa…</strong></p>
+<ul>
+<li><em>Certo, era exatamente isso que precisava para meus argumentos nesse ponto do artigo. No entanto, desejo finalizar com o seguinte enredo: o Git/Github são preparados para projetos muito complexos (cite cases para exemplificar esse argumento), mas suas funcionalidades também podem atender projetos de pesquisas mais simples que envolvam três pesquisadores ou um único pesquisador. Preciso de sua ajuda para desenvolver esses argumentos sem você repetir argumentos que já apresentou para mim nessa conversa.</em></li>
+</ul>
+<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
