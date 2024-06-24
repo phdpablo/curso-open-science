@@ -32,11 +32,11 @@ Apesar de importantes atores nacionais, tais como CAPES, CNPq e Scielo, defender
 
 Por prática de CA entende-se a perspectiva micro da CA, relacionadas com as terminologias e conhecimento em torno do fluxo de trabalho do gerador de conhecimento científico aberto (@fig-ca-micro), ou seja, o cientista que se propõe tornar sua pesquisa transparente, reprodutível e replicável.
 
-![Perspectiva micro da CA. Taxonomia relacionada com terminologias e conhecimento em torno da prática (fluxo de trabalho) do gerador de conhecimento científico aberto. Ilustração disponível em: <https://doi.org/10.5281/zenodo.10835001>.](img/ca-micro.png){#fig-ca-micro fig-alt="Perspectiva micro da CA" fig-align="left"}
+[![Perspectiva micro da CA. Taxonomia relacionada com terminologias e conhecimento em torno da prática (fluxo de trabalho) do gerador de conhecimento científico aberto. Ilustração disponível em: https://doi.org/10.5281/zenodo.10835001.](img/ca-micro.png){#fig-ca-micro fig-alt="Perspectiva micro da CA" fig-align="left"}](https://doi.org/10.5281/zenodo.10835001)
 
 Exclui-se a perspectiva macro, relacionadas com as ramificações conceituais da CA concernentes às políticas públicas, infraestrutura, envolvimento aberto de atores sociais e diálogo aberto com outros sistemas de conhecimento (@fig-ca-macro). Essa última perspectiva está fora do escopo da discussão do curso, que se concentra em algumas das dimensões da perspectiva micro, particularmente, as ferramentas disponíveis para compilação dos produtos científicos que integram a publicação científica [@unesco2021].
 
-![Perspectiva macro da CA. Taxonomia relacionada com as ramificações conceituais da CA concernentes às políticas (públicas), infraestrutura, envolvimento aberto de atores sociais (sociedade) e diálogo aberto com outros sistemas de conhecimento. Ilustração disponível em: <https://doi.org/10.5281/zenodo.10835001>](img/ca-macro.png){#fig-ca-macro fig-alt="Perspectiva macro da CA" fig-align="left"}
+[![Perspectiva macro da CA. Taxonomia relacionada com as ramificações conceituais da CA concernentes às políticas (públicas), infraestrutura, envolvimento aberto de atores sociais (sociedade) e diálogo aberto com outros sistemas de conhecimento. Ilustração disponível em: https://doi.org/10.5281/zenodo.10835001](img/ca-macro.png){#fig-ca-macro fig-alt="Perspectiva macro da CA" fig-align="left"}](https://doi.org/10.5281/zenodo.10835001)
 
 Apesar de uma verossímil expectativa desabonadora, tendo em vista o contexto da CA no Brasil, o diagnóstico da situação da prática da CA se mostra importante, *per si*, pois:
 
@@ -103,19 +103,19 @@ O artigo sugere oito práticas de CA (das quais destaco sete) que estudantes de 
 
 Algumas das práticas sugeridas incluem:
 
-1. **Fluxo de Trabalho do Projeto (Nível Fácil)**: isso inclui a estrutura da pasta do arquivo, convenções de nomenclatura de documentos, controle de versão, armazenamento em nuvem e outros detalhes. Ter um sistema de fluxo de trabalho de projeto dedicado ajuda a manter sua pesquisa organizada, melhorando a reprodutibilidade, minimizando erros e facilitando colaborações com outros e com você no futuro.
+1.  **Fluxo de Trabalho do Projeto (Nível Fácil)**: isso inclui a estrutura da pasta do arquivo, convenções de nomenclatura de documentos, controle de versão, armazenamento em nuvem e outros detalhes. Ter um sistema de fluxo de trabalho de projeto dedicado ajuda a manter sua pesquisa organizada, melhorando a reprodutibilidade, minimizando erros e facilitando colaborações com outros e com você no futuro.
 
-2. **Preprints (Nível Fácil)**: postar um manuscrito antes de submetê-lo a uma revista permite um feedback mais amplo do que o que é proporcionado pela revisão por pares e pode ajudar a melhorar um artigo antes da submissão, identificando quaisquer falhas importantes.
+2.  **Preprints (Nível Fácil)**: postar um manuscrito antes de submetê-lo a uma revista permite um feedback mais amplo do que o que é proporcionado pela revisão por pares e pode ajudar a melhorar um artigo antes da submissão, identificando quaisquer falhas importantes.
 
-3. **Código Reprodutível (Nível Médio)**: o código reprodutível para análise de dados e visualizações (por exemplo, tabelas, figuras) refere-se a uma versão detalhada e escrita do seu código que permitiria a outra pessoa (ou a você no futuro) gerar a mesma saída relatada em seu manuscrito.
+3.  **Código Reprodutível (Nível Médio)**: o código reprodutível para análise de dados e visualizações (por exemplo, tabelas, figuras) refere-se a uma versão detalhada e escrita do seu código que permitiria a outra pessoa (ou a você no futuro) gerar a mesma saída relatada em seu manuscrito.
 
-4. **Compartilhamento de Dados (Nível Médio)**: compartilhar dados refere-se a tornar o conjunto de dados desidentificado usado para um projeto disponível para outros pesquisadores.
+4.  **Compartilhamento de Dados (Nível Médio)**: compartilhar dados refere-se a tornar o conjunto de dados desidentificado usado para um projeto disponível para outros pesquisadores.
 
-5. **Escrita de Manuscrito Transparente (Nível Médio)**: Para escrever um manuscrito transparente, claro e reprodutível, é útil seguir as diretrizes ou padrões de escrita de manuscritos.
+5.  **Escrita de Manuscrito Transparente (Nível Médio)**: Para escrever um manuscrito transparente, claro e reprodutível, é útil seguir as diretrizes ou padrões de escrita de manuscritos.
 
-6. **Pré-registro (Nível Médio)**: o pré-registro refere-se à postagem de um esboço cronometrado das perguntas de pesquisa, hipóteses, método e plano de análise para um projeto específico antes da coleta de dados e/ou análise.
+6.  **Pré-registro (Nível Médio)**: o pré-registro refere-se à postagem de um esboço cronometrado das perguntas de pesquisa, hipóteses, método e plano de análise para um projeto específico antes da coleta de dados e/ou análise.
 
-7. **Relatório Registrado (Nível Difícil)**: os Relatórios Registrados envolvem um processo de submissão em duas partes, onde os autores primeiro enviam uma proposta de Estágio 1, que inclui a introdução, método e plano de análise - tudo antes que a coleta de dados e/ou análise tenha sido feita.
+7.  **Relatório Registrado (Nível Difícil)**: os Relatórios Registrados envolvem um processo de submissão em duas partes, onde os autores primeiro enviam uma proposta de Estágio 1, que inclui a introdução, método e plano de análise - tudo antes que a coleta de dados e/ou análise tenha sido feita.
 
 O artigo enfatiza que se envolver em uma prática de CA é melhor do que nenhuma e que a CA é apenas uma boa ciência. Além disso, sugere-se que se construa sobre o trabalho que já foi feito em vez de reinventar a roda. A maioria das práticas sugeridas se concentra no uso do [Open Science Framework](https://osf.io).
 :::

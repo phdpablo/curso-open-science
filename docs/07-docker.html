@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.45">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7&nbsp; Controle de Ambiente (Containers) – Artigo à Prova de Futuro</title>
+<title>7&nbsp; Controle de Ambiente – Artigo à Prova de Futuro</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -57,22 +77,23 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 
 
-<meta property="og:title" content="Artigo à Prova de Futuro - 7&nbsp; Controle de Ambiente (Containers)">
+<meta property="og:title" content="Artigo à Prova de Futuro - 7&nbsp; Controle de Ambiente">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="Artigo à Prova de Futuro">
 </head>
 
@@ -82,13 +103,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./07-docker.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Controle de Ambiente (Containers)</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./07-docker.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Controle de Ambiente</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -102,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Artigo à Prova de Futuro</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/phdpablo/curso-open-science/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/phdpablo/curso-open-science/" title="Código fonte" class="quarto-navigation-tool px-1" aria-label="Código fonte"><i class="bi bi-github"></i></a>
     <a href="./Artigo-à-Prova-de-Futuro.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
     <div class="dropdown">
       <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
@@ -127,8 +148,8 @@ ul.task-list li input[type="checkbox"] {
           </li>
       </ul>
     </div>
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo escuro"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Alternar modo de leitor">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
@@ -138,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Procurar"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -200,7 +221,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./07-docker.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Controle de Ambiente (Containers)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Controle de Ambiente</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -227,13 +248,85 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header">
-<h1 class="title display-7"><span id="sec-docker" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Controle de Ambiente (Containers)</span></span></h1>
+<h1 class="title display-7"><span id="sec-docker" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Controle de Ambiente</span></span></h1>
 
 </header>
 
 
+<p>Imagine a seguinte situação: você publicou uma pesquisa quantitativa, disponibilizando o código e os dados para que outros pesquisadores possam reproduzir os resultados. Um pesquisador entra em contato e diz que não conseguiu. Você como bom mineiro, responde: “Uai, comigo funcionou!”. Prestativo como é sugere para o pesquisador, da Polônia, que venha até sua casa para que você possa ajudá-lo a reproduzir os resultados, e aproveitar para tomar um café e comer um pão de queijo. O pesquisador, educadamente, responde que não pode ir até sua casa, pois está do outro lado do mundo.</p>
+<p>Então, prestativo como é, você sugere que vai enviar uma imagem do seu HD para ele. O pesquisador, educadamente, responde que não pode aceitar, pois o arquivo da imagem é muito grande e ele não tem espaço suficiente para armazenar a imagem. Além do mais, ele não entende muito bem (e não tem!) a infraestrutura para pode acessar seu HD. Inclusive, ele utiliza um sistema operacional (e estrutura de hardware) diferente do seu.</p>
+<p>Pois bem, essa situação poderia ser a única saída alguns anos atrás. No entanto, hoje em dia, com os serviços de armazenamento em nuvem, as soluções de virtualização (máquinas virtuais), containers e controle de ambiente, é possível compartilhar o ambiente de desenvolvimento de forma mais simples.</p>
+<p>Máquinas virtuais (VM) são ambientes que emulam um sistema operacional (SO) completo sobre um hardware físico, permitindo a execução de múltiplos sistemas operacionais em uma única máquina. Elas oferecem um alto nível de isolamento e controle, pois cada VM inclui seu próprio SO, bibliotecas e aplicativos. As VMs podem ser classificadas em dois tipos: <em>Type 1 Hypervisor</em> e <em>Type 2 Hypervisor</em>. Tipo 1 Hypervisor roda diretamente sobre o hardware, gerenciando várias VMs sem a necessidade de um SO subjacente, o que proporciona melhor desempenho e eficiência. Já o <em>Type 2 Hypervisor</em> roda sobre um SO existente, sendo menos eficiente, mas mais fácil de configurar e utilizar em ambientes de desktop <a href="#fig-vm-container" class="quarto-xref">Figura&nbsp;<span>7.1</span></a>.</p>
+<div id="fig-vm-container" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Soluções para controle do ambiente de desenvolvimento">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-vm-container-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://doi.org/10.5281/zenodo.12521134"><img src="img/vm-container.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Soluções para controle do ambiente de desenvolvimento"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vm-container-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;7.1: Soluções para controle do ambiente de desenvolvimento. Ilustração disponível em: https://doi.org/10.5281/zenodo.12521134
+</figcaption>
+</figure>
+</div>
+<p>Exemplos de soluções de virtualização Tipo 1 podemos elencar:</p>
+<ul>
+<li><p><a href="https://www.vmware.com/products/esxi-and-esx.html.html"><strong>VMware ESXi</strong></a>: Uma solução comercial amplamente utilizada em ambientes corporativos para criar e gerenciar VMs. Oferece alta performance e várias funcionalidades avançadas de gerenciamento.</p></li>
+<li><p><a href="https://learn.microsoft.com/pt-br/windows-server/virtualization/hyper-v/hyper-v-technology-overview"><strong>Microsoft Hyper-V</strong></a>: Integrado ao Windows, é uma solução comercial que também pode ser usada gratuitamente com recursos limitados. Hyper-V é amplamente utilizado em ambientes Windows.</p></li>
+<li><p><a href="https://xenproject.org/"><strong>Xen</strong>:</a> Uma solução open-source popular em ambientes de nuvem, como o Amazon Web Services (AWS). Xen é altamente eficiente e suportado por várias distribuições Linux.</p></li>
+</ul>
+<p>Exemplos de Tipo 2 incluem:</p>
+<ul>
+<li><p><a href="https://www.vmware.com/products/desktop-hypervisor.html"><strong>VMware Workstation</strong></a>: Uma solução comercial usada principalmente em desktops e laptops para executar múltiplos SOs. VMware Workstation é conhecido pela sua estabilidade e facilidade de uso. Recentemente ele passou a ser gratuito.</p></li>
+<li><p><a href="https://www.virtualbox.org/"><strong>Oracle VirtualBox</strong></a>: Uma solução open-source amplamente utilizada para virtualização em desktops. VirtualBox é gratuito e suporta uma vasta gama de SOs convidados.</p></li>
+<li><p><a href="https://www.parallels.com/br/"><strong>Parallels Desktop</strong></a>: Uma solução comercial popular entre usuários de Mac, permitindo que eles rodem Windows, Linux e outros no macOS de maneira integrada.</p></li>
+</ul>
+<p>As vantagens das VMs incluem um alto isolamento e segurança, além da flexibilidade para rodar diferentes SOs. No entanto, elas consomem muitos recursos, como CPU, memória e armazenamento, e as imagens são grandes e difíceis de compartilhar <span class="citation" data-cites="clyburne-sherin2019">(<a href="references.html#ref-clyburne-sherin2019" role="doc-biblioref">Clyburne-Sherin et al., 2019</a>)</span>. Nesse sentido, para a reprodutibilidade das pesquisas empíricas no ambito da Ciência Aberta o emprego de VMs pode ser impraticável. Para nosso dia a dia enquanto pesquisadores e professores pode ser uma ferramenta extremamente últil. <strong>Esse curso está organizado dentro de uma VM</strong>.</p>
+<p>Por outro lado, os containers são uma tecnologia de virtualização a nível de SO, mais leve que as VMs, que compartilham o mesmo kernel do SO hospedeiro, mas ainda assim oferecem isolamento para aplicações. <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kunernetes</a> e <a href="https://www.redhat.com/en/technologies/cloud-computing/openshift">OpenShift</a> são uma das ferramentas mais populares para criar e gerenciar containers. Ao contrário das VMs, os containers contêm apenas a aplicação e suas dependências, compartilhando o kernel do SO hospedeiro. Isso torna os containers mais leves e eficientes em termos de recursos, além de serem rápidos na inicialização e execução. Além disso, são fáceis de distribuir e compartilhar <span class="citation" data-cites="clyburne-sherin2019">(<a href="references.html#ref-clyburne-sherin2019" role="doc-biblioref">Clyburne-Sherin et al., 2019</a>)</span>.</p>
+<p>Enquanto as VMs oferecem maior isolamento, os containers têm menor consumo de recursos e são mais práticos para desenvolvimento e distribuição de aplicações. No entanto, eles compartilham o kernel do SO hospedeiro, o que resulta em menor isolamento comparado às VMs. Os contêineres estão ganhando força na pesquisa científica <span class="citation" data-cites="moreau2023">(<a href="references.html#ref-moreau2023" role="doc-biblioref">Moreau et al., 2023</a>)</span> e o Docker despontado como uma das soluções mais populares para controle de ambiente em pesquisas empíricas quantitativas <span class="citation" data-cites="wiebels2021">(<a href="references.html#ref-wiebels2021" role="doc-biblioref">Wiebels &amp; Moreau, 2021</a>)</span>.</p>
+<p>Por fim, temos as ferramentas de controle de ambiente como <a href="https://docs.conda.io/projects/conda/en/stable/">Conda</a> e <a href="https://rstudio.github.io/renv/articles/renv.html">renv</a>, que ajudam a gerenciar pacotes e dependências em ambientes de desenvolvimento, sem a necessidade de virtualização. Conda, por exemplo, gerencia pacotes, dependências e ambientes virtuais para linguagens como Python e R, permitindo criar ambientes isolados com versões específicas de pacotes e dependências. Já o renv (R Environment) é específico para projetos R, criando um ambiente de desenvolvimento reproduzível.</p>
+<p>Essas ferramentas oferecem a vantagem de menor sobrecarga de recursos e são fáceis de configurar e utilizar, promovendo a reprodutibilidade de ambientes de desenvolvimento para linguagens específicas. No entanto, oferecem menor isolamento comparado às VMs e containers e dependem da compatibilidade do sistema operacional e das versões dos pacotes.</p>
+<p>A recomendação para os pesquisadores que desejem terem seus trabalhos transparentes e reprodutíveis é que eles entendam das duas últimas soluções, por exemplo, num ambiente R, de containers + renv. Na verdade, essas duas soluções devem caminhar juntas, pois no contexto da maioria dos workflows (pipelines) de pesquisa a construção de containers é facilitada pela aplicação correta dos pacotes de controle de ambiente (Conda, renv, etc.).</p>
+<p>No entanto, a computação em nuvens também nos agraciou com outras soluções que facilitam a reprodutibilidade, transparência e colaboração em pesquisas empíricas. Plataformas de notebooks na nuvem como <a href="https://colab.research.google.com/">Google Colab</a> e <a href="https://posit.cloud/">Posit Cloud</a> (anteriormente conhecido como RStudio Cloud) permitem compartilhar notebooks rodando num mesmo hardware, mas os usuários precisam garantir que as dependências e versões de pacotes sejam corretamente especificadas e gerenciadas.</p>
+<p>No <a href="https://jupyter.org/hub">JupyterHub</a> temos proposta parecida, mas ele nos dá um controle melhor sobre o ambiente, já que um administrador pode configurar e manter as dependências necessárias de um projeto colaborativo. O <a href="https://mybinder.org/">Binder</a> é uma plataforma open-source que transforma repositórios Git em ambientes executáveis, focando principalmente em notebooks Jupyter. Ele facilita a execução de notebooks a partir de repositórios Git e garante que as dependências especificadas no repositório sejam instaladas, mas depende da configuração correta dos arquivos de dependências.</p>
+<p>O <a href="https://codeocean.com/">Code Ocean</a> e <a href="https://nextjournal.com/">Nextjournal</a> são soluções específicas para a reprodutibilidade de pesquisas científicas, focando na facilidade de uso e na acessibilidade para a comunidade acadêmica. O Code Ocean permite que os cientistas agrupem código, dados, resultados, metadados e um ambiente computacional em um único lugar — chamado de “cápsula”, cujos resultados podem ser reproduzidos por qualquer pessoa num simples botão <span class="citation" data-cites="clyburne-sherin2019">(<a href="references.html#ref-clyburne-sherin2019" role="doc-biblioref">Clyburne-Sherin et al., 2019</a>)</span>. O Nextjournal é uma plataforma de colaboração e publicação de notebooks interativos, que permite a execução de código em diferentes linguagens, como o Code Ocean, e a criação de artigos científicos interativos. Essas duas soluções oferecem um ambiente integrado, com interface gráfica intuitiva para configurar ambientes de desenvolvimento e execução, o que facilita para pesquisadores sem conhecimento técnico avançado. No entanto, são soluções comerciais e podem ter limitações em termos de recursos e personalização.</p>
+<p>As soluções apresentadas sobrepostas à nuvem do lado direito na <a href="#fig-vm-container" class="quarto-xref">Figura&nbsp;<span>7.1</span></a> podem ser consideradas soluções intermediárias aos containers tradicionais, no sentido de que elas utilizam conteinerização para criar ambientes reprodutíveis, mas abstraem a complexidade técnica e fornecem interfaces mais amigáveis e específicas para a comunidade científica. Elas são ideais para pesquisadores que buscam simplicidade e reprodutibilidade sem a necessidade de se aprofundar nos detalhes técnicos dos containers. Essas plataformas tornam a poderosa tecnologia de conteinerização acessível e aplicável ao contexto da pesquisa científica.</p>
+<p>Podemos dizer que em termos de níveis de reprodutibilidade, Google Colab e Posit Cloud atendem a um nível básico, porque a reprodutibilidade pode ser limitada pela variabilidade das dependências das sessões e cabe ao usuário uma configuração cuidadosa dos pacotes e versões. Binder e JupyterHub fornecem um nível intermediário de reprodutibilidade, pois apesar de um melhor controle sobre o ambiente, requer configuração e manutenção adequadas das dependências. Por fim, Code Ocean e Nextjournal oferecem um alto nível de reprodutibilidade, pois são ambientes integrados para criar, executar e compartilhar projetos de pesquisa reprodutíveis.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="citation" data-cites="wiebels2021">Wiebels &amp; Moreau (<a href="references.html#ref-wiebels2021" role="doc-biblioref">2021</a>)</span> <em>Reading Note</em> (<a href="00-prework.html#tip-prompt" class="quarto-xref">Tip&nbsp;<span>1</span></a>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>O artigo de <span class="citation" data-cites="wiebels2021">Wiebels &amp; Moreau (<a href="references.html#ref-wiebels2021" role="doc-biblioref">2021</a>)</span> discute a importância e a aplicação das práticas de ciência aberta na pesquisa. Eles destacam que, desde 2019, cerca de 35% dos pesquisadores de psicologia adotaram práticas de CA, um aumento significativo em relação aos 5% de apenas cinco anos antes.</p>
+<p>O artigo, inicialmente, discute o pacote <a href="https://rstudio.github.io/renv/articles/renv.html">renv</a>, que gerencia dependências em R armazenando o código-fonte de todos os pacotes R usados em um projeto. No entanto, eles observam que essa abordagem não lida com dependências do sistema ou dependências de outras linguagens de programação e pacotes de software.</p>
+<p>Para resolver essas limitações, os autores apresentam os “containers”, que permitem empacotar todo o código e dependências para garantir que as análises sejam executadas de maneira confiável em uma variedade de sistemas operacionais e versões de software. Eles descrevem a lógica por trás dos containers, o que são e os problemas práticos que podem resolver.</p>
+<p>Os autores explicam que o ideal é “empacotar” (isolar) todo o ambiente de computação de forma que qualquer pessoa em qualquer computador possa examinar e replicar nosso trabalho, independentemente do software instalado, drivers e sistemas operacionais. Uma maneira popular de alcançar esse objetivo é com máquinas virtuais (VMs), mas as VMs podem ficar muito grandes e lentas, o que pode tornar o compartilhamento e o uso delas impraticáveis. Os containers também isolam ambientes de computação, mas usam menos recursos do que as VMs.</p>
+<p>Apesar de suas vantagens, a contêinerização ainda é raramente usada na psicologia, talvez por falta de conscientização ou porque o uso - e especialmente a construção - de containers pode parecer assustador para aqueles que não têm formação em ciência da computação. Para superar essa barreira, os autores usam a plataforma de contêiner <a href="https://www.docker.com/">Docker</a> e se concentram na linguagem R.</p>
+<p>Eles explicam que o Docker é um projeto de contêinerização de código aberto baseado em Linux; ou seja, o Linux está rodando dentro dos containers, mesmo que estejamos em um computador Windows ou Mac. Eles também esclarecem que um número ilimitado de containers pode ser criado a partir de uma imagem e, ao contrário das imagens, os containers podem ser modificados enquanto estão em execução.</p>
+<p>Os autores comparam uma imagem Docker a uma receita de bolo e o container Docker correspondente a um bolo acabado. A receita contém as instruções para fazer o bolo, pode ser usada para fazer quantos bolos você quiser e pode ser compartilhada para permitir que outros façam o mesmo bolo. Todos que usam a receita acabam com o mesmo tipo de bolo, que pode ser modificado adicionando, por exemplo, cobertura ou confeites. No entanto, sua adição de cobertura e minha adição de confeites não mudarão a receita, e da próxima vez que usarmos a receita, teremos o mesmo bolo de antes.</p>
+<p>Os autores escolheram usar o Docker para o tutorial por cinco razões principais. Primeiro, o Docker é uma das principais plataformas de contêiner e foi estabelecido como uma prática recomendada em vários campos de pesquisa. Segundo, o Docker funciona em todos os principais sistemas operacionais (Linux, macOS e Windows). Terceiro, os containers Docker são fáceis de usar, muito leves e rápidos. Quarto, as imagens Docker podem ser armazenadas e compartilhadas gratuitamente no registro central Docker Hub. Finalmente, graças à sua crescente popularidade, o Docker se beneficia de uma grande comunidade de usuários e um rico ecossistema de ferramentas relacionadas, como o Rocker, que fornece containers com ambientes R.</p>
+<p>Os autores concluem que a contêinerização é um passo importante para tornar a pesquisa reprodutível, fornecendo um ambiente de computação consistente que pode ser usado por todos os colaboradores ao longo do projeto e que pode ser compartilhado junto com a publicação. Compartilhar um container após a finalização de um projeto de pesquisa garante que suas análises sejam reprodutíveis. Nesse contexto, a proficiência em contêinerização, entre o conjunto mais amplo de ferramentas computacionais exigidas por um cientista moderno, pode se revelar um investimento valioso para cientistas comportamentais em todos os estágios de carreira.</p>
+</div>
+</div>
+</div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-clyburne-sherin2019" class="csl-entry" role="listitem">
+Clyburne-Sherin, A., Fei, X., &amp; Green, S. A. (2019). Computational <span>Reproducibility</span> via <span>Containers</span> in <span>Psychology</span>. <em>Meta-Psychology</em>, <em>3</em>. <a href="https://doi.org/10.15626/MP.2018.892">https://doi.org/10.15626/MP.2018.892</a>
+</div>
+<div id="ref-moreau2023" class="csl-entry" role="listitem">
+Moreau, D., Wiebels, K., &amp; Boettiger, C. (2023). Containers for Computational Reproducibility. <em>Nature Reviews Methods Primers</em>, <em>3</em>(1), 50. <a href="https://doi.org/10.1038/s43586-023-00236-9">https://doi.org/10.1038/s43586-023-00236-9</a>
+</div>
+<div id="ref-wiebels2021" class="csl-entry" role="listitem">
+Wiebels, K., &amp; Moreau, D. (2021). Leveraging <span>Containers</span> for <span>Reproducible Psychological Research</span>. <em>Advances in Methods and Practices in Psychological Science</em>, <em>4</em>(2), 251524592110178. <a href="https://doi.org/10.1177/25152459211017853">https://doi.org/10.1177/25152459211017853</a>
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -423,12 +516,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiada");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiada");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",

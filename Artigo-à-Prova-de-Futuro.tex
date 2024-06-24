@@ -149,36 +149,36 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
-  \renewcommand*\contentsname{Table of contents}
+  \renewcommand*\contentsname{Índice}
 \else
-  \newcommand\contentsname{Table of contents}
+  \newcommand\contentsname{Índice}
 \fi
 \ifdefined\listfigurename
-  \renewcommand*\listfigurename{List of Figures}
+  \renewcommand*\listfigurename{Lista de Figuras}
 \else
-  \newcommand\listfigurename{List of Figures}
+  \newcommand\listfigurename{Lista de Figuras}
 \fi
 \ifdefined\listtablename
-  \renewcommand*\listtablename{List of Tables}
+  \renewcommand*\listtablename{Lista de Tabelas}
 \else
-  \newcommand\listtablename{List of Tables}
+  \newcommand\listtablename{Lista de Tabelas}
 \fi
 \ifdefined\figurename
-  \renewcommand*\figurename{Figure}
+  \renewcommand*\figurename{Figura}
 \else
-  \newcommand\figurename{Figure}
+  \newcommand\figurename{Figura}
 \fi
 \ifdefined\tablename
-  \renewcommand*\tablename{Table}
+  \renewcommand*\tablename{Tabela}
 \else
-  \newcommand\tablename{Table}
+  \newcommand\tablename{Tabela}
 \fi
 }
 \@ifpackageloaded{float}{}{\usepackage{float}}
 \floatstyle{ruled}
 \@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
-\floatname{codelisting}{Listing}
-\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\floatname{codelisting}{Listagem}
+\newcommand*\listoflistings{\listof{codelisting}{Lista de Listagens}}
 \makeatother
 \makeatletter
 \makeatother
@@ -189,6 +189,15 @@
 \newcounter{quartocallouttipno}
 \newcommand{\quartocallouttip}[1]{\refstepcounter{quartocallouttipno}\label{#1}}
 \ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{portuguese}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage{bookmark}
@@ -197,6 +206,7 @@
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
   pdftitle={Artigo à Prova de Futuro},
+  pdflang={pt},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -322,7 +332,7 @@ Nesse sentido, o material do curso organizado nessa página refere-se ao
 roteiro estruturado de tudo que se vê nas aulas síncronas e conteúdos
 adicionais (bibliografia, notas de aulas, links, etc).
 
-A proposta do curso busca seguir de perto a mensagem de Dogucu and
+A proposta do curso busca seguir de perto a mensagem de Dogucu \&
 Çetinkaya-Rundel (2022). Nesse artigo as autoras abordam a importância
 da reprodutibilidade na ciência de dados, tanto na pesquisa quanto no
 ensino. Elas recomendam que os professores-pesquisadores adotem fluxos
@@ -365,7 +375,7 @@ para as aulas remotas. Essas soluções na sua maioria requerem cadastros
 rápidos, e podem ser feitos de forma instantânea via conta
 Google/Microsoft/Apple.
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-important-color-frame, rightrule=.15mm, coltitle=black, breakable, titlerule=0mm, colbacktitle=quarto-callout-important-color!10!white, colback=white, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Tip \ref*{tip-prompt}: ChatGPT para suas notas de leituras}, left=2mm, leftrule=.75mm, opacityback=0, toprule=.15mm, bottomrule=.15mm, bottomtitle=1mm, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, colframe=quarto-callout-important-color-frame, colbacktitle=quarto-callout-important-color!10!white, bottomrule=.15mm, colback=white, opacityback=0, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, opacitybacktitle=0.6, left=2mm, toprule=.15mm, arc=.35mm, coltitle=black, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Tip \ref*{tip-prompt}: ChatGPT para suas notas de leituras}]
 
 \quartocallouttip{tip-prompt} 
 
@@ -388,7 +398,7 @@ answer in Portuguese}''
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-caution-color-frame, rightrule=.15mm, coltitle=black, breakable, titlerule=0mm, colbacktitle=quarto-callout-caution-color!10!white, colback=white, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Não confie cegamente na IA}, left=2mm, leftrule=.75mm, opacityback=0, toprule=.15mm, bottomrule=.15mm, bottomtitle=1mm, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, colframe=quarto-callout-caution-color-frame, colbacktitle=quarto-callout-caution-color!10!white, bottomrule=.15mm, colback=white, opacityback=0, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, opacitybacktitle=0.6, left=2mm, toprule=.15mm, arc=.35mm, coltitle=black, rightrule=.15mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Não confie cegamente na IA}]
 
 Eu simplesmente copiei e colei os resultados do ChatGPT para compilar
 essas notas de leituras? Não. Após o resultado do ChatGPT eu reviso o
@@ -400,7 +410,7 @@ a partir da leitura do artigo ou sendo conhecedor do assunto abordado.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, rightrule=.15mm, coltitle=black, breakable, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Outra curiosidade\ldots{}}, left=2mm, leftrule=.75mm, opacityback=0, toprule=.15mm, bottomrule=.15mm, bottomtitle=1mm, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, colback=white, opacityback=0, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, opacitybacktitle=0.6, left=2mm, toprule=.15mm, arc=.35mm, coltitle=black, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Outra curiosidade\ldots{}}]
 
 A
 \href{https://phdpablo.github.io/curso-open-science/img/cover.png}{imagem
@@ -557,10 +567,10 @@ slides utilizados nas aulas (🗣️), aulas gravadas ou indicações de vídeo
 e leituras básica sobre os conteúdos (📓).
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2394}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2394}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2817}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2394}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2432}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2432}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2703}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2432}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Aula/Conteúdo
@@ -575,26 +585,28 @@ Instrutor
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Chapter~\ref{sec-intro} & 📅04/06/24⏲️19:00 &
+Capítulo~\ref{sec-intro} & 📅04/06/24⏲️19:00 &
 \href{./resources/01-intro.pdf}{🗣}\href{https://www.youtube.com/live/7ewEcTATkZM?si=Lq40IAoDgsy_A619}{🎥}\href{https://doi.org/10.1590/S0034-759020230408}{📓}
 & Ricardo Limongi \\
-Chapter~\ref{sec-osf} & 📅06/06/24⏲️19:00 &
+Capítulo~\ref{sec-osf} & 📅06/06/24⏲️19:00 &
 \href{https://osf.io/wm8vs}{🗣️}\href{https://www.youtube.com/watch?v=B19MPDJX_vs}{🎥}\href{https://doi.org/10.1002/cpet.32}{📓}
 & Pablo Rogers \\
-Chapter~\ref{sec-zotero} & 📅11/06/24⏲️19:00 &
+Capítulo~\ref{sec-zotero} & 📅11/06/24⏲️19:00 &
 \href{https://osf.io/emxz8}{🗣️}\href{https://youtu.be/tnbwKj6-pD8?si=Yx9IC2LhrplvA6g1}{🎥}\href{https://kuscholarworks.ku.edu/handle/1808/34983}{📓}
 & Pablo Rogers \\
-Chapter~\ref{sec-project} & 📅13/06/24⏲️19:00 &
+Capítulo~\ref{sec-project} & 📅13/06/24⏲️19:00 &
 \href{./resources/04-project.pdf}{🗣️}\href{https://youtu.be/l8yh3f8Tbv8?si=Yeq-xRxmffF7S1dk}{🎥}\href{https://doi.org/10.1371/journal.pcbi.1005510}{📓}
 & Pablo Rogers \\
-Chapter~\ref{sec-git} & 📅18/06/24⏲️19:00 &
+Capítulo~\ref{sec-git} & 📅18/06/24⏲️19:00 &
 \href{./resources/05-git.pdf}{🗣️}\href{https://youtu.be/uQL6NOSd9cc?si=TIYenlvIzKpoQ2dQ&t=1775}{🎥}\href{https://doi.org/10.1177/2515245918754826}{📓}
 & Pablo Rogers \\
-Chapter~\ref{sec-quarto} & 📅20/06/24⏲️19:00 &
+Capítulo~\ref{sec-quarto} & 📅20/06/24⏲️19:00 &
 \href{https://tracykteal.quarto.pub/intro-to-quarto/}{🗣️}\href{https://youtu.be/XuxyzBhDvLg?si=iRCnXPJkmqbLuFty&t=1469}{🎥}\href{https://doi.org/10.31219/osf.io/ur4xn}{📓}
 & Pablo Rogers \\
-Chapter~\ref{sec-docker} & 📅25/06/24⏲️19:00 & 🗣️🎥📓 & Pablo Rogers \\
-Chapter~\ref{sec-AI} & 📅27/06/24⏲️19:00 & 🗣️🎥📓 & Ricardo Limongi \\
+Capítulo~\ref{sec-docker} & 📅25/06/24⏲️19:00 &
+\href{https://kevinushey-2020-rstudio-conf.netlify.app/slides.html\#1}{🗣️}\href{https://youtu.be/N2STULZ1dYo?si=LAxCXfI9J0irxADD&t=523}{🎥}\href{https://doi.org/10.1177/25152459211017853}{📓}
+& Pablo Rogers \\
+Capítulo~\ref{sec-AI} & 📅27/06/24⏲️19:00 & 🗣️🎥📓 & Ricardo Limongi \\
 \end{longtable}
 
 \bookmarksetup{startatroot}
@@ -608,50 +620,51 @@ A pesquisa científica atual\footnote{O texto apresentado nessa seção é
   acompanhado no \href{http://osf.io/dnrgf}{OSF}: Rogers, P., Limongi,
   R., \& Barboza, F. (2024, May 29). The Practice of Open Science in
   Brazil. Retrieved from osf.io/dnrgf} enfrenta vários desafios (Munafò
-et al. 2017). Problemas como o pequeno tamanho da amostra, pequenos
+et al., 2017). Problemas como o pequeno tamanho da amostra, pequenos
 tamanhos de efeito, p-hacking e HARKing (viés positivo de publicação),
 conflitos de interesse e a competição entre cientistas que trabalham
 isoladamente sem combinar seus esforços, têm sido apontados como
 catalizadores do que se convencionou chamar de ``crise de
-reprodutibilidade'' na ciência (M. Baker 2016; Munafò et al. 2017).
+reprodutibilidade'' na ciência (M. Baker, 2016; Munafò et al., 2017).
 
 Pesquisas apontam que mais de 70\% de pesquisadores que tentaram,
 falharam em reproduzir os experimentos de outros cientistas, e mais da
-metade falhou em reproduzir seus próprios experimentos (M. Baker 2016),
+metade falhou em reproduzir seus próprios experimentos (M. Baker, 2016),
 com estimativa de que 85\% dos esforços de pesquisas estejam sendo
-desperdiçados (Munafò et al. 2017), gerando custos econômicos
-bilionários (Freedman, Cockburn, and Simcoe 2015).
+desperdiçados (Munafò et al., 2017), gerando custos econômicos
+bilionários (Freedman et al., 2015).
 
 A despeito daqueles que advogam que não existe essa tal ``crise de
-reprodutibilidade'' (Bernard 2023; Fanelli 2018; Protzko et al. 2023), a
-grande maioria da comunidade científica concorda com sua existência e
-defende a melhoria da transparência, reprodutibilidade e eficiência na
-ciência (M. Baker 2016).
+reprodutibilidade'' (Bernard, 2023; Fanelli, 2018; Protzko et al.,
+2023), a grande maioria da comunidade científica concorda com sua
+existência e defende a melhoria da transparência, reprodutibilidade e
+eficiência na ciência (M. Baker, 2016).
 
 Nesse contexto, o movimento da Ciência Aberta (CA) tem ganhado
 notoriedade e mudado a percepção sobre o cenário científico global
-(Crüwell et al. 2019). Ele busca tornar o conhecimento científico mais
+(Crüwell et al., 2019). Ele busca tornar o conhecimento científico mais
 acessível, transparente e colaborativo. Se apresenta como uma coleção de
 práticas de democratização do conhecimento e ruptura com o formato único
-de divulgação do conhecimento científico (Crüwell et al. 2019; Heinz and
-Miranda 2024; Munafò et al. 2017). Ele surge do embate entre aqueles que
-buscam compartilhar o conhecimento e aqueles que defendem mecanismos de
-apropriação privada para a produção científica (Heinz and Miranda 2024).
+de divulgação do conhecimento científico (Crüwell et al., 2019; Heinz \&
+Miranda, 2024; Munafò et al., 2017). Ele surge do embate entre aqueles
+que buscam compartilhar o conhecimento e aqueles que defendem mecanismos
+de apropriação privada para a produção científica (Heinz \& Miranda,
+2024).
 
-A CA é um termo múltiplo e genérico (Vicente-Saez and Martinez-Fuentes
+A CA é um termo múltiplo e genérico (Vicente-Saez \& Martinez-Fuentes,
 2018), que representa diversas interpretações, e é considerada um novo
 modelo de divulgação e produção de resultados científicos por meio do
-acesso livre e irrestrito ao conhecimento (Heinz and Miranda 2024). A CA
+acesso livre e irrestrito ao conhecimento (Heinz \& Miranda, 2024). A CA
 não é apenas um conceito, mas uma prática multifacetada que influencia o
 ciclo de vida da pesquisa, desde a concepção até a disseminação dos
-resultados (Silva and Silveira 2019).
+resultados (Silva \& Silveira, 2019).
 
 Existem pelo menos cinco escolas de pensamento dentro da CA. Estas
 escolas abrangem desde a arquitetura tecnológica necessária para
 suportar a ciência até a inclusão do público geral na criação de
 conhecimento, passando pela medição do impacto alternativo, acesso ao
 conhecimento como um direito humano, e a pesquisa colaborativa como
-inovação aberta (Silva and Silveira 2019).
+inovação aberta (Silva \& Silveira, 2019).
 
 A taxonomia proposta pela
 \href{https://www.fosteropenscience.eu/foster-taxonomy/open-workflow-tools}{FOSTER}
@@ -661,8 +674,8 @@ revisada e ampliada para o contexto latino americano por Silveira et al.
 dimensão da complexidade do assunto (vide ilustração em:
 \url{https://doi.org/10.5281/zenodo.7836884}).
 
-Existem vários argumentos que sustentam a importância da CA (Heinz and
-Miranda 2024). Primeiramente, a CA pode trazer benefícios sociais
+Existem vários argumentos que sustentam a importância da CA (Heinz \&
+Miranda, 2024). Primeiramente, a CA pode trazer benefícios sociais
 significativos, pois contribui para o avanço do conhecimento, a
 inovação, a educação, a transparência e a participação cidadã. Além
 disso, a CA pode trazer benefícios científicos ao aumentar a qualidade,
@@ -674,15 +687,15 @@ equidade e a diversidade na ciência, além de respeitar os direitos dos
 autores, dos participantes e da sociedade como um todo.
 
 Esses argumentos são fundamentais para legitimar a CA e destacar sua
-importância no mundo atual (Heinz and Miranda 2024), principalmente,
+importância no mundo atual (Heinz \& Miranda, 2024), principalmente,
 como potencial transformador para reduzir desigualdades existentes em
 tecnologias de informação e comunicação -- reduzir exclusões digitais,
 tecnológicas e de conhecimento --, e acelerar o progresso rumo à
 implementação da Agenda 2030 e realização dos Objetivos de
-Desenvolvimento Sustentável (UNESCO 2021).
+Desenvolvimento Sustentável (UNESCO, 2021).
 
-O movimento da CA no Brasil está em uma fase transitória (Rezende and
-Falgueras 2020) -- ainda consolidando o acesso aberto -- com o governo
+O movimento da CA no Brasil está em uma fase transitória (Rezende \&
+Falgueras, 2020) -- ainda consolidando o acesso aberto -- com o governo
 desempenhando um papel crucial nesse processo. O Brasil tem ganhado
 destaque por sua abordagem única na implementação da CA. Esta abordagem
 é moldada por marcos regulatórios que se estendem desde o governo até as
@@ -690,7 +703,7 @@ instituições e agências de financiamento. Os regulamentos brasileiros,
 particularmente aqueles que promovem a abertura de dados governamentais,
 têm um impacto direto na prática científica. Eles incentivam a
 transparência e facilitam o acesso a dados científicos originados de
-instituições públicas (Rezende and Falgueras 2020).
+instituições públicas (Rezende \& Falgueras, 2020).
 
 A trajetória brasileira rumo à CA inicia com a abertura de dados na
 esfera governamental entre 2009 e 2016, evoluindo para a criação de um
@@ -699,7 +712,7 @@ Inovações e Comunicações (MCTIC) para desenvolver uma política nacional
 para a CA. Este esforço concentrou ênfase no reconhecimento dos dados de
 pesquisa como ativos de desenvolvimento científico, econômico e social,
 buscando facilitar seu acesso, compartilhamento e reutilização (Rezende
-and Falgueras 2020).
+\& Falgueras, 2020).
 
 Talvez por esse motivo, as políticas institucionais brasileiras revelam
 um cenário ainda muito influenciado pela ``via verde'' do movimento de
@@ -707,23 +720,22 @@ acesso aberto, caracterizado pelo depósito de dados em repositórios
 digitais abertos, e que o comprometimento efetivo do Brasil com a CA
 ainda é incipiente. As regulamentações atuais favorecem principalmente o
 acesso aberto, sem abordar de maneira abrangente outros aspectos da CA
-(Rezende and Falgueras 2020). O Brasil é um dos líderes mundiais no
-fornecimento de acesso universal às suas pesquisas e estudos (Neto,
-Willinsky, and Alperin 2016), com crescimento estável de sua produção
-científica disponível em acesso aberto, principalmente, as áreas de
-Agricultura e Ciência \& Tecnologia (Caballero-Rivero, Sánchez-Tarragó,
-and Santos 2019).
+(Rezende \& Falgueras, 2020). O Brasil é um dos líderes mundiais no
+fornecimento de acesso universal às suas pesquisas e estudos (Neto et
+al., 2016), com crescimento estável de sua produção científica
+disponível em acesso aberto, principalmente, as áreas de Agricultura e
+Ciência \& Tecnologia (Caballero-Rivero et al., 2019).
 
 Em termos de pesquisa acadêmica sobre o tema no Brasil, os estudos são
-precoces e concentrados na área de Ciência da Informação (Albano,
-Pedroso, and Caetano 2023). A despeito da maturidade da CA no Brasil, a
-importância do tema -- materializada na quantidade de produção acadêmica
--- tem aumentado vertiginosamente (Albano, Pedroso, and Caetano 2023), e
-a dispersão de autores e respectivas instituições que publicam sobre o
-assunto, parece ser a situação predominante.
+precoces e concentrados na área de Ciência da Informação (Albano et al.,
+2023). A despeito da maturidade da CA no Brasil, a importância do tema
+-- materializada na quantidade de produção acadêmica -- tem aumentado
+vertiginosamente (Albano et al., 2023), e a dispersão de autores e
+respectivas instituições que publicam sobre o assunto, parece ser a
+situação predominante.
 
 Apesar de importantes atores nacionais, tais como CAPES, CNPq e Scielo,
-defenderem o crescimento de iniciativas de CA (Mendes-Da-Silva 2023), o
+defenderem o crescimento de iniciativas de CA (Mendes-Da-Silva, 2023), o
 assunto no Brasil parece estar circunscrito em iniciativas de
 importantes periódicos nacionais sobre dados aberto, capitaneados pelas
 orientações da Scielo. Não foi encontrada nenhuma pesquisa empírica,
@@ -731,40 +743,40 @@ sobre a prática da CA no Brasil.
 
 Por prática de CA entende-se a perspectiva micro da CA, relacionadas com
 as terminologias e conhecimento em torno do fluxo de trabalho do gerador
-de conhecimento científico aberto (Figure~\ref{fig-ca-micro}), ou seja,
+de conhecimento científico aberto (Figura~\ref{fig-ca-micro}), ou seja,
 o cientista que se propõe tornar sua pesquisa transparente, reprodutível
 e replicável.
 
 \begin{figure}
 
-\includegraphics{img/ca-micro.png}
+\href{https://doi.org/10.5281/zenodo.10835001}{\includegraphics{img/ca-micro.png}}
 
 \caption{\label{fig-ca-micro}Perspectiva micro da CA. Taxonomia
 relacionada com terminologias e conhecimento em torno da prática (fluxo
 de trabalho) do gerador de conhecimento científico aberto. Ilustração
-disponível em: \url{https://doi.org/10.5281/zenodo.10835001}.}
+disponível em: https://doi.org/10.5281/zenodo.10835001.}
 
 \end{figure}%
 
 Exclui-se a perspectiva macro, relacionadas com as ramificações
 conceituais da CA concernentes às políticas públicas, infraestrutura,
 envolvimento aberto de atores sociais e diálogo aberto com outros
-sistemas de conhecimento (Figure~\ref{fig-ca-macro}). Essa última
+sistemas de conhecimento (Figura~\ref{fig-ca-macro}). Essa última
 perspectiva está fora do escopo da discussão do curso, que se concentra
 em algumas das dimensões da perspectiva micro, particularmente, as
 ferramentas disponíveis para compilação dos produtos científicos que
-integram a publicação científica (UNESCO 2021).
+integram a publicação científica (UNESCO, 2021).
 
 \begin{figure}
 
-\includegraphics{img/ca-macro.png}
+\href{https://doi.org/10.5281/zenodo.10835001}{\includegraphics{img/ca-macro.png}}
 
 \caption{\label{fig-ca-macro}Perspectiva macro da CA. Taxonomia
 relacionada com as ramificações conceituais da CA concernentes às
 políticas (públicas), infraestrutura, envolvimento aberto de atores
 sociais (sociedade) e diálogo aberto com outros sistemas de
 conhecimento. Ilustração disponível em:
-\url{https://doi.org/10.5281/zenodo.10835001}}
+https://doi.org/10.5281/zenodo.10835001}
 
 \end{figure}%
 
@@ -795,37 +807,37 @@ mostra importante, \emph{per si}, pois:
 \end{enumerate}
 
 Sobre esse último ponto, até para aqueles que não reconhecem a ``crise
-de reprodutibilidade'' na ciência (Bernard 2023), a comunidade
+de reprodutibilidade'' na ciência (Bernard, 2023), a comunidade
 científica e atores importantes do cenário advogam que a solução inclui
 educar os estudantes e pesquisadores desde cedo em todas as questões da
-CA (D. H. Baker et al. 2023; Bezjak et al. 2018; Chopik et al. 2018;
-Crüwell et al. 2019; Dogucu and Çetinkaya-Rundel 2022; Janz 2015;
-McAleer et al. 2022; Munafò et al. 2017; Toelch and Ostwald 2018).
+CA (D. H. Baker et al., 2023; Bezjak et al., 2018; Chopik et al., 2018;
+Crüwell et al., 2019; Dogucu \& Çetinkaya-Rundel, 2022; Janz, 2015;
+McAleer et al., 2022; Munafò et al., 2017; Toelch \& Ostwald, 2018).
 
 A referida crise não deriva de má conduta científica, mas principalmente
 da confusão entre replicar conclusões, replicar resultados, falta de
 educação em estatística, lógica científica, método científico,
 alfabetização de dados, etc. Para combater essas questões é necessário
 investir em educação e disseminação de boas práticas de investigação
-para uma mudança de cultura (D. H. Baker et al. 2023; Bezjak et al.
-2018; Chopik et al. 2018; Crüwell et al. 2019; Dogucu and
-Çetinkaya-Rundel 2022; Janz 2015; McAleer et al. 2022; Munafò et al.
-2017; Toelch and Ostwald 2018).
+para uma mudança de cultura (D. H. Baker et al., 2023; Bezjak et al.,
+2018; Chopik et al., 2018; Crüwell et al., 2019; Dogucu \&
+Çetinkaya-Rundel, 2022; Janz, 2015; McAleer et al., 2022; Munafò et al.,
+2017; Toelch \& Ostwald, 2018).
 
 Investir em recursos humanos, treinamento, educação, alfabetização
 digital, capacitação sistemática e contínua, e fomentar uma cultura
 científica de CA, têm sido apresentadas como algumas das principais
 medidas simultâneas para superar o cenário atual (Committee on
-Reproducibility and Replicability in Science et al. 2019; European
-Commission. Directorate General for Research and Innovation. 2017;
-UNESCO 2021). A proposta do curso pode contribuir para a literatura da
+Reproducibility and Replicability in Science et al., 2019; European
+Commission. Directorate General for Research and Innovation., 2017;
+UNESCO, 2021). A proposta do curso pode contribuir para a literatura da
 CA no Brasil, pois pretende perseguir dois objetivos concomitantes: 1)
 diagnosticar sua prática junto aos pesquisadores brasileiros; e 2)
 promover o desenvolvimento de uma intervenção educacional sobre a
 prática (workflow) e principais ferramentas para compilação dos produtos
 científicos que integram uma publicação científica aberta.
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, rightrule=.15mm, coltitle=black, breakable, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@klein2018 \emph{Reading Note} (Tip~\ref{tip-prompt})}, left=2mm, leftrule=.75mm, opacityback=0, toprule=.15mm, bottomrule=.15mm, bottomtitle=1mm, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, colback=white, opacityback=0, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, opacitybacktitle=0.6, left=2mm, toprule=.15mm, arc=.35mm, coltitle=black, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@klein2018 \emph{Reading Note} (Tip~\ref{tip-prompt})}]
 
 O artigo é um guia prático para pesquisadores que desejam compartilhar
 os produtos de sua pesquisa. Os autores argumentam que as práticas de
@@ -901,7 +913,7 @@ melhorar a qualidade e a credibilidade de seu trabalho.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, rightrule=.15mm, coltitle=black, breakable, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@kathawalla2021 \emph{Reading Note} (Tip~\ref{tip-prompt})}, left=2mm, leftrule=.75mm, opacityback=0, toprule=.15mm, bottomrule=.15mm, bottomtitle=1mm, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, colback=white, opacityback=0, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, opacitybacktitle=0.6, left=2mm, toprule=.15mm, arc=.35mm, coltitle=black, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@kathawalla2021 \emph{Reading Note} (Tip~\ref{tip-prompt})}]
 
 Este artigo fornece um guia para ajudar estudantes de pós-graduação e
 seus orientadores a se envolverem na prática da ciência aberta (CA). A
@@ -1086,7 +1098,7 @@ pesquisadores a gerenciar seus projetos de pesquisa, incluindo:
 
 O \textbf{OSF} tem um foco mais amplo em todo o ciclo de vida da
 pesquisa, desde a concepção da ideia até a publicação dos resultados
-(Figure~\ref{fig-osf-researchcycle}). Já algumas das soluções citadas
+(Figura~\ref{fig-osf-researchcycle}). Já algumas das soluções citadas
 foca principalmente no compartilhamento de dados e publicações. O
 \textbf{OSF} oferece ferramentas mais robustas para colaboração em
 equipe, como wikis, painéis de discussão e ferramentas de gerenciamento
@@ -1111,7 +1123,7 @@ pesquisadores a iniciar sua jornada \textbf{OSF}. Claro que ele foi
 adaptado para nossos fins, principalmente, em decorrência do tempo
 destinado ao módulo.
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, coltitle=black, breakable, titlerule=0mm, colbacktitle=quarto-callout-tip-color!10!white, colback=white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Bifurcando ou duplicando um projeto}, left=2mm, leftrule=.75mm, opacityback=0, toprule=.15mm, bottomrule=.15mm, bottomtitle=1mm, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, bottomrule=.15mm, colback=white, opacityback=0, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, opacitybacktitle=0.6, left=2mm, toprule=.15mm, arc=.35mm, coltitle=black, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Bifurcando ou duplicando um projeto}]
 
 Você sabia que é possível executar um ``\emph{forking}'' (criar uma
 cópia do projeto existente) ou ``\emph{duplicate as template}''
@@ -1130,11 +1142,11 @@ dados, documentos reprodutíveis e até mesmo gerenciamento de cursos.
 \end{tcolorbox}
 
 Para os alunos que desejam uma leitura sobre o \textbf{OSF} na prática,
-indico os artigos de Sullivan, DeHaven, and Mellor (2019) e Soderberg
-(2018). Apesar de o leitor poder encontrar \emph{prints} das telas da
-plataforma desatualizadas, esses dois artigos podem ser um bom começo
-para entender a lógica da plataforma. E \emph{off course}, recomendo
-fortemente você dar uma olhada no
+indico os artigos de Sullivan et al. (2019) e Soderberg (2018). Apesar
+de o leitor poder encontrar \emph{prints} das telas da plataforma
+desatualizadas, esses dois artigos podem ser um bom começo para entender
+a lógica da plataforma. E \emph{off course}, recomendo fortemente você
+dar uma olhada no
 \href{https://help.osf.io/article/342-getting-started-on-the-osf}{suporte
 do \textbf{OSF}}, onde podemos encontrar vídeos introdutórios
 excelentes.
@@ -1150,7 +1162,7 @@ Github. Por isso, que também nesse módulo passamos pelo
 que integra com o Github e tem a capacidade de gerar DOIs para as
 versões dos repositórios.
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, rightrule=.15mm, coltitle=black, breakable, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@sullivan2019 \emph{Reading Note} (Tip~\ref{tip-prompt})}, left=2mm, leftrule=.75mm, opacityback=0, toprule=.15mm, bottomrule=.15mm, bottomtitle=1mm, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, colback=white, opacityback=0, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, opacitybacktitle=0.6, left=2mm, toprule=.15mm, arc=.35mm, coltitle=black, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@sullivan2019 \emph{Reading Note} (Tip~\ref{tip-prompt})}]
 
 O artigo apresenta um protocolo para a implementação de práticas de
 Ciência Aberta (CA), com foco no uso do Open Science Framework (OSF). As
@@ -1217,8 +1229,8 @@ um guia para implementar essas práticas de forma eficaz.
 
 Existem mais de 30 diferentes\footnote{\href{https://en.wikipedia.org/wiki/Comparison_of_reference_management_software}{Esta
   lista} no Wikipedia, que é atualizada constantemente, faz uma
-  comparação entre eles.} gerenciadores de referências (Proske, Wenzel,
-and Queitsch 2023). Entre eles podemos indicar o
+  comparação entre eles.} gerenciadores de referências (Proske et al.,
+2023). Entre eles podemos indicar o
 \href{https://www.citavi.com/en}{Citavi} e o
 \href{https://refworks.proquest.com/learn-more/}{RefWorks}. No entanto,
 os mais populares são o \href{https://endnote.com/}{EndNote},
@@ -1242,27 +1254,26 @@ Mendeley, especialmente no que diz respeito ao \textbf{Ecossitema de
 Plugins}. O Zotero possui uma comunidade ativa de desenvolvedores e
 pesquisadores que criam e compartilham plugins. Esses plugins estendem
 as funcionalidades do Zotero, permitindo personalizações específicas e
-integrações com outras ferramentas (Behera and Jain 2023). O plugin
+integrações com outras ferramentas (Behera \& Jain, 2023). O plugin
 \href{https://retorque.re/zotero-better-bibtex/}{Better BibTeX}, por
 exemplo, oferece recursos avançados de exportação e formatação de
 bibliografias, tornando-o uma escolha popular para usuários que
 trabalham com LaTeX, Markdown, HTML, e outras linguagens de marcação.
 Outro exemplo é o \href{https://zotfile.com/}{ZotFile}, que permite
 gerenciar anexos de PDFs, renomeando arquivos automaticamente e
-organizando-os em pastas específicas (Behera and Jain 2023). Assim,
+organizando-os em pastas específicas (Behera \& Jain, 2023). Assim,
 poderás estender o armazenamento do Zotero de 300Mb para o limite de seu
 serviço de armazenamento na nuvem (Google Drive, OneDrive, Dropbox,
 etc.)\footnote{Outro importante plugin é a integração com o
-  \href{https://github.com/ethanwillis/zotero-scihub}{SciHub} (Behera
-  and Jain 2023). Coloquei essa informação em nota, pois ele é
-  questionável do ponto de vista ético (😬🫣), apesar de extensivamente
-  utilizado no Brasil por estudantes de pós-graduação stricto sensu de
-  diferentes áreas (Oddone and Souza 2024). Ou se enxergarmos o problema
-  sob outro ponto de vista, a ampla adoção do SciHub no Brasil e em todo
-  o mundo reflete a resposta dos cientistas ao desgastado sistema de
-  comunicação científica mantido pelas editoras internacionais.~Além
-  disso, reforça a relevância dos princípios da Ciência Aberta (Oddone
-  and Souza 2024).}.
+  \href{https://github.com/ethanwillis/zotero-scihub}{SciHub} (Behera \&
+  Jain, 2023). Coloquei essa informação em nota, pois ele é questionável
+  do ponto de vista ético (😬🫣), apesar de extensivamente utilizado no
+  Brasil por estudantes de pós-graduação stricto sensu de diferentes
+  áreas (Oddone \& Souza, 2024). Ou se enxergarmos o problema sob outro
+  ponto de vista, a ampla adoção do SciHub no Brasil e em todo o mundo
+  reflete a resposta dos cientistas ao desgastado sistema de comunicação
+  científica mantido pelas editoras internacionais.~Além disso, reforça
+  a relevância dos princípios da Ciência Aberta (Oddone \& Souza, 2024).}.
 
 Nesse sentido, uma recomendação importante é não deixar de dar uma
 olhada no \href{https://www.zotero.org/support/plugins}{página de
@@ -1278,7 +1289,7 @@ contexto do processo de escrita, e não apenas como facilitadores
 operacionais (``\emph{time saver}'') de citações e bibliografias.
 Somente usuários avançados podem aproveitar o suporte que a maioria dos
 sistemas de gerenciamento de referências oferece para o processo de
-escrita (Proske, Wenzel, and Queitsch 2023).
+escrita (Proske et al., 2023).
 
 Atualmente, gerenciadores de referências mais populares oferecem
 funcionalidades básicas, que incluem:
@@ -1299,8 +1310,7 @@ funcionalidades básicas, que incluem:
   Sincronizar referências entre o aplicativo de desktop e a versão
   móvel, bem como entre diferentes computadores; e
 \item
-  Compartilhar referências com colegas (Proske, Wenzel, and Queitsch
-  2023)
+  Compartilhar referências com colegas (Proske et al., 2023)
 \end{itemize}
 
 Esse conteúdo é abordado em detalhes no trabalho de Thomas (2023), e
@@ -1342,7 +1352,7 @@ ou ii) o histórico de versões do seu aplicativo de armazenamento nas
 nuvens (\texttt{OneDrive}, \texttt{Google\ Drive} ou \texttt{Dropbox}),
 você já está familiarizado com a ideia de controle de versão. Qual
 estudante ou pesquisador nunca se deparou com uma situação parecida da
-Figure~\ref{fig-funny-git}?
+Figura~\ref{fig-funny-git}?
 
 \begin{figure}
 
@@ -1599,7 +1609,7 @@ alterações simultâneas, fusões complexas e um alto nível de coordenação
 e colaboração. A capacidade do Git de gerenciar branches de forma
 eficiente e a integração contínua proporcionada pelo GitHub são
 elementos cruciais para o sucesso desses projetos. A
-Figure~\ref{fig-gitflow} ilustra um diagrama hipotético do fluxo de
+Figura~\ref{fig-gitflow} ilustra um diagrama hipotético do fluxo de
 trabalho em um ambiente de desenvolvimento de software típico, com
 diversos ramos, e como a complexidade de gerenciamento de versões,
 apesar de tratada pelo Git e GitHub, pode escalar.
@@ -1624,7 +1634,7 @@ request no GitHub, permitindo uma revisão por pares antes da fusão. Isso
 não só mantém a qualidade do trabalho como também documenta o processo
 de desenvolvimento de maneira transparente.
 
-A Figure~\ref{fig-git3autores} ilustra um Gitflow hipotético para uma
+A Figura~\ref{fig-git3autores} ilustra um Gitflow hipotético para uma
 colaboração científica envolvendo três autores. Note que cada autor tem
 seu próprio branch de produção, que é integrado ao branch principal
 através de pull requests, administrado pelo autor principal. Essa
@@ -1636,7 +1646,7 @@ e GitHub.
 
 \begin{figure}
 
-\includegraphics{img/git3autores.jpg}
+\href{https://doi.org/10.5281/zenodo.12165926}{\includegraphics{img/git3autores.jpg}}
 
 \caption{\label{fig-git3autores}\textbf{Um fluxo de trabalho hipotético
 do Git para uma colaboração científica envolvendo três autores}. Cada
@@ -1644,8 +1654,8 @@ círculo representa um commit e as cores indicam commits específicos do
 autor. Setas bidirecionais indicam uma sincronização (um push e pull na
 terminologia Git). Setas unidirecionais indicam uma atualização de uma
 ramificação para outra. As setas horizontais indicam o desenvolvimento
-ao longo de um ramo específico (Ram 2013). Ilustração disponível em:
-\url{https://doi.org/10.5281/zenodo.12165926}.}
+ao longo de um ramo específico (Ram, 2013). Ilustração disponível em:
+\textless https://doi.org/10.5281/zenodo.12165926\textgreater.}
 
 \end{figure}%
 
@@ -1657,7 +1667,7 @@ abordagens sem o risco de perder trabalho anterior. Além disso, o GitHub
 fornece um backup seguro na nuvem, garantindo que os dados estejam
 protegidos contra perda.
 
-A Figure~\ref{fig-gitautorbegin} ilustra um Gitflow hipotético para um
+A Figura~\ref{fig-gitautorbegin} ilustra um Gitflow hipotético para um
 único pesquisador. Neste caso, o pesquisador mantém um branch principal
 para o desenvolvimento do projeto e cria branches individuais para
 experimentos ou novas ideias. Cada commit é documentado com uma mensagem
@@ -1670,7 +1680,7 @@ remoto for público.
 
 \begin{figure}
 
-\includegraphics{img/gitautorbegin.jpg}
+\href{https://doi.org/10.5281/zenodo.12165926}{\includegraphics{img/gitautorbegin.jpg}}
 
 \caption{\label{fig-gitautorbegin}\textbf{Um fluxo de trabalho
 hipotético do Git para a execução de uma pesquisa solo.} Cada círculo
@@ -1683,21 +1693,22 @@ repositório local com o repositório remoto (Github) desde as etapas
 iniciais da pesquisa. Nessa perspectiva o repositório remoto funciona
 como um armazenamento de backup, e se público, para tornar a evolução do
 trabalho do pesquisador disponível para quem deseja acompanhar.
-Ilustração disponível em: \url{https://doi.org/10.5281/zenodo.12165926}}
+Ilustração disponível em:
+\textless https://doi.org/10.5281/zenodo.12165926\textgreater{}}
 
 \end{figure}%
 
 Por outro lado, um pesquisador pode optar por tornar público seu
 trabalho (dados, materiais e histórico de mudanças) somente quando for
 submeter o artigo para publicação, como podemos ver na
-Figure~\ref{fig-gitautorend}. Essa figura ilustra um workflow em que o
+Figura~\ref{fig-gitautorend}. Essa figura ilustra um workflow em que o
 pesquisador desenvolveu seu trabalho localmente, fazendo uso do Git para
 seu controle de versões, e apenas quando da necessidade de tornar
 público, vinculou o repositório local com o repositório remoto.
 
 \begin{figure}
 
-\includegraphics{img/gitautorend.jpg}
+\href{https://doi.org/10.5281/zenodo.12165926}{\includegraphics{img/gitautorend.jpg}}
 
 \caption{\label{fig-gitautorend}\textbf{Um fluxo de trabalho hipotético
 do Git para a execução de uma pesquisa solo.} Cada círculo representa um
@@ -1711,7 +1722,8 @@ finalizou o artigo. Nessa perspectiva o repositório remoto só faz
 sentido se para publicar os dados, materiais da pesquisa e o histórico
 de mudanças, pois como backup, o autor pode utilizar um serviço de
 armazenamento nas nuvens (OneDrive, GoogleDrive, DropBox, etc.).
-Ilustração disponível em: \url{https://doi.org/10.5281/zenodo.12165926}}
+Ilustração disponível em:
+\textless https://doi.org/10.5281/zenodo.12165926\textgreater{}}
 
 \end{figure}%
 
@@ -1720,12 +1732,12 @@ as funcionalidades do Git/Github também se adaptam perfeitamente a
 projetos de pesquisa mais simples, seja com número pequeno de
 pesquisadores ou mesmo com um único pesquisador.
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, rightrule=.15mm, coltitle=black, breakable, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@vuorre2018 \emph{Reading Note} (Tip~\ref{tip-prompt})}, left=2mm, leftrule=.75mm, opacityback=0, toprule=.15mm, bottomrule=.15mm, bottomtitle=1mm, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, colback=white, opacityback=0, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, opacitybacktitle=0.6, left=2mm, toprule=.15mm, arc=.35mm, coltitle=black, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@vuorre2018 \emph{Reading Note} (Tip~\ref{tip-prompt})}]
 
 Como uma tentativa de enfrentar os desafios da reprodutibilidade na
 ciência empírica, um fator específico que se destaca é a forma como os
 pesquisadores organizam, curam, compartilham e colaboram em seus ativos
-de pesquisa (Vuorre and Curley 2018). Para mitigar essas dificuldades,
+de pesquisa (Vuorre \& Curley, 2018). Para mitigar essas dificuldades,
 sistemas de controle de versão (VCS), como o Git, têm sido amplamente
 adotados, uma vez que facilitam o acompanhamento das mudanças, versões e
 colaboração em projetos científicos.
@@ -1736,7 +1748,7 @@ computação. Isso se deve à sua capacidade de tratar qualquer texto
 digitado em um computador -- manuscritos, scripts de análise
 estatística, código-fonte de experimentos computadorizados e até
 arquivos de dados -- como código, gerenciando assim múltiplas versões e
-autores sem introduzir erros (Vuorre and Curley 2018).
+autores sem introduzir erros (Vuorre \& Curley, 2018).
 
 Ao trabalhar com Git, os usuários podem salvar versões intermediárias de
 seus arquivos no disco rígido e, subsequentemente, no histórico do VCS.
@@ -1744,14 +1756,14 @@ Esse processo permite que todas as alterações sejam monitoradas e
 revertidas quando necessário. A instalação do Git e sua integração com
 ferramentas como o RStudio proporcionam uma interface gráfica amigável
 para gerenciar repositórios locais e remotos, facilitando o controle de
-versões e a colaboração (Vuorre and Curley 2018).
+versões e a colaboração (Vuorre \& Curley, 2018).
 
 A introdução do Git desde o início de um projeto científico torna o
 fluxo de trabalho mais eficiente e menos trabalhoso do que tentar
 incorporar práticas de reprodutibilidade após a conclusão do projeto. A
 organização clara de arquivos e pastas, seguindo diretrizes como as
 recomendações do Project TIER, é uma etapa inicial crucial para garantir
-a reprodutibilidade (Vuorre and Curley 2018).
+a reprodutibilidade (Vuorre \& Curley, 2018).
 
 O GitHub, uma plataforma online para hospedagem de repositórios Git,
 permite a criação de repositórios centralizados que facilitam o trabalho
@@ -1760,7 +1772,7 @@ máquinas locais, fazer mudanças e enviar (push) essas alterações de
 volta para o repositório central, assim como obter (pull) as alterações
 feitas por outros colaboradores. Esse fluxo de trabalho centralizado
 evita problemas de sobrescrita de arquivos e mantém um histórico
-detalhado das contribuições de cada membro da equipe (Vuorre and Curley
+detalhado das contribuições de cada membro da equipe (Vuorre \& Curley,
 2018).
 
 No entanto, é importante notar que o Git não é a única solução para
@@ -1770,17 +1782,17 @@ tempo real e acesso ao histórico de arquivos, o Git proporciona
 vantagens significativas para projetos mais complexos. Ele permite o
 gerenciamento simultâneo de múltiplos componentes de um projeto, como
 dados, scripts de análise e manuscritos, reduzindo a possibilidade de
-erros associados ao uso de versões desatualizadas de arquivos (Vuorre
-and Curley 2018).
+erros associados ao uso de versões desatualizadas de arquivos (Vuorre \&
+Curley, 2018).
 
 Além disso, a utilização do Git com o RStudio é particularmente atrativa
 para psicólogos, pois o ambiente integrado de desenvolvimento (IDE) do
 RStudio, juntamente com os pacotes R Markdown (e Quarto, por minha conta
 😁🤣) e knitr, oferece uma solução completa para gestão de projetos,
-análise de dados e preparação de manuscritos (Vuorre and Curley 2018). A
+análise de dados e preparação de manuscritos (Vuorre \& Curley, 2018). A
 integração com serviços como Zenodo, que permite a atribuição de DOIs
 (identificadores digitais) aos repositórios do GitHub, também facilita a
-citação dos materiais de pesquisa (Vuorre and Curley 2018).
+citação dos materiais de pesquisa (Vuorre \& Curley, 2018).
 
 Em suma, a adoção de sistemas de controle de versão como o Git,
 especialmente quando integrados a plataformas como o RStudio e o GitHub,
@@ -1790,7 +1802,7 @@ significativamente para a melhoria da reprodutibilidade na ciência.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, rightrule=.15mm, coltitle=black, breakable, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@gilroy2019 \emph{Reading Note} (Tip~\ref{tip-prompt})}, left=2mm, leftrule=.75mm, opacityback=0, toprule=.15mm, bottomrule=.15mm, bottomtitle=1mm, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, colback=white, opacityback=0, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, opacitybacktitle=0.6, left=2mm, toprule=.15mm, arc=.35mm, coltitle=black, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@gilroy2019 \emph{Reading Note} (Tip~\ref{tip-prompt})}]
 
 Este tutorial revisa as diretrizes de Práticas Transparentes e Abertas
 fornecidas pela Open Science Foundation e explora como os pesquisadores
@@ -1884,8 +1896,8 @@ disponíveis, quando salvos, no mesmo arquivo da base de dados. Através
 da tela dos outputs o usuário pode editar os títulos, adicionar notas,
 copiar as citações dos pacotes do R que estão sendo utilizados, copiar
 as análises para edição em outros softwares e duplicar as análises
-(Rogers 2024). Essas últimas funcionalidades são extremamente úteis para
-a reprodutibilidade.
+(Rogers, 2024). Essas últimas funcionalidades são extremamente úteis
+para a reprodutibilidade.
 
 No entanto, ambos os softwares ainda são recentes e ainda não englobam
 todas as análises dos softwares mais tradicionais, como o SPSS e o
@@ -1919,7 +1931,7 @@ Python, Julia e Observable). No RStudio, os usuários escrevem seus
 códigos e análises em R e Python, e o Quarto processa esse conteúdo e
 exporta o resultado em diferentes formatos, como HTML, PDF e DOCX,
 facilitando a disseminação e o compartilhamento do trabalho em múltiplas
-plataformas, como é ilustrado na Figure~\ref{fig-quarto-illustration}.
+plataformas, como é ilustrado na Figura~\ref{fig-quarto-illustration}.
 
 \begin{figure}
 
@@ -1929,7 +1941,7 @@ plataformas, como é ilustrado na Figure~\ref{fig-quarto-illustration}.
 
 \end{figure}%
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, rightrule=.15mm, coltitle=black, breakable, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figure~\ref{fig-quarto-illustration}?}, left=2mm, leftrule=.75mm, opacityback=0, toprule=.15mm, bottomrule=.15mm, bottomtitle=1mm, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, colback=white, opacityback=0, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, opacitybacktitle=0.6, left=2mm, toprule=.15mm, arc=.35mm, coltitle=black, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figura~\ref{fig-quarto-illustration}?}]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2003,7 +2015,7 @@ plataformas, como é ilustrado na Figure~\ref{fig-quarto-illustration}.
 
 \end{tcolorbox}
 
-A Figure~\ref{fig-quarto-process} explica o fluxo de trabalho um pouco
+A Figura~\ref{fig-quarto-process} explica o fluxo de trabalho um pouco
 mais analítico de criação e publicação de documentos com Quarto.
 Inicia-se com um arquivo \texttt{.qmd} que é processado por ferramentas
 como knitr ou Jupyter para gerar um arquivo Markdown. Esse arquivo
@@ -2018,7 +2030,7 @@ saída, permitindo uma ampla flexibilidade na distribuição do conteúdo.
 
 \end{figure}%
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, rightrule=.15mm, coltitle=black, breakable, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figure~\ref{fig-quarto-process}?}, left=2mm, leftrule=.75mm, opacityback=0, toprule=.15mm, bottomrule=.15mm, bottomtitle=1mm, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, colback=white, opacityback=0, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, opacitybacktitle=0.6, left=2mm, toprule=.15mm, arc=.35mm, coltitle=black, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figura~\ref{fig-quarto-process}?}]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2111,7 +2123,7 @@ saída, permitindo uma ampla flexibilidade na distribuição do conteúdo.
 Se quisermos pensar o fluxo de trabalho com Quarto com enfoque
 específico nos passos de criação e renderização de um documento,
 oferecendo um guia passo a passo um pouco mais sintético, podemos
-consider a ilustração da Figure~\ref{fig-qmd-workflow}. Essa figura
+consider a ilustração da Figura~\ref{fig-qmd-workflow}. Essa figura
 ilustra de maneira didática e sequencial as etapas que um usuário deve
 seguir, desde a criação do arquivo até a renderização do documento final
 em múltiplos formatos. Nessa imagem destacamos explicitamente a
@@ -2126,7 +2138,7 @@ por pesquisadores.
 
 \end{figure}%
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, rightrule=.15mm, coltitle=black, breakable, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figure~\ref{fig-qmd-workflow}?}, left=2mm, leftrule=.75mm, opacityback=0, toprule=.15mm, bottomrule=.15mm, bottomtitle=1mm, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, colback=white, opacityback=0, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, opacitybacktitle=0.6, left=2mm, toprule=.15mm, arc=.35mm, coltitle=black, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figura~\ref{fig-qmd-workflow}?}]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2189,7 +2201,7 @@ por pesquisadores.
 
 E por fim, se desejamos melhorar nosso entendimento de como utilizar o
 Quarto no contexto de uma pesquisa científica empírica, a
-Figure~\ref{fig-all-workflow} enfatiza a integração da narrativa
+Figura~\ref{fig-all-workflow} enfatiza a integração da narrativa
 científica, código e dados, culminando na publicação de resultados. Esse
 fluxo de trabalho é ideal para pesquisas que requerem transparência e
 reprodutibilidade, permitindo que outros pesquisadores verifiquem e
@@ -2209,7 +2221,7 @@ utilizando Quarto}
 
 \end{figure}%
 
-\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, opacitybacktitle=0.6, colframe=quarto-callout-note-color-frame, rightrule=.15mm, coltitle=black, breakable, titlerule=0mm, colbacktitle=quarto-callout-note-color!10!white, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figure~\ref{fig-all-workflow}?}, left=2mm, leftrule=.75mm, opacityback=0, toprule=.15mm, bottomrule=.15mm, bottomtitle=1mm, arc=.35mm]
+\begin{tcolorbox}[enhanced jigsaw, breakable, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, colback=white, opacityback=0, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, opacitybacktitle=0.6, left=2mm, toprule=.15mm, arc=.35mm, coltitle=black, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figura~\ref{fig-all-workflow}?}]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2357,7 +2369,289 @@ utilizando Quarto}
 
 \bookmarksetup{startatroot}
 
-\section{Controle de Ambiente (Containers)}\label{sec-docker}
+\section{Controle de Ambiente}\label{sec-docker}
+
+Imagine a seguinte situação: você publicou uma pesquisa quantitativa,
+disponibilizando o código e os dados para que outros pesquisadores
+possam reproduzir os resultados. Um pesquisador entra em contato e diz
+que não conseguiu. Você como bom mineiro, responde: ``Uai, comigo
+funcionou!''. Prestativo como é sugere para o pesquisador, da Polônia,
+que venha até sua casa para que você possa ajudá-lo a reproduzir os
+resultados, e aproveitar para tomar um café e comer um pão de queijo. O
+pesquisador, educadamente, responde que não pode ir até sua casa, pois
+está do outro lado do mundo.
+
+Então, prestativo como é, você sugere que vai enviar uma imagem do seu
+HD para ele. O pesquisador, educadamente, responde que não pode aceitar,
+pois o arquivo da imagem é muito grande e ele não tem espaço suficiente
+para armazenar a imagem. Além do mais, ele não entende muito bem (e não
+tem!) a infraestrutura para pode acessar seu HD. Inclusive, ele utiliza
+um sistema operacional (e estrutura de hardware) diferente do seu.
+
+Pois bem, essa situação poderia ser a única saída alguns anos atrás. No
+entanto, hoje em dia, com os serviços de armazenamento em nuvem, as
+soluções de virtualização (máquinas virtuais), containers e controle de
+ambiente, é possível compartilhar o ambiente de desenvolvimento de forma
+mais simples.
+
+Máquinas virtuais (VM) são ambientes que emulam um sistema operacional
+(SO) completo sobre um hardware físico, permitindo a execução de
+múltiplos sistemas operacionais em uma única máquina. Elas oferecem um
+alto nível de isolamento e controle, pois cada VM inclui seu próprio SO,
+bibliotecas e aplicativos. As VMs podem ser classificadas em dois tipos:
+\emph{Type 1 Hypervisor} e \emph{Type 2 Hypervisor}. Tipo 1 Hypervisor
+roda diretamente sobre o hardware, gerenciando várias VMs sem a
+necessidade de um SO subjacente, o que proporciona melhor desempenho e
+eficiência. Já o \emph{Type 2 Hypervisor} roda sobre um SO existente,
+sendo menos eficiente, mas mais fácil de configurar e utilizar em
+ambientes de desktop Figura~\ref{fig-vm-container}.
+
+\begin{figure}
+
+\centering{
+
+\href{https://doi.org/10.5281/zenodo.12521134}{\includegraphics{img/vm-container.png}}
+
+}
+
+\caption{\label{fig-vm-container}Soluções para controle do ambiente de
+desenvolvimento. Ilustração disponível em:
+https://doi.org/10.5281/zenodo.12521134}
+
+\end{figure}%
+
+Exemplos de soluções de virtualização Tipo 1 podemos elencar:
+
+\begin{itemize}
+\item
+  \href{https://www.vmware.com/products/esxi-and-esx.html.html}{\textbf{VMware
+  ESXi}}: Uma solução comercial amplamente utilizada em ambientes
+  corporativos para criar e gerenciar VMs. Oferece alta performance e
+  várias funcionalidades avançadas de gerenciamento.
+\item
+  \href{https://learn.microsoft.com/pt-br/windows-server/virtualization/hyper-v/hyper-v-technology-overview}{\textbf{Microsoft
+  Hyper-V}}: Integrado ao Windows, é uma solução comercial que também
+  pode ser usada gratuitamente com recursos limitados. Hyper-V é
+  amplamente utilizado em ambientes Windows.
+\item
+  \href{https://xenproject.org/}{\textbf{Xen}:} Uma solução open-source
+  popular em ambientes de nuvem, como o Amazon Web Services (AWS). Xen é
+  altamente eficiente e suportado por várias distribuições Linux.
+\end{itemize}
+
+Exemplos de Tipo 2 incluem:
+
+\begin{itemize}
+\item
+  \href{https://www.vmware.com/products/desktop-hypervisor.html}{\textbf{VMware
+  Workstation}}: Uma solução comercial usada principalmente em desktops
+  e laptops para executar múltiplos SOs. VMware Workstation é conhecido
+  pela sua estabilidade e facilidade de uso. Recentemente ele passou a
+  ser gratuito.
+\item
+  \href{https://www.virtualbox.org/}{\textbf{Oracle VirtualBox}}: Uma
+  solução open-source amplamente utilizada para virtualização em
+  desktops. VirtualBox é gratuito e suporta uma vasta gama de SOs
+  convidados.
+\item
+  \href{https://www.parallels.com/br/}{\textbf{Parallels Desktop}}: Uma
+  solução comercial popular entre usuários de Mac, permitindo que eles
+  rodem Windows, Linux e outros no macOS de maneira integrada.
+\end{itemize}
+
+As vantagens das VMs incluem um alto isolamento e segurança, além da
+flexibilidade para rodar diferentes SOs. No entanto, elas consomem
+muitos recursos, como CPU, memória e armazenamento, e as imagens são
+grandes e difíceis de compartilhar (Clyburne-Sherin et al., 2019). Nesse
+sentido, para a reprodutibilidade das pesquisas empíricas no ambito da
+Ciência Aberta o emprego de VMs pode ser impraticável. Para nosso dia a
+dia enquanto pesquisadores e professores pode ser uma ferramenta
+extremamente últil. \textbf{Esse curso está organizado dentro de uma
+VM}.
+
+Por outro lado, os containers são uma tecnologia de virtualização a
+nível de SO, mais leve que as VMs, que compartilham o mesmo kernel do SO
+hospedeiro, mas ainda assim oferecem isolamento para aplicações.
+\href{https://www.docker.com/}{Docker},
+\href{https://kubernetes.io/}{Kunernetes} e
+\href{https://www.redhat.com/en/technologies/cloud-computing/openshift}{OpenShift}
+são uma das ferramentas mais populares para criar e gerenciar
+containers. Ao contrário das VMs, os containers contêm apenas a
+aplicação e suas dependências, compartilhando o kernel do SO hospedeiro.
+Isso torna os containers mais leves e eficientes em termos de recursos,
+além de serem rápidos na inicialização e execução. Além disso, são
+fáceis de distribuir e compartilhar (Clyburne-Sherin et al., 2019).
+
+Enquanto as VMs oferecem maior isolamento, os containers têm menor
+consumo de recursos e são mais práticos para desenvolvimento e
+distribuição de aplicações. No entanto, eles compartilham o kernel do SO
+hospedeiro, o que resulta em menor isolamento comparado às VMs. Os
+contêineres estão ganhando força na pesquisa científica (Moreau et al.,
+2023) e o Docker despontado como uma das soluções mais populares para
+controle de ambiente em pesquisas empíricas quantitativas (Wiebels \&
+Moreau, 2021).
+
+Por fim, temos as ferramentas de controle de ambiente como
+\href{https://docs.conda.io/projects/conda/en/stable/}{Conda} e
+\href{https://rstudio.github.io/renv/articles/renv.html}{renv}, que
+ajudam a gerenciar pacotes e dependências em ambientes de
+desenvolvimento, sem a necessidade de virtualização. Conda, por exemplo,
+gerencia pacotes, dependências e ambientes virtuais para linguagens como
+Python e R, permitindo criar ambientes isolados com versões específicas
+de pacotes e dependências. Já o renv (R Environment) é específico para
+projetos R, criando um ambiente de desenvolvimento reproduzível.
+
+Essas ferramentas oferecem a vantagem de menor sobrecarga de recursos e
+são fáceis de configurar e utilizar, promovendo a reprodutibilidade de
+ambientes de desenvolvimento para linguagens específicas. No entanto,
+oferecem menor isolamento comparado às VMs e containers e dependem da
+compatibilidade do sistema operacional e das versões dos pacotes.
+
+A recomendação para os pesquisadores que desejem terem seus trabalhos
+transparentes e reprodutíveis é que eles entendam das duas últimas
+soluções, por exemplo, num ambiente R, de containers + renv. Na verdade,
+essas duas soluções devem caminhar juntas, pois no contexto da maioria
+dos workflows (pipelines) de pesquisa a construção de containers é
+facilitada pela aplicação correta dos pacotes de controle de ambiente
+(Conda, renv, etc.).
+
+No entanto, a computação em nuvens também nos agraciou com outras
+soluções que facilitam a reprodutibilidade, transparência e colaboração
+em pesquisas empíricas. Plataformas de notebooks na nuvem como
+\href{https://colab.research.google.com/}{Google Colab} e
+\href{https://posit.cloud/}{Posit Cloud} (anteriormente conhecido como
+RStudio Cloud) permitem compartilhar notebooks rodando num mesmo
+hardware, mas os usuários precisam garantir que as dependências e
+versões de pacotes sejam corretamente especificadas e gerenciadas.
+
+No \href{https://jupyter.org/hub}{JupyterHub} temos proposta parecida,
+mas ele nos dá um controle melhor sobre o ambiente, já que um
+administrador pode configurar e manter as dependências necessárias de um
+projeto colaborativo. O \href{https://mybinder.org/}{Binder} é uma
+plataforma open-source que transforma repositórios Git em ambientes
+executáveis, focando principalmente em notebooks Jupyter. Ele facilita a
+execução de notebooks a partir de repositórios Git e garante que as
+dependências especificadas no repositório sejam instaladas, mas depende
+da configuração correta dos arquivos de dependências.
+
+O \href{https://codeocean.com/}{Code Ocean} e
+\href{https://nextjournal.com/}{Nextjournal} são soluções específicas
+para a reprodutibilidade de pesquisas científicas, focando na facilidade
+de uso e na acessibilidade para a comunidade acadêmica. O Code Ocean
+permite que os cientistas agrupem código, dados, resultados, metadados e
+um ambiente computacional em um único lugar --- chamado de ``cápsula'',
+cujos resultados podem ser reproduzidos por qualquer pessoa num simples
+botão (Clyburne-Sherin et al., 2019). O Nextjournal é uma plataforma de
+colaboração e publicação de notebooks interativos, que permite a
+execução de código em diferentes linguagens, como o Code Ocean, e a
+criação de artigos científicos interativos. Essas duas soluções oferecem
+um ambiente integrado, com interface gráfica intuitiva para configurar
+ambientes de desenvolvimento e execução, o que facilita para
+pesquisadores sem conhecimento técnico avançado. No entanto, são
+soluções comerciais e podem ter limitações em termos de recursos e
+personalização.
+
+As soluções apresentadas sobrepostas à nuvem do lado direito na
+Figura~\ref{fig-vm-container} podem ser consideradas soluções
+intermediárias aos containers tradicionais, no sentido de que elas
+utilizam conteinerização para criar ambientes reprodutíveis, mas
+abstraem a complexidade técnica e fornecem interfaces mais amigáveis e
+específicas para a comunidade científica. Elas são ideais para
+pesquisadores que buscam simplicidade e reprodutibilidade sem a
+necessidade de se aprofundar nos detalhes técnicos dos containers. Essas
+plataformas tornam a poderosa tecnologia de conteinerização acessível e
+aplicável ao contexto da pesquisa científica.
+
+Podemos dizer que em termos de níveis de reprodutibilidade, Google Colab
+e Posit Cloud atendem a um nível básico, porque a reprodutibilidade pode
+ser limitada pela variabilidade das dependências das sessões e cabe ao
+usuário uma configuração cuidadosa dos pacotes e versões. Binder e
+JupyterHub fornecem um nível intermediário de reprodutibilidade, pois
+apesar de um melhor controle sobre o ambiente, requer configuração e
+manutenção adequadas das dependências. Por fim, Code Ocean e Nextjournal
+oferecem um alto nível de reprodutibilidade, pois são ambientes
+integrados para criar, executar e compartilhar projetos de pesquisa
+reprodutíveis.
+
+\begin{tcolorbox}[enhanced jigsaw, breakable, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, bottomrule=.15mm, colback=white, opacityback=0, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, titlerule=0mm, opacitybacktitle=0.6, left=2mm, toprule=.15mm, arc=.35mm, coltitle=black, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@wiebels2021 \emph{Reading Note} (Tip~\ref{tip-prompt})}]
+
+O artigo de Wiebels \& Moreau (2021) discute a importância e a aplicação
+das práticas de ciência aberta na pesquisa. Eles destacam que, desde
+2019, cerca de 35\% dos pesquisadores de psicologia adotaram práticas de
+CA, um aumento significativo em relação aos 5\% de apenas cinco anos
+antes.
+
+O artigo, inicialmente, discute o pacote
+\href{https://rstudio.github.io/renv/articles/renv.html}{renv}, que
+gerencia dependências em R armazenando o código-fonte de todos os
+pacotes R usados em um projeto. No entanto, eles observam que essa
+abordagem não lida com dependências do sistema ou dependências de outras
+linguagens de programação e pacotes de software.
+
+Para resolver essas limitações, os autores apresentam os ``containers'',
+que permitem empacotar todo o código e dependências para garantir que as
+análises sejam executadas de maneira confiável em uma variedade de
+sistemas operacionais e versões de software. Eles descrevem a lógica por
+trás dos containers, o que são e os problemas práticos que podem
+resolver.
+
+Os autores explicam que o ideal é ``empacotar'' (isolar) todo o ambiente
+de computação de forma que qualquer pessoa em qualquer computador possa
+examinar e replicar nosso trabalho, independentemente do software
+instalado, drivers e sistemas operacionais. Uma maneira popular de
+alcançar esse objetivo é com máquinas virtuais (VMs), mas as VMs podem
+ficar muito grandes e lentas, o que pode tornar o compartilhamento e o
+uso delas impraticáveis. Os containers também isolam ambientes de
+computação, mas usam menos recursos do que as VMs.
+
+Apesar de suas vantagens, a contêinerização ainda é raramente usada na
+psicologia, talvez por falta de conscientização ou porque o uso - e
+especialmente a construção - de containers pode parecer assustador para
+aqueles que não têm formação em ciência da computação. Para superar essa
+barreira, os autores usam a plataforma de contêiner
+\href{https://www.docker.com/}{Docker} e se concentram na linguagem R.
+
+Eles explicam que o Docker é um projeto de contêinerização de código
+aberto baseado em Linux; ou seja, o Linux está rodando dentro dos
+containers, mesmo que estejamos em um computador Windows ou Mac. Eles
+também esclarecem que um número ilimitado de containers pode ser criado
+a partir de uma imagem e, ao contrário das imagens, os containers podem
+ser modificados enquanto estão em execução.
+
+Os autores comparam uma imagem Docker a uma receita de bolo e o
+container Docker correspondente a um bolo acabado. A receita contém as
+instruções para fazer o bolo, pode ser usada para fazer quantos bolos
+você quiser e pode ser compartilhada para permitir que outros façam o
+mesmo bolo. Todos que usam a receita acabam com o mesmo tipo de bolo,
+que pode ser modificado adicionando, por exemplo, cobertura ou
+confeites. No entanto, sua adição de cobertura e minha adição de
+confeites não mudarão a receita, e da próxima vez que usarmos a receita,
+teremos o mesmo bolo de antes.
+
+Os autores escolheram usar o Docker para o tutorial por cinco razões
+principais. Primeiro, o Docker é uma das principais plataformas de
+contêiner e foi estabelecido como uma prática recomendada em vários
+campos de pesquisa. Segundo, o Docker funciona em todos os principais
+sistemas operacionais (Linux, macOS e Windows). Terceiro, os containers
+Docker são fáceis de usar, muito leves e rápidos. Quarto, as imagens
+Docker podem ser armazenadas e compartilhadas gratuitamente no registro
+central Docker Hub. Finalmente, graças à sua crescente popularidade, o
+Docker se beneficia de uma grande comunidade de usuários e um rico
+ecossistema de ferramentas relacionadas, como o Rocker, que fornece
+containers com ambientes R.
+
+Os autores concluem que a contêinerização é um passo importante para
+tornar a pesquisa reprodutível, fornecendo um ambiente de computação
+consistente que pode ser usado por todos os colaboradores ao longo do
+projeto e que pode ser compartilhado junto com a publicação.
+Compartilhar um container após a finalização de um projeto de pesquisa
+garante que suas análises sejam reprodutíveis. Nesse contexto, a
+proficiência em contêinerização, entre o conjunto mais amplo de
+ferramentas computacionais exigidas por um cientista moderno, pode se
+revelar um investimento valioso para cientistas comportamentais em todos
+os estágios de carreira.
+
+\end{tcolorbox}
 
 \bookmarksetup{startatroot}
 
@@ -2373,225 +2667,244 @@ utilizando Quarto}
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
 \bibitem[\citeproctext]{ref-albano2023}
-Albano, Cláudio Sonáglio, Paula de Oliveira Pedroso, and Doriedson
-Oliveira Caetano. 2023. {``Ci{ê}ncia {Aberta}: {Um Panorama} Sobre as
-{Publica{ç}{õ}es} No {Cen{á}rio Brasileiro}.''} \emph{Saber
-Cient{í}fico} 12 (1): 1--12.
+Albano, C. S., Pedroso, P. de O., \& Caetano, D. O. (2023). Ci{ê}ncia
+{Aberta}: {Um Panorama} Sobre as {Publica{ç}{õ}es} No {Cen{á}rio
+Brasileiro}. \emph{Saber Cient{í}fico}, \emph{12}(1), 1--12.
 
 \bibitem[\citeproctext]{ref-baker2023}
-Baker, Daniel H, Mareike Berg, Kirralise Hansford, Bartholomew Patrick
-Anselm Quinn, Federico Gabriele Segala, and Erin English. 2023.
-{``{ReproduceMe}: Lessons from a Pilot Project on Computational
-Reproducibility.''} Preprint. PsyArXiv.
-\url{https://doi.org/10.31234/osf.io/k8d4u}.
+Baker, D. H., Berg, M., Hansford, K., Quinn, B. P. A., Segala, F. G., \&
+English, E. (2023). \emph{{ReproduceMe}: Lessons from a Pilot Project on
+Computational Reproducibility} {[}Preprint{]}. PsyArXiv.
+\url{https://doi.org/10.31234/osf.io/k8d4u}
 
 \bibitem[\citeproctext]{ref-baker2016}
-Baker, Monya. 2016. {``1,500 Scientists Lift the Lid on
-Reproducibility.''} \emph{Nature} 533 (7604): 452--54.
-\url{https://doi.org/10.1038/533452a}.
+Baker, M. (2016). 1,500 Scientists Lift the Lid on Reproducibility.
+\emph{Nature}, \emph{533}(7604), 452--454.
+\url{https://doi.org/10.1038/533452a}
 
 \bibitem[\citeproctext]{ref-prashantakumarbehera2023}
-Behera, Prashanta Kumar, and Sanmati Jinendran Jain. 2023. {``Zotero --
-an Open-Source Reference Management Software: A Practical Manual.''} In.
-OSF. \url{https://doi.org/10.17605/OSF.IO/8S73R}.
+Behera, P. K., \& Jain, S. J. (2023). \emph{Zotero -- An Open-Source
+Reference Management Software: A Practical Manual}. OSF.
+\url{https://doi.org/10.17605/OSF.IO/8S73R}
 
 \bibitem[\citeproctext]{ref-bernard2023}
-Bernard, Christophe. 2023. {``Stop {Reproducing} the {Reproducibility
-Crisis}.''} \emph{Eneuro} 10 (2): ENEURO.0032--23.2023.
-\url{https://doi.org/10.1523/ENEURO.0032-23.2023}.
+Bernard, C. (2023). Stop {Reproducing} the {Reproducibility Crisis}.
+\emph{Eneuro}, \emph{10}(2), ENEURO.0032--23.2023.
+\url{https://doi.org/10.1523/ENEURO.0032-23.2023}
 
 \bibitem[\citeproctext]{ref-bezjak2018}
-Bezjak, Sonja, April Clyburne-Sherin, Philipp Conzett, Pedro Fernandes,
-Edit Görögh, Kerstin Helbig, Bianca Kramer, et al. 2018. \emph{Open
-{Science Training Handbook}}. Zenodo.
-\url{https://doi.org/10.5281/ZENODO.1212496}.
+Bezjak, S., Clyburne-Sherin, A., Conzett, P., Fernandes, P., Görögh, E.,
+Helbig, K., Kramer, B., Labastida, I., Niemeyer, K., Psomopoulos, F.,
+Ross-Hellauer, T., Schneider, R., Tennant, J., Verbakel, E., Brinken,
+H., \& Heller, L. (2018). \emph{Open {Science Training Handbook}}.
+Zenodo. \url{https://doi.org/10.5281/ZENODO.1212496}
 
 \bibitem[\citeproctext]{ref-caballero-rivero2019}
-Caballero-Rivero, Alejandro, Nancy Sánchez-Tarragó, and Raimundo Nonato
-Macedo dos Santos. 2019. {``{Pr{á}ticas de Ci{ê}ncia Aberta da
-comunidade acad{ê}mica brasileira: estudo a partir da produ{ç}{ã}o
-cient{í}fica}.''} \emph{Transinforma{ç}{ã}o} 31 (November): e190029.
-\url{https://doi.org/10.1590/2318-0889201931e190029}.
+Caballero-Rivero, A., Sánchez-Tarragó, N., \& Santos, R. N. M. dos.
+(2019). {Pr{á}ticas de Ci{ê}ncia Aberta da comunidade acad{ê}mica
+brasileira: estudo a partir da produ{ç}{ã}o cient{í}fica}.
+\emph{Transinforma{ç}{ã}o}, \emph{31}, e190029.
+\url{https://doi.org/10.1590/2318-0889201931e190029}
 
 \bibitem[\citeproctext]{ref-chopik2018}
-Chopik, William J., Ryan H. Bremner, Andrew M. Defever, and Victor N.
-Keller. 2018. {``How (and {Whether}) to {Teach Undergraduates About} the
-{Replication Crisis} in {Psychological Science}.''} \emph{Teaching of
-Psychology} 45 (2): 158--63.
-\url{https://doi.org/10.1177/0098628318762900}.
+Chopik, W. J., Bremner, R. H., Defever, A. M., \& Keller, V. N. (2018).
+How (and {Whether}) to {Teach Undergraduates About} the {Replication
+Crisis} in {Psychological Science}. \emph{Teaching of Psychology},
+\emph{45}(2), 158--163. \url{https://doi.org/10.1177/0098628318762900}
+
+\bibitem[\citeproctext]{ref-clyburne-sherin2019}
+Clyburne-Sherin, A., Fei, X., \& Green, S. A. (2019). Computational
+{Reproducibility} via {Containers} in {Psychology}.
+\emph{Meta-Psychology}, \emph{3}.
+\url{https://doi.org/10.15626/MP.2018.892}
 
 \bibitem[\citeproctext]{ref-crrs2019}
 Committee on Reproducibility and Replicability in Science, Board on
 Behavioral, Cognitive, and Sensory Sciences, Committee on National
 Statistics, Division of Behavioral and Social Sciences and Education,
 Nuclear and Radiation Studies Board, Division on Earth and Life Studies,
-Board on Mathematical Sciences and Analytics, et al. 2019.
-\emph{Reproducibility and {Replicability} in {Science}}. Washington,
-D.C.: National Academies Press. \url{https://doi.org/10.17226/25303}.
+Board on Mathematical Sciences and Analytics, Committee on Applied and
+Theoretical Statistics, Division on Engineering and Physical Sciences,
+Board on Research Data and Information, Committee on Science,
+Engineering, Medicine, and Public Policy, Policy and Global Affairs, \&
+National Academies of Sciences, Engineering, and Medicine. (2019).
+\emph{Reproducibility and {Replicability} in {Science}} (p. 25303).
+National Academies Press. \url{https://doi.org/10.17226/25303}
 
 \bibitem[\citeproctext]{ref-cruwell2019}
-Crüwell, Sophia, Johnny Van Doorn, Alexander Etz, Matthew C. Makel,
-Hannah Moshontz, Jesse C. Niebaum, Amy Orben, Sam Parsons, and Michael
-Schulte-Mecklenbeck. 2019. {``Seven {Easy Steps} to {Open Science}: {An
-Annotated Reading List}.''} \emph{Zeitschrift f{ü}r Psychologie} 227
-(4): 237--48. \url{https://doi.org/10.1027/2151-2604/a000387}.
+Crüwell, S., Van Doorn, J., Etz, A., Makel, M. C., Moshontz, H.,
+Niebaum, J. C., Orben, A., Parsons, S., \& Schulte-Mecklenbeck, M.
+(2019). Seven {Easy Steps} to {Open Science}: {An Annotated Reading
+List}. \emph{Zeitschrift f{ü}r Psychologie}, \emph{227}(4), 237--248.
+\url{https://doi.org/10.1027/2151-2604/a000387}
 
 \bibitem[\citeproctext]{ref-dogucu2022}
-Dogucu, Mine, and Mine Çetinkaya-Rundel. 2022. {``Tools and
-{Recommendations} for {Reproducible Teaching}.''} \emph{Journal of
-Statistics and Data Science Education} 30 (3): 251--60.
-\url{https://doi.org/10.1080/26939169.2022.2138645}.
+Dogucu, M., \& Çetinkaya-Rundel, M. (2022). Tools and {Recommendations}
+for {Reproducible Teaching}. \emph{Journal of Statistics and Data
+Science Education}, \emph{30}(3), 251--260.
+\url{https://doi.org/10.1080/26939169.2022.2138645}
 
 \bibitem[\citeproctext]{ref-EU2017}
 European Commission. Directorate General for Research and Innovation.
-2017. \emph{Providing Researchers with the Skills and Competencies They
-Need to Practise {Open Science}.} LU: Publications Office.
-\url{https://data.europa.eu/doi/10.2777/121253}.
+(2017). \emph{Providing Researchers with the Skills and Competencies
+They Need to Practise {Open Science}.} Publications Office.
+\url{https://data.europa.eu/doi/10.2777/121253}
 
 \bibitem[\citeproctext]{ref-fanelli2018}
-Fanelli, Daniele. 2018. {``Is Science Really Facing a Reproducibility
-Crisis, and Do We Need It To?''} \emph{Proceedings of the National
-Academy of Sciences} 115 (11): 2628--31.
-\url{https://doi.org/10.1073/pnas.1708272114}.
+Fanelli, D. (2018). Is Science Really Facing a Reproducibility Crisis,
+and Do We Need It To? \emph{Proceedings of the National Academy of
+Sciences}, \emph{115}(11), 2628--2631.
+\url{https://doi.org/10.1073/pnas.1708272114}
 
 \bibitem[\citeproctext]{ref-freedman2015}
-Freedman, Leonard P., Iain M. Cockburn, and Timothy S. Simcoe. 2015.
-{``The {Economics} of {Reproducibility} in {Preclinical Research}.''}
-\emph{PLOS Biology} 13 (6): e1002165.
-\url{https://doi.org/10.1371/journal.pbio.1002165}.
+Freedman, L. P., Cockburn, I. M., \& Simcoe, T. S. (2015). The
+{Economics} of {Reproducibility} in {Preclinical Research}. \emph{PLOS
+Biology}, \emph{13}(6), e1002165.
+\url{https://doi.org/10.1371/journal.pbio.1002165}
 
 \bibitem[\citeproctext]{ref-heinz2024}
-Heinz, Michele, and Miranda Miranda. 2024. {``Ci{ê}ncia {Aberta}:
-Argumentos e Desafios Para Sua Legitima{ç}{ã}o Cient{í}fica.''} \emph{Em
-Quest{ã}o} 30. \url{https://doi.org/10.1590/1808-5245.30.135618}.
+Heinz, M., \& Miranda, M. (2024). Ci{ê}ncia {Aberta}: Argumentos e
+Desafios Para Sua Legitima{ç}{ã}o Cient{í}fica. \emph{Em Quest{ã}o},
+\emph{30}. \url{https://doi.org/10.1590/1808-5245.30.135618}
 
 \bibitem[\citeproctext]{ref-janz2015}
-Janz, Nicole. 2015. {``Bringing the {Gold Standard} into the
-{Classroom}: {Replication} in {University Teaching}.''}
-\emph{International Studies Perspectives}, March, n/a--.
-\url{https://doi.org/10.1111/insp.12104}.
+Janz, N. (2015). Bringing the {Gold Standard} into the {Classroom}:
+{Replication} in {University Teaching}. \emph{International Studies
+Perspectives}, n/a--n/a. \url{https://doi.org/10.1111/insp.12104}
 
 \bibitem[\citeproctext]{ref-mcaleer2022}
-McAleer, Phil, Niamh Stack, Heather Woods, Lisa Marie DeBruine, Helena
-Paterson, Emily Nordmann, Carolina Ellen Kuepper-Tetzel, and Dale J.
-Barr. 2022. {``Embedding {Data Skills} in {Research Methods Education}:
-{Preparing Students} for {Reproducible Research}.''} Preprint. PsyArXiv.
-\url{https://doi.org/10.31234/osf.io/hq68s}.
+McAleer, P., Stack, N., Woods, H., DeBruine, L. M., Paterson, H.,
+Nordmann, E., Kuepper-Tetzel, C. E., \& Barr, D. J. (2022).
+\emph{Embedding {Data Skills} in {Research Methods Education}:
+{Preparing Students} for {Reproducible Research}} {[}Preprint{]}.
+PsyArXiv. \url{https://doi.org/10.31234/osf.io/hq68s}
 
 \bibitem[\citeproctext]{ref-mendes-da-silva2023}
-Mendes-Da-Silva, Wesley. 2023. {``What {Lectures} and {Research} in
-{Business Management Need} to {Know About Open Science}.''}
-\emph{Revista de Administra{ç}{ã}o de Empresas} 63 (4): e0000--0033.
-\url{https://doi.org/10.1590/s0034-759020230408x}.
+Mendes-Da-Silva, W. (2023). What {Lectures} and {Research} in {Business
+Management Need} to {Know About Open Science}. \emph{Revista de
+Administra{ç}{ã}o de Empresas}, \emph{63}(4), e0000--0033.
+\url{https://doi.org/10.1590/s0034-759020230408x}
+
+\bibitem[\citeproctext]{ref-moreau2023}
+Moreau, D., Wiebels, K., \& Boettiger, C. (2023). Containers for
+Computational Reproducibility. \emph{Nature Reviews Methods Primers},
+\emph{3}(1), 50. \url{https://doi.org/10.1038/s43586-023-00236-9}
 
 \bibitem[\citeproctext]{ref-munafo2017}
-Munafò, Marcus R., Brian A. Nosek, Dorothy V. M. Bishop, Katherine S.
-Button, Christopher D. Chambers, Nathalie Percie Du Sert, Uri Simonsohn,
-Eric-Jan Wagenmakers, Jennifer J. Ware, and John P. A. Ioannidis. 2017.
-{``A Manifesto for Reproducible Science.''} \emph{Nature Human
-Behaviour} 1 (1): 0021. \url{https://doi.org/10.1038/s41562-016-0021}.
+Munafò, M. R., Nosek, B. A., Bishop, D. V. M., Button, K. S., Chambers,
+C. D., Percie Du Sert, N., Simonsohn, U., Wagenmakers, E.-J., Ware, J.
+J., \& Ioannidis, J. P. A. (2017). A Manifesto for Reproducible Science.
+\emph{Nature Human Behaviour}, \emph{1}(1), 0021.
+\url{https://doi.org/10.1038/s41562-016-0021}
 
 \bibitem[\citeproctext]{ref-neto2016}
-Neto, Silvio Carvalho, John Willinsky, and Juan Pablo Alperin. 2016.
-{``Measuring, Rating, Supporting, and Strengthening Open Access
-Scholarly Publishing in {Brazil}.''} \emph{Education Policy Analysis
-Archives} 24 (May): 54--54. \url{https://doi.org/10.14507/epaa.24.2391}.
+Neto, S. C., Willinsky, J., \& Alperin, J. P. (2016). Measuring, Rating,
+Supporting, and Strengthening Open Access Scholarly Publishing in
+{Brazil}. \emph{Education Policy Analysis Archives}, \emph{24}, 54--54.
+\url{https://doi.org/10.14507/epaa.24.2391}
 
 \bibitem[\citeproctext]{ref-oddone2024}
-Oddone, Nanci, and Leticia Vitória Rodrigues Lima Souza. 2024. {``Acesso
-Ao Conhecimento No Contexto Da Ciência Aberta: O Segredo Da Popularidade
-Do Sci-Hub.''} \emph{Revista Digital de Biblioteconomia e Ciência Da
-Informação} 22.
-https://doi.org/\url{https://doi.org/10.20396/rdbci.v22i00.8673883}.
+Oddone, N., \& Souza, L. V. R. L. (2024). Acesso ao conhecimento no
+contexto da ciência aberta: o segredo da popularidade do Sci-Hub.
+\emph{Revista Digital de Biblioteconomia e Ciência da Informação},
+\emph{22}.
+https://doi.org/\url{https://doi.org/10.20396/rdbci.v22i00.8673883}
 
 \bibitem[\citeproctext]{ref-olson2022}
-Olson, Eric, Nicole Pfeiffer, Mark Call, and Daniel Steger. 2022.
-{``Getting Started on OSF,''} August.
-\url{https://doi.org/10.17605/OSF.IO/YAQE8}.
+Olson, E., Pfeiffer, N., Call, M., \& Steger, D. (2022). \emph{Getting
+Started on OSF}. \url{https://doi.org/10.17605/OSF.IO/YAQE8}
 
 \bibitem[\citeproctext]{ref-proske2023}
-Proske, Antje, Christina Wenzel, and Manuela Barbara Queitsch. 2023.
-{``Reference Management Systems.''} In \emph{Digital Writing
-Technologies in Higher Education}, edited by Otto Kruse, Christian Rapp,
-Chris M. Anson, Kalliopi Benetos, Elena Cotos, Ann Devitt, and Antonette
-Shibani, 215--30. Springer International Publishing.
-\url{https://doi.org/10.1007/978-3-031-36033-6_14}.
+Proske, A., Wenzel, C., \& Queitsch, M. B. (2023). Reference Management
+Systems. Em O. Kruse, C. Rapp, C. M. Anson, K. Benetos, E. Cotos, A.
+Devitt, \& A. Shibani (Eds.), \emph{Digital Writing Technologies in
+Higher Education} (pp. 215--230). Springer International Publishing.
+\url{https://doi.org/10.1007/978-3-031-36033-6_14}
 
 \bibitem[\citeproctext]{ref-protzko2023}
-Protzko, John, Jon Krosnick, Leif Nelson, Brian A. Nosek, Jordan Axt,
-Matt Berent, Nicholas Buttrick, et al. 2023. {``High Replicability of
-Newly Discovered Social-Behavioural Findings Is Achievable.''}
-\emph{Nature Human Behaviour}, November.
-\url{https://doi.org/10.1038/s41562-023-01749-9}.
+Protzko, J., Krosnick, J., Nelson, L., Nosek, B. A., Axt, J., Berent,
+M., Buttrick, N., DeBell, M., Ebersole, C. R., Lundmark, S., MacInnis,
+B., O'Donnell, M., Perfecto, H., Pustejovsky, J. E., Roeder, S. S.,
+Walleczek, J., \& Schooler, J. W. (2023). High Replicability of Newly
+Discovered Social-Behavioural Findings Is Achievable. \emph{Nature Human
+Behaviour}. \url{https://doi.org/10.1038/s41562-023-01749-9}
 
 \bibitem[\citeproctext]{ref-ram2013}
-Ram, Karthik. 2013. {``Git Can Facilitate Greater Reproducibility and
-Increased Transparency in Science.''} \emph{Source Code for Biology and
-Medicine} 8 (7): 8. \url{https://doi.org/10.1186/1751-0473-8-7}.
+Ram, K. (2013). Git Can Facilitate Greater Reproducibility and Increased
+Transparency in Science. \emph{Source Code for Biology and Medicine},
+\emph{8}(7), 8. \url{https://doi.org/10.1186/1751-0473-8-7}
 
 \bibitem[\citeproctext]{ref-rezende2020}
-Rezende, Laura Vilela Rodrigues, and Ernest Abadal Falgueras. 2020.
-{``Estado Da Arte Dos Marcos Regulat{ó}rios Brasileiros Rumo {à}
-{Ci{ê}ncia Aberta}.''} \emph{Encontros Bibli: Revista Eletr{ô}nica de
-Biblioteconomia e Ci{ê}ncia Da Informa{ç}{ã}o} 25 (September): 01--25.
-\url{https://doi.org/10.5007/1518-2924.2020.e71370}.
+Rezende, L. V. R., \& Falgueras, E. A. (2020). Estado Da Arte Dos Marcos
+Regulat{ó}rios Brasileiros Rumo {à} {Ci{ê}ncia Aberta}. \emph{Encontros
+Bibli: revista eletr{ô}nica de biblioteconomia e ci{ê}ncia da
+informa{ç}{ã}o}, \emph{25}, 01--25.
+\url{https://doi.org/10.5007/1518-2924.2020.e71370}
 
 \bibitem[\citeproctext]{ref-rogers2024}
-Rogers, Pablo. 2024. {``Best Practices for Your Confirmatory Factor
-Analysis: {A JASP} and Lavaan Tutorial.''} \emph{Behavior Research
-Methods}, March. \url{https://doi.org/10.3758/s13428-024-02375-7}.
+Rogers, P. (2024). Best Practices for Your Confirmatory Factor Analysis:
+{A JASP} and Lavaan Tutorial. \emph{Behavior Research Methods}.
+\url{https://doi.org/10.3758/s13428-024-02375-7}
 
 \bibitem[\citeproctext]{ref-silva2019}
-Silva, Fabiano Couto Corrêa Da, and Lúcia Da Silveira. 2019. {``O
-Ecossistema Da {Ci{ê}ncia Aberta}.''} \emph{Transinforma{ç}{ã}o} 31:
-e190001. \url{https://doi.org/10.1590/2318-0889201931e190001}.
+Silva, F. C. C. D., \& Silveira, L. D. (2019). O Ecossistema Da
+{Ci{ê}ncia Aberta}. \emph{Transinforma{ç}{ã}o}, \emph{31}, e190001.
+\url{https://doi.org/10.1590/2318-0889201931e190001}
 
 \bibitem[\citeproctext]{ref-silveira2023}
-Silveira, Lúcia Da, Nivaldo Calixto Ribeiro, Remedios Melero, Andrea
-Mora-Campos, Daniel Fernando Piraquive-Piraquive, Alejandro Uribe
-Tirado, Priscila Machado Borges Sena, et al. 2023. {``Taxonomia Da
-{Ci{ê}ncia Aberta}: Revisada e Ampliada.''} \emph{Encontros Bibli:
-Revista Eletr{ô}nica de Biblioteconomia e Ci{ê}ncia Da Informa{ç}{ã}o}
-28 (June). \url{https://doi.org/10.5007/1518-2924.2023.e91712}.
+Silveira, L. D., Calixto Ribeiro, N., Melero, R., Mora-Campos, A.,
+Piraquive-Piraquive, D. F., Uribe Tirado, A., Machado Borges Sena, P.,
+Polanco Cortés, J., Santillán-Aldana, J., Couto Corrêa Da Silva, F.,
+Ferreira Araújo, R., Enciso Betancourt, A. M., \& Fachin, J. (2023).
+Taxonomia Da {Ci{ê}ncia Aberta}: Revisada e Ampliada. \emph{Encontros
+Bibli: revista eletr{ô}nica de biblioteconomia e ci{ê}ncia da
+informa{ç}{ã}o}, \emph{28}.
+\url{https://doi.org/10.5007/1518-2924.2023.e91712}
 
 \bibitem[\citeproctext]{ref-soderberg2018}
-Soderberg, Courtney K. 2018. {``Using OSF to Share Data: A Step-by-Step
-Guide.''} \emph{Advances in Methods and Practices in Psychological
-Science} 1 (1): 115--20. \url{https://doi.org/10.1177/2515245918757689}.
+Soderberg, C. K. (2018). Using OSF to Share Data: A Step-by-Step Guide.
+\emph{Advances in Methods and Practices in Psychological Science},
+\emph{1}(1), 115--120. \url{https://doi.org/10.1177/2515245918757689}
 
 \bibitem[\citeproctext]{ref-sullivan2019}
-Sullivan, Ian, Alexander DeHaven, and David Mellor. 2019. {``Open and
-Reproducible Research on Open Science Framework.''} \emph{Current
-Protocols Essential Laboratory Techniques} 18 (1): e32.
-\url{https://doi.org/10.1002/cpet.32}.
+Sullivan, I., DeHaven, A., \& Mellor, D. (2019). Open and Reproducible
+Research on Open Science Framework. \emph{Current Protocols Essential
+Laboratory Techniques}, \emph{18}(1), e32.
+\url{https://doi.org/10.1002/cpet.32}
 
 \bibitem[\citeproctext]{ref-thomas2023}
-Thomas, Paul A. 2023. \emph{Using Zotero for Citation Management: A
+Thomas, P. A. (2023). \emph{Using Zotero for Citation Management: A
 Step-by-Step Guide to Organizing and Citing Your Research}. University
 of Kansas Libraries.
-\url{https://kuscholarworks.ku.edu/handle/1808/34983}.
+\url{https://kuscholarworks.ku.edu/handle/1808/34983}
 
 \bibitem[\citeproctext]{ref-toelch2018}
-Toelch, Ulf, and Dirk Ostwald. 2018. {``Digital Open
-Science---{Teaching} Digital Tools for Reproducible and Transparent
-Research.''} \emph{PLOS Biology} 16 (7): e2006022.
-\url{https://doi.org/10.1371/journal.pbio.2006022}.
+Toelch, U., \& Ostwald, D. (2018). Digital Open Science---{Teaching}
+Digital Tools for Reproducible and Transparent Research. \emph{PLOS
+Biology}, \emph{16}(7), e2006022.
+\url{https://doi.org/10.1371/journal.pbio.2006022}
 
 \bibitem[\citeproctext]{ref-unesco2021}
-UNESCO. 2021. {``{UNESCO Recommendation} on {Open Science}.''} UNESCO.
-\url{https://doi.org/10.54677/MNMH8546}.
+UNESCO. (2021). \emph{{UNESCO Recommendation} on {Open Science}}.
+UNESCO. \url{https://doi.org/10.54677/MNMH8546}
 
 \bibitem[\citeproctext]{ref-vicente-saez2018}
-Vicente-Saez, Ruben, and Clara Martinez-Fuentes. 2018. {``Open {Science}
-Now: {A} Systematic Literature Review for an Integrated Definition.''}
-\emph{Journal of Business Research} 88 (July): 428--36.
-\url{https://doi.org/10.1016/j.jbusres.2017.12.043}.
+Vicente-Saez, R., \& Martinez-Fuentes, C. (2018). Open {Science} Now:
+{A} Systematic Literature Review for an Integrated Definition.
+\emph{Journal of Business Research}, \emph{88}, 428--436.
+\url{https://doi.org/10.1016/j.jbusres.2017.12.043}
 
 \bibitem[\citeproctext]{ref-vuorre2018}
-Vuorre, Matti, and James P. Curley. 2018. {``Curating {Research Assets}:
-{A Tutorial} on the {Git Version Control System}.''} \emph{Advances in
-Methods and Practices in Psychological Science} 1 (2): 219--36.
-\url{https://doi.org/10.1177/2515245918754826}.
+Vuorre, M., \& Curley, J. P. (2018). Curating {Research Assets}: {A
+Tutorial} on the {Git Version Control System}. \emph{Advances in Methods
+and Practices in Psychological Science}, \emph{1}(2), 219--236.
+\url{https://doi.org/10.1177/2515245918754826}
+
+\bibitem[\citeproctext]{ref-wiebels2021}
+Wiebels, K., \& Moreau, D. (2021). Leveraging {Containers} for
+{Reproducible Psychological Research}. \emph{Advances in Methods and
+Practices in Psychological Science}, \emph{4}(2), 251524592110178.
+\url{https://doi.org/10.1177/25152459211017853}
 
 \end{CSLReferences}
 

@@ -7,6 +7,7 @@ execute:
 #filters: 
   #- webr
   #- abstract-section:
+lang: pt
 book:
   title: "Artigo à Prova de Futuro"
   subtitle: "Jornada de Open Science na Prática"
@@ -44,6 +45,7 @@ book:
     - references.qmd
 
 bibliography: references.bib
+csl: apa7ed.csl
 
 format:
   html:
