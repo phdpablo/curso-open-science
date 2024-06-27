@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -73,6 +93,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta property="og:title" content="Artigo à Prova de Futuro - 4&nbsp; Gestão de Dados e Projetos">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="Artigo à Prova de Futuro">
 </head>
 
@@ -220,8 +241,20 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#gerenciamento-de-dados" id="toc-gerenciamento-de-dados" class="nav-link active" data-scroll-target="#gerenciamento-de-dados"><span class="header-section-number">4.1</span> Gerenciamento de Dados</a></li>
+  <li><a href="#programação" id="toc-programação" class="nav-link" data-scroll-target="#programação"><span class="header-section-number">4.2</span> Programação</a></li>
+  <li><a href="#colaboração" id="toc-colaboração" class="nav-link" data-scroll-target="#colaboração"><span class="header-section-number">4.3</span> Colaboração</a></li>
+  <li><a href="#acompanhamento-de-mudanças" id="toc-acompanhamento-de-mudanças" class="nav-link" data-scroll-target="#acompanhamento-de-mudanças"><span class="header-section-number">4.4</span> Acompanhamento de Mudanças</a></li>
+  <li><a href="#redação-de-manuscritos" id="toc-redação-de-manuscritos" class="nav-link" data-scroll-target="#redação-de-manuscritos"><span class="header-section-number">4.5</span> Redação de Manuscritos</a></li>
+  <li><a href="#implementação-de-ciência-aberta" id="toc-implementação-de-ciência-aberta" class="nav-link" data-scroll-target="#implementação-de-ciência-aberta"><span class="header-section-number">4.6</span> Implementação de Ciência Aberta</a></li>
+  <li><a href="#cenas-dos-próximos-capítulos" id="toc-cenas-dos-próximos-capítulos" class="nav-link" data-scroll-target="#cenas-dos-próximos-capítulos"><span class="header-section-number">4.7</span> <strong><em>CENAS DOS PRÓXIMOS CAPÍTULOS</em></strong></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -232,8 +265,116 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Essa seção é o elo entre as seções anteriores e as próximas. Aqui, você vai receber algumas dicas de como organizar seus dados, pasta e scripts em um projeto de pesquisa. Talvez você se pergunte: porque eu preciso aprender a organizar meus arquivos e pasta? Já faço isso, do meu jeito, há anos, e nunca tive problemas em entender o que eu faço! A resposta é simples: não trata somente de você entender e achar que o produto final da sua pesquisa (o artigo) seja suficiente. No contexto da Ciência Aberta (CA) a ideia é que deixe transparente o processo de análise, materiais e métodos, e que outros pesquisadores possam reproduzir seus resultados. Nesse sentido, deve haver uma padronização mínima de organização de arquivos, pastas e scripts para que outros pesquisadores possam entender e reproduzir seus resultados. Lembre-se que agora você pode compartilhar uma pasta compilada da sua pesquisa, via Google Drive ou OneDrive, no seu projeto do <a href="https://osf.io/">Open Science Framework</a>.</p>
+<p>Nesse sentido, a intenção é que adotemos certa padronização na organização de arquivos, pastas e scripts, seguindo algumas sugestões de boas práticas para que o processo da nossa pesquisa fique inteligível para qualquer um. Para você ver tanto que a “coisa” é séria, existe até protocolo de padronização de organização de arquivos e pastas, como o <a href="https://www.projecttier.org/">Project TIER</a>, focado para pesquisas em ciências sociais. No caso de scripts, talvez o estilo de escrita e organização mais conhecido para o ambiente R seja o <a href="https://style.tidyverse.org/">Tidyverse Style Guide</a>. O livro de <span class="citation" data-cites="zandonella2022">Zandonella Callegher &amp; Massidda (<a href="references.html#ref-zandonella2022" role="doc-biblioref">2022</a>)</span> apresenta uma excelente discussão desses tópicos nos capítulos 3, 4 e 5<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p>No entanto, pelo menos nesse primeiro momento, resolvemos discutir um conjunto de boas práticas computacionais que todo pesquisador deve adotar, independentemente do seu nível atual de habilidade computacional, apresentadas por <span class="citation" data-cites="wilson2017">Wilson et al. (<a href="references.html#ref-wilson2017" role="doc-biblioref">2017</a>)</span>. Essas práticas abrangem gerenciamento de dados, programação, colaboração com colegas, organização de projetos, acompanhamento de trabalhos e redação de manuscritos. Especificamente, na aula dessa seção detalhamos o “Box 1. Summary of practices” do artigo, que pontua 38 tópicos. Quais sejam:</p>
+<section id="gerenciamento-de-dados" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="gerenciamento-de-dados"><span class="header-section-number">4.1</span> Gerenciamento de Dados</h2>
+<ol type="1">
+<li><strong>Proteção dos Dados Brutos</strong>: Dados originais não devem ser sobrescritos. Usar permissões de somente leitura e garantir múltiplos backups em locais diferentes, como Google Drive e Dropbox, para evitar perda de dados.</li>
+<li><strong>Conversão de Dados</strong>: Transformar dados para formatos como CSV ou JSON sem alterar seu conteúdo facilita a análise e a visualização.</li>
+<li><strong>Estruturação de Dados</strong>: Cada coluna deve representar uma variável e cada linha, uma observação. Isso facilita a aplicação de técnicas de análise.</li>
+<li><strong>Automatização e Documentação</strong>: Utilizar scripts em R ou Python para todas as etapas do processamento de dados e manter um log detalhado das operações.</li>
+<li><strong>Acessibilidade e Citação</strong>: Tornar os dados acessíveis a outros pesquisadores e garantir a citação adequada ao compartilhar dados em repositórios como OSF ou Zenodo.</li>
+</ol>
+</section>
+<section id="programação" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="programação"><span class="header-section-number">4.2</span> Programação</h2>
+<ol type="1">
+<li><strong>Documentação</strong>: Documentar o propósito e o uso dos programas ajuda na compreensão e manutenção futura.</li>
+<li><strong>Modularização</strong>: Dividir o código em funções separadas para carregamento de dados, limpeza e análise facilita a manutenção e reutilização.</li>
+<li><strong>Redução de Redundância</strong>: Usar bibliotecas existentes como Pandas em Python em vez de escrever código do zero.</li>
+<li><strong>Teste de Código</strong>: Escrever pequenos testes para verificar a funcionalidade correta do código.</li>
+<li><strong>Publicação de Código</strong>: Publicar código no Zenodo ou GitHub e gerar DOI para aumentar a visibilidade e reprodutibilidade.</li>
+</ol>
+</section>
+<section id="colaboração" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="colaboração"><span class="header-section-number">4.3</span> Colaboração</h2>
+<ol type="1">
+<li><strong>Gerenciamento de Projetos</strong>: Utilizar ferramentas como Trello ou GitHub Issues para gerenciar tarefas e estabelecer canais de comunicação claros.</li>
+<li><strong>Licenciamento e Citação</strong>: Incluir arquivos de licença e citação nos repositórios de projetos.</li>
+<li><strong>Documentação de Projeto</strong>: Criar arquivos README.md e CITATION.md que descrevam o projeto, objetivos e como configurá-lo.</li>
+<li><strong>Estrutura de Diretórios</strong>: Organizar o projeto em diretórios nomeados de forma clara e manter todos os arquivos relacionados dentro deles.</li>
+</ol>
+</section>
+<section id="acompanhamento-de-mudanças" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="acompanhamento-de-mudanças"><span class="header-section-number">4.4</span> Acompanhamento de Mudanças</h2>
+<ol type="1">
+<li><strong>Versionamento com Git</strong>: Fazer commits frequentes e de pequeno porte e sincronizar alterações com repositórios GitHub para manter um histórico detalhado das mudanças.</li>
+<li><strong>Backup Automático</strong>: Usar serviços de backup automático como Dropbox ou Google Drive para garantir a segurança dos dados.</li>
+</ol>
+</section>
+<section id="redação-de-manuscritos" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="redação-de-manuscritos"><span class="header-section-number">4.5</span> Redação de Manuscritos</h2>
+<ol type="1">
+<li><strong>Ferramentas de Versionamento</strong>: Utilizar LaTeX, Markdown ou Quarto para redigir manuscritos, aproveitando a facilidade de versionamento e colaboração.</li>
+<li><strong>Publicação e Compartilhamento</strong>: Integrar práticas de ciência aberta no fluxo de trabalho, como publicar pré-prints e pré-registrar estudos.</li>
+</ol>
+<p>Em resumo, o artigo propõe que pesquisadores de todas as áreas devem adotar práticas computacionais sólidas para garantir a integridade, reprodutibilidade e transparência de suas pesquisas.</p>
+<p>E por fim, também sugerimos que os pesquisadores se engajem em comunidades de práticas para compartilhar conhecimento e colaborar com outros pesquisadores. Bora começar?</p>
+</section>
+<section id="implementação-de-ciência-aberta" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="implementação-de-ciência-aberta"><span class="header-section-number">4.6</span> Implementação de Ciência Aberta</h2>
+<ol type="1">
+<li><strong>Começar Pequeno</strong>: Iniciar com pequenas práticas de ciência aberta, como usar software de código aberto e publicar pré-prints.</li>
+<li><strong>Conhecer Políticas</strong>: Familiarizar-se com políticas de ciência aberta e compartilhar casos de sucesso.</li>
+<li><strong>Educação em Ciência Aberta</strong>: Incorporar práticas de ciência aberta no conteúdo dos cursos e adotar recursos educacionais abertos.</li>
+<li><strong>Colaboração e Redes</strong>: Desenvolver redes colaborativas e utilizar ferramentas abertas para repositórios e versionamento de dados.</li>
+<li><strong>Mudança na Avaliação Acadêmica</strong>: Promover alternativas à medição tradicional de desempenho acadêmico e reconhecer uma variedade de resultados de pesquisa.</li>
+</ol>
+</section>
+<section id="cenas-dos-próximos-capítulos" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="cenas-dos-próximos-capítulos"><span class="header-section-number">4.7</span> <strong><em>CENAS DOS PRÓXIMOS CAPÍTULOS</em></strong></h2>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/s3JldKoA0zw" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Você não vai querer cometer esses erros<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><a href="https://www.bbc.com/news/magazine-22223190"><strong>Caso 1: Reinhart, Rogoff… e Herndon: O aluno que pegou os professores</strong></a></p>
+<p>Economistas ficaram surpresos ao descobrir que um famoso artigo acadêmico, frequentemente usado para justificar cortes de austeridade, continha erros significativos. Esses erros, cometidos por dois renomados professores de Harvard, foram identificados por um estudante durante a realização de um trabalho acadêmico.</p>
+<p>Em 4 de janeiro de 2010, no Marriott Hotel em Atlanta, durante a reunião anual da American Economic Association, os professores Carmen Reinhart e Ken Rogoff apresentaram um artigo chamado “Growth in a Time of Debt”. Eles afirmavam que o crescimento econômico desacelera drasticamente quando a dívida de um país ultrapassa 90% do Produto Interno Bruto (PIB).</p>
+<p>O artigo ganhou notoriedade rapidamente, sendo citado por formuladores de políticas como o comissário da UE Olli Rehn e o político republicano dos EUA Paul Ryan, que usaram o limite de 90% de dívida-PIB para apoiar estratégias de austeridade.</p>
+<p>Thomas Herndon, um estudante da Universidade de Massachusetts Amherst, escolheu este artigo para uma tarefa de replicação de resultados. No entanto, Herndon não conseguiu replicar os resultados dos professores de Harvard, o que inicialmente o fez pensar que havia cometido um erro. Após várias verificações e com a ajuda de seus professores, Herndon entrou em contato com Reinhart e Rogoff, que forneceram a planilha usada na pesquisa original.</p>
+<p>Ao analisar a planilha, Herndon descobriu um erro básico: os professores de Harvard haviam incluído apenas 15 dos 20 países analisados em um cálculo crucial. Além disso, havia outras questões metodológicas, como a forma de mediação dos dados, que distorciam os resultados.</p>
+<p>Esses achados foram publicados em 15 de abril, revelando que, embora altos níveis de dívida ainda estejam correlacionados com menor crescimento, a relação é muito mais suave e há muitas exceções à regra. Reinhart e Rogoff reconheceram o erro, mas defenderam que ele não afetava significativamente a mensagem central do artigo.</p>
+<p>Essa descoberta trouxe à tona a importância de verificar e replicar resultados de pesquisas, especialmente aquelas que influenciam políticas públicas. Embora o debate sobre a austeridade continue, o trabalho de Herndon destacou a necessidade de rigor acadêmico e a revisão crítica dos estudos usados para fundamentar decisões econômicas.</p>
+<p><a href="https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates">Caso 2: Cientistas renomeiam genes humanos para impedir que o Microsoft Excel os interprete erroneamente como datas</a></p>
+<p>Nos últimos anos, 27 genes humanos foram renomeados devido a um problema comum com o Microsoft Excel, que interpretava incorretamente os símbolos alfanuméricos dos genes como datas. Esse problema surgiu porque o Excel, uma ferramenta amplamente utilizada por cientistas para gerenciar dados, converte automaticamente certos símbolos de genes, como “MARCH1” (abreviação de “Membrane Associated Ring-CH-Type Finger 1”), em datas, como “1-Mar”.</p>
+<p>Estudos mostraram que cerca de um quinto dos dados genéticos em artigos publicados foi afetado por erros do Excel. Esse problema é tão difundido que até mesmo trabalhos revisados por pares foram impactados. Não há uma solução fácil, já que o Excel não permite desativar essa formatação automática. Para contornar isso, os cientistas precisam alterar manualmente o tipo de dado para cada coluna ou corrigir os dados sempre que exportam e importam arquivos.</p>
+<p>Para resolver esse problema, o Comitê de Nomenclatura de Genes da HUGO (HGNC) publicou novas diretrizes para a nomeação de genes, levando em consideração o comportamento do Excel. Por exemplo, “MARCH1” foi alterado para “MARCHF1” e “SEPT1” para “SEPTIN1”. Essas mudanças foram implementadas após consultar a comunidade científica para evitar confusões futuras.</p>
+<p>Historicamente, a nomeação de genes permitia certa criatividade, resultando em nomes curiosos como “sonic hedgehog” e “Indy”. No entanto, as diretrizes atuais priorizam a clareza e a praticidade, exigindo nomes únicos e específicos, que evitem confusões e termos ofensivos.</p>
+<p>Embora houvesse algum debate sobre por que os cientistas deveriam ajustar os nomes dos genes em vez de o Excel mudar sua funcionalidade, a decisão foi baseada na praticidade. A mudança no Excel beneficiaria apenas um pequeno grupo de usuários, enquanto a renomeação dos genes oferece uma solução imediata e duradoura.</p>
+<p>Essa mudança foi bem recebida pela comunidade científica, que expressou entusiasmo nas redes sociais pela resolução de um problema que afetava significativamente o trabalho de pesquisa.</p>
+<p>Essa decisão ilustra como a ciência pode se adaptar para superar desafios práticos, garantindo que a pesquisa continue de maneira eficiente e precisa.</p>
+</div>
+</div>
+</div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-wilson2017" class="csl-entry" role="listitem">
+Wilson, G., Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L., &amp; Teal, T. K. (2017). Good enough practices in scientific computing. <em>PLOS Computational Biology</em>, <em>13</em>(6), e1005510. <a href="https://doi.org/10.1371/journal.pcbi.1005510">https://doi.org/10.1371/journal.pcbi.1005510</a>
+</div>
+<div id="ref-zandonella2022" class="csl-entry" role="listitem">
+Zandonella Callegher, C., &amp; Massidda, D. (2022). <em>The open science manual: Make your scientific research accessible and reproducible</em>. <a href="https://doi.org/10.5281/zenodo.6521850">https://doi.org/10.5281/zenodo.6521850</a>
+</div>
+</div>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Na verdade, se tivéssemos que indicar um único livro de leitura para abordar os temas do curso, esse livro seria o recomendado. Apesar de não contextualizar a CA como fizemos no começo, nem apresentar o Zotero e outras ferramentas de IA dentro desse contexto, talvez seja o compêndio que mais se assemelha à proposta de nosso curso.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Pedi para o ChatGPT4o resumir as duas matérias e me dar sua resposta em português. Como sempre, revisei o conteúdo para saber se batia com o que eu li.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -22,7 +22,7 @@ O **OSF** oferece uma série de recursos para ajudar os pesquisadores a gerencia
 
 O **OSF** tem um foco mais amplo em todo o ciclo de vida da pesquisa, desde a concepção da ideia até a publicação dos resultados (@fig-osf-researchcycle). Já algumas das soluções citadas foca principalmente no compartilhamento de dados e publicações. O **OSF** oferece ferramentas mais robustas para colaboração em equipe, como wikis, painéis de discussão e ferramentas de gerenciamento de tarefas, e principalmente, possui uma comunidade mais ativa de pesquisadores e colaboradores.
 
-![OSF Research Lifecycle](img/osf-researchcycle.png){#fig-osf-researchcycle fig-align="left"}
+[![OSF Research Lifecycle](img/osf-researchcycle.png){#fig-osf-researchcycle fig-align="center"}](https://help.osf.io/article/583-getting-to-know-the-osf-the-basics)
 
 ## Open Science Framework (OSF)
 

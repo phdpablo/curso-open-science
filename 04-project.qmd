@@ -1,1 +1,96 @@
 # Gestão de Dados e Projetos {#sec-project}
+
+Essa seção é o elo entre as seções anteriores e as próximas. Aqui, você vai receber algumas dicas de como organizar seus dados, pasta e scripts em um projeto de pesquisa. Talvez você se pergunte: porque eu preciso aprender a organizar meus arquivos e pasta? Já faço isso, do meu jeito, há anos, e nunca tive problemas em entender o que eu faço! A resposta é simples: não trata somente de você entender e achar que o produto final da sua pesquisa (o artigo) seja suficiente. No contexto da Ciência Aberta (CA) a ideia é que deixe transparente o processo de análise, materiais e métodos, e que outros pesquisadores possam reproduzir seus resultados. Nesse sentido, deve haver uma padronização mínima de organização de arquivos, pastas e scripts para que outros pesquisadores possam entender e reproduzir seus resultados. Lembre-se que agora você pode compartilhar uma pasta compilada da sua pesquisa, via Google Drive ou OneDrive, no seu projeto do [Open Science Framework](https://osf.io/).
+
+Nesse sentido, a intenção é que adotemos certa padronização na organização de arquivos, pastas e scripts, seguindo algumas sugestões de boas práticas para que o processo da nossa pesquisa fique inteligível para qualquer um. Para você ver tanto que a "coisa" é séria, existe até protocolo de padronização de organização de arquivos e pastas, como o [Project TIER](https://www.projecttier.org/), focado para pesquisas em ciências sociais. No caso de scripts, talvez o estilo de escrita e organização mais conhecido para o ambiente R seja o [Tidyverse Style Guide](https://style.tidyverse.org/). O livro de @zandonella2022 apresenta uma excelente discussão desses tópicos nos capítulos 3, 4 e 5[^04-project-1].
+
+[^04-project-1]: Na verdade, se tivéssemos que indicar um único livro de leitura para abordar os temas do curso, esse livro seria o recomendado. Apesar de não contextualizar a CA como fizemos no começo, nem apresentar o Zotero e outras ferramentas de IA dentro desse contexto, talvez seja o compêndio que mais se assemelha à proposta de nosso curso.
+
+No entanto, pelo menos nesse primeiro momento, resolvemos discutir um conjunto de boas práticas computacionais que todo pesquisador deve adotar, independentemente do seu nível atual de habilidade computacional, apresentadas por @wilson2017. Essas práticas abrangem gerenciamento de dados, programação, colaboração com colegas, organização de projetos, acompanhamento de trabalhos e redação de manuscritos. Especificamente, na aula dessa seção detalhamos o “Box 1. Summary of practices” do artigo, que pontua 38 tópicos. Quais sejam:
+
+## Gerenciamento de Dados
+
+1.  **Proteção dos Dados Brutos**: Dados originais não devem ser sobrescritos. Usar permissões de somente leitura e garantir múltiplos backups em locais diferentes, como Google Drive e Dropbox, para evitar perda de dados.
+2.  **Conversão de Dados**: Transformar dados para formatos como CSV ou JSON sem alterar seu conteúdo facilita a análise e a visualização.
+3.  **Estruturação de Dados**: Cada coluna deve representar uma variável e cada linha, uma observação. Isso facilita a aplicação de técnicas de análise.
+4.  **Automatização e Documentação**: Utilizar scripts em R ou Python para todas as etapas do processamento de dados e manter um log detalhado das operações.
+5.  **Acessibilidade e Citação**: Tornar os dados acessíveis a outros pesquisadores e garantir a citação adequada ao compartilhar dados em repositórios como OSF ou Zenodo.
+
+## Programação
+
+1.  **Documentação**: Documentar o propósito e o uso dos programas ajuda na compreensão e manutenção futura.
+2.  **Modularização**: Dividir o código em funções separadas para carregamento de dados, limpeza e análise facilita a manutenção e reutilização.
+3.  **Redução de Redundância**: Usar bibliotecas existentes como Pandas em Python em vez de escrever código do zero.
+4.  **Teste de Código**: Escrever pequenos testes para verificar a funcionalidade correta do código.
+5.  **Publicação de Código**: Publicar código no Zenodo ou GitHub e gerar DOI para aumentar a visibilidade e reprodutibilidade.
+
+## Colaboração
+
+1.  **Gerenciamento de Projetos**: Utilizar ferramentas como Trello ou GitHub Issues para gerenciar tarefas e estabelecer canais de comunicação claros.
+2.  **Licenciamento e Citação**: Incluir arquivos de licença e citação nos repositórios de projetos.
+3.  **Documentação de Projeto**: Criar arquivos README.md e CITATION.md que descrevam o projeto, objetivos e como configurá-lo.
+4.  **Estrutura de Diretórios**: Organizar o projeto em diretórios nomeados de forma clara e manter todos os arquivos relacionados dentro deles.
+
+## Acompanhamento de Mudanças
+
+1.  **Versionamento com Git**: Fazer commits frequentes e de pequeno porte e sincronizar alterações com repositórios GitHub para manter um histórico detalhado das mudanças.
+2.  **Backup Automático**: Usar serviços de backup automático como Dropbox ou Google Drive para garantir a segurança dos dados.
+
+## Redação de Manuscritos
+
+1.  **Ferramentas de Versionamento**: Utilizar LaTeX, Markdown ou Quarto para redigir manuscritos, aproveitando a facilidade de versionamento e colaboração.
+2.  **Publicação e Compartilhamento**: Integrar práticas de ciência aberta no fluxo de trabalho, como publicar pré-prints e pré-registrar estudos.
+
+Em resumo, o artigo propõe que pesquisadores de todas as áreas devem adotar práticas computacionais sólidas para garantir a integridade, reprodutibilidade e transparência de suas pesquisas.
+
+E por fim, também sugerimos que os pesquisadores se engajem em comunidades de práticas para compartilhar conhecimento e colaborar com outros pesquisadores. Bora começar?
+
+## Implementação de Ciência Aberta
+
+1.  **Começar Pequeno**: Iniciar com pequenas práticas de ciência aberta, como usar software de código aberto e publicar pré-prints.
+2.  **Conhecer Políticas**: Familiarizar-se com políticas de ciência aberta e compartilhar casos de sucesso.
+3.  **Educação em Ciência Aberta**: Incorporar práticas de ciência aberta no conteúdo dos cursos e adotar recursos educacionais abertos.
+4.  **Colaboração e Redes**: Desenvolver redes colaborativas e utilizar ferramentas abertas para repositórios e versionamento de dados.
+5.  **Mudança na Avaliação Acadêmica**: Promover alternativas à medição tradicional de desempenho acadêmico e reconhecer uma variedade de resultados de pesquisa.
+
+## ***CENAS DOS PRÓXIMOS CAPÍTULOS***
+
+{{< video https://www.youtube.com/watch?v=s3JldKoA0zw >}}
+
+::: {.callout-warning collapse="true"}
+## Você não vai querer cometer esses erros[^04-project-2]
+
+[**Caso 1: Reinhart, Rogoff... e Herndon: O aluno que pegou os professores**](https://www.bbc.com/news/magazine-22223190)
+
+Economistas ficaram surpresos ao descobrir que um famoso artigo acadêmico, frequentemente usado para justificar cortes de austeridade, continha erros significativos. Esses erros, cometidos por dois renomados professores de Harvard, foram identificados por um estudante durante a realização de um trabalho acadêmico.
+
+Em 4 de janeiro de 2010, no Marriott Hotel em Atlanta, durante a reunião anual da American Economic Association, os professores Carmen Reinhart e Ken Rogoff apresentaram um artigo chamado "Growth in a Time of Debt". Eles afirmavam que o crescimento econômico desacelera drasticamente quando a dívida de um país ultrapassa 90% do Produto Interno Bruto (PIB).
+
+O artigo ganhou notoriedade rapidamente, sendo citado por formuladores de políticas como o comissário da UE Olli Rehn e o político republicano dos EUA Paul Ryan, que usaram o limite de 90% de dívida-PIB para apoiar estratégias de austeridade.
+
+Thomas Herndon, um estudante da Universidade de Massachusetts Amherst, escolheu este artigo para uma tarefa de replicação de resultados. No entanto, Herndon não conseguiu replicar os resultados dos professores de Harvard, o que inicialmente o fez pensar que havia cometido um erro. Após várias verificações e com a ajuda de seus professores, Herndon entrou em contato com Reinhart e Rogoff, que forneceram a planilha usada na pesquisa original.
+
+Ao analisar a planilha, Herndon descobriu um erro básico: os professores de Harvard haviam incluído apenas 15 dos 20 países analisados em um cálculo crucial. Além disso, havia outras questões metodológicas, como a forma de mediação dos dados, que distorciam os resultados.
+
+Esses achados foram publicados em 15 de abril, revelando que, embora altos níveis de dívida ainda estejam correlacionados com menor crescimento, a relação é muito mais suave e há muitas exceções à regra. Reinhart e Rogoff reconheceram o erro, mas defenderam que ele não afetava significativamente a mensagem central do artigo.
+
+Essa descoberta trouxe à tona a importância de verificar e replicar resultados de pesquisas, especialmente aquelas que influenciam políticas públicas. Embora o debate sobre a austeridade continue, o trabalho de Herndon destacou a necessidade de rigor acadêmico e a revisão crítica dos estudos usados para fundamentar decisões econômicas.
+
+[Caso 2: Cientistas renomeiam genes humanos para impedir que o Microsoft Excel os interprete erroneamente como datas](https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates)
+
+Nos últimos anos, 27 genes humanos foram renomeados devido a um problema comum com o Microsoft Excel, que interpretava incorretamente os símbolos alfanuméricos dos genes como datas. Esse problema surgiu porque o Excel, uma ferramenta amplamente utilizada por cientistas para gerenciar dados, converte automaticamente certos símbolos de genes, como "MARCH1" (abreviação de "Membrane Associated Ring-CH-Type Finger 1"), em datas, como "1-Mar".
+
+Estudos mostraram que cerca de um quinto dos dados genéticos em artigos publicados foi afetado por erros do Excel. Esse problema é tão difundido que até mesmo trabalhos revisados por pares foram impactados. Não há uma solução fácil, já que o Excel não permite desativar essa formatação automática. Para contornar isso, os cientistas precisam alterar manualmente o tipo de dado para cada coluna ou corrigir os dados sempre que exportam e importam arquivos.
+
+Para resolver esse problema, o Comitê de Nomenclatura de Genes da HUGO (HGNC) publicou novas diretrizes para a nomeação de genes, levando em consideração o comportamento do Excel. Por exemplo, "MARCH1" foi alterado para "MARCHF1" e "SEPT1" para "SEPTIN1". Essas mudanças foram implementadas após consultar a comunidade científica para evitar confusões futuras.
+
+Historicamente, a nomeação de genes permitia certa criatividade, resultando em nomes curiosos como "sonic hedgehog" e "Indy". No entanto, as diretrizes atuais priorizam a clareza e a praticidade, exigindo nomes únicos e específicos, que evitem confusões e termos ofensivos.
+
+Embora houvesse algum debate sobre por que os cientistas deveriam ajustar os nomes dos genes em vez de o Excel mudar sua funcionalidade, a decisão foi baseada na praticidade. A mudança no Excel beneficiaria apenas um pequeno grupo de usuários, enquanto a renomeação dos genes oferece uma solução imediata e duradoura.
+
+Essa mudança foi bem recebida pela comunidade científica, que expressou entusiasmo nas redes sociais pela resolução de um problema que afetava significativamente o trabalho de pesquisa.
+
+Essa decisão ilustra como a ciência pode se adaptar para superar desafios práticos, garantindo que a pesquisa continue de maneira eficiente e precisa.
+:::
+
+[^04-project-2]: Pedi para o ChatGPT4o resumir as duas matérias e me dar sua resposta em português. Como sempre, revisei o conteúdo para saber se batia com o que eu li.
