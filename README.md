@@ -45,7 +45,9 @@ Esse curso é um projeto em constante desenvolvimento, e por isso, sugestões e 
 
 Se você utilizar o material desse curso em algum trabalho acadêmico, por favor, cite o livro do curso da seguinte forma:
 
+
 Rogers, P. (2024). Artigo à Prova de Futuro: Jornada de Open Science na Prática (1.0). Disponível em: https://phdpablo.github.io/curso-open-science/. https://doi.org/10.5281/zenodo.12593928
+
 
 BibTex:
 
