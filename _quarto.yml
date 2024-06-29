@@ -14,7 +14,7 @@ book:
   #author: "Pablo Rogers"
   #date: last-modified
   #date-format: long
-  #doi: 10.5281/zenodo.10443128
+  doi: 10.5281/zenodo.12593928
   cover-image: img/cover.png
   downloads: pdf
   reader-mode: true
@@ -66,23 +66,27 @@ format:
     fig-align: left
   
   pdf:
-    documentclass: article
+    documentclass: book
+    #cover-image: img/cover-book.pdf
     papersize: A4
     #abstract: "Working in progress"
-    top-level-division: section
+    author: "Pablo Rogers"
+    date: last-modified
+    date-format: "MMM, YYYY"
+    top-level-division: default
     #code-block-bg: gray
     geometry:
-      - paperwidth=8.00in
-      - paperheight=10.00in
+      - paperwidth=8.27in
+      - paperheight=11.69in
       - left=1.25in
       - textwidth= 5.25in
       - top=1.00in
       - textheight=8.25in
       #- showframe
-    #include-in-header: preamble.tex
-    #include-before-body: first.tex
-    #include-after-body: backcover.tex
-    toc: false
+    include-in-header: preamble.tex
+    include-before-body: first.tex
+    include-after-body: backcover.tex
+    toc: true
     colorlinks: true
     fig-width: 5
     fig-height: 5
@@ -90,4 +94,3 @@ format:
     keep-tex: true
 
 editor: visual
-

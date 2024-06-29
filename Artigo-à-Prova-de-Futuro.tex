@@ -5,7 +5,7 @@
 %
 \documentclass[
   a4paper,
-]{article}
+]{book}
 
 \usepackage{amsmath,amssymb}
 \usepackage{iftex}
@@ -39,7 +39,7 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\usepackage[paperwidth=8.00in,paperheight=10.00in,left=1.25in,textwidth=
+\usepackage[paperwidth=8.27in,paperheight=11.69in,left=1.25in,textwidth=
 5.25in,top=1.00in,textheight=8.25in]{geometry}
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{5}
@@ -67,6 +67,46 @@
 \fi
 \makeatother
 
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
@@ -125,6 +165,15 @@
 \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\usepackage{makeidx}
+\makeindex
+\usepackage{titling}
+\usepackage{pdfpages}
+\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
+\let\oldmaketitle\maketitle
+\AtBeginDocument{\let\maketitle\relax}
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}} % Discard next blank page
 
 \makeatletter
 \@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
@@ -206,9 +255,10 @@
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
   pdftitle={Artigo à Prova de Futuro},
+  pdfauthor={Pablo Rogers},
   pdflang={pt},
   colorlinks=true,
-  linkcolor={blue},
+  linkcolor={Maroon},
   filecolor={Maroon},
   citecolor={Blue},
   urlcolor={Blue},
@@ -222,17 +272,35 @@
 }
 \makeatother
 \subtitle{Jornada de Open Science na Prática}
-\author{}
-\date{}
+\author{Pablo Rogers}
+\date{jun, 2024}
 
 \begin{document}
+\frontmatter
 \maketitle
 
+\begin{center}
+\includepdf[fitpaper=true,pages=-]{img/cover-book}
+\end{center}
+\let\maketitle\oldmaketitle
+\maketitle
+\AtBeginShipoutNext{\AtBeginShipoutDiscard}
+\mainmatter
+%\pagestyle{plain}
+
+\renewcommand*\contentsname{Índice}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\mainmatter
 \bookmarksetup{startatroot}
 
-\section*{Home 🏢}\label{sec-home}
+\chapter*{O Curso 🏢}\label{sec-home}
+\addcontentsline{toc}{chapter}{O Curso 🏢}
 
-\markboth{Home 🏢}{Home 🏢}
+\markboth{O Curso 🏢}{O Curso 🏢}
 
 Página do curso \textbf{``Artigo à Prova de Futuro: Jornada de Open
 Science na Prática''}. Aqui você encontrará informações sobre o programa
@@ -240,12 +308,12 @@ do curso, materiais para seu acompanhamento e sugestões de leituras
 sobre a prática da ciência aberta (artigos, notas de aulas, blogs,
 vídeos, etc.).
 
-Caso você caiu nessa página por acaso (🤣😁😉), saiba que o poderá se
-inscrever no curso \href{https://forms.gle/b6Zio7oL8XxxhhtS9}{aqui}:
-independente se ele estiver acontecendo no momento, será convidado a
-participar da próxima versão.
+Caso você caiu nessa página por acaso, saiba que o poderá se inscrever
+no curso \href{https://forms.gle/b6Zio7oL8XxxhhtS9}{aqui}: independente
+se ele estiver acontecendo no momento, será convidado a participar da
+próxima versão.
 
-\subsection*{Sobre os instrutores}\label{sec-instrutor}
+\section*{Sobre os instrutores}\label{sec-instrutor}
 
 \markright{Sobre os instrutores}
 
@@ -268,20 +336,19 @@ inteligência artificial aplicada aos negócios e pesquisa. Em seu
 possível encontrar vídeos das suas atividades: congressos, palestras,
 aulas, etc.
 
-\subsection*{Sobre o curso}\label{sec-about}
+\section*{Objetivos}\label{sec-about}
 
-\markright{Sobre o curso}
+\markright{Objetivos}
 
 O curso tem objetivo de introduzir os conceitos relacionados com a
-ciência aberta e a prática da pesquisa reprodutível. O curso aborda
-temas introdutórios sobre ciência aberta, com foco no ferramental
-disponível para tornar a pesquisa mais transparente, reprodutível e
-acessível. O curso é voltado para pesquisadores e estudantes de
-pós-graduação, mas aberto a qualquer pessoa interessada em aprender
-sobre a prática da ciência aberta. O protagonista do curso é o
-pesquisador brasileiro que deseja aprimorar a qualidade e a
-transparência de sua pesquisa, e que busca ferramentas para tornar-lá
-mais eficiente e acessível.
+Ciência Aberta (CA) e a prática da pesquisa reprodutível. O curso aborda
+temas introdutórios sobre CA, com foco no ferramental disponível para
+tornar a pesquisa mais transparente, reprodutível e acessível. O curso é
+voltado para pesquisadores e estudantes de pós-graduação, mas aberto a
+qualquer pessoa interessada em aprender sobre a prática da CA. O
+protagonista do curso é o pesquisador brasileiro que deseja aprimorar a
+qualidade e a transparência de sua pesquisa, e que busca ferramentas
+para tornar-lá mais eficiente e acessível.
 
 Trata-se de um curso intermitente programado para acontecer em 4
 encontros de 4 horas/aula (ou 8 encontros de 2 horas/aula), totalizando
@@ -307,16 +374,16 @@ sobre a próxima edição do curso. Após selecionados, os inscritos
 receberão um e-mail com instruções para acesso à plataforma de aulas
 síncronas e para a realização das atividades prévias ao curso.
 
-\subsection*{Ementa do curso}\label{sec-ementa}
+\section*{Ementa}\label{sec-ementa}
 
-\markright{Ementa do curso}
+\markright{Ementa}
 
 Introdução da Ciência Aberta / Repositórios da Ciência Aberta /
-Gerenciamento de Referências e Bibliotecas / Gestão de Dados e Projetos
-/ Controle de Versão / Documentos Reprodutíveis / Controle de Ambiente
-(containers) / IA Aplicada à Pesquisa Científica.
+Gerenciamento de Referências e Bibliotecas / Gestão de Projetos, Dados e
+Scripts / Controle de Versão / Documentos Reprodutíveis / Controle de
+Ambiente / IA Aplicada à Pesquisa Científica.
 
-\subsection*{Metodologia}\label{sec-method}
+\section*{Metodologia}\label{sec-method}
 
 \markright{Metodologia}
 
@@ -328,9 +395,9 @@ gravadas e disponibilizadas no
 projeto Psico\&Econo\_METRIA}, mas a intenção é que o conteúdo principal
 seja síncrono, para uma maior interação entre os participantes.
 
-Nesse sentido, o material do curso organizado nessa página refere-se ao
-roteiro estruturado de tudo que se vê nas aulas síncronas e conteúdos
-adicionais (bibliografia, notas de aulas, links, etc).
+Nesse sentido, o material do curso organizado nesse site refere-se ao
+roteiro estruturado (enrendo) de tudo que se vê nas aulas síncronas e
+conteúdos adicionais (bibliografia, notas de aulas, links, etc).
 
 A proposta do curso busca seguir de perto a mensagem de Dogucu \&
 Çetinkaya-Rundel (2022). Nesse artigo as autoras abordam a importância
@@ -342,12 +409,53 @@ reprodutibilidade, focada exclusivamente nas ferramentas para o ensino
 (todos os materiais de ensino devem ser computacionalmente
 reprodutíveis, bem documentados e abertos).
 
+\newpage
+
+\section*{Citação}\label{sec-cite}
+
+\markright{Citação}
+
+Se você utilizar o material desse curso em algum trabalho acadêmico, por
+favor, cite o livro do curso da seguinte forma:
+
+\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, left=2mm, toprule=.15mm, colback=white, colframe=quarto-callout-important-color-frame, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, leftrule=.75mm]
+
+Rogers, P. (2024). Artigo à Prova de Futuro: Jornada de Open Science na
+Prática (1.0). Disponível em:
+https://phdpablo.github.io/curso-open-science/.
+https://doi.org/10.5281/zenodo.12593928
+
+\end{tcolorbox}
+
+BibTex:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\SpecialCharTok{@}\NormalTok{misc\{rogers2024,}
+\NormalTok{  author       }\OtherTok{=}\NormalTok{ \{Rogers, Pablo\},}
+\NormalTok{  title        }\OtherTok{=}\NormalTok{ \{\{Artigo à Prova de Futuro}\SpecialCharTok{:}\NormalTok{ Jornada de Open Science }
+\NormalTok{                   na Prática\}\},}
+\NormalTok{  month        }\OtherTok{=}\NormalTok{ jun,}
+\NormalTok{  year         }\OtherTok{=} \DecValTok{2024}\NormalTok{,}
+\NormalTok{  publisher    }\OtherTok{=}\NormalTok{ \{Zenodo\},}
+\NormalTok{  version      }\OtherTok{=}\NormalTok{ \{}\FloatTok{1.0}\NormalTok{\},}
+\NormalTok{  doi          }\OtherTok{=}\NormalTok{ \{}\FloatTok{10.5281}\SpecialCharTok{/}\NormalTok{zenodo}\FloatTok{.12593928}\NormalTok{\},}
+\NormalTok{  url          }\OtherTok{=}\NormalTok{ \{https}\SpecialCharTok{:}\ErrorTok{//}\NormalTok{phdpablo.github.io}\SpecialCharTok{/}\NormalTok{curso}\SpecialCharTok{{-}}\NormalTok{open}\SpecialCharTok{{-}}\NormalTok{science}\SpecialCharTok{/}\NormalTok{\}}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\section*{Licença}\label{licenuxe7a}
+
+\markright{Licença}
+
 Artigo à Prova de Futuro: Jornada de Open Science na Prática by Pablo
 Rogers is licensed under CC BY-NC-SA 4.0
 
 \bookmarksetup{startatroot}
 
-\section*{Pré-requisitos 📇}\label{sec-prework}
+\chapter*{Pré-requisitos 📇}\label{sec-prework}
+\addcontentsline{toc}{chapter}{Pré-requisitos 📇}
 
 \markboth{Pré-requisitos 📇}{Pré-requisitos 📇}
 
@@ -359,15 +467,15 @@ que utilizaremos no curso: Zotero, OSF, Zenodo, Git, Github, RStudio,
 Quarto/RMarkdown, Docker, etc; mas desejável que o aluno já as tenha
 instalado e/ou cadastro nas plataformas.
 
-Abaixo eu descrevo sucintamente o que é cada uma dessas ferramentas e
-plataformas, e como você pode se preparar para o curso. Também apresento
-um vídeo curto sobre a instalação e cadastro em cada uma delas. A ideia
-é que você já tenha todas as ferramentas e plataformas instaladas e/ou
-cadastro antes do início do curso, para que possamos focar no conteúdo e
-prática durante as aulas síncronas. Mas pode ficar tranquilo, pois na
-primeira aula do curso abordaremos essas tarefas, e caso ainda haja
-alguma dúvida na instalação e cadastro, dedicaremos algum tempo para
-saná-las.
+Abaixo descrevemos sucintamente o que é cada uma dessas ferramentas e
+plataformas, e como você pode se preparar para o curso. Também
+apresentamos um vídeo curto sobre a instalação e cadastro em cada uma
+delas. A ideia é que você já tenha todas as ferramentas e plataformas
+instaladas e/ou cadastro antes do início do curso, para que possamos
+focar no conteúdo e prática durante as aulas síncronas. Mas pode ficar
+tranquilo, pois na primeira aula do curso abordaremos essas tarefas, e
+caso ainda haja alguma dúvida na instalação e cadastro, dedicaremos
+algum tempo para saná-las.
 
 Outras soluções que iremos discutir e testar durante o curso, como
 alguns pacotes do R, e aplicações de IA no último módulo, deixaremos
@@ -375,20 +483,20 @@ para as aulas remotas. Essas soluções na sua maioria requerem cadastros
 rápidos, e podem ser feitos de forma instantânea via conta
 Google/Microsoft/Apple.
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, left=2mm, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Tip \ref*{tip-prompt}: ChatGPT para suas notas de leituras}, titlerule=0mm, leftrule=.75mm, arc=.35mm, colback=white, bottomtitle=1mm, toptitle=1mm, toprule=.15mm, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, arc=.35mm, colbacktitle=quarto-callout-important-color!10!white, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Tip \ref*{tip-prompt}: ChatGPT para suas notas de leituras}, left=2mm, toprule=.15mm, colback=white, titlerule=0mm, colframe=quarto-callout-important-color-frame, bottomtitle=1mm, bottomrule=.15mm, toptitle=1mm, opacitybacktitle=0.6, coltitle=black, rightrule=.15mm]
 
 \quartocallouttip{tip-prompt} 
 
-Os resumos das bibliografias que apresento em cada uma das seções foram
-elaborados com o auxílio do ChatGPT 4, seja pelo o
+Os resumos das bibliografias que apresentamos em cada uma das seções
+foram elaborados com o auxílio do ChatGPT 4, seja pelo o
 \href{https://chat.openai.com/}{webapp da OpenAI} ou pelo
 \href{https://copilot.microsoft.com/}{Copilot} (ou buscador Bing) da
-Microsoft.
+Microsoft.\vspace{0.5em}
 
-Eu destaco (seleciono através de marca texto no Zotero, por exemplo) as
-passagens que considero importante do artigo científico, tendo em vista
-a minha perspectiva e fins no momento da leitura, e posteriormente copio
-e colo as notas de leitura com a seguinte prompt:
+Destacamos (selecionamos através de marca texto no Zotero, por exemplo)
+as passagens que consideramos importante do artigo científico, tendo em
+vista a perspectiva e fins no momento da leitura, e posteriormente se
+copia e cola as notas de leitura com a seguinte prompt:\vspace{0.5em}
 
 ``\emph{Senteces in the text are reading notes, that is, what I found
 most important and interesting, from a scientific article on the topic
@@ -398,19 +506,20 @@ answer in Portuguese}''
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, left=2mm, colbacktitle=quarto-callout-caution-color!10!white, colframe=quarto-callout-caution-color-frame, coltitle=black, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Não confie cegamente na IA}, titlerule=0mm, leftrule=.75mm, arc=.35mm, colback=white, bottomtitle=1mm, toptitle=1mm, toprule=.15mm, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, arc=.35mm, colbacktitle=quarto-callout-caution-color!10!white, breakable, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Não confie cegamente na IA}, left=2mm, toprule=.15mm, colback=white, titlerule=0mm, colframe=quarto-callout-caution-color-frame, bottomtitle=1mm, bottomrule=.15mm, toptitle=1mm, opacitybacktitle=0.6, coltitle=black, rightrule=.15mm]
 
-Eu simplesmente copiei e colei os resultados do ChatGPT para compilar
-essas notas de leituras? Não. Após o resultado do ChatGPT eu reviso o
-sumário das notas de leituras e faço ajustes, que somente são possíveis
-porque li o artigo por completo. A despeito do ChatGPT fazer um bom
-serviço nesse sentido, ele ainda comete muitos deslizes. Deslizes esses
-que você não pode deixar passar num texto científico, e somente captaria
-a partir da leitura do artigo ou sendo conhecedor do assunto abordado.
+Você simplesmente copia e cola os resultados do ChatGPT para compilar
+essas notas de leituras? Não. Após o resultado do ChatGPT você deve
+revisar o sumário das notas de leituras e fazer ajustes, que somente são
+possíveis porque leu o artigo por completo. A despeito do ChatGPT fazer
+um bom serviço nesse sentido, ele ainda comete muitos deslizes. Deslizes
+esses que você não pode deixar passar num texto científico, e somente
+captaria a partir da leitura do artigo ou sendo conhecedor do assunto
+abordado.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Outra curiosidade\ldots{}}, titlerule=0mm, leftrule=.75mm, arc=.35mm, colback=white, bottomtitle=1mm, toptitle=1mm, toprule=.15mm, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Outra curiosidade\ldots{}}, left=2mm, toprule=.15mm, colback=white, titlerule=0mm, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, bottomrule=.15mm, toptitle=1mm, opacitybacktitle=0.6, coltitle=black, rightrule=.15mm]
 
 A
 \href{https://phdpablo.github.io/curso-open-science/img/cover.png}{imagem
@@ -425,8 +534,8 @@ que também pode ser utilizada no
 
 \end{tcolorbox}
 
-\subsection*{Github}\label{sec-githubprework}
-\addcontentsline{toc}{subsection}{Github}
+\section*{Github}\label{sec-githubprework}
+\addcontentsline{toc}{section}{Github}
 
 \markright{Github}
 
@@ -437,15 +546,14 @@ cadastrar em outras plataformas, como o Zenodo, OSF, etc. Algumas
 features que aprenderemos no curso exigem o vínculo entre as contas. Se
 for professor ou estudante, você pode solicitar o
 \href{https://education.github.com/}{GitHub Education} e ter acesso, por
-exemplo, ao Copilot, uma das ferramentas de IA que abordaremos no último
-módulo. Por isso, é importante que você se cadastre com um e-mail
-institucional. Use o mesmo e-mail para se cadastrar em todas
-plataformas.
+exemplo, ao Copilot, uma das ferramentas de IA mais interessante. Por
+isso, é importante que você se cadastre com um e-mail institucional. Use
+o mesmo e-mail para se cadastrar em todas plataformas.
 
 \url{https://youtu.be/Nmjh9KsV6eU}
 
-\subsection*{Git}\label{sec-gitprework}
-\addcontentsline{toc}{subsection}{Git}
+\section*{Git}\label{sec-gitprework}
+\addcontentsline{toc}{section}{Git}
 
 \markright{Git}
 
@@ -453,14 +561,14 @@ Github não é a mesma coisa que Git. O Github é uma plataforma, e o Git é
 uma ferramenta. Instale a versão mais recente do Git:
 \url{https://git-scm.com/downloads}. O Git é uma ferramenta de controle
 de versão, e o Github é uma plataforma que utiliza o Git. O Git é uma
-ferramenta essencial para a prática da ciência aberta, e é uma das
-ferramentas mais importantes para o pesquisador que deseja tornar sua
-pesquisa mais transparente e reprodutível.
+ferramenta essencial para a prática da CA, e é uma das ferramentas mais
+importantes para o pesquisador que deseja tornar sua pesquisa mais
+transparente e reprodutível.
 
 \url{https://youtu.be/XCa6mE0bEI0}
 
-\subsection*{Zotero}\label{sec-zoteroprework}
-\addcontentsline{toc}{subsection}{Zotero}
+\section*{Zotero}\label{sec-zoteroprework}
+\addcontentsline{toc}{section}{Zotero}
 
 \markright{Zotero}
 
@@ -469,46 +577,47 @@ Baixe a versão mais recente do Zotero:
 \url{https://www.zotero.org/user/register/}. Vamos discutir sobre o
 Zotero e diversos plugins que são úteis no dia-a-dia do pesquisador.
 Atualmente, o Zotero é a ferramenta mais completa para gerenciamento de
-referências e bibliotecas, e se integra nativamente com o RStudio.
+referências e bibliotecas, e se integra nativamente com o RStudio e
+diversas ferramentas de IA.
 
 \url{https://youtu.be/ZSFq6LHaDJ4}
 
-\subsection*{OSF}\label{sec-osfprework}
-\addcontentsline{toc}{subsection}{OSF}
+\section*{OSF}\label{sec-osfprework}
+\addcontentsline{toc}{section}{OSF}
 
 \markright{OSF}
 
 Cadastre no Open Science Framework (OSF):
 \url{https://osf.io/register/}. Como veremos, essa plataforma é uma das
-mais importantes para a prática da ciência aberta. Ela está no começo
-(pré-registro) e no final (repositório de dados e pré-print) do ciclo de
-vida (workflow) de um projeto de pesquisa.
+mais importantes para a prática da CA. Ela está no começo (pré-registro)
+e no final (repositório de dados e pré-print) do ciclo de vida
+(workflow) de um projeto de pesquisa.
 
 \url{https://youtu.be/WQ4O-8O6MwI}
 
-\subsection*{Zenodo}\label{sec-zenodoprework}
-\addcontentsline{toc}{subsection}{Zenodo}
+\section*{Zenodo}\label{sec-zenodoprework}
+\addcontentsline{toc}{section}{Zenodo}
 
 \markright{Zenodo}
 
 Apesar do Zenodo cumprir funções similares ao OSF e até mesmo ao Github,
-ele é mais voltado para a publicação de dados e publicações científicas.
-Cadastre no Zenodo: \url{https://zenodo.org/login/} e víncule sua conta
-com o Github. Isso será útil, principalmente, para geração de DOI de
-repositórios do Github.
+ele é mais voltado para a publicação de dados e publicações científicas
+pontuais. Cadastre no Zenodo: \url{https://zenodo.org/login/} e víncule
+sua conta com o Github. Isso será útil, principalmente, para geração de
+DOI de repositórios do Github.
 
 \url{https://youtu.be/pZaqL3Auxb0}
 
-\subsection*{RStudio}\label{sec-rstudioprework}
-\addcontentsline{toc}{subsection}{RStudio}
+\section*{RStudio}\label{sec-rstudioprework}
+\addcontentsline{toc}{section}{RStudio}
 
 \markright{RStudio}
 
 Baixe a versão mais recente do RStudio:
 \url{https://posit.co/download/rstudio-desktop/}. O RStudio é uma
 Integrated Development Environment (IDE) para a linguagem R. O RStudio é
-uma ferramenta essencial para a prática da ciência aberta em R, pois
-integra as principais soluções que abordaremos no curso (Zotero, Quarto,
+uma ferramenta essencial para a prática da CA em R, pois integra as
+principais soluções que abordaremos no curso (Zotero, Quarto,
 Git/Github, etc.). A empresa RStudio recentemente mudou o nome para
 Posit, com o objetivo refletir melhor a expansão da empresa para além do
 desenvolvimento de ferramentas para R, incluindo Python e outras
@@ -517,24 +626,24 @@ programação que utilizaremos no curso.
 
 \url{https://youtu.be/KM2jxaNIEUk}
 
-\subsection*{Quarto}\label{sec-quartoprework}
-\addcontentsline{toc}{subsection}{Quarto}
+\section*{Quarto}\label{sec-quartoprework}
+\addcontentsline{toc}{section}{Quarto}
 
 \markright{Quarto}
 
-Baixe a versão mais recente do Quarto: \url{https://www.quarto.org/}. O
-Quarto é uma linguagem de marcação que permite a criação de documentos
-reprodutíveis e dinâmicos. Ele é uma evolução e tende a substituir o
-RMarkdown, que é a principal linguagem de marcação do R. O Quarto
-engloba e adiciona diversas outras vantagens ao RMarkdown, tal como a
-possibilidade de criar documentos reprodutíveis em Python, Julia, etc.
-Se você já tem algum conhecimento de RMarkdown, não se preocupe, pois o
-Quarto é uma extensão natural.
+Baixe a versão mais recente do Quarto CLI (Command Line Interface):
+\url{https://www.quarto.org/}. O Quarto é uma linguagem de marcação que
+permite a criação de documentos reprodutíveis e dinâmicos. Ele é uma
+evolução e tende a substituir o RMarkdown, que é a principal linguagem
+de marcação do R. O Quarto engloba e adiciona diversas outras vantagens
+ao RMarkdown, tal como a possibilidade de criar documentos reprodutíveis
+em Python, Julia, etc. Se você já tem algum conhecimento de RMarkdown,
+não se preocupe, pois o Quarto é uma extensão natural.
 
 \url{https://youtu.be/-HvOMVkk6I4}
 
-\subsection*{Docker}\label{sec-dockerprework}
-\addcontentsline{toc}{subsection}{Docker}
+\section*{Docker}\label{sec-dockerprework}
+\addcontentsline{toc}{section}{Docker}
 
 \markright{Docker}
 
@@ -542,14 +651,13 @@ Baixe a versão mais recente do Docker:
 \url{https://www.docker.com/products/docker-desktop}. Nesse mesmo link
 você cria uma conta. O Docker é uma plataforma para desenvolvimento,
 envio e execução de aplicativos. O Docker é uma ferramenta essencial
-para a prática da ciência aberta, pois permite a criação de ambientes
-reprodutíveis.
+para a prática da CA, pois permite a criação de ambientes reprodutíveis.
 
 \url{https://youtu.be/WjXQxhTLlrQ}
 
 \bookmarksetup{startatroot}
 
-\section*{Agenda 📅}\label{sec-schedule}
+\chapter*{Agenda 📅}\label{sec-schedule}
 
 \markboth{Agenda 📅}{Agenda 📅}
 
@@ -567,10 +675,10 @@ slides utilizados nas aulas (🗣️), aulas gravadas ou indicações de vídeo
 e leituras básica sobre os conteúdos (📓).
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2466}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2466}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2603}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2466}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0600}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0760}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.7960}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0680}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Aula/Conteúdo
@@ -613,7 +721,7 @@ Capítulo~\ref{sec-AI} & 📅27/06/24⏲️19:00 &
 
 \bookmarksetup{startatroot}
 
-\section{Introdução à Ciência Aberta}\label{sec-intro}
+\chapter{Introdução à Ciência Aberta}\label{sec-intro}
 
 A pesquisa científica atual\footnote{O texto apresentado nessa seção é
   uma compilação de fragmentos do Projeto APQ-01225-24 submetido ao
@@ -839,15 +947,16 @@ promover o desenvolvimento de uma intervenção educacional sobre a
 prática (workflow) e principais ferramentas para compilação dos produtos
 científicos que integram uma publicação científica aberta.
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@klein2018 \emph{Reading Note} (Tip~\ref{tip-prompt})}, titlerule=0mm, leftrule=.75mm, arc=.35mm, colback=white, bottomtitle=1mm, toptitle=1mm, toprule=.15mm, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\emph{A Pratical Guide for Transparency in Psychological Science}
+(Tip~\ref{tip-prompt})}, left=2mm, toprule=.15mm, colback=white, titlerule=0mm, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, bottomrule=.15mm, toptitle=1mm, opacitybacktitle=0.6, coltitle=black, rightrule=.15mm]
 
-O artigo é um guia prático para pesquisadores que desejam compartilhar
-os produtos de sua pesquisa. Os autores argumentam que as práticas de
-pesquisa transparentes são essenciais para melhorar a credibilidade e a
-cumulatividade da ciência.
+O artigo (Klein et al., 2018) é um guia prático para pesquisadores que
+desejam compartilhar os produtos de sua pesquisa. Os autores argumentam
+que as práticas de pesquisa transparentes são essenciais para melhorar a
+credibilidade e a cumulatividade da ciência.\vspace{0.5em}
 
 O artigo fornece recomendações específicas sobre como compartilhar os
-seguintes produtos de pesquisa:
+seguintes produtos de pesquisa:\vspace{0.5em}
 
 \begin{itemize}
 \tightlist
@@ -860,10 +969,10 @@ seguintes produtos de pesquisa:
 \item
   Procedimento de análise
 \item
-  Relatórios de pesquisa
+  Relatórios de pesquisa\vspace{0.5em}
 \end{itemize}
 
-As recomendações gerais dos autores são as seguintes:
+As recomendações gerais dos autores são as seguintes:\vspace{0.5em}
 
 \begin{itemize}
 \item
@@ -880,15 +989,16 @@ As recomendações gerais dos autores são as seguintes:
 \item
   \textbf{Comece cedo}: começar a compartilhar informações sobre sua
   pesquisa no início do processo pode ajudá-lo a evitar problemas e
-  economizar tempo.
+  economizar tempo.\vspace{0.5em}
 \end{itemize}
 
 Os autores também discutem algumas preocupações comuns que os
 pesquisadores têm sobre as práticas de pesquisa transparentes. Eles
 argumentam que essas preocupações são geralmente infundadas e que as
-práticas transparentes têm muitos benefícios.
+práticas transparentes têm muitos benefícios.\vspace{0.5em}
 
-Os principais benefícios das práticas de pesquisa transparentes são:
+Os principais benefícios das práticas de pesquisa transparentes
+são:\vspace{0.5em}
 
 \begin{itemize}
 \item
@@ -905,7 +1015,7 @@ Os principais benefícios das práticas de pesquisa transparentes são:
   colaborar com outros pesquisadores e a receber financiamento.
 \item
   \textbf{Maior eficiência da pesquisa}: as práticas transparentes podem
-  ajudar os pesquisadores a economizar tempo e recursos.
+  ajudar os pesquisadores a economizar tempo e recursos.\vspace{0.5em}
 \end{itemize}
 
 Em conclusão, o artigo fornece informações valiosas para pesquisadores
@@ -915,21 +1025,24 @@ melhorar a qualidade e a credibilidade de seu trabalho.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@kathawalla2021 \emph{Reading Note} (Tip~\ref{tip-prompt})}, titlerule=0mm, leftrule=.75mm, arc=.35mm, colback=white, bottomtitle=1mm, toptitle=1mm, toprule=.15mm, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\emph{Easing Into Open Science: A Guide for Graduate Students and Their
+Advisors} (Tip~\ref{tip-prompt})}, left=2mm, toprule=.15mm, colback=white, titlerule=0mm, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, bottomrule=.15mm, toptitle=1mm, opacitybacktitle=0.6, coltitle=black, rightrule=.15mm]
 
-Este artigo fornece um guia para ajudar estudantes de pós-graduação e
-seus orientadores a se envolverem na prática da ciência aberta (CA). A
-CA é descrita como um termo amplo que se refere a uma variedade de
-princípios e comportamentos relacionados à transparência, credibilidade,
-reprodutibilidade e acessibilidade.
+O artigo (Kathawalla et al., 2021) fornece um guia para ajudar
+estudantes de pós-graduação e seus orientadores a se envolverem na
+prática da ciência aberta (CA). A CA é descrita como um termo amplo que
+se refere a uma variedade de princípios e comportamentos relacionados à
+transparência, credibilidade, reprodutibilidade e
+acessibilidade.\vspace{0.5em}
 
 O artigo sugere oito práticas de CA (das quais destaco sete) que
 estudantes de pós-graduação iniciantes podem começar a adotar hoje. Cada
 comportamento é classificado em termos de dificuldade (fácil, médio,
 difícil) e apresentado em ordem de adoção sugerida. Em cada prática,
-eles seguem o formato de o quê, por quê, como e preocupações.
+eles seguem o formato de o quê, por quê, como e
+preocupações.\vspace{0.5em}
 
-Algumas das práticas sugeridas incluem:
+Algumas das práticas sugeridas incluem:\vspace{0.5em}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -970,7 +1083,7 @@ Algumas das práticas sugeridas incluem:
   Registrados envolvem um processo de submissão em duas partes, onde os
   autores primeiro enviam uma proposta de Estágio 1, que inclui a
   introdução, método e plano de análise - tudo antes que a coleta de
-  dados e/ou análise tenha sido feita.
+  dados e/ou análise tenha sido feita.\vspace{0.5em}
 \end{enumerate}
 
 O artigo enfatiza que se envolver em uma prática de CA é melhor do que
@@ -983,17 +1096,16 @@ roda. A maioria das práticas sugeridas se concentra no uso do
 
 \bookmarksetup{startatroot}
 
-\section{Repositórios da Ciência Aberta}\label{sec-osf}
+\chapter{Repositórios da Ciência Aberta}\label{sec-osf}
 
-No contexto da ciência aberta, existem diversos repositórios
-disponíveis, cada um com suas funções e propósitos específicos. Esses
-repositórios são essenciais para promover a transparência,
-acessibilidade e colaboração na pesquisa científica. Eles assumem um
-papel crucial na democratização do conhecimento e na promoção da
-colaboração científica. Cada qual com suas particularidades, oferecem
-aos pesquisadores ferramentas para armazenar, compartilhar e gerenciar
-dados, publicações e outros materiais de pesquisa, ou se preferir, todo
-o ciclo de vida da pesquisa.
+No contexto da CA, existem diversos repositórios disponíveis, cada um
+com suas funções e propósitos específicos. Esses repositórios são
+essenciais para promover a transparência, acessibilidade e colaboração
+na pesquisa científica. Eles assumem um papel crucial na democratização
+do conhecimento e na promoção da colaboração científica. Cada qual com
+suas particularidades, oferecem aos pesquisadores ferramentas para
+armazenar, compartilhar e gerenciar dados, publicações e outros
+materiais de pesquisa, ou se preferir, todo o ciclo de vida da pesquisa.
 
 \begin{itemize}
 \tightlist
@@ -1119,9 +1231,6 @@ pesquisadores e colaboradores.
 
 \end{figure}%
 
-\subsection{Open Science Framework
-(OSF)}\label{open-science-framework-osf}
-
 O material utilizado nesse módulo do curso segue de perto a proposta de
 Olson et al. (2022), um \href{https://osf.io/yaqe8/}{projeto oficial do
 COS} que possui recursos, modelos e práticas para ajudar os
@@ -1129,16 +1238,16 @@ pesquisadores a iniciar sua jornada \textbf{OSF}. Claro que ele foi
 adaptado para nossos fins, principalmente, em decorrência do tempo
 destinado ao módulo.
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, left=2mm, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Bifurcando ou duplicando um projeto}, titlerule=0mm, leftrule=.75mm, arc=.35mm, colback=white, bottomtitle=1mm, toptitle=1mm, toprule=.15mm, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, arc=.35mm, colbacktitle=quarto-callout-tip-color!10!white, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{\emph{Bifurcando ou duplicando um projeto}}, left=2mm, toprule=.15mm, colback=white, titlerule=0mm, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, bottomrule=.15mm, toptitle=1mm, opacitybacktitle=0.6, coltitle=black, rightrule=.15mm]
 
 Você sabia que é possível executar um ``\emph{forking}'' (criar uma
 cópia do projeto existente) ou ``\emph{duplicate as template}''
 (duplicar apenas a estrutura do projeto e seus componentes) de um
-projeto público no OSF?
+projeto público no OSF?\vspace{0.5em}
 
 Você que se interessa em iniciar seu próprio projeto OSF com um modelo,
 pode criar sua própria duplicata do projeto Olson et al. (2022) para
-começar!
+começar!\vspace{0.5em}
 
 Neste \href{https://osf.io/yaqe8/}{projeto}, existem templates e
 recursos básicos para diversos casos de uso encontrados no OSF;
@@ -1148,11 +1257,11 @@ dados, documentos reprodutíveis e até mesmo gerenciamento de cursos.
 \end{tcolorbox}
 
 Para os alunos que desejam uma leitura sobre o \textbf{OSF} na prática,
-indico os artigos de Sullivan et al. (2019) e Soderberg (2018). Apesar
-de o leitor poder encontrar \emph{prints} das telas da plataforma
+indicamos os artigos de Sullivan et al. (2019) e Soderberg (2018).
+Apesar de o leitor poder encontrar \emph{prints} das telas da plataforma
 desatualizadas, esses dois artigos podem ser um bom começo para entender
-a lógica da plataforma. E \emph{off course}, recomendo fortemente você
-dar uma olhada no
+a lógica da plataforma. E \emph{off course}, recomendamos fortemente
+você dar uma olhada no
 \href{https://help.osf.io/article/342-getting-started-on-the-osf}{suporte
 do \textbf{OSF}}, onde podemos encontrar vídeos introdutórios
 excelentes.
@@ -1161,18 +1270,20 @@ Esse curso poderia ter sido concebido e gerenciado dentro do
 \textbf{OSF}, no entanto, devido a proposta de apresentarmos também o
 \href{https://phdpablo.github.io/curso-open-science/05-git.html}{Git/Github}
 e sua integração com documentos reprodutíveis no
-\href{https://phdpablo.github.io/curso-open-science/06-quarto.html}{RStudio/Quarto}
-(como esse que está lendo 😁), optamos por priorizar o repositório do
-Github. Por isso, que também nesse módulo passamos pelo
+\href{https://phdpablo.github.io/curso-open-science/06-quarto.html}{RStudio/Quarto},
+optamos por priorizar o repositório do Github. Por isso, que também
+nesse módulo passamos pelo
 \href{https://phdpablo.github.io/curso-open-science/00-prework.html\#sec-zenodoprework}{Zenodo},
 que integra com o Github e tem a capacidade de gerar DOIs para as
 versões dos repositórios.
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@sullivan2019 \emph{Reading Note} (Tip~\ref{tip-prompt})}, titlerule=0mm, leftrule=.75mm, arc=.35mm, colback=white, bottomtitle=1mm, toptitle=1mm, toprule=.15mm, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\emph{Open and Reproducible Research on Open Science Framework}
+(Tip~\ref{tip-prompt})}, left=2mm, toprule=.15mm, colback=white, titlerule=0mm, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, bottomrule=.15mm, toptitle=1mm, opacitybacktitle=0.6, coltitle=black, rightrule=.15mm]
 
-O artigo apresenta um protocolo para a implementação de práticas de
-Ciência Aberta (CA), com foco no uso do Open Science Framework (OSF). As
-principais ideias do texto são as seguintes:
+O artigo (Sullivan et al., 2019) apresenta um protocolo para a
+implementação de práticas de Ciência Aberta (CA), com foco no uso do
+Open Science Framework (OSF). As principais ideias do texto são as
+seguintes:\vspace{0.5em}
 
 \begin{itemize}
 \item
@@ -1183,11 +1294,11 @@ principais ideias do texto são as seguintes:
   pesquisa científica, tornando-a mais confiável e robusta;
 \item
   O OSF é uma plataforma gratuita e de código aberto que pode ser usada
-  para implementar práticas de CA;
+  para implementar práticas de CA;\vspace{0.5em}
 \end{itemize}
 
 O protocolo apresentado no texto fornece instruções passo a passo para
-as seguintes práticas de CA:
+as seguintes práticas de CA:\vspace{0.5em}
 
 \begin{itemize}
 \item
@@ -1220,7 +1331,7 @@ as seguintes práticas de CA:
   preliminares de artigos científicos que são publicadas online antes de
   serem revisados por pares. As pré-impressões podem ajudar a acelerar a
   divulgação da pesquisa e a promover o debate científico. O OSF fornece
-  um repositório para publicar pré-impressões.
+  um repositório para publicar pré-impressões.\vspace{0.5em}
 \end{itemize}
 
 O artigo fornece informações valiosas para os pesquisadores que desejam
@@ -1231,7 +1342,7 @@ um guia para implementar essas práticas de forma eficaz.
 
 \bookmarksetup{startatroot}
 
-\section{Gerenciamento de Referências e Bibliotecas}\label{sec-zotero}
+\chapter{Gerenciamento de Referências e Bibliotecas}\label{sec-zotero}
 
 Existem mais de 30 diferentes\footnote{\href{https://en.wikipedia.org/wiki/Comparison_of_reference_management_software}{Esta
   lista} no Wikipedia, que é atualizada constantemente, faz uma
@@ -1273,11 +1384,11 @@ serviço de armazenamento na nuvem (Google Drive, OneDrive, Dropbox,
 etc.)\footnote{Outro importante plugin é a integração com o
   \href{https://github.com/ethanwillis/zotero-scihub}{SciHub} (Behera \&
   Jain, 2023). Coloquei essa informação em nota, pois ele é questionável
-  do ponto de vista ético (😬🫣), apesar de extensivamente utilizado no
-  Brasil por estudantes de pós-graduação stricto sensu de diferentes
-  áreas (Oddone \& Souza, 2024). Ou se enxergarmos o problema sob outro
-  ponto de vista, a ampla adoção do SciHub no Brasil e em todo o mundo
-  reflete a resposta dos cientistas ao desgastado sistema de comunicação
+  do ponto de vista ético, apesar de extensivamente utilizado no Brasil
+  por estudantes de pós-graduação stricto sensu de diferentes áreas
+  (Oddone \& Souza, 2024). Ou se enxergarmos o problema sob outro ponto
+  de vista, a ampla adoção do SciHub no Brasil e em todo o mundo reflete
+  a resposta dos cientistas ao desgastado sistema de comunicação
   científica mantido pelas editoras internacionais.~Além disso, reforça
   a relevância dos princípios da Ciência Aberta (Oddone \& Souza, 2024).}.
 
@@ -1333,7 +1444,7 @@ configurar alguns plugins.
 
 \bookmarksetup{startatroot}
 
-\section{Gestão de Dados e Projetos}\label{sec-project}
+\chapter{Gestão de Projetos}\label{sec-project}
 
 Essa seção é o elo entre as seções anteriores e as próximas. Aqui, você
 vai receber algumas dicas de como organizar seus dados, pasta e scripts
@@ -1375,9 +1486,10 @@ computacional, apresentadas por Wilson et al. (2017). Essas práticas
 abrangem gerenciamento de dados, programação, colaboração com colegas,
 organização de projetos, acompanhamento de trabalhos e redação de
 manuscritos. Especificamente, na aula dessa seção detalhamos o ``Box 1.
-Summary of practices'' do artigo, que pontua 38 tópicos. Quais sejam:
+Summary of practices'' do artigo (Wilson et al., 2017), que pontua 38
+tópicos. Quais sejam:
 
-\subsection{Gerenciamento de Dados}\label{gerenciamento-de-dados}
+\section{Gerenciamento de Dados}\label{gerenciamento-de-dados}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1404,7 +1516,7 @@ Summary of practices'' do artigo, que pontua 38 tópicos. Quais sejam:
   repositórios como OSF ou Zenodo.
 \end{enumerate}
 
-\subsection{Programação}\label{programauxe7uxe3o}
+\section{Programação}\label{programauxe7uxe3o}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1427,7 +1539,7 @@ Summary of practices'' do artigo, que pontua 38 tópicos. Quais sejam:
   gerar DOI para aumentar a visibilidade e reprodutibilidade.
 \end{enumerate}
 
-\subsection{Colaboração}\label{colaborauxe7uxe3o}
+\section{Colaboração}\label{colaborauxe7uxe3o}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1448,7 +1560,7 @@ Summary of practices'' do artigo, que pontua 38 tópicos. Quais sejam:
   deles.
 \end{enumerate}
 
-\subsection{Acompanhamento de
+\section{Acompanhamento de
 Mudanças}\label{acompanhamento-de-mudanuxe7as}
 
 \begin{enumerate}
@@ -1463,7 +1575,7 @@ Mudanças}\label{acompanhamento-de-mudanuxe7as}
   Dropbox ou Google Drive para garantir a segurança dos dados.
 \end{enumerate}
 
-\subsection{Redação de Manuscritos}\label{redauxe7uxe3o-de-manuscritos}
+\section{Redação de Manuscritos}\label{redauxe7uxe3o-de-manuscritos}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1478,15 +1590,16 @@ Mudanças}\label{acompanhamento-de-mudanuxe7as}
   estudos.
 \end{enumerate}
 
-Em resumo, o artigo propõe que pesquisadores de todas as áreas devem
-adotar práticas computacionais sólidas para garantir a integridade,
-reprodutibilidade e transparência de suas pesquisas.
+Em resumo, o artigo (Wilson et al., 2017) propõe que pesquisadores de
+todas as áreas devem adotar práticas computacionais sólidas para
+garantir a integridade, reprodutibilidade e transparência de suas
+pesquisas.
 
 E por fim, também sugerimos que os pesquisadores se engajem em
 comunidades de práticas para compartilhar conhecimento e colaborar com
 outros pesquisadores. Bora começar?
 
-\subsection{Implementação de Ciência
+\section{Implementação de Ciência
 Aberta}\label{implementauxe7uxe3o-de-ciuxeancia-aberta}
 
 \begin{enumerate}
@@ -1511,35 +1624,37 @@ Aberta}\label{implementauxe7uxe3o-de-ciuxeancia-aberta}
   de resultados de pesquisa.
 \end{enumerate}
 
-\subsection{\texorpdfstring{\textbf{\emph{CENAS DOS PRÓXIMOS
-CAPÍTULOS}}}{CENAS DOS PRÓXIMOS CAPÍTULOS}}\label{cenas-dos-pruxf3ximos-capuxedtulos}
+\section{Cenas dos próximos
+capítulos}\label{cenas-dos-pruxf3ximos-capuxedtulos}
 
 \url{https://www.youtube.com/watch?v=s3JldKoA0zw}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, left=2mm, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Você não vai querer cometer esses erros\footnote{Pedi para o ChatGPT4o
-  resumir as duas matérias e me dar sua resposta em português. Como
-  sempre, revisei o conteúdo para saber se batia com o que eu li.}}, titlerule=0mm, leftrule=.75mm, arc=.35mm, colback=white, bottomtitle=1mm, toptitle=1mm, toprule=.15mm, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, arc=.35mm, colbacktitle=quarto-callout-warning-color!10!white, breakable, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Você não vai querer cometer esses erros\ldots{}\footnote{Pedimos para o
+  ChatGPT4o resumir as duas matérias e me nos dar resposta em português.
+  Como sempre, revisamos o conteúdo para saber se batia com o que eu
+  lemos.}}, left=2mm, toprule=.15mm, colback=white, titlerule=0mm, colframe=quarto-callout-warning-color-frame, bottomtitle=1mm, bottomrule=.15mm, toptitle=1mm, opacitybacktitle=0.6, coltitle=black, rightrule=.15mm]
 
 \href{https://www.bbc.com/news/magazine-22223190}{\textbf{Caso 1:
-Reinhart, Rogoff\ldots{} e Herndon: O aluno que pegou os professores}}
+Reinhart, Rogoff\ldots{} e Herndon: O aluno que pegou os
+professores}}\vspace{1em}
 
 Economistas ficaram surpresos ao descobrir que um famoso artigo
 acadêmico, frequentemente usado para justificar cortes de austeridade,
 continha erros significativos. Esses erros, cometidos por dois renomados
 professores de Harvard, foram identificados por um estudante durante a
-realização de um trabalho acadêmico.
+realização de um trabalho acadêmico.\vspace{0.5em}
 
 Em 4 de janeiro de 2010, no Marriott Hotel em Atlanta, durante a reunião
 anual da American Economic Association, os professores Carmen Reinhart e
 Ken Rogoff apresentaram um artigo chamado ``Growth in a Time of Debt''.
 Eles afirmavam que o crescimento econômico desacelera drasticamente
 quando a dívida de um país ultrapassa 90\% do Produto Interno Bruto
-(PIB).
+(PIB).\vspace{0.5em}
 
 O artigo ganhou notoriedade rapidamente, sendo citado por formuladores
 de políticas como o comissário da UE Olli Rehn e o político republicano
 dos EUA Paul Ryan, que usaram o limite de 90\% de dívida-PIB para apoiar
-estratégias de austeridade.
+estratégias de austeridade.\vspace{0.5em}
 
 Thomas Herndon, um estudante da Universidade de Massachusetts Amherst,
 escolheu este artigo para uma tarefa de replicação de resultados. No
@@ -1547,28 +1662,28 @@ entanto, Herndon não conseguiu replicar os resultados dos professores de
 Harvard, o que inicialmente o fez pensar que havia cometido um erro.
 Após várias verificações e com a ajuda de seus professores, Herndon
 entrou em contato com Reinhart e Rogoff, que forneceram a planilha usada
-na pesquisa original.
+na pesquisa original.\vspace{0.5em}
 
 Ao analisar a planilha, Herndon descobriu um erro básico: os professores
 de Harvard haviam incluído apenas 15 dos 20 países analisados em um
 cálculo crucial. Além disso, havia outras questões metodológicas, como a
-forma de mediação dos dados, que distorciam os resultados.
+forma de mediação dos dados, que distorciam os resultados.\vspace{0.5em}
 
 Esses achados foram publicados em 15 de abril, revelando que, embora
 altos níveis de dívida ainda estejam correlacionados com menor
 crescimento, a relação é muito mais suave e há muitas exceções à regra.
 Reinhart e Rogoff reconheceram o erro, mas defenderam que ele não
-afetava significativamente a mensagem central do artigo.
+afetava significativamente a mensagem central do artigo.\vspace{0.5em}
 
 Essa descoberta trouxe à tona a importância de verificar e replicar
 resultados de pesquisas, especialmente aquelas que influenciam políticas
 públicas. Embora o debate sobre a austeridade continue, o trabalho de
 Herndon destacou a necessidade de rigor acadêmico e a revisão crítica
-dos estudos usados para fundamentar decisões econômicas.
+dos estudos usados para fundamentar decisões econômicas.\vspace{0.5em}
 
-\href{https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates}{Caso
+\href{https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates}{\textbf{Caso
 2: Cientistas renomeiam genes humanos para impedir que o Microsoft Excel
-os interprete erroneamente como datas}
+os interprete erroneamente como datas}}\vspace{1em}
 
 Nos últimos anos, 27 genes humanos foram renomeados devido a um problema
 comum com o Microsoft Excel, que interpretava incorretamente os símbolos
@@ -1576,7 +1691,7 @@ alfanuméricos dos genes como datas. Esse problema surgiu porque o Excel,
 uma ferramenta amplamente utilizada por cientistas para gerenciar dados,
 converte automaticamente certos símbolos de genes, como ``MARCH1''
 (abreviação de ``Membrane Associated Ring-CH-Type Finger 1''), em datas,
-como ``1-Mar''.
+como ``1-Mar''.\vspace{0.5em}
 
 Estudos mostraram que cerca de um quinto dos dados genéticos em artigos
 publicados foi afetado por erros do Excel. Esse problema é tão difundido
@@ -1584,50 +1699,50 @@ que até mesmo trabalhos revisados por pares foram impactados. Não há uma
 solução fácil, já que o Excel não permite desativar essa formatação
 automática. Para contornar isso, os cientistas precisam alterar
 manualmente o tipo de dado para cada coluna ou corrigir os dados sempre
-que exportam e importam arquivos.
+que exportam e importam arquivos.\vspace{0.5em}
 
 Para resolver esse problema, o Comitê de Nomenclatura de Genes da HUGO
 (HGNC) publicou novas diretrizes para a nomeação de genes, levando em
 consideração o comportamento do Excel. Por exemplo, ``MARCH1'' foi
 alterado para ``MARCHF1'' e ``SEPT1'' para ``SEPTIN1''. Essas mudanças
 foram implementadas após consultar a comunidade científica para evitar
-confusões futuras.
+confusões futuras.\vspace{0.5em}
 
 Historicamente, a nomeação de genes permitia certa criatividade,
 resultando em nomes curiosos como ``sonic hedgehog'' e ``Indy''. No
 entanto, as diretrizes atuais priorizam a clareza e a praticidade,
 exigindo nomes únicos e específicos, que evitem confusões e termos
-ofensivos.
+ofensivos.\vspace{0.5em}
 
 Embora houvesse algum debate sobre por que os cientistas deveriam
 ajustar os nomes dos genes em vez de o Excel mudar sua funcionalidade, a
 decisão foi baseada na praticidade. A mudança no Excel beneficiaria
 apenas um pequeno grupo de usuários, enquanto a renomeação dos genes
-oferece uma solução imediata e duradoura.
+oferece uma solução imediata e duradoura.\vspace{0.5em}
 
 Essa mudança foi bem recebida pela comunidade científica, que expressou
 entusiasmo nas redes sociais pela resolução de um problema que afetava
-significativamente o trabalho de pesquisa.
+significativamente o trabalho de pesquisa.\vspace{0.5em}
 
 Essa decisão ilustra como a ciência pode se adaptar para superar
 desafios práticos, garantindo que a pesquisa continue de maneira
-eficiente e precisa.
+eficiente e precisa.\vspace{0.5em}
 
 \end{tcolorbox}
 
 \bookmarksetup{startatroot}
 
-\section{Controle de versão}\label{sec-git}
+\chapter{Controle de versão}\label{sec-git}
 
 Você\footnote{A \href{https://git-scm.com/book/en/v2}{literatura sobre
   controle de versão}, especialmente Git e Github, é ``farta''. Tanto em
   inglês como em português. Uma pesquisa simples vai achar muitas
   referências a blogs e textos de profissionais especializados,
   inclusive, \href{https://happygitwithr.com/}{para os nossos fins}. No
-  Youtube existem muitos vídeos sobre o tema. Seja o que eu escrevesse
-  por aqui, seria de pouca contribuição. Dessa forma, busquei
+  Youtube existem muitos vídeos sobre o tema. Seja o que escrevessemos
+  por aqui, seria de pouca contribuição. Dessa forma, buscamos
   contextualizar o versionamento de arquivos num empreendimento de
-  pesquisa de meu dia a dia: um pesquisador com viés quantitativo,
+  pesquisa de nosso dia a dia: um pesquisador com viés quantitativo,
   envolvido em pesquisas sem pouca colaboração, mas que achou no
   controle de versão uma solução impar para diversas demandas
   preconizadas pela Ciência Aberta.} em algum grau utiliza um sistema
@@ -1664,16 +1779,16 @@ utilizado em projetos de desenvolvimento de software, mas também é uma
 ferramenta valiosa para pesquisadores que desejam gerenciar e
 compartilhar seus ativos de pesquisa.
 
-Os controles\footnote{Como ressaltei na nota anterior\ldots{} minha
+Os controles\footnote{Como ressaltamos na nota anterior\ldots{} nossa
   impressão era que não havia nada para dizer sobre o tema, haja vista a
-  vasta literatura. Desse modo, resolvi fazer um experimento e nessa
-  nota documento para vocês. Dentro do enredo que adotei para a aula e o
-  roteiro dessa seção, conversei com o ChatGPT 4o (em 2024-06-19) e me
-  apropriei de alguns de seus argumentos para escrever o resto dessa
-  seção. Claro, com muitos, mas muitos ajustes! Inclusive, a parte final
-  dessa seção, onde conversamos sobre um hipotético workflow (Gitflow)
-  para uma colaboração científica é de minha propriedade. Seguem minhas
-  prompts:
+  vasta literatura. Desse modo, resolvemos fazer um experimento e nessa
+  nota documentamos para vocês. Dentro do enredo que adotamos para a
+  aula e o roteiro dessa seção, conversamos com o ChatGPT 4o (em
+  2024-06-19) e me apropriamos de alguns de seus argumentos para
+  escrever o resto dessa seção. Claro, com muitos, mas muitos ajustes!
+  Inclusive, a parte final dessa seção, onde conversamos sobre um
+  hipotético workflow (Gitflow) para uma colaboração científica é de
+  nossa propriedade. Seguem nossas prompts:
 
   \begin{itemize}
   \tightlist
@@ -1774,11 +1889,11 @@ insuficientes para um workflow de pesquisa empírica no contexto da CA:
   \begin{itemize}
   \tightlist
   \item
-    Em um ambiente de ciência aberta, é crucial automatizar testes e
-    validações para garantir a qualidade e a reprodutibilidade dos
-    resultados. Soluções como GitHub Actions permitem a implementação de
-    pipelines de integração contínua (CI), automatizando testes e outras
-    tarefas, algo que não é possível com controles de versão simples.
+    Em um ambiente de CA, é crucial automatizar testes e validações para
+    garantir a qualidade e a reprodutibilidade dos resultados. Soluções
+    como GitHub Actions permitem a implementação de pipelines de
+    integração contínua (CI), automatizando testes e outras tarefas,
+    algo que não é possível com controles de versão simples.
   \end{itemize}
 \item
   \textbf{Documentação e Transparência}:
@@ -2015,7 +2130,8 @@ as funcionalidades do Git/Github também se adaptam perfeitamente a
 projetos de pesquisa mais simples, seja com número pequeno de
 pesquisadores ou mesmo com um único pesquisador.
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@vuorre2018 \emph{Reading Note} (Tip~\ref{tip-prompt})}, titlerule=0mm, leftrule=.75mm, arc=.35mm, colback=white, bottomtitle=1mm, toptitle=1mm, toprule=.15mm, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\emph{Curating Research Assets: A Tutorial on the Git Version Control
+System} (Tip~\ref{tip-prompt})}, left=2mm, toprule=.15mm, colback=white, titlerule=0mm, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, bottomrule=.15mm, toptitle=1mm, opacitybacktitle=0.6, coltitle=black, rightrule=.15mm]
 
 Como uma tentativa de enfrentar os desafios da reprodutibilidade na
 ciência empírica, um fator específico que se destaca é a forma como os
@@ -2023,7 +2139,7 @@ pesquisadores organizam, curam, compartilham e colaboram em seus ativos
 de pesquisa (Vuorre \& Curley, 2018). Para mitigar essas dificuldades,
 sistemas de controle de versão (VCS), como o Git, têm sido amplamente
 adotados, uma vez que facilitam o acompanhamento das mudanças, versões e
-colaboração em projetos científicos.
+colaboração em projetos científicos.\vspace{0.5em}
 
 O Git, inicialmente desenvolvido para a escrita colaborativa de código,
 agora é amplamente utilizado em diversas áreas além da ciência da
@@ -2031,7 +2147,7 @@ computação. Isso se deve à sua capacidade de tratar qualquer texto
 digitado em um computador -- manuscritos, scripts de análise
 estatística, código-fonte de experimentos computadorizados e até
 arquivos de dados -- como código, gerenciando assim múltiplas versões e
-autores sem introduzir erros (Vuorre \& Curley, 2018).
+autores sem introduzir erros (Vuorre \& Curley, 2018).\vspace{0.5em}
 
 Ao trabalhar com Git, os usuários podem salvar versões intermediárias de
 seus arquivos no disco rígido e, subsequentemente, no histórico do VCS.
@@ -2039,14 +2155,14 @@ Esse processo permite que todas as alterações sejam monitoradas e
 revertidas quando necessário. A instalação do Git e sua integração com
 ferramentas como o RStudio proporcionam uma interface gráfica amigável
 para gerenciar repositórios locais e remotos, facilitando o controle de
-versões e a colaboração (Vuorre \& Curley, 2018).
+versões e a colaboração (Vuorre \& Curley, 2018).\vspace{0.5em}
 
 A introdução do Git desde o início de um projeto científico torna o
 fluxo de trabalho mais eficiente e menos trabalhoso do que tentar
 incorporar práticas de reprodutibilidade após a conclusão do projeto. A
 organização clara de arquivos e pastas, seguindo diretrizes como as
 recomendações do Project TIER, é uma etapa inicial crucial para garantir
-a reprodutibilidade (Vuorre \& Curley, 2018).
+a reprodutibilidade (Vuorre \& Curley, 2018).\vspace{0.5em}
 
 O GitHub, uma plataforma online para hospedagem de repositórios Git,
 permite a criação de repositórios centralizados que facilitam o trabalho
@@ -2056,7 +2172,7 @@ volta para o repositório central, assim como obter (pull) as alterações
 feitas por outros colaboradores. Esse fluxo de trabalho centralizado
 evita problemas de sobrescrita de arquivos e mantém um histórico
 detalhado das contribuições de cada membro da equipe (Vuorre \& Curley,
-2018).
+2018).\vspace{0.5em}
 
 No entanto, é importante notar que o Git não é a única solução para
 colaboração e curadoria de materiais de pesquisa. Embora plataformas
@@ -2066,16 +2182,16 @@ vantagens significativas para projetos mais complexos. Ele permite o
 gerenciamento simultâneo de múltiplos componentes de um projeto, como
 dados, scripts de análise e manuscritos, reduzindo a possibilidade de
 erros associados ao uso de versões desatualizadas de arquivos (Vuorre \&
-Curley, 2018).
+Curley, 2018).\vspace{0.5em}
 
 Além disso, a utilização do Git com o RStudio é particularmente atrativa
 para psicólogos, pois o ambiente integrado de desenvolvimento (IDE) do
-RStudio, juntamente com os pacotes R Markdown (e Quarto, por minha conta
-😁🤣) e knitr, oferece uma solução completa para gestão de projetos,
-análise de dados e preparação de manuscritos (Vuorre \& Curley, 2018). A
-integração com serviços como Zenodo, que permite a atribuição de DOIs
-(identificadores digitais) aos repositórios do GitHub, também facilita a
-citação dos materiais de pesquisa (Vuorre \& Curley, 2018).
+RStudio, juntamente com os pacotes R Markdown (e Quarto) e knitr,
+oferece uma solução completa para gestão de projetos, análise de dados e
+preparação de manuscritos (Vuorre \& Curley, 2018). A integração com
+serviços como Zenodo, que permite a atribuição de DOIs (identificadores
+digitais) aos repositórios do GitHub, também facilita a citação dos
+materiais de pesquisa (Vuorre \& Curley, 2018).\vspace{0.5em}
 
 Em suma, a adoção de sistemas de controle de versão como o Git,
 especialmente quando integrados a plataformas como o RStudio e o GitHub,
@@ -2085,33 +2201,36 @@ significativamente para a melhoria da reprodutibilidade na ciência.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@gilroy2019 \emph{Reading Note} (Tip~\ref{tip-prompt})}, titlerule=0mm, leftrule=.75mm, arc=.35mm, colback=white, bottomtitle=1mm, toptitle=1mm, toprule=.15mm, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\emph{Furthering Open Science in Behavior Analysis: An Introduction and
+Tutorial for Using} \emph{GitHub in Research} (Tip~\ref{tip-prompt})}, left=2mm, toprule=.15mm, colback=white, titlerule=0mm, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, bottomrule=.15mm, toptitle=1mm, opacitybacktitle=0.6, coltitle=black, rightrule=.15mm]
 
-Este tutorial revisa as diretrizes de Práticas Transparentes e Abertas
-fornecidas pela Open Science Foundation e explora como os pesquisadores
-podem utilizar a transparência do GitHub em suas pesquisas. Ele
-exemplifica como os pesquisadores podem usar o GitHub para compartilhar
-código, dados e materiais de pesquisa, permitindo a inspeção e
-replicação por parte de revisores e outros pesquisadores através do
-\textbf{Github Desktop}.
+Este tutorial (Gilroy \& Kaplan, 2019) revisa as diretrizes de Práticas
+Transparentes e Abertas fornecidas pela Open Science Foundation e
+explora como os pesquisadores podem utilizar a transparência do GitHub
+em suas pesquisas. Ele exemplifica como os pesquisadores podem usar o
+GitHub para compartilhar código, dados e materiais de pesquisa,
+permitindo a inspeção e replicação por parte de revisores e outros
+pesquisadores através do \textbf{Github Desktop}.\vspace{0.5em}
 
 As implicações do aumento da demanda por transparência e métodos
 estatísticos modernos são discutidas, e plataformas como o GitHub são
-revisadas como uma forma de apoiar a pesquisa transparente.
+revisadas como uma forma de apoiar a pesquisa
+transparente.\vspace{0.5em}
 
 A ``crise de reprodutibilidade'' é mencionada, referindo-se às
 tentativas malsucedidas de replicar efeitos estatisticamente
 significativos relatados em estudos psicológicos. As pressões para
 publicar em revistas prestigiadas e obter financiamento são destacadas
 como fatores que contribuem para a presença de práticas questionáveis de
-pesquisa em várias disciplinas, incluindo psicologia.
+pesquisa em várias disciplinas, incluindo psicologia.\vspace{0.5em}
 
 A importância da transparência e da abertura é enfatizada como uma
 maneira de enfrentar essas questões. As diretrizes TOP (Transparent and
 Open Practices) são mencionadas, estabelecendo padrões para a
 transparência em citações, dados, análises, materiais de pesquisa,
 pré-registros e suporte para replicações. No entanto, é observado que
-poucos estudos utilizam o pré-registro dos métodos e planos analíticos.
+poucos estudos utilizam o pré-registro dos métodos e planos
+analíticos.\vspace{0.5em}
 
 O OSF e o GitHub são apresentados como plataformas que oferecem recursos
 relacionados à pesquisa, como pré-registro e arquivamento público. O
@@ -2122,7 +2241,8 @@ analítica atual e futura. A importância de compartilhar o código-fonte,
 dados e materiais do estudo é mencionada, permitindo a inspeção e
 replicação por parte de revisores e outros pesquisadores. O foco do
 tutorial é na execução do Github Desktop, uma interface gráfica para o
-Git (Git Client), que facilita a colaboração e o controle de versão.
+Git (Git Client), que facilita a colaboração e o controle de
+versão.\vspace{0.5em}
 
 A configuração adequada da máquina local é mencionada como necessária
 para executar os programas estatísticos e scripts de análise. O processo
@@ -2138,7 +2258,7 @@ representam desafios para a comunidade científica.
 
 \bookmarksetup{startatroot}
 
-\section{Documentos Reprodutíveis}\label{sec-quarto}
+\chapter{Documentos Reprodutíveis}\label{sec-quarto}
 
 Você pode ter chegado até aqui e pensado: esse negócio de
 reprodutibilidade e transparência não é para mim! Eu sou um pesquisador
@@ -2189,7 +2309,7 @@ ser um limitante para pesquisadores que necessitam de análises mais
 complexas. Os dois carecem de funcionalidades para a organização e
 estruturação dos dados, ficando o ETL (\emph{Extration, Transform and
 Loading}) a cargo de outros softwares, colocando dificuldade ao controle
-de versões, De qualquer forma, acredito que a tendência é que esses
+de versões, De qualquer forma, acreditamos que a tendência é que esses
 softwares evoluam e se tornem mais populares, principalmente entre
 pesquisadores que não têm familiaridade com a programação.
 
@@ -2224,7 +2344,7 @@ plataformas, como é ilustrado na Figura~\ref{fig-quarto-illustration}.
 
 \end{figure}%
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figura~\ref{fig-quarto-illustration}?}, titlerule=0mm, leftrule=.75mm, arc=.35mm, colback=white, bottomtitle=1mm, toptitle=1mm, toprule=.15mm, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figura~\ref{fig-quarto-illustration}?}, left=2mm, toprule=.15mm, colback=white, titlerule=0mm, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, bottomrule=.15mm, toptitle=1mm, opacitybacktitle=0.6, coltitle=black, rightrule=.15mm]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2298,12 +2418,12 @@ plataformas, como é ilustrado na Figura~\ref{fig-quarto-illustration}.
 
 \end{tcolorbox}
 
-A Figura~\ref{fig-quarto-process} explica o fluxo de trabalho um pouco
-mais analítico de criação e publicação de documentos com Quarto.
-Inicia-se com um arquivo \texttt{.qmd} que é processado por ferramentas
-como knitr ou Jupyter para gerar um arquivo Markdown. Esse arquivo
-Markdown é então convertido pelo Pandoc para os formatos finais de
-saída, permitindo uma ampla flexibilidade na distribuição do conteúdo.
+A Figura~\ref{fig-quarto-process} explica o fluxo de trabalho de criação
+e publicação de documentos com Quarto de forma mais analítica. Inicia-se
+com um arquivo \texttt{.qmd} que é processado por ferramentas como knitr
+ou Jupyter para gerar um arquivo Markdown. Esse arquivo Markdown é então
+convertido pelo Pandoc para os formatos finais de saída, permitindo uma
+ampla flexibilidade na distribuição do conteúdo.
 
 \begin{figure}
 
@@ -2313,7 +2433,7 @@ saída, permitindo uma ampla flexibilidade na distribuição do conteúdo.
 
 \end{figure}%
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figura~\ref{fig-quarto-process}?}, titlerule=0mm, leftrule=.75mm, arc=.35mm, colback=white, bottomtitle=1mm, toptitle=1mm, toprule=.15mm, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figura~\ref{fig-quarto-process}?}, left=2mm, toprule=.15mm, colback=white, titlerule=0mm, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, bottomrule=.15mm, toptitle=1mm, opacitybacktitle=0.6, coltitle=black, rightrule=.15mm]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2421,7 +2541,7 @@ por pesquisadores.
 
 \end{figure}%
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figura~\ref{fig-qmd-workflow}?}, titlerule=0mm, leftrule=.75mm, arc=.35mm, colback=white, bottomtitle=1mm, toptitle=1mm, toprule=.15mm, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figura~\ref{fig-qmd-workflow}?}, left=2mm, toprule=.15mm, colback=white, titlerule=0mm, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, bottomrule=.15mm, toptitle=1mm, opacitybacktitle=0.6, coltitle=black, rightrule=.15mm]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2504,7 +2624,7 @@ utilizando Quarto}
 
 \end{figure}%
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figura~\ref{fig-all-workflow}?}, titlerule=0mm, leftrule=.75mm, arc=.35mm, colback=white, bottomtitle=1mm, toptitle=1mm, toprule=.15mm, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figura~\ref{fig-all-workflow}?}, left=2mm, toprule=.15mm, colback=white, titlerule=0mm, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, bottomrule=.15mm, toptitle=1mm, opacitybacktitle=0.6, coltitle=black, rightrule=.15mm]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2517,7 +2637,7 @@ utilizando Quarto}
   \item
     \textbf{Narrativa}: A história ou o contexto da pesquisa, incluindo
     introdução, metodologia, resultados e discussão, é escrita em texto
-    simples.
+    plano.
   \item
     \textbf{Código}: O código utilizado para análises, simulações ou
     geração de figuras e tabelas. Esse código pode ser gerido através de
@@ -2582,11 +2702,12 @@ utilizando Quarto}
   \item
     \textbf{Comando de Renderização}: O comando \texttt{quarto\ render}
     é utilizado para processar o documento (projeto) e gerar as versões
-    finais nos formatos desejados.
+    finais nos formatos desejados.\vspace{0.5em}
   \end{itemize}
 \end{enumerate}
 
-\textbf{Fluxo de Trabalho de uma Pesquisa Empírica Hipotética}:
+\textbf{Fluxo de Trabalho de uma Pesquisa Empírica
+Hipotética}:\vspace{0.5em}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2652,15 +2773,15 @@ utilizando Quarto}
 
 \bookmarksetup{startatroot}
 
-\section{Controle de Ambiente}\label{sec-docker}
+\chapter{Controle de Ambiente}\label{sec-docker}
 
 Imagine a seguinte situação: você publicou uma pesquisa quantitativa,
 disponibilizando o código e os dados para que outros pesquisadores
 possam reproduzir os resultados. Um pesquisador entra em contato e diz
-que não conseguiu. Você como bom mineiro, responde: ``Uai, comigo
-funcionou!''. Prestativo como é sugere para o pesquisador, da Polônia,
-que venha até sua casa para que você possa ajudá-lo a reproduzir os
-resultados, e aproveitar para tomar um café e comer um pão de queijo. O
+que não conseguiu replicar seus resultados. Você como bom mineiro,
+responde: ``Uai, comigo funcionou!''. Prestativo como é sugere para o
+pesquisador, da Polônia, que venha até sua casa para que você possa
+ajudá-lo, e aproveitar para tomar um café e comer um pão de queijo. O
 pesquisador, educadamente, responde que não pode ir até sua casa, pois
 está do outro lado do mundo.
 
@@ -2762,8 +2883,8 @@ são uma das ferramentas mais populares para criar e gerenciar
 containers. Ao contrário das VMs, os containers contêm apenas a
 aplicação e suas dependências, compartilhando o kernel do SO hospedeiro.
 Isso torna os containers mais leves e eficientes em termos de recursos,
-além de serem rápidos na inicialização e execução. Além disso, são
-fáceis de distribuir e compartilhar (Clyburne-Sherin et al., 2019).
+e ainda são rápidos na inicialização e execução. Além disso, são fáceis
+de distribuir e compartilhar (Clyburne-Sherin et al., 2019).
 
 Enquanto as VMs oferecem maior isolamento, os containers têm menor
 consumo de recursos e são mais práticos para desenvolvimento e
@@ -2856,27 +2977,28 @@ oferecem um alto nível de reprodutibilidade, pois são ambientes
 integrados para criar, executar e compartilhar projetos de pesquisa
 reprodutíveis.
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{@wiebels2021 \emph{Reading Note} (Tip~\ref{tip-prompt})}, titlerule=0mm, leftrule=.75mm, arc=.35mm, colback=white, bottomtitle=1mm, toptitle=1mm, toprule=.15mm, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\emph{Leveraging Containers for Reproducible Psychological Research}
+(Tip~\ref{tip-prompt})}, left=2mm, toprule=.15mm, colback=white, titlerule=0mm, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, bottomrule=.15mm, toptitle=1mm, opacitybacktitle=0.6, coltitle=black, rightrule=.15mm]
 
 O artigo de Wiebels \& Moreau (2021) discute a importância e a aplicação
 das práticas de ciência aberta na pesquisa. Eles destacam que, desde
 2019, cerca de 35\% dos pesquisadores de psicologia adotaram práticas de
 CA, um aumento significativo em relação aos 5\% de apenas cinco anos
-antes.
+antes.\vspace{0.5em}
 
 O artigo, inicialmente, discute o pacote
 \href{https://rstudio.github.io/renv/articles/renv.html}{renv}, que
 gerencia dependências em R armazenando o código-fonte de todos os
 pacotes R usados em um projeto. No entanto, eles observam que essa
 abordagem não lida com dependências do sistema ou dependências de outras
-linguagens de programação e pacotes de software.
+linguagens de programação e pacotes de software.\vspace{0.5em}
 
 Para resolver essas limitações, os autores apresentam os ``containers'',
 que permitem empacotar todo o código e dependências para garantir que as
 análises sejam executadas de maneira confiável em uma variedade de
 sistemas operacionais e versões de software. Eles descrevem a lógica por
 trás dos containers, o que são e os problemas práticos que podem
-resolver.
+resolver.\vspace{0.5em}
 
 Os autores explicam que o ideal é ``empacotar'' (isolar) todo o ambiente
 de computação de forma que qualquer pessoa em qualquer computador possa
@@ -2885,21 +3007,22 @@ instalado, drivers e sistemas operacionais. Uma maneira popular de
 alcançar esse objetivo é com máquinas virtuais (VMs), mas as VMs podem
 ficar muito grandes e lentas, o que pode tornar o compartilhamento e o
 uso delas impraticáveis. Os containers também isolam ambientes de
-computação, mas usam menos recursos do que as VMs.
+computação, mas usam menos recursos do que as VMs.\vspace{0.5em}
 
 Apesar de suas vantagens, a contêinerização ainda é raramente usada na
 psicologia, talvez por falta de conscientização ou porque o uso - e
 especialmente a construção - de containers pode parecer assustador para
 aqueles que não têm formação em ciência da computação. Para superar essa
 barreira, os autores usam a plataforma de contêiner
-\href{https://www.docker.com/}{Docker} e se concentram na linguagem R.
+\href{https://www.docker.com/}{Docker} e se concentram na linguagem
+R.\vspace{0.5em}
 
 Eles explicam que o Docker é um projeto de contêinerização de código
 aberto baseado em Linux; ou seja, o Linux está rodando dentro dos
 containers, mesmo que estejamos em um computador Windows ou Mac. Eles
 também esclarecem que um número ilimitado de containers pode ser criado
 a partir de uma imagem e, ao contrário das imagens, os containers podem
-ser modificados enquanto estão em execução.
+ser modificados enquanto estão em execução.\vspace{0.5em}
 
 Os autores comparam uma imagem Docker a uma receita de bolo e o
 container Docker correspondente a um bolo acabado. A receita contém as
@@ -2909,7 +3032,7 @@ mesmo bolo. Todos que usam a receita acabam com o mesmo tipo de bolo,
 que pode ser modificado adicionando, por exemplo, cobertura ou
 confeites. No entanto, sua adição de cobertura e minha adição de
 confeites não mudarão a receita, e da próxima vez que usarmos a receita,
-teremos o mesmo bolo de antes.
+teremos o mesmo bolo de antes.\vspace{0.5em}
 
 Os autores escolheram usar o Docker para o tutorial por cinco razões
 principais. Primeiro, o Docker é uma das principais plataformas de
@@ -2921,7 +3044,7 @@ Docker podem ser armazenadas e compartilhadas gratuitamente no registro
 central Docker Hub. Finalmente, graças à sua crescente popularidade, o
 Docker se beneficia de uma grande comunidade de usuários e um rico
 ecossistema de ferramentas relacionadas, como o Rocker, que fornece
-containers com ambientes R.
+containers com ambientes R.\vspace{0.5em}
 
 Os autores concluem que a contêinerização é um passo importante para
 tornar a pesquisa reprodutível, fornecendo um ambiente de computação
@@ -2938,7 +3061,7 @@ os estágios de carreira.
 
 \bookmarksetup{startatroot}
 
-\section{IA Aplicada à Pesquisa Científica}\label{sec-AI}
+\chapter{IA Aplicada à Pesquisa Científica}\label{sec-AI}
 
 Nesta última aula discutiremos o papel da inteligência artificial (IA)
 na pesquisa científica, com ênfase em como essas tecnologias podem ser
@@ -2957,36 +3080,36 @@ Vamos explorar essas ferramentas e discutir como elas podem ser
 aplicadas aos nossos próprios projetos de pesquisa, promovendo uma
 abordagem mais aberta, colaborativa e eficiente na ciência.
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, opacityback=0, left=2mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Transcrição de uma das palestras do Prof.~Ricardo Limongi}, titlerule=0mm, leftrule=.75mm, arc=.35mm, colback=white, bottomtitle=1mm, toptitle=1mm, toprule=.15mm, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, opacityback=0, arc=.35mm, colbacktitle=quarto-callout-note-color!10!white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Transcrição de uma das palestras do Prof.~Ricardo Limongi}, left=2mm, toprule=.15mm, colback=white, titlerule=0mm, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, bottomrule=.15mm, toptitle=1mm, opacitybacktitle=0.6, coltitle=black, rightrule=.15mm]
 
 Na lista de vídeos indicados em nossa Agenda temos uma recente
 \href{https://youtu.be/-WBfK9V1-ZE?si=Usd0KdyeJvoVmQ05}{palestra do
 Prof.~Ricardo Limongi} sobre o uso de IA na pesquisa científica. Em
 cerca de duas horas o professor abordou o uso prático, questões éticas,
 ferramentas e reflexões sobre IA e métodos de síntese de conhecimento
-com o Grupo PBE-USP.
+com o Grupo PBE-USP.\vspace{0.5em}
 
 Podemos utilizar alguma ferramenta de IA para nos ajudar a entender o
 enrendo e tópicos da palestra? Pois bem, fomos no Youtube, copiamos a
 transcrição da palestra, e depois utilizamos o
 \href{https://aistudio.google.com}{AI Studio do Google} com a seguinte
-prompt:
+prompt:\vspace{0.5em}
 
 \emph{O texto abaixo é a transcrição de uma aula sobre Ferramentas de IA
 aplicadas à Pesquisa Científica. Gostaria que elencasse os pontos
-abordados nesse vídeo.}
+abordados nesse vídeo.}\vspace{0.5em}
 
 \textbf{OBS:} Não colamos a transcrição aqui devido a quantidade de
 palavras (2 horas de palestra!). Inclusive, por esse motivo, utilizamos
 \href{https://aistudio.google.com}{AI Studio do Google}, que na sua
-versão teste aceita um milhão de tokens.
+versão teste aceita um milhão de tokens.\vspace{0.5em}
 
-Eis a resposta:
+Eis a resposta:\vspace{0.5em}
 
 \textbf{Pontos abordados na aula sobre Ferramentas de IA aplicadas à
-Pesquisa Científica:}
+Pesquisa Científica:}\vspace{0.5em}
 
-\textbf{1. Introdução e Apresentação:}
+\textbf{1. Introdução e Apresentação:}\vspace{0.5em}
 
 \begin{itemize}
 \tightlist
@@ -2998,10 +3121,10 @@ Pesquisa Científica:}
   Inteligência Artificial e marketing.
 \item
   Ênfase na importância de compartilhar conhecimento e ser generoso
-  dentro da comunidade acadêmica.
+  dentro da comunidade acadêmica.\vspace{0.5em}
 \end{itemize}
 
-\textbf{2. Inteligência Artificial como Meio e não Fim:}
+\textbf{2. Inteligência Artificial como Meio e não Fim:}\vspace{0.5em}
 
 \begin{itemize}
 \tightlist
@@ -3014,10 +3137,10 @@ Pesquisa Científica:}
   auxiliar e não substituir o papel do pesquisador.
 \item
   Importância da reflexão crítica e da capacidade de análise e
-  interpretação do ser humano.
+  interpretação do ser humano.\vspace{0.5em}
 \end{itemize}
 
-\textbf{3. Ciência Aberta e Replicação:}
+\textbf{3. Ciência Aberta e Replicação:}\vspace{0.5em}
 
 \begin{itemize}
 \tightlist
@@ -3029,10 +3152,11 @@ Pesquisa Científica:}
   crítico na comunidade científica.
 \item
   Menção a plataformas como ``ArXiv'' para disponibilização de materiais
-  para avaliação e crítica.
+  para avaliação e crítica.\vspace{0.5em}
 \end{itemize}
 
-\textbf{4. Inteligência Artificial como Automação de Tarefas:}
+\textbf{4. Inteligência Artificial como Automação de
+Tarefas:}\vspace{0.5em}
 
 \begin{itemize}
 \tightlist
@@ -3044,10 +3168,11 @@ Pesquisa Científica:}
   de diferentes modelos de acesso (gratuitas e pagas).
 \item
   Menção ao crescimento do mercado da IA e à necessidade de recursos
-  para acesso a plataformas mais avançadas.
+  para acesso a plataformas mais avançadas.\vspace{0.5em}
 \end{itemize}
 
-\textbf{5. A Importância da Organização e Transparência na Pesquisa:}
+\textbf{5. A Importância da Organização e Transparência na
+Pesquisa:}\vspace{0.5em}
 
 \begin{itemize}
 \tightlist
@@ -3063,10 +3188,10 @@ Pesquisa Científica:}
   dificultando a replicação e o aprendizado da IA.
 \item
   Sugestão de incluir informações sobre o uso de IA na sessão de métodos
-  dos artigos para promover transparência e aprendizado.
+  dos artigos para promover transparência e aprendizado.\vspace{0.5em}
 \end{itemize}
 
-\textbf{6. Ferramentas de IA para Revisão da Literatura:}
+\textbf{6. Ferramentas de IA para Revisão da Literatura:}\vspace{0.5em}
 
 \begin{itemize}
 \tightlist
@@ -3086,10 +3211,11 @@ Pesquisa Científica:}
   aprendizado personalizado do algoritmo.
 \item
   Explicação do recurso ``TLDR'' (Too Long, Didn't Read) como resumo do
-  resumo para facilitar a análise inicial de artigos.
+  resumo para facilitar a análise inicial de artigos.\vspace{0.5em}
 \end{itemize}
 
-\textbf{7. Ferramentas de IA para Detecção de Plágio e Uso da IA:}
+\textbf{7. Ferramentas de IA para Detecção de Plágio e Uso da
+IA:}\vspace{0.5em}
 
 \begin{itemize}
 \tightlist
@@ -3105,10 +3231,10 @@ Pesquisa Científica:}
   de diretrizes para a utilização ética e transparente.
 \item
   Sugestão de submeter tanto a versão humana quanto a versão editada
-  pela IA para a avaliação dos editores.
+  pela IA para a avaliação dos editores.\vspace{0.5em}
 \end{itemize}
 
-\textbf{8. Ferramentas de IA para Análise de Dados:}
+\textbf{8. Ferramentas de IA para Análise de Dados:}\vspace{0.5em}
 
 \begin{itemize}
 \tightlist
@@ -3120,10 +3246,10 @@ Pesquisa Científica:}
   geração de insights.
 \item
   Discussão sobre a importância de entender os algoritmos e a capacidade
-  de interpretação crítica dos resultados da IA.
+  de interpretação crítica dos resultados da IA.\vspace{0.5em}
 \end{itemize}
 
-\textbf{9. Desafios e Limitações da IA na Pesquisa:}
+\textbf{9. Desafios e Limitações da IA na Pesquisa:}\vspace{0.5em}
 
 \begin{itemize}
 \tightlist
@@ -3144,10 +3270,12 @@ Pesquisa Científica:}
   limitando o aprendizado da IA e criando desigualdade de acesso.
 \item
   Ênfase na necessidade de acesso aberto a artigos científicos para
-  facilitar o aprendizado e democratizar o acesso à informação.
+  facilitar o aprendizado e democratizar o acesso à
+  informação.\vspace{0.5em}
 \end{itemize}
 
-\textbf{10. Letramento Digital e a Importância do Ensino da IA:}
+\textbf{10. Letramento Digital e a Importância do Ensino da
+IA:}\vspace{0.5em}
 
 \begin{itemize}
 \tightlist
@@ -3166,10 +3294,10 @@ Pesquisa Científica:}
 \item
   Ênfase na importância de entender os processos de pesquisa e os
   fundamentos da metodologia para utilizar a IA de forma eficiente e
-  ética.
+  ética.\vspace{0.5em}
 \end{itemize}
 
-\textbf{11. Conclusões e Considerações Finais:}
+\textbf{11. Conclusões e Considerações Finais:}\vspace{0.5em}
 
 \begin{itemize}
 \tightlist
@@ -3187,7 +3315,7 @@ Pesquisa Científica:}
   incorporar o uso da IA de forma crítica e consciente.
 \item
   Reconhecimento da importância do conhecimento e da expertise humana
-  para a análise e interpretação dos resultados da IA.
+  para a análise e interpretação dos resultados da IA.\vspace{0.5em}
 \end{itemize}
 
 Em suma, a aula abordou a utilização da IA como ferramenta auxiliar na
@@ -3201,8 +3329,8 @@ para o uso crítico e consciente da ferramenta.
 
 \bookmarksetup{startatroot}
 
-\section*{Referências}\label{referuxeancias}
-\addcontentsline{toc}{section}{Referências}
+\chapter*{Referências}\label{referuxeancias}
+\addcontentsline{toc}{chapter}{Referências}
 
 \markboth{Referências}{Referências}
 
@@ -3304,6 +3432,12 @@ Freedman, L. P., Cockburn, I. M., \& Simcoe, T. S. (2015). The
 Biology}, \emph{13}(6), e1002165.
 \url{https://doi.org/10.1371/journal.pbio.1002165}
 
+\bibitem[\citeproctext]{ref-gilroy2019}
+Gilroy, S. P., \& Kaplan, B. A. (2019). Furthering {Open Science} in
+{Behavior Analysis}: {An Introduction} and {Tutorial} for {Using GitHub}
+in {Research}. \emph{Perspectives on Behavior Science}, \emph{42}(3),
+565--581. \url{https://doi.org/10.1007/s40614-019-00202-5}
+
 \bibitem[\citeproctext]{ref-heinz2024}
 Heinz, M., \& Miranda, M. (2024). Ci{ê}ncia {Aberta}: Argumentos e
 Desafios Para Sua Legitima{ç}{ã}o Cient{í}fica. \emph{Em Quest{ã}o},
@@ -3313,6 +3447,19 @@ Desafios Para Sua Legitima{ç}{ã}o Cient{í}fica. \emph{Em Quest{ã}o},
 Janz, N. (2015). Bringing the {Gold Standard} into the {Classroom}:
 {Replication} in {University Teaching}. \emph{International Studies
 Perspectives}, n/a--n/a. \url{https://doi.org/10.1111/insp.12104}
+
+\bibitem[\citeproctext]{ref-kathawalla2021}
+Kathawalla, U.-K., Silverstein, P., \& Syed, M. (2021). Easing {Into
+Open Science}: {A Guide} for {Graduate Students} and {Their Advisors}.
+\emph{Collabra: Psychology}, \emph{7}(1), 18684.
+\url{https://doi.org/10.1525/collabra.18684}
+
+\bibitem[\citeproctext]{ref-klein2018}
+Klein, O., Hardwicke, T. E., Aust, F., Breuer, J., Danielsson, H., Mohr,
+A. H., IJzerman, H., Nilsonne, G., Vanpaemel, W., \& Frank, M. C.
+(2018). A {Practical Guide} for {Transparency} in {Psychological
+Science}. \emph{Collabra: Psychology}, \emph{4}(1), 20.
+\url{https://doi.org/10.1525/collabra.158}
 
 \bibitem[\citeproctext]{ref-mcaleer2022}
 McAleer, P., Stack, N., Woods, H., DeBruine, L. M., Paterson, H.,
@@ -3457,5 +3604,11 @@ manual: Make your scientific research accessible and reproducible}.
 \end{CSLReferences}
 
 
+\backmatter
+
+\printindex
+%back cover
+\includepdf[fitpaper=true,pages=-]{img/back-cover}
+\pagenumbering{gobble} 
 
 \end{document}

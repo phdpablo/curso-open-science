@@ -167,7 +167,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Home 🏢</span></a>
+ <span class="menu-text">O Curso 🏢</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -203,7 +203,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./04-project.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Gestão de Dados e Projetos</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Gestão de Projetos</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -257,7 +257,7 @@ div.csl-indent {
 <p>De qualquer forma, como refletimos até a penúltima seção, talvez dominar a plataforma <a href="https://osf.io/">OSF</a>, o <a href="https://www.zotero.org/">Zotero</a> e um protocolo rígido de organização de dados e projetos (vide <a href="https://www.projecttier.org/tier-protocol/protocol-4-0/">Protocolo TIER</a>, por exemplo) seja suficiente para você. A integração dessas soluções com outras que você já utiliza no dia a dia (armazenamento nas nuvens, processadores de texto, softwares específicos de análise qualitativa, etc) já lhe capacita para ter um projeto de pesquisa organizado e documentado com boas práticas da Ciência Aberta (CA).</p>
 <p>Ou talvez você, mesmo sendo um pesquisador que utiliza métodos quantitativos, empregue o mesmo argumento: eu nem gosto dessas “coisas” de código e programação. Prefiro soluções <em>point-and-click</em>, tal como o SPSS e Stata! Tenho uma boa notícia para você também: existem dois outros softwares com essa funcionalidade e boa compatilidade com os princípios da CA: o <a href="https://jasp-stats.org/">JASP</a> e o <a href="https://www.jamovi.org/">Jamovi</a>.</p>
 <p>Primeiramente, os dois são softwares gratuitos e de código aberto. Segundo, ambos possuem uma interface gráfica amigável e intuitiva, que permite a execução de análises estatísticas sem a necessidade de programação. Terceiro, em ambos os outputs das análises ficam disponíveis, quando salvos, no mesmo arquivo da base de dados. Através da tela dos outputs o usuário pode editar os títulos, adicionar notas, copiar as citações dos pacotes do R que estão sendo utilizados, copiar as análises para edição em outros softwares e duplicar as análises <span class="citation" data-cites="rogers2024">(<a href="references.html#ref-rogers2024" role="doc-biblioref">Rogers, 2024</a>)</span>. Essas últimas funcionalidades são extremamente úteis para a reprodutibilidade.</p>
-<p>No entanto, ambos os softwares ainda são recentes e ainda não englobam todas as análises dos softwares mais tradicionais, como o SPSS e o Stata. Eles não possuem a mesma quantidade de pacotes do R, o que pode ser um limitante para pesquisadores que necessitam de análises mais complexas. Os dois carecem de funcionalidades para a organização e estruturação dos dados, ficando o ETL (<em>Extration, Transform and Loading</em>) a cargo de outros softwares, colocando dificuldade ao controle de versões, De qualquer forma, acredito que a tendência é que esses softwares evoluam e se tornem mais populares, principalmente entre pesquisadores que não têm familiaridade com a programação.</p>
+<p>No entanto, ambos os softwares ainda são recentes e ainda não englobam todas as análises dos softwares mais tradicionais, como o SPSS e o Stata. Eles não possuem a mesma quantidade de pacotes do R, o que pode ser um limitante para pesquisadores que necessitam de análises mais complexas. Os dois carecem de funcionalidades para a organização e estruturação dos dados, ficando o ETL (<em>Extration, Transform and Loading</em>) a cargo de outros softwares, colocando dificuldade ao controle de versões, De qualquer forma, acreditamos que a tendência é que esses softwares evoluam e se tornem mais populares, principalmente entre pesquisadores que não têm familiaridade com a programação.</p>
 <p>De qualquer forma, o foco dessa seção é mostrar como você pode usar o Quarto para documentos dinâmicos, independente se você é um pesquisador qualitativo ou quantitativo, que prefere ou não usar recursos <em>point-and-click</em>. O Quarto é uma ferramenta de código aberto que permite a criação de documentos dinâmicos, tal como o R Markdown, mas com uma interface gráfica mais amigável e intuitiva. Através do Quarto, você pode criar documentos dinâmicos com texto, imagens, tabelas, gráficos, equações, referências bibliográficas, etc. E, o melhor de tudo, você pode fazer isso com pouca necessidade de programação, caso seu interesse seja apenas utilizar o Quarto como editor de documentos dinâmicos, ou seja, somente para escrever e organizar seu projeto de pesquisa.</p>
 <p>O Quarto é integrado ao RStudio, o que facilita a sua utilização por pesquisadores que já estão familiarizados com o R. Através do RStudio, você pode criar, editar e renderizar documentos dinâmicos em Quarto. Entretando, o Quarto integra várias linguagens de programação (R, Python, Julia e Observable). No RStudio, os usuários escrevem seus códigos e análises em R e Python, e o Quarto processa esse conteúdo e exporta o resultado em diferentes formatos, como HTML, PDF e DOCX, facilitando a disseminação e o compartilhamento do trabalho em múltiplas plataformas, como é ilustrado na <a href="#fig-quarto-illustration" class="quarto-xref">Figura&nbsp;<span>6.1</span></a>.</p>
 <div id="fig-quarto-illustration" class="quarto-float quarto-figure quarto-figure-left anchored">
@@ -313,7 +313,7 @@ O que o ChatGPT 4o nos diz sobre a <a href="#fig-quarto-illustration" class="qua
 </div>
 </div>
 </div>
-<p>A <a href="#fig-quarto-process" class="quarto-xref">Figura&nbsp;<span>6.2</span></a> explica o fluxo de trabalho um pouco mais analítico de criação e publicação de documentos com Quarto. Inicia-se com um arquivo <code>.qmd</code> que é processado por ferramentas como knitr ou Jupyter para gerar um arquivo Markdown. Esse arquivo Markdown é então convertido pelo Pandoc para os formatos finais de saída, permitindo uma ampla flexibilidade na distribuição do conteúdo.</p>
+<p>A <a href="#fig-quarto-process" class="quarto-xref">Figura&nbsp;<span>6.2</span></a> explica o fluxo de trabalho de criação e publicação de documentos com Quarto de forma mais analítica. Inicia-se com um arquivo <code>.qmd</code> que é processado por ferramentas como knitr ou Jupyter para gerar um arquivo Markdown. Esse arquivo Markdown é então convertido pelo Pandoc para os formatos finais de saída, permitindo uma ampla flexibilidade na distribuição do conteúdo.</p>
 <div id="fig-quarto-process" class="quarto-float quarto-figure quarto-figure-left anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-quarto-process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -447,7 +447,7 @@ O que o ChatGPT 4o nos diz sobre a <a href="#fig-all-workflow" class="quarto-xre
 <ol type="1">
 <li><strong>Narrativa e Código (Narrative story, Code, Data)</strong>:
 <ul>
-<li><strong>Narrativa</strong>: A história ou o contexto da pesquisa, incluindo introdução, metodologia, resultados e discussão, é escrita em texto simples.</li>
+<li><strong>Narrativa</strong>: A história ou o contexto da pesquisa, incluindo introdução, metodologia, resultados e discussão, é escrita em texto plano.</li>
 <li><strong>Código</strong>: O código utilizado para análises, simulações ou geração de figuras e tabelas. Esse código pode ser gerido através de controle de versão, garantindo rastreabilidade e reprodutibilidade.</li>
 <li><strong>Dados</strong>: Os dados brutos ou processados usados na pesquisa, que também podem estar sob controle de versão.</li>
 </ul></li>

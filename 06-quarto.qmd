@@ -8,7 +8,7 @@ Ou talvez você, mesmo sendo um pesquisador que utiliza métodos quantitativos, 
 
 Primeiramente, os dois são softwares gratuitos e de código aberto. Segundo, ambos possuem uma interface gráfica amigável e intuitiva, que permite a execução de análises estatísticas sem a necessidade de programação. Terceiro, em ambos os outputs das análises ficam disponíveis, quando salvos, no mesmo arquivo da base de dados. Através da tela dos outputs o usuário pode editar os títulos, adicionar notas, copiar as citações dos pacotes do R que estão sendo utilizados, copiar as análises para edição em outros softwares e duplicar as análises [@rogers2024]. Essas últimas funcionalidades são extremamente úteis para a reprodutibilidade.
 
-No entanto, ambos os softwares ainda são recentes e ainda não englobam todas as análises dos softwares mais tradicionais, como o SPSS e o Stata. Eles não possuem a mesma quantidade de pacotes do R, o que pode ser um limitante para pesquisadores que necessitam de análises mais complexas. Os dois carecem de funcionalidades para a organização e estruturação dos dados, ficando o ETL (*Extration, Transform and Loading*) a cargo de outros softwares, colocando dificuldade ao controle de versões, De qualquer forma, acredito que a tendência é que esses softwares evoluam e se tornem mais populares, principalmente entre pesquisadores que não têm familiaridade com a programação.
+No entanto, ambos os softwares ainda são recentes e ainda não englobam todas as análises dos softwares mais tradicionais, como o SPSS e o Stata. Eles não possuem a mesma quantidade de pacotes do R, o que pode ser um limitante para pesquisadores que necessitam de análises mais complexas. Os dois carecem de funcionalidades para a organização e estruturação dos dados, ficando o ETL (*Extration, Transform and Loading*) a cargo de outros softwares, colocando dificuldade ao controle de versões, De qualquer forma, acreditamos que a tendência é que esses softwares evoluam e se tornem mais populares, principalmente entre pesquisadores que não têm familiaridade com a programação.
 
 De qualquer forma, o foco dessa seção é mostrar como você pode usar o Quarto para documentos dinâmicos, independente se você é um pesquisador qualitativo ou quantitativo, que prefere ou não usar recursos *point-and-click*. O Quarto é uma ferramenta de código aberto que permite a criação de documentos dinâmicos, tal como o R Markdown, mas com uma interface gráfica mais amigável e intuitiva. Através do Quarto, você pode criar documentos dinâmicos com texto, imagens, tabelas, gráficos, equações, referências bibliográficas, etc. E, o melhor de tudo, você pode fazer isso com pouca necessidade de programação, caso seu interesse seja apenas utilizar o Quarto como editor de documentos dinâmicos, ou seja, somente para escrever e organizar seu projeto de pesquisa.
 
@@ -26,11 +26,9 @@ O Quarto é integrado ao RStudio, o que facilita a sua utilização por pesquisa
         -   **Julia**: Linguagem de programação de alto desempenho para computação técnica.
         -   **Observable**: Plataforma para criar visualizações de dados interativas.
     -   O texto "+ more!" indica que o Quarto suporta outras linguagens além das mencionadas.
-
 2.  **Quarto**:
     -   No centro da imagem, há um círculo azul com o logo do Quarto, representando a ferramenta em si.
     -   Quarto atua como uma plataforma de integração, permitindo que os usuários combinem códigos de diferentes linguagens e criem documentos ricos em conteúdo.
-
 3.  **Exportação para Diversos Formatos**:
     -   À direita, a imagem mostra os diferentes formatos para os quais o Quarto pode exportar:
         -   **HTML**: Para visualização web.
@@ -39,7 +37,7 @@ O Quarto é integrado ao RStudio, o que facilita a sua utilização por pesquisa
     -   O texto "+ more!" indica que o Quarto pode exportar para outros formatos além dos ilustrados.
 :::
 
-A @fig-quarto-process explica o fluxo de trabalho um pouco mais analítico de criação e publicação de documentos com Quarto. Inicia-se com um arquivo `.qmd` que é processado por ferramentas como knitr ou Jupyter para gerar um arquivo Markdown. Esse arquivo Markdown é então convertido pelo Pandoc para os formatos finais de saída, permitindo uma ampla flexibilidade na distribuição do conteúdo.
+A @fig-quarto-process explica o fluxo de trabalho de criação e publicação de documentos com Quarto de forma mais analítica. Inicia-se com um arquivo `.qmd` que é processado por ferramentas como knitr ou Jupyter para gerar um arquivo Markdown. Esse arquivo Markdown é então convertido pelo Pandoc para os formatos finais de saída, permitindo uma ampla flexibilidade na distribuição do conteúdo.
 
 [![Workflow analítico do Quarto](img/quarto-process.png){#fig-quarto-process}](https://r-cubed-advanced.rostools.org/sessions/build-website)
 
@@ -48,20 +46,16 @@ A @fig-quarto-process explica o fluxo de trabalho um pouco mais analítico de cr
 
 1.  **Documentos Quarto (qmd)**:
     -   O processo começa com um documento no formato Quarto Markdown (qmd), que é um arquivo que pode conter texto, código e outros elementos dinâmicos.
-
 2.  **Processamento com knitr ou Jupyter**:
     -   A próxima etapa do fluxo envolve a escolha de um processador para converter o conteúdo do documento qmd:
         -   **knitr**: Um pacote no R que permite a integração de código e texto, frequentemente usado para documentos R Markdown.
         -   **Jupyter**: Um ambiente interativo de notebooks que suporta várias linguagens de programação, como Python.
     -   A imagem mostra que o documento `qmd` pode ser processado por qualquer uma dessas ferramentas, resultando em um documento Markdown intermediário (md).
-
 3.  **Markdown (md)**:
     -   Após o processamento inicial, o documento é convertido em um arquivo Markdown padrão (md). Este arquivo contém o texto e as marcações, mas ainda precisa ser convertido para o formato de saída final desejado.
-
 4.  **Conversão com Pandoc**:
     -   O arquivo Markdown é então processado pelo Pandoc, uma ferramenta poderosa de conversão de documentos. Pandoc é capaz de transformar arquivos Markdown em uma variedade de formatos de saída.
     -   A imagem retrata o Pandoc como uma máquina que processa o documento `md` e o converte para os formatos finais.
-
 5.  **Formatos de Saída**:
     -   O resultado final do processo pode ser exportado para diversos formatos, conforme ilustrado na imagem:
         -   **HTML**: Para publicação na web.
@@ -80,15 +74,12 @@ Se quisermos pensar o fluxo de trabalho com Quarto com enfoque específico nos p
 1.  **Open (Abrir)**:
     -   **Passo**: Abrir um novo arquivo de tipo Quarto Document com a extensão `.qmd`.
     -   **Detalhe**: Este passo inicial foca na criação do arquivo fonte que será usado para todo o fluxo de trabalho subsequente.
-
 2.  **Write (Escrever)**:
     -   **Passo**: Escrever o conteúdo usando a sintaxe compatível com o Quarto.
     -   **Detalhe**: Este passo enfatiza a fase de escrita, onde o usuário insere o texto e a estrutura básica do documento.
-
 3.  **Embed (Incorporar)**:
     -   **Passo**: Incorporar código R que gera saída a ser incluída no relatório.
     -   **Detalhe**: Este passo mostra como os usuários podem integrar blocos de código no documento. Aqui, o exemplo específico de código R (`hist(x)`) é dado, o que ilustra a capacidade do Quarto de processar e renderizar código dinâmico.
-
 4.  **Render (Renderizar)**:
     -   **Passo**: Substituir o código R pela sua saída e transformar o relatório em uma apresentação de slides, PDF, HTML ou arquivo MS Word.
     -   **Detalhe**: Este passo final detalha o processo de renderização, onde o Quarto processa o código embutido, gera os resultados e cria o documento final no formato desejado.
@@ -102,42 +93,34 @@ E por fim, se desejamos melhorar nosso entendimento de como utilizar o Quarto no
 ## O que o ChatGPT 4o nos diz sobre a @fig-all-workflow?
 
 1.  **Narrativa e Código (Narrative story, Code, Data)**:
-    -   **Narrativa**: A história ou o contexto da pesquisa, incluindo introdução, metodologia, resultados e discussão, é escrita em texto simples.
+    -   **Narrativa**: A história ou o contexto da pesquisa, incluindo introdução, metodologia, resultados e discussão, é escrita em texto plano.
     -   **Código**: O código utilizado para análises, simulações ou geração de figuras e tabelas. Esse código pode ser gerido através de controle de versão, garantindo rastreabilidade e reprodutibilidade.
     -   **Dados**: Os dados brutos ou processados usados na pesquisa, que também podem estar sob controle de versão.
-
 2.  **Edição de Texto (Text editing)**:
     -   **Edição de Texto Plano**: A narrativa e o código são combinados em um editor de texto plano, formando um documento integral que contém a descrição da pesquisa e os scripts de análise.
-
 3.  **Execução (Execute)**:
     -   **Executar Código**: O código embutido no documento é executado, gerando saídas como gráficos, tabelas e resultados estatísticos que são automaticamente incorporados ao documento.
-
 4.  **Publicação (Publish)**:
     -   **Folha de Estilo (Style sheet)**: Um template pode ser aplicado para formatar o documento de acordo com as normas de publicação ou preferências estilísticas.
     -   **Pandoc**: Ferramenta usada para converter o documento em vários formatos de saída.
     -   **Resultados**:
         -   **Artigo PDF Estático (Scholarly PDF article)**: Um documento PDF pronto para submissão a revistas acadêmicas ou para distribuição formal. É um formato estático, onde o conteúdo é fixo e não interativo.
         -   **Website Dinâmico (Website)**: Um site interativo onde os leitores podem interagir com gráficos e visualizações de dados. Este formato permite uma experiência de leitura mais envolvente.
-
 5.  **Renderização (quarto render)**:
-    -   **Comando de Renderização**: O comando `quarto render` é utilizado para processar o documento (projeto) e gerar as versões finais nos formatos desejados.
+    -   **Comando de Renderização**: O comando `quarto render` é utilizado para processar o documento (projeto) e gerar as versões finais nos formatos desejados.\vspace{0.5em}
 
-**Fluxo de Trabalho de uma Pesquisa Empírica Hipotética**:
+**Fluxo de Trabalho de uma Pesquisa Empírica Hipotética**:\vspace{0.5em}
 
 1.  **Início**:
     -   Começa com a escrita da narrativa da pesquisa e o desenvolvimento do código para análise dos dados.
     -   Os dados são coletados e preparados, podendo ser versões controladas para assegurar integridade e reprodutibilidade.
-
 2.  **Edição e Integração**:
     -   O texto da narrativa, o código e os dados são integrados em um único documento Quarto (.qmd), utilizando um editor de texto plano.
-
 3.  **Execução de Análises**:
     -   O código é executado dentro do documento, gerando os resultados das análises que são automaticamente incorporados à narrativa.
-
 4.  **Preparação para Publicação**:
     -   Aplicação de um template para garantir que o documento final esteja formatado corretamente.
     -   Uso do Pandoc para converter o documento em formatos de saída, tanto estáticos (PDF) quanto dinâmicos (site web interativo).
-
 5.  **Publicação e Distribuição**:
     -   **PDF Estático**: Criado para ser submetido a revistas científicas ou compartilhado formalmente.
     -   **Website Dinâmico**: Disponibilizado para o público, permitindo interação com os dados e gráficos, promovendo maior engajamento e entendimento dos resultados da pesquisa.

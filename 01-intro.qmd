@@ -57,19 +57,19 @@ A referida crise não deriva de má conduta científica, mas principalmente da c
 Investir em recursos humanos, treinamento, educação, alfabetização digital, capacitação sistemática e contínua, e fomentar uma cultura científica de CA, têm sido apresentadas como algumas das principais medidas simultâneas para superar o cenário atual [@crrs2019; @EU2017; @unesco2021]. A proposta do curso pode contribuir para a literatura da CA no Brasil, pois pretende perseguir dois objetivos concomitantes: 1) diagnosticar sua prática junto aos pesquisadores brasileiros; e 2) promover o desenvolvimento de uma intervenção educacional sobre a prática (workflow) e principais ferramentas para compilação dos produtos científicos que integram uma publicação científica aberta.
 
 ::: {.callout-note collapse="true"}
-## @klein2018 *Reading Note* (@tip-prompt)
+## *A Pratical Guide for Transparency in Psychological Science* (@tip-prompt)
 
-O artigo é um guia prático para pesquisadores que desejam compartilhar os produtos de sua pesquisa. Os autores argumentam que as práticas de pesquisa transparentes são essenciais para melhorar a credibilidade e a cumulatividade da ciência.
+O artigo [@klein2018] é um guia prático para pesquisadores que desejam compartilhar os produtos de sua pesquisa. Os autores argumentam que as práticas de pesquisa transparentes são essenciais para melhorar a credibilidade e a cumulatividade da ciência.\vspace{0.5em}
 
-O artigo fornece recomendações específicas sobre como compartilhar os seguintes produtos de pesquisa:
+O artigo fornece recomendações específicas sobre como compartilhar os seguintes produtos de pesquisa:\vspace{0.5em}
 
 -   Protocolo de estudo
 -   Materiais
 -   Dados e metadados
 -   Procedimento de análise
--   Relatórios de pesquisa
+-   Relatórios de pesquisa\vspace{0.5em}
 
-As recomendações gerais dos autores são as seguintes:
+As recomendações gerais dos autores são as seguintes:\vspace{0.5em}
 
 -   **Torne a transparência um padrão**: isso significa compartilhar o máximo possível de informações sobre sua pesquisa, desde o início do processo.
 
@@ -77,11 +77,11 @@ As recomendações gerais dos autores são as seguintes:
 
 -   **Compartilhe e documente o que puder**: isso ajudará a garantir que sua pesquisa seja reproduzível e confiável.
 
--   **Comece cedo**: começar a compartilhar informações sobre sua pesquisa no início do processo pode ajudá-lo a evitar problemas e economizar tempo.
+-   **Comece cedo**: começar a compartilhar informações sobre sua pesquisa no início do processo pode ajudá-lo a evitar problemas e economizar tempo.\vspace{0.5em}
 
-Os autores também discutem algumas preocupações comuns que os pesquisadores têm sobre as práticas de pesquisa transparentes. Eles argumentam que essas preocupações são geralmente infundadas e que as práticas transparentes têm muitos benefícios.
+Os autores também discutem algumas preocupações comuns que os pesquisadores têm sobre as práticas de pesquisa transparentes. Eles argumentam que essas preocupações são geralmente infundadas e que as práticas transparentes têm muitos benefícios.\vspace{0.5em}
 
-Os principais benefícios das práticas de pesquisa transparentes são:
+Os principais benefícios das práticas de pesquisa transparentes são:\vspace{0.5em}
 
 -   **Melhor credibilidade da pesquisa**: os pesquisadores transparentes são mais propensos a serem vistos como confiáveis e honestos.
 
@@ -89,21 +89,21 @@ Os principais benefícios das práticas de pesquisa transparentes são:
 
 -   **Mais oportunidades de colaboração e financiamento**: os pesquisadores transparentes são mais propensos a serem convidados para colaborar com outros pesquisadores e a receber financiamento.
 
--   **Maior eficiência da pesquisa**: as práticas transparentes podem ajudar os pesquisadores a economizar tempo e recursos.
+-   **Maior eficiência da pesquisa**: as práticas transparentes podem ajudar os pesquisadores a economizar tempo e recursos.\vspace{0.5em}
 
 Em conclusão, o artigo fornece informações valiosas para pesquisadores que desejam compartilhar os produtos de sua pesquisa. As recomendações dos autores são baseadas em evidências e podem ajudar os pesquisadores a melhorar a qualidade e a credibilidade de seu trabalho.
 :::
 
 ::: {.callout-note collapse="true"}
-## @kathawalla2021 *Reading Note* (@tip-prompt)
+## *Easing Into Open Science: A Guide for Graduate Students and Their Advisors* (@tip-prompt)
 
-Este artigo fornece um guia para ajudar estudantes de pós-graduação e seus orientadores a se envolverem na prática da ciência aberta (CA). A CA é descrita como um termo amplo que se refere a uma variedade de princípios e comportamentos relacionados à transparência, credibilidade, reprodutibilidade e acessibilidade.
+O artigo [@kathawalla2021] fornece um guia para ajudar estudantes de pós-graduação e seus orientadores a se envolverem na prática da ciência aberta (CA). A CA é descrita como um termo amplo que se refere a uma variedade de princípios e comportamentos relacionados à transparência, credibilidade, reprodutibilidade e acessibilidade.\vspace{0.5em}
 
-O artigo sugere oito práticas de CA (das quais destaco sete) que estudantes de pós-graduação iniciantes podem começar a adotar hoje. Cada comportamento é classificado em termos de dificuldade (fácil, médio, difícil) e apresentado em ordem de adoção sugerida. Em cada prática, eles seguem o formato de o quê, por quê, como e preocupações.
+O artigo sugere oito práticas de CA (das quais destaco sete) que estudantes de pós-graduação iniciantes podem começar a adotar hoje. Cada comportamento é classificado em termos de dificuldade (fácil, médio, difícil) e apresentado em ordem de adoção sugerida. Em cada prática, eles seguem o formato de o quê, por quê, como e preocupações.\vspace{0.5em}
 
-Algumas das práticas sugeridas incluem:
+Algumas das práticas sugeridas incluem:\vspace{0.5em}
 
-1.  **Fluxo de Trabalho do Projeto (Nível Fácil)**: isso inclui a estrutura da pasta do arquivo, convenções de nomenclatura de documentos, controle de versão, armazenamento em nuvem e outros detalhes. Ter um sistema de fluxo de trabalho de projeto dedicado ajuda a manter sua pesquisa organizada, melhorando a reprodutibilidade, minimizando erros e facilitando colaborações com outros e com você no futuro.
+  1.  **Fluxo de Trabalho do Projeto (Nível Fácil)**: isso inclui a estrutura da pasta do arquivo, convenções de nomenclatura de documentos, controle de versão, armazenamento em nuvem e outros detalhes. Ter um sistema de fluxo de trabalho de projeto dedicado ajuda a manter sua pesquisa organizada, melhorando a reprodutibilidade, minimizando erros e facilitando colaborações com outros e com você no futuro.
 
 2.  **Preprints (Nível Fácil)**: postar um manuscrito antes de submetê-lo a uma revista permite um feedback mais amplo do que o que é proporcionado pela revisão por pares e pode ajudar a melhorar um artigo antes da submissão, identificando quaisquer falhas importantes.
 
@@ -115,7 +115,7 @@ Algumas das práticas sugeridas incluem:
 
 6.  **Pré-registro (Nível Médio)**: o pré-registro refere-se à postagem de um esboço cronometrado das perguntas de pesquisa, hipóteses, método e plano de análise para um projeto específico antes da coleta de dados e/ou análise.
 
-7.  **Relatório Registrado (Nível Difícil)**: os Relatórios Registrados envolvem um processo de submissão em duas partes, onde os autores primeiro enviam uma proposta de Estágio 1, que inclui a introdução, método e plano de análise - tudo antes que a coleta de dados e/ou análise tenha sido feita.
+7.  **Relatório Registrado (Nível Difícil)**: os Relatórios Registrados envolvem um processo de submissão em duas partes, onde os autores primeiro enviam uma proposta de Estágio 1, que inclui a introdução, método e plano de análise - tudo antes que a coleta de dados e/ou análise tenha sido feita.\vspace{0.5em}
 
 O artigo enfatiza que se envolver em uma prática de CA é melhor do que nenhuma e que a CA é apenas uma boa ciência. Além disso, sugere-se que se construa sobre o trabalho que já foi feito em vez de reinventar a roda. A maioria das práticas sugeridas se concentra no uso do [Open Science Framework](https://osf.io).
 :::

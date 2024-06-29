@@ -7,95 +7,94 @@ Vamos explorar essas ferramentas e discutir como elas podem ser aplicadas aos no
 ::: {.callout-note collapse="true"}
 ## Transcrição de uma das palestras do Prof. Ricardo Limongi
 
-Na lista de vídeos indicados em nossa Agenda temos uma recente [palestra do Prof. Ricardo Limongi](https://youtu.be/-WBfK9V1-ZE?si=Usd0KdyeJvoVmQ05) sobre o uso de IA na pesquisa científica. Em cerca de duas horas o professor abordou o uso prático, questões éticas, ferramentas e reflexões sobre IA e métodos de síntese de conhecimento com o Grupo PBE-USP.
+Na lista de vídeos indicados em nossa Agenda temos uma recente [palestra do Prof. Ricardo Limongi](https://youtu.be/-WBfK9V1-ZE?si=Usd0KdyeJvoVmQ05) sobre o uso de IA na pesquisa científica. Em cerca de duas horas o professor abordou o uso prático, questões éticas, ferramentas e reflexões sobre IA e métodos de síntese de conhecimento com o Grupo PBE-USP.\vspace{0.5em}
 
-Podemos utilizar alguma ferramenta de IA para nos ajudar a entender o enrendo e tópicos da palestra? Pois bem, fomos no Youtube, copiamos a transcrição da palestra, e depois utilizamos o [AI Studio do Google](https://aistudio.google.com) com a seguinte prompt:
+Podemos utilizar alguma ferramenta de IA para nos ajudar a entender o enrendo e tópicos da palestra? Pois bem, fomos no Youtube, copiamos a transcrição da palestra, e depois utilizamos o [AI Studio do Google](https://aistudio.google.com) com a seguinte prompt:\vspace{0.5em}
 
-*O texto abaixo é a transcrição de uma aula sobre Ferramentas de IA aplicadas à Pesquisa Científica. Gostaria que elencasse os pontos abordados nesse vídeo.*
+*O texto abaixo é a transcrição de uma aula sobre Ferramentas de IA aplicadas à Pesquisa Científica. Gostaria que elencasse os pontos abordados nesse vídeo.*\vspace{0.5em}
 
-**OBS:** Não colamos a transcrição aqui devido a quantidade de palavras (2 horas de palestra!). Inclusive, por esse motivo, utilizamos [AI Studio do Google](https://aistudio.google.com), que na sua versão teste aceita um milhão de tokens.
+**OBS:** Não colamos a transcrição aqui devido a quantidade de palavras (2 horas de palestra!). Inclusive, por esse motivo, utilizamos [AI Studio do Google](https://aistudio.google.com), que na sua versão teste aceita um milhão de tokens.\vspace{0.5em}
 
-Eis a resposta:
+Eis a resposta:\vspace{0.5em}
 
-**Pontos abordados na aula sobre Ferramentas de IA aplicadas à Pesquisa Científica:**
+**Pontos abordados na aula sobre Ferramentas de IA aplicadas à Pesquisa Científica:**\vspace{0.5em}
 
-
-**1. Introdução e Apresentação:**
+**1. Introdução e Apresentação:**\vspace{0.5em}
 
 -   Apresentação do grupo de pesquisa de prática baseada em evidências na saúde e dos palestrantes.
 -   Breve currículo do professor Ricardo Limongi, especialista em Inteligência Artificial e marketing.
--   Ênfase na importância de compartilhar conhecimento e ser generoso dentro da comunidade acadêmica.
+-   Ênfase na importância de compartilhar conhecimento e ser generoso dentro da comunidade acadêmica.\vspace{0.5em}
 
-**2. Inteligência Artificial como Meio e não Fim:**
+**2. Inteligência Artificial como Meio e não Fim:**\vspace{0.5em}
 
 -   Discussão sobre a rápida ascensão da IA e a necessidade de aprendizado, especialmente após o lançamento do ChatGPT.
 -   Alerta sobre o uso excessivo da IA como ferramenta para gerar artigos completos, enfatizando que a IA deve ser vista como uma ferramenta auxiliar e não substituir o papel do pesquisador.
--   Importância da reflexão crítica e da capacidade de análise e interpretação do ser humano.
+-   Importância da reflexão crítica e da capacidade de análise e interpretação do ser humano.\vspace{0.5em}
 
-**3. Ciência Aberta e Replicação:**
+**3. Ciência Aberta e Replicação:**\vspace{0.5em}
 
 -   Discussão sobre o movimento de ciência aberta e sua importância para a replicabilidade de pesquisas.
 -   Ênfase na transparência, compartilhamento de dados e o escrutínio crítico na comunidade científica.
--   Menção a plataformas como "ArXiv" para disponibilização de materiais para avaliação e crítica.
+-   Menção a plataformas como "ArXiv" para disponibilização de materiais para avaliação e crítica.\vspace{0.5em}
 
-**4. Inteligência Artificial como Automação de Tarefas:**
+**4. Inteligência Artificial como Automação de Tarefas:**\vspace{0.5em}
 
 -   Conceituação da IA como ferramenta de automação de tarefas, desde a revisão da literatura à análise de dados.
 -   Apresentação de plataformas de IA categorizadas por tipo de tarefa e de diferentes modelos de acesso (gratuitas e pagas).
--   Menção ao crescimento do mercado da IA e à necessidade de recursos para acesso a plataformas mais avançadas.
+-   Menção ao crescimento do mercado da IA e à necessidade de recursos para acesso a plataformas mais avançadas.\vspace{0.5em}
 
-**5. A Importância da Organização e Transparência na Pesquisa:**
+**5. A Importância da Organização e Transparência na Pesquisa:**\vspace{0.5em}
 
 -   Discussão sobre a necessidade de organização do processo de pesquisa desde o início, incluindo declaração de hipóteses, objetivos e metodologia.
 -   Importância da clareza nas informações fornecidas à IA para evitar vieses e garantir a qualidade do resultado.
 -   Críticas à falta de transparência na metodologia de alguns artigos, dificultando a replicação e o aprendizado da IA.
--   Sugestão de incluir informações sobre o uso de IA na sessão de métodos dos artigos para promover transparência e aprendizado.
+-   Sugestão de incluir informações sobre o uso de IA na sessão de métodos dos artigos para promover transparência e aprendizado.\vspace{0.5em}
 
-**6. Ferramentas de IA para Revisão da Literatura:**
+**6. Ferramentas de IA para Revisão da Literatura:**\vspace{0.5em}
 
 -   Apresentação do Semantic Scholar como ferramenta de busca e análise de literatura, e sua integração com plataformas como o Google Scholar e o LitMaps.
 -   Demonstração do LitMaps como plataforma para revisão da literatura com interface visual, recursos de fichamento e funcionalidades para identificar estudos similares.
 -   Menção à plataforma "Research Gate" como rede social para pesquisadores e sua limitação em relação à publicação de artigos.
 -   Sugestão de criar perfis nas plataformas de IA para beneficiar do aprendizado personalizado do algoritmo.
--   Explicação do recurso "TLDR" (Too Long, Didn't Read) como resumo do resumo para facilitar a análise inicial de artigos.
+-   Explicação do recurso "TLDR" (Too Long, Didn't Read) como resumo do resumo para facilitar a análise inicial de artigos.\vspace{0.5em}
 
-**7. Ferramentas de IA para Detecção de Plágio e Uso da IA:**
+**7. Ferramentas de IA para Detecção de Plágio e Uso da IA:**\vspace{0.5em}
 
 -   Diferenciação entre plágio e uso de IA na escrita, e a necessidade de entender o contexto e o percentual de similaridade para identificar possíveis problemas.
 -   Apresentação de ferramentas de detecção de IA em textos como o "Detector de IA", disponível no LitMaps.
 -   Discussão sobre a tolerância ao uso da IA na escrita, e a necessidade de diretrizes para a utilização ética e transparente.
--   Sugestão de submeter tanto a versão humana quanto a versão editada pela IA para a avaliação dos editores.
+-   Sugestão de submeter tanto a versão humana quanto a versão editada pela IA para a avaliação dos editores.\vspace{0.5em}
 
-**8. Ferramentas de IA para Análise de Dados:**
+**8. Ferramentas de IA para Análise de Dados:**\vspace{0.5em}
 
 -   Demonstração do "Consensus" como ferramenta para analisar e avaliar relações entre variáveis, utilizando dados do Semantic Scholar.
 -   Apresentação do CoPilot como recurso de interação com os dados e geração de insights.
--   Discussão sobre a importância de entender os algoritmos e a capacidade de interpretação crítica dos resultados da IA.
+-   Discussão sobre a importância de entender os algoritmos e a capacidade de interpretação crítica dos resultados da IA.\vspace{0.5em}
 
-**9. Desafios e Limitações da IA na Pesquisa:**
+**9. Desafios e Limitações da IA na Pesquisa:**\vspace{0.5em}
 
 -   Discussão sobre a questão da privacidade de dados e os riscos de vazamento de informações confidenciais ao utilizar plataformas de IA.
 -   Menção ao Microsoft CoPilot como alternativa com maior segurança de dados.
 -   Alerta sobre a falta de leitura dos termos de uso e a necessidade de atenção para a proteção de dados sensíveis.
 -   Discussão sobre a dificuldade de rastrear e evitar o uso indevido da IA em pareceres e trabalhos acadêmicos.
 -   Menção ao problema da falta de acesso a conteúdos científicos pagos, limitando o aprendizado da IA e criando desigualdade de acesso.
--   Ênfase na necessidade de acesso aberto a artigos científicos para facilitar o aprendizado e democratizar o acesso à informação.
+-   Ênfase na necessidade de acesso aberto a artigos científicos para facilitar o aprendizado e democratizar o acesso à informação.\vspace{0.5em}
 
-**10. Letramento Digital e a Importância do Ensino da IA:**
+**10. Letramento Digital e a Importância do Ensino da IA:**\vspace{0.5em}
 
 -   Discussão sobre a importância do letramento digital e da educação para o uso ético e responsável da IA na pesquisa.
 -   Ênfase na necessidade de repensar as disciplinas de metodologia e integrar o ensino da IA de forma crítica e consciente.
 -   Compartilhamento de exemplos de iniciativas de letramento digital para professores e pesquisadores, como o "Academia GPT".
 -   Alerta sobre a necessidade de desenvolver habilidades para identificar o uso indevido da IA e avaliar criticamente os resultados.
--   Ênfase na importância de entender os processos de pesquisa e os fundamentos da metodologia para utilizar a IA de forma eficiente e ética.
+-   Ênfase na importância de entender os processos de pesquisa e os fundamentos da metodologia para utilizar a IA de forma eficiente e ética.\vspace{0.5em}
 
-**11. Conclusões e Considerações Finais:**
+**11. Conclusões e Considerações Finais:**\vspace{0.5em}
 
 -   Reconhecimento da IA como ferramenta fundamental para a pesquisa, mas com a necessidade de uso consciente e responsável.
 -   Importância de desenvolver um letramento digital para a pesquisa, com foco na ética, na crítica e na interpretação.
 -   Incentivo à participação em debates e à criação de diretrizes para o uso da IA na pesquisa.
 -   Ênfase na necessidade de adaptação do ensino da metodologia para incorporar o uso da IA de forma crítica e consciente.
--   Reconhecimento da importância do conhecimento e da expertise humana para a análise e interpretação dos resultados da IA.
+-   Reconhecimento da importância do conhecimento e da expertise humana para a análise e interpretação dos resultados da IA.\vspace{0.5em}
 
 Em suma, a aula abordou a utilização da IA como ferramenta auxiliar na pesquisa científica, destacando sua potencialidade e os desafios para seu uso ético e responsável. A principal mensagem é que a IA deve ser integrada ao processo de pesquisa como um complemento e não como um substituto, sendo crucial o desenvolvimento de um letramento digital para o uso crítico e consciente da ferramenta.
 :::

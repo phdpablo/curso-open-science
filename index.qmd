@@ -1,8 +1,8 @@
-# Home 🏢 {#sec-home .unnumbered .unlisted}
+# O Curso 🏢 {#sec-home .unnumbered}
 
 Página do curso **"Artigo à Prova de Futuro: Jornada de Open Science na Prática"**. Aqui você encontrará informações sobre o programa do curso, materiais para seu acompanhamento e sugestões de leituras sobre a prática da ciência aberta (artigos, notas de aulas, blogs, vídeos, etc.).
 
-Caso você caiu nessa página por acaso (🤣😁😉), saiba que o poderá se inscrever no curso [aqui](https://forms.gle/b6Zio7oL8XxxhhtS9): independente se ele estiver acontecendo no momento, será convidado a participar da próxima versão.
+Caso você caiu nessa página por acaso, saiba que o poderá se inscrever no curso [aqui](https://forms.gle/b6Zio7oL8XxxhhtS9): independente se ele estiver acontecendo no momento, será convidado a participar da próxima versão.
 
 ## Sobre os instrutores {#sec-instrutor .unnumbered .unlisted}
 
@@ -10,9 +10,9 @@ O curso é coordenado e ministrado por Pablo Rogers, doutor em administração p
 
 Na sua versão atual o curso também será ministrado por Ricardo Limongi, doutor em administração pela Fundação Getúlio Vargas (FGV-SP) e professor de marketing e métodos quantitativos desde 2008 e atual editor chefe da Brazilian Administration Review (BAR). Em seu [perfil do Instagram](https://www.instagram.com/limongi/) é possível acompanhar sua agenda de atividades, cursos e palestras sobre inteligência artificial aplicada aos negócios e pesquisa. Em seu [canal do YouTube](https://www.youtube.com/@ricardolimongi_ia), é possível encontrar vídeos das suas atividades: congressos, palestras, aulas, etc.
 
-## Sobre o curso {#sec-about .unnumbered .unlisted}
+## Objetivos {#sec-about .unnumbered .unlisted}
 
-O curso tem objetivo de introduzir os conceitos relacionados com a ciência aberta e a prática da pesquisa reprodutível. O curso aborda temas introdutórios sobre ciência aberta, com foco no ferramental disponível para tornar a pesquisa mais transparente, reprodutível e acessível. O curso é voltado para pesquisadores e estudantes de pós-graduação, mas aberto a qualquer pessoa interessada em aprender sobre a prática da ciência aberta. O protagonista do curso é o pesquisador brasileiro que deseja aprimorar a qualidade e a transparência de sua pesquisa, e que busca ferramentas para tornar-lá mais eficiente e acessível.
+O curso tem objetivo de introduzir os conceitos relacionados com a Ciência Aberta (CA) e a prática da pesquisa reprodutível. O curso aborda temas introdutórios sobre CA, com foco no ferramental disponível para tornar a pesquisa mais transparente, reprodutível e acessível. O curso é voltado para pesquisadores e estudantes de pós-graduação, mas aberto a qualquer pessoa interessada em aprender sobre a prática da CA. O protagonista do curso é o pesquisador brasileiro que deseja aprimorar a qualidade e a transparência de sua pesquisa, e que busca ferramentas para tornar-lá mais eficiente e acessível.
 
 Trata-se de um curso intermitente programado para acontecer em 4 encontros de 4 horas/aula (ou 8 encontros de 2 horas/aula), totalizando 16 horas/aula. Num primeiro momento, a ideia que o curso seja remoto e síncrono para alcançar um número maior de interessados. Ele poderá acontecer mais de uma vez no ano, com datas e horários a serem definidos. Para o calendário atual do curso, consulte a seção [Agenda](https://phdpablo.github.io/curso-open-science/00-schedule.html).
 
@@ -20,17 +20,45 @@ O curso é gratuito e com de certificado de extensão pela Universidade Federal 
 
 As vagas são limitadas e a seleção será feita por ordem de inscrição. Após o preenchimento das vagas, os demais interessados serão inscritos automaticamente numa lista de espera e, tempestivamente, serão avisados sobre a próxima edição do curso. Após selecionados, os inscritos receberão um e-mail com instruções para acesso à plataforma de aulas síncronas e para a realização das atividades prévias ao curso.
 
-## Ementa do curso {#sec-ementa .unnumbered .unlisted}
+## Ementa {#sec-ementa .unnumbered .unlisted}
 
-Introdução da Ciência Aberta / Repositórios da Ciência Aberta / Gerenciamento de Referências e Bibliotecas / Gestão de Dados e Projetos / Controle de Versão / Documentos Reprodutíveis / Controle de Ambiente (containers) / IA Aplicada à Pesquisa Científica.
+Introdução da Ciência Aberta / Repositórios da Ciência Aberta / Gerenciamento de Referências e Bibliotecas / Gestão de Projetos, Dados e Scripts / Controle de Versão / Documentos Reprodutíveis / Controle de Ambiente / IA Aplicada à Pesquisa Científica.
 
 ## Metodologia {#sec-method .unnumbered .unlisted}
 
 Num primeiro momento, o curso foi concebido para acontecer de forma remota e síncrona, com aulas expositivas e teóricas, porém em grande medida, o conteúdo é essencialmente prático. Algumas aulas poderão ser gravadas e disponibilizadas no [canal do YouTube do projeto Psico&Econo_METRIA](https://www.youtube.com/c/PsicoEconoMETRIA), mas a intenção é que o conteúdo principal seja síncrono, para uma maior interação entre os participantes.
 
-Nesse sentido, o material do curso organizado nessa página refere-se ao roteiro estruturado de tudo que se vê nas aulas síncronas e conteúdos adicionais (bibliografia, notas de aulas, links, etc).
+Nesse sentido, o material do curso organizado nesse site refere-se ao roteiro estruturado (enrendo) de tudo que se vê nas aulas síncronas e conteúdos adicionais (bibliografia, notas de aulas, links, etc).
 
 A proposta do curso busca seguir de perto a mensagem de @dogucu2022. Nesse artigo as autoras abordam a importância da reprodutibilidade na ciência de dados, tanto na pesquisa quanto no ensino. Elas recomendam que os professores-pesquisadores adotem fluxos de trabalho reprodutíveis em suas pesquisas e ensinem esses fluxos de trabalho aos seus alunos. Elas propõem uma dimensão para as práticas de reprodutibilidade, focada exclusivamente nas ferramentas para o ensino (todos os materiais de ensino devem ser computacionalmente reprodutíveis, bem documentados e abertos).
+
+\newpage
+
+## Citação {#sec-cite .unnumbered .unlisted}
+
+Se você utilizar o material desse curso em algum trabalho acadêmico, por favor, cite o livro do curso da seguinte forma:
+
+::: {.callout-important appearance="minimal" icon="false"}
+Rogers, P. (2024). Artigo à Prova de Futuro: Jornada de Open Science na Prática (1.0). Disponível em: https://phdpablo.github.io/curso-open-science/. https://doi.org/10.5281/zenodo.12593928
+:::
+
+BibTex:
+
+``` r
+@misc{rogers2024,
+  author       = {Rogers, Pablo},
+  title        = {{Artigo à Prova de Futuro: Jornada de Open Science 
+                   na Prática}},
+  month        = jun,
+  year         = 2024,
+  publisher    = {Zenodo},
+  version      = {1.0},
+  doi          = {10.5281/zenodo.12593928},
+  url          = {https://phdpablo.github.io/curso-open-science/}
+}
+```
+
+## Licença {.unnumbered .unlisted}
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
 
