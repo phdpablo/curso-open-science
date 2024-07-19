@@ -52,6 +52,7 @@ div.csl-indent {
 <meta name="quarto:offset" content="./">
 <link href="./06-quarto.html" rel="next">
 <link href="./04-project.html" rel="prev">
+<link href="./img/psicoeconometria.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -90,6 +91,15 @@ div.csl-indent {
     "search-label": "Procurar"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=GTM-PGQXTTXN"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'GTM-PGQXTTXN', { 'anonymize_ip': true});
+</script>
 
 
 <meta property="og:title" content="Artigo à Prova de Futuro - 5&nbsp; Controle de versão">
@@ -254,7 +264,7 @@ div.csl-indent {
 
 
 <p>Você<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> em algum grau utiliza um sistema para versionar seu trabalho. Seja ele um simples <code>Ctrl + Z</code> ou <code>Cmd + Z</code> para desfazer a última ação, ou sistemas mais elaborados, como i) o controle de alterações do seu processador de texto ou ii) o histórico de versões do seu aplicativo de armazenamento nas nuvens (<code>OneDrive</code>, <code>Google Drive</code> ou <code>Dropbox</code>), você já está familiarizado com a ideia de controle de versão. Qual estudante ou pesquisador nunca se deparou com uma situação parecida da <a href="#fig-funny-git" class="quarto-xref">Figura&nbsp;<span>5.1</span></a>?</p>
-<div id="fig-funny-git" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Situação engraçada de versionamento">
+<div id="fig-funny-git" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Situação engraçada de versionamento" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-funny-git-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://phdcomics.com/comics/archive.php?comicid=1531"><img src="img/funny-git.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Situação engraçada de versionamento"></a>
@@ -305,7 +315,7 @@ Figura&nbsp;5.1: Situação amadora de controle de versão
 <p>Além de todas essas funcionalidades, a hospedagem de projetos no GitHub aumenta significativamente a visibilidade da pesquisa. Isso facilita a disseminação de resultados e a colaboração com a comunidade científica global, promovendo uma cultura de transparência e compartilhamento de conhecimento.</p>
 <p>Em resumo, enquanto o Git fornece uma solução robusta para controle de versão local, ideal para quem necessita de um ambiente privado e eficiente, o GitHub expande essas capacidades com ferramentas que promovem a colaboração, automação, documentação e visibilidade pública. No contexto da CA, o GitHub se alinha melhor com os princípios de transparência, colaboração e reprodutibilidade, oferecendo um conjunto de ferramentas que suportam e amplificam as boas práticas da pesquisa científica.</p>
 <p>Git e GitHub têm sido fundamentais em projetos de grande escala, como o desenvolvimento do kernel do Linux e projetos de software de código aberto como o TensorFlow, mantido pelo Google. Estes projetos envolvem milhares de colaboradores ao redor do mundo, exigindo um sistema robusto de controle de versão que possa lidar com uma vasta quantidade de alterações simultâneas, fusões complexas e um alto nível de coordenação e colaboração. A capacidade do Git de gerenciar branches de forma eficiente e a integração contínua proporcionada pelo GitHub são elementos cruciais para o sucesso desses projetos. A <a href="#fig-gitflow" class="quarto-xref">Figura&nbsp;<span>5.2</span></a> ilustra um diagrama hipotético do fluxo de trabalho em um ambiente de desenvolvimento de software típico, com diversos ramos, e como a complexidade de gerenciamento de versões, apesar de tratada pelo Git e GitHub, pode escalar.</p>
-<div id="fig-gitflow" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left" alt="Diagrama Gitflow Hipotético">
+<div id="fig-gitflow" class="quarto-float quarto-figure quarto-figure-left anchored" alt="Diagrama Gitflow Hipotético" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-gitflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Gitflow-release-branch-process-start-finish"><img src="img/gitflow.jpg" class="img-fluid quarto-figure quarto-figure-left figure-img" alt="Diagrama Gitflow Hipotético"></a>
@@ -317,7 +327,7 @@ Figura&nbsp;5.2: Diagrama GitFlow hipotético num ambiente de desenvolvimento de
 </div>
 <p>No entanto, o Git/Github são igualmente valiosos para projetos de menor escala. Em um projeto de pesquisa envolvendo três pesquisadores, Git e GitHub facilitam a colaboração ao permitir que cada pesquisador trabalhe em diferentes partes do projeto simultaneamente. Eles podem criar branches individuais para testar novas hipóteses ou desenvolver partes do projeto de forma independente. Quando uma nova contribuição está pronta, ela pode ser integrada ao projeto principal através de um pull request no GitHub, permitindo uma revisão por pares antes da fusão. Isso não só mantém a qualidade do trabalho como também documenta o processo de desenvolvimento de maneira transparente.</p>
 <p>A <a href="#fig-git3autores" class="quarto-xref">Figura&nbsp;<span>5.3</span></a> ilustra um Gitflow hipotético para uma colaboração científica envolvendo três autores. Note que cada autor tem seu próprio branch de produção, que é integrado ao branch principal através de pull requests, administrado pelo autor principal. Essa estrutura permite que cada autor trabalhe de forma independente, mantendo um histórico detalhado de suas contribuições e facilitando a revisão e a fusão de alterações. Com apenas três branches, o gerenciamento dessa hipotética pesquisa não seria tão complexo com o Git e GitHub.</p>
-<div id="fig-git3autores" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left" alt="Gitflow hipotético para uma colaboração científica envolvendo três autores">
+<div id="fig-git3autores" class="quarto-float quarto-figure quarto-figure-left anchored" alt="Gitflow hipotético para uma colaboração científica envolvendo três autores" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-git3autores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://doi.org/10.5281/zenodo.12165926"><img src="img/git3autores.jpg" class="img-fluid quarto-figure quarto-figure-left figure-img" alt="Gitflow hipotético para uma colaboração científica envolvendo três autores"></a>
@@ -329,7 +339,7 @@ Figura&nbsp;5.3: Um fluxo de trabalho hipotético do Git para uma colaboração 
 </div>
 <p>Para um único pesquisador, o Git oferece uma maneira eficaz de versionar seu trabalho, mantendo um histórico detalhado de todas as alterações. Isso pode ser especialmente útil para rastrear o progresso ao longo do tempo, revertendo alterações se necessário e experimentando diferentes abordagens sem o risco de perder trabalho anterior. Além disso, o GitHub fornece um backup seguro na nuvem, garantindo que os dados estejam protegidos contra perda.</p>
 <p>A <a href="#fig-gitautorbegin" class="quarto-xref">Figura&nbsp;<span>5.4</span></a> ilustra um Gitflow hipotético para um único pesquisador. Neste caso, o pesquisador mantém um branch principal para o desenvolvimento do projeto e cria branches individuais para experimentos ou novas ideias. Cada commit é documentado com uma mensagem descritiva, permitindo que o pesquisador rastreie o progresso e o propósito de cada alteração. Esse processo garante que o projeto seja desenvolvido de forma estruturada e transparente, com um histórico detalhado de todas as contribuições, que podem ser acompanhadas, revisadas e auditadas por qualquer pessoa interessada, se o repositório remoto for público.</p>
-<div id="fig-gitautorbegin" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left" alt="Gitflow hipotético para uma pesquisa solo">
+<div id="fig-gitautorbegin" class="quarto-float quarto-figure quarto-figure-left anchored" alt="Gitflow hipotético para uma pesquisa solo" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-gitautorbegin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://doi.org/10.5281/zenodo.12165926"><img src="img/gitautorbegin.jpg" class="img-fluid quarto-figure quarto-figure-left figure-img" alt="Gitflow hipotético para uma pesquisa solo"></a>
@@ -340,7 +350,7 @@ Figura&nbsp;5.4: Um fluxo de trabalho hipotético do Git para a execução de um
 </figure>
 </div>
 <p>Por outro lado, um pesquisador pode optar por tornar público seu trabalho (dados, materiais e histórico de mudanças) somente quando for submeter o artigo para publicação, como podemos ver na <a href="#fig-gitautorend" class="quarto-xref">Figura&nbsp;<span>5.5</span></a>. Essa figura ilustra um workflow em que o pesquisador desenvolveu seu trabalho localmente, fazendo uso do Git para seu controle de versões, e apenas quando da necessidade de tornar público, vinculou o repositório local com o repositório remoto.</p>
-<div id="fig-gitautorend" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left" alt="Gitflow hipotético para uma pesquisa solo">
+<div id="fig-gitautorend" class="quarto-float quarto-figure quarto-figure-left anchored" alt="Gitflow hipotético para uma pesquisa solo" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-gitautorend-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://doi.org/10.5281/zenodo.12165926"><img src="img/gitautorend.jpg" class="img-fluid quarto-figure quarto-figure-left figure-img" alt="Gitflow hipotético para uma pesquisa solo"></a>

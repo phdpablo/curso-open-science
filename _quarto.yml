@@ -9,6 +9,8 @@ execute:
   #- abstract-section:
 lang: pt
 book:
+  google-analytics: "GTM-PGQXTTXN"
+  favicon: img/psicoeconometria.png
   title: "Artigo à Prova de Futuro"
   subtitle: "Jornada de Open Science na Prática"
   #author: "Pablo Rogers"
