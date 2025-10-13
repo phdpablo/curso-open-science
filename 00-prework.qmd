@@ -1,4 +1,4 @@
-# Pré-requisitos 📇 {#sec-prework .unnumbered}
+# \emojitext{📇} Pré-requisitos {#sec-prework .unnumbered}
 
 O curso não exige conhecimento prévio em programação, mas é recomendável que o aluno tenha familiaridade com o uso de computadores (ambiente Windows) e com a escrita de textos científicos. Nesse sentido, não é necessário ter conhecimento prévio sobre as ferramentas e plataformas que utilizaremos no curso: Zotero, OSF, Zenodo, Git, Github, RStudio, Quarto/RMarkdown, Docker, etc; mas desejável que o aluno já as tenha instalado e/ou cadastro nas plataformas.
 

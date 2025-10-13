@@ -34,8 +34,8 @@ book:
   
   chapters:
     - index.qmd
-    - 00-prework.qmd
     - 00-schedule.qmd
+    - 00-prework.qmd
     - 01-intro.qmd
     - 02-osf.qmd
     - 03-zotero.qmd
@@ -66,12 +66,13 @@ format:
     fig-width: 5
     fig-height: 5
     fig-align: left
+    filters: 
+      - emoji-html.lua
   
   pdf:
+    pdf-engine: lualatex
     documentclass: book
-    #cover-image: img/cover-book.pdf
     papersize: A4
-    #abstract: "Working in progress"
     author: "Pablo Rogers"
     date: last-modified
     date-format: "MMM, YYYY"
@@ -84,7 +85,6 @@ format:
       - textwidth= 5.25in
       - top=1.00in
       - textheight=8.25in
-      #- showframe
     include-in-header: preamble.tex
     include-before-body: first.tex
     include-after-body: backcover.tex
@@ -95,4 +95,4 @@ format:
     fig-align: left
     keep-tex: true
 
-editor: visual
+editor: source

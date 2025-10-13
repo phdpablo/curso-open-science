@@ -1,40 +1,58 @@
-# O Curso 🏢 {#sec-home .unnumbered}
+## \emojitext{🏢} O Curso {#sec-home .unnumbered}
 
-Página do curso **"Artigo à Prova de Futuro: Jornada de Open Science na Prática"**. Aqui você encontrará informações sobre o programa do curso, materiais para seu acompanhamento e sugestões de leituras sobre a prática da ciência aberta (artigos, notas de aulas, blogs, vídeos, etc.).
+<br>
 
-Caso você caiu nessa página por acaso, saiba que o poderá se inscrever no curso [aqui](https://forms.gle/b6Zio7oL8XxxhhtS9): independente se ele estiver acontecendo no momento, será convidado a participar da próxima versão.
+::: {.content-visible unless-format="pdf"}
+-   \emojitext{📝} **FAÇA SUA INSCRIÇÃO [AQUI](https://forms.gle/wRNWAU9Ffyp7o4Vq9)**
 
-## Sobre os instrutores {#sec-instrutor .unnumbered .unlisted}
 
-O curso é coordenado e ministrado por Pablo Rogers, doutor em administração pela Universidade de São Paulo (FEA/USP) e professor de finanças e métodos quantitativos desde 2005. Em sua [página de perfil do Github](https://github.com/phdpablo) temos informações de seus trabalhos recentes, e no seu [site pessoal](https://phdpablo.com/), detalhes sobre suas formações, competências, trajetória e projetos.
+-   \emojitext{📅} **CONSULTE A AGENDA ATUALIZADA [AQUI](https://phdpablo.github.io/curso-open-science/00-schedule.html)**
 
-Na sua versão atual o curso também será ministrado por Ricardo Limongi, doutor em administração pela Fundação Getúlio Vargas (FGV-SP) e professor de marketing e métodos quantitativos desde 2008 e atual editor chefe da Brazilian Administration Review (BAR). Em seu [perfil do Instagram](https://www.instagram.com/limongi/) é possível acompanhar sua agenda de atividades, cursos e palestras sobre inteligência artificial aplicada aos negócios e pesquisa. Em seu [canal do YouTube](https://www.youtube.com/@ricardolimongi_ia), é possível encontrar vídeos das suas atividades: congressos, palestras, aulas, etc.
 
-## Objetivos {#sec-about .unnumbered .unlisted}
+-   \emojitext{🛠️} **NO CURSO VOCÊ VAI APRENDER A IMPLEMENTAR UM ARTIGO COMO [ESSE](https://phdpablo.github.io/article-template/) E/OU DESENVOLVER UMA DISCIPLINA COMO [ESSA](https://fccp.phdpablo.com/).**
 
-O curso tem objetivo de introduzir os conceitos relacionados com a Ciência Aberta (CA) e a prática da pesquisa reprodutível. O curso aborda temas introdutórios sobre CA, com foco no ferramental disponível para tornar a pesquisa mais transparente, reprodutível e acessível. O curso é voltado para pesquisadores e estudantes de pós-graduação, mas aberto a qualquer pessoa interessada em aprender sobre a prática da CA. O protagonista do curso é o pesquisador brasileiro que deseja aprimorar a qualidade e a transparência de sua pesquisa, e que busca ferramentas para tornar-lá mais eficiente e acessível.
+<br>
 
-Trata-se de um curso intermitente programado para acontecer em 4 encontros de 4 horas/aula (ou 8 encontros de 2 horas/aula), totalizando 16 horas/aula. Num primeiro momento, a ideia que o curso seja remoto e síncrono para alcançar um número maior de interessados. Ele poderá acontecer mais de uma vez no ano, com datas e horários a serem definidos. Para o calendário atual do curso, consulte a seção [Agenda](https://phdpablo.github.io/curso-open-science/00-schedule.html).
+Página do curso **"Artigo à Prova de Futuro: Jornada de Open Science na Prática"**. Nesse site você encontrará informações sobre o programa do curso, materiais didáticos (resumos, notas de aulas e vídeos) e sugestões de leituras sobre a prática da Ciência Aberta (artigos e livros).
+:::
 
-O curso é gratuito e com de certificado de extensão pela Universidade Federal de Uberlândia (UFU). As inscrições são feitas por meio de um [formulário](https://forms.gle/wRNWAU9Ffyp7o4Vq9) intermediado pelo projeto [Psico&Econo_METRIA](https://www.youtube.com/c/PsicoEconoMETRIA). Quando da previsão das datas, uma campanha de e-mail marketing divulgará o link para a inscrição através de coordenações de pós-graduações selecionadas.
+::: {.content-visible unless-format="html"}
+Material didático do curso **"Artigo à Prova de Futuro: Jornada de Open Science na Prática"**. Nesse ebook você encontrará um conteúdo programático sobre Ciência Aberta (CA) e Pesquisa Reprodutível, com resumo de textos, recursos didáticos (notas de aulas e vídeos) e sugestões de leitura (artigos e livros).
+:::
+
+## Sobre os instrutores {#sec-instrutor .unnumbered}
+
+O curso é coordenado e ministrado por [Pablo Rogers](https://phdpablo.com/), Doutor em Administração pela Universidade de São Paulo (FEA/USP) e professor de finanças e métodos quantitativos desde 2005. Em sua [página de perfil do Github](https://github.com/phdpablo) você encontra informações de seus trabalhos recentes, e no seu [site pessoal](https://phdpablo.com/), detalhes sobre suas formações, competências, trajetória e projetos.
+
+O curso tem a parceria do Prof. Ricardo Limongi, Doutor em Administração pela Fundação Getúlio Vargas (FGV-SP), professor de marketing e métodos quantitativos desde 2008 e atual editor chefe da Brazilian Administration Review (BAR). Em seu [perfil do Instagram](https://www.instagram.com/limongi/) é possível acompanhar sua agenda de atividades, cursos e palestras sobre Inteligência Artificial (IA) aplicada aos negócios e pesquisa. Em seu [canal do YouTube](https://www.youtube.com/@ricardolimongi_ia), você encontra vídeos das suas atividades: congressos, palestras, aulas, etc.
+
+## Objetivos {#sec-about .unnumbered}
+
+O curso tem objetivo de introduzir os conceitos relacionados com a Ciência Aberta (CA) e a Prática da Pesquisa Reprodutível. O curso aborda temas introdutórios sobre CA, com foco no ferramental disponível para tornar a pesquisa mais transparente, reprodutível e acessível.
+
+Ao final pretendemos que os pesquisadores e estudantes de pós-graduação estejam gabaritados para implementar o [ARTE (Article Reproducibility Template & Environment)](https://phdpablo.github.io/article-template/), por exemplo, e os professores empenhados em desenvolver um Recurso Didático Aberto (REA), tal como o exemplo dessa disciplina: [Finanças Corporativas de Curto Prazo](https://fccp.phdpablo.com/).
+
+O protagonista do curso é o professor e/ou pesquisador brasileiro que deseja aprimorar a qualidade e a transparência de suas aulas e pesquisa, e que busca ferramentas para tornar-lás mais eficiente e acessível.
+
+Trata-se de um curso intermitente programado para acontecer em 8 encontros de 2 horas/aula, totalizando 16 horas/aula. Para alcançar um número maior de interessadosO o curso é remoto e síncrono. Ele poderá acontecer mais de uma vez no ano, com datas e horários a serem definidos. Para o calendário atual do curso, consulte a seção [Agenda](00-schedule.html).
+
+O curso é gratuito e com de certificado de extensão pela Universidade Federal de Uberlândia (UFU). As inscrições são feitas por meio de um [formulário](https://forms.gle/wRNWAU9Ffyp7o4Vq9) intermediado pelo projeto [Psico&Econo_METRIA](https://www.youtube.com/c/PsicoEconoMETRIA). Quando da previsão das datas ou início do curso, uma campanha de e-mail marketing divulgará para os inscritos na [lista de espera](https://forms.gle/wRNWAU9Ffyp7o4Vq9) e para coordenações de pós-graduações selecionadas.
 
 As vagas são limitadas e a seleção será feita por ordem de inscrição. Após o preenchimento das vagas, os demais interessados serão inscritos automaticamente numa lista de espera e, tempestivamente, serão avisados sobre a próxima edição do curso. Após selecionados, os inscritos receberão um e-mail com instruções para acesso à plataforma de aulas síncronas e para a realização das atividades prévias ao curso.
 
-## Ementa {#sec-ementa .unnumbered .unlisted}
+## Ementa {#sec-ementa .unnumbered}
 
-Introdução da Ciência Aberta / Repositórios da Ciência Aberta / Gerenciamento de Referências e Bibliotecas / Gestão de Projetos, Dados e Scripts / Controle de Versão / Documentos Reprodutíveis / Controle de Ambiente / IA Aplicada à Pesquisa Científica.
+Introdução da Ciência Aberta / Repositórios da Ciência Aberta / Gerenciamento de Referências e Bibliotecas / Gestão de Projetos, Dados e Scripts / Controle de Versão / Documentos Dinâmicos e Reprodutíveis / Controle de Ambiente / IA Aplicada à Pesquisa Reprodutível.
 
-## Metodologia {#sec-method .unnumbered .unlisted}
+## Metodologia {#sec-method .unnumbered}
 
-Num primeiro momento, o curso foi concebido para acontecer de forma remota e síncrona, com aulas expositivas e teóricas, porém em grande medida, o conteúdo é essencialmente prático. Algumas aulas poderão ser gravadas e disponibilizadas no [canal do YouTube do projeto Psico&Econo_METRIA](https://www.youtube.com/c/PsicoEconoMETRIA), mas a intenção é que o conteúdo principal seja síncrono, para uma maior interação entre os participantes.
+O curso foi concebido para acontecer de forma remota e síncrona, com aulas expositivas, porém em grande medida, o conteúdo é essencialmente prático. As aulas serão gravadas e disponibilizadas no [canal do YouTube do projeto Psico&Econo_METRIA](https://www.youtube.com/c/PsicoEconoMETRIA) (se inscreva \emojitext{🥰}). O conteúdo principal do curso é síncrono, e pode mudar de edição para edição, no entanto, algumas aulas, principalmente para cadastros e instalações das ferramentas utilizadas, podem ser disponibilizadas de forma assíncrona, tal como na página [Pré-requisitos](00-prework.html).
 
-Nesse sentido, o material do curso organizado nesse site refere-se ao roteiro estruturado (enrendo) de tudo que se vê nas aulas síncronas e conteúdos adicionais (bibliografia, notas de aulas, links, etc).
-
-A proposta do curso busca seguir de perto a mensagem de @dogucu2022. Nesse artigo as autoras abordam a importância da reprodutibilidade na ciência de dados, tanto na pesquisa quanto no ensino. Elas recomendam que os professores-pesquisadores adotem fluxos de trabalho reprodutíveis em suas pesquisas e ensinem esses fluxos de trabalho aos seus alunos. Elas propõem uma dimensão para as práticas de reprodutibilidade, focada exclusivamente nas ferramentas para o ensino (todos os materiais de ensino devem ser computacionalmente reprodutíveis, bem documentados e abertos).
+A proposta do curso busca seguir de perto a mensagem de @dogucu2022 e ser um **Recurso Educacional Aberto (REA)**. Nesse artigo as autoras abordam a importância da reprodutibilidade na ciência de dados, tanto na pesquisa quanto no ensino. Elas recomendam que os professores-pesquisadores adotem fluxos de trabalho reprodutíveis em suas pesquisas e ensinem esses fluxos de trabalho aos seus alunos. Elas propõem uma dimensão para as práticas de reprodutibilidade, focada exclusivamente nas ferramentas para o ensino (todos os materiais de ensino devem ser computacionalmente reprodutíveis, bem documentados e abertos).
 
 \newpage
 
-## Citação {#sec-cite .unnumbered .unlisted}
+## Citação {#sec-cite .unnumbered}
 
 Se você utilizar o material desse curso em algum trabalho acadêmico, por favor, cite o livro do curso da seguinte forma:
 
@@ -42,6 +60,7 @@ Se você utilizar o material desse curso em algum trabalho acadêmico, por favor
 Rogers, P. (2024). Artigo à Prova de Futuro: Jornada de Open Science na Prática (1.0). Disponível em: https://phdpablo.github.io/curso-open-science/. https://doi.org/10.5281/zenodo.12593928
 :::
 
+::: {.content-visible unless-format="pdf"}
 BibTex:
 
 ``` r
@@ -57,8 +76,9 @@ BibTex:
   url          = {https://phdpablo.github.io/curso-open-science/}
 }
 ```
+:::
 
-## Licença {.unnumbered .unlisted}
+## Licença {#sec-lice .unnumbered}
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
 

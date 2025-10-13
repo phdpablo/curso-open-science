@@ -4,9 +4,19 @@
     "href": "index.html",
     "title": "Artigo à Prova de Futuro",
     "section": "",
-    "text": "O Curso 🏢\nPágina do curso “Artigo à Prova de Futuro: Jornada de Open Science na Prática”. Aqui você encontrará informações sobre o programa do curso, materiais para seu acompanhamento e sugestões de leituras sobre a prática da ciência aberta (artigos, notas de aulas, blogs, vídeos, etc.).\nCaso você caiu nessa página por acaso, saiba que o poderá se inscrever no curso aqui: independente se ele estiver acontecendo no momento, será convidado a participar da próxima versão.",
+    "text": "🏢 O Curso\nPágina do curso “Artigo à Prova de Futuro: Jornada de Open Science na Prática”. Nesse site você encontrará informações sobre o programa do curso, materiais didáticos (resumos, notas de aulas e vídeos) e sugestões de leituras sobre a prática da Ciência Aberta (artigos e livros).",
     "crumbs": [
-      "O Curso 🏢"
+      "\\emojitext{🏢} O Curso"
+    ]
+  },
+  {
+    "objectID": "index.html#sec-home",
+    "href": "index.html#sec-home",
+    "title": "Artigo à Prova de Futuro",
+    "section": "",
+    "text": "📝 FAÇA SUA INSCRIÇÃO AQUI\n📅 CONSULTE A AGENDA ATUALIZADA AQUI\n🛠️ NO CURSO VOCÊ VAI APRENDER A IMPLEMENTAR UM ARTIGO COMO ESSE E/OU DESENVOLVER UMA DISCIPLINA COMO ESSA.",
+    "crumbs": [
+      "\\emojitext{🏢} O Curso"
     ]
   },
   {
@@ -14,9 +24,9 @@
     "href": "index.html#sec-instrutor",
     "title": "Artigo à Prova de Futuro",
     "section": "Sobre os instrutores",
-    "text": "Sobre os instrutores\nO curso é coordenado e ministrado por Pablo Rogers, doutor em administração pela Universidade de São Paulo (FEA/USP) e professor de finanças e métodos quantitativos desde 2005. Em sua página de perfil do Github temos informações de seus trabalhos recentes, e no seu site pessoal, detalhes sobre suas formações, competências, trajetória e projetos.\nNa sua versão atual o curso também será ministrado por Ricardo Limongi, doutor em administração pela Fundação Getúlio Vargas (FGV-SP) e professor de marketing e métodos quantitativos desde 2008 e atual editor chefe da Brazilian Administration Review (BAR). Em seu perfil do Instagram é possível acompanhar sua agenda de atividades, cursos e palestras sobre inteligência artificial aplicada aos negócios e pesquisa. Em seu canal do YouTube, é possível encontrar vídeos das suas atividades: congressos, palestras, aulas, etc.",
+    "text": "Sobre os instrutores\nO curso é coordenado e ministrado por Pablo Rogers, Doutor em Administração pela Universidade de São Paulo (FEA/USP) e professor de finanças e métodos quantitativos desde 2005. Em sua página de perfil do Github você encontra informações de seus trabalhos recentes, e no seu site pessoal, detalhes sobre suas formações, competências, trajetória e projetos.\nO curso tem a parceria do Prof. Ricardo Limongi, Doutor em Administração pela Fundação Getúlio Vargas (FGV-SP), professor de marketing e métodos quantitativos desde 2008 e atual editor chefe da Brazilian Administration Review (BAR). Em seu perfil do Instagram é possível acompanhar sua agenda de atividades, cursos e palestras sobre Inteligência Artificial (IA) aplicada aos negócios e pesquisa. Em seu canal do YouTube, você encontra vídeos das suas atividades: congressos, palestras, aulas, etc.",
     "crumbs": [
-      "O Curso 🏢"
+      "\\emojitext{🏢} O Curso"
     ]
   },
   {
@@ -24,9 +34,9 @@
     "href": "index.html#sec-about",
     "title": "Artigo à Prova de Futuro",
     "section": "Objetivos",
-    "text": "Objetivos\nO curso tem objetivo de introduzir os conceitos relacionados com a Ciência Aberta (CA) e a prática da pesquisa reprodutível. O curso aborda temas introdutórios sobre CA, com foco no ferramental disponível para tornar a pesquisa mais transparente, reprodutível e acessível. O curso é voltado para pesquisadores e estudantes de pós-graduação, mas aberto a qualquer pessoa interessada em aprender sobre a prática da CA. O protagonista do curso é o pesquisador brasileiro que deseja aprimorar a qualidade e a transparência de sua pesquisa, e que busca ferramentas para tornar-lá mais eficiente e acessível.\nTrata-se de um curso intermitente programado para acontecer em 4 encontros de 4 horas/aula (ou 8 encontros de 2 horas/aula), totalizando 16 horas/aula. Num primeiro momento, a ideia que o curso seja remoto e síncrono para alcançar um número maior de interessados. Ele poderá acontecer mais de uma vez no ano, com datas e horários a serem definidos. Para o calendário atual do curso, consulte a seção Agenda.\nO curso é gratuito e com de certificado de extensão pela Universidade Federal de Uberlândia (UFU). As inscrições são feitas por meio de um formulário intermediado pelo projeto Psico&Econo_METRIA. Quando da previsão das datas, uma campanha de e-mail marketing divulgará o link para a inscrição através de coordenações de pós-graduações selecionadas.\nAs vagas são limitadas e a seleção será feita por ordem de inscrição. Após o preenchimento das vagas, os demais interessados serão inscritos automaticamente numa lista de espera e, tempestivamente, serão avisados sobre a próxima edição do curso. Após selecionados, os inscritos receberão um e-mail com instruções para acesso à plataforma de aulas síncronas e para a realização das atividades prévias ao curso.",
+    "text": "Objetivos\nO curso tem objetivo de introduzir os conceitos relacionados com a Ciência Aberta (CA) e a Prática da Pesquisa Reprodutível. O curso aborda temas introdutórios sobre CA, com foco no ferramental disponível para tornar a pesquisa mais transparente, reprodutível e acessível.\nAo final pretendemos que os pesquisadores e estudantes de pós-graduação estejam gabaritados para implementar o ARTE (Article Reproducibility Template & Environment), por exemplo, e os professores empenhados em desenvolver um Recurso Didático Aberto (REA), tal como o exemplo dessa disciplina: Finanças Corporativas de Curto Prazo.\nO protagonista do curso é o professor e/ou pesquisador brasileiro que deseja aprimorar a qualidade e a transparência de suas aulas e pesquisa, e que busca ferramentas para tornar-lás mais eficiente e acessível.\nTrata-se de um curso intermitente programado para acontecer em 8 encontros de 2 horas/aula, totalizando 16 horas/aula. Para alcançar um número maior de interessadosO o curso é remoto e síncrono. Ele poderá acontecer mais de uma vez no ano, com datas e horários a serem definidos. Para o calendário atual do curso, consulte a seção Agenda.\nO curso é gratuito e com de certificado de extensão pela Universidade Federal de Uberlândia (UFU). As inscrições são feitas por meio de um formulário intermediado pelo projeto Psico&Econo_METRIA. Quando da previsão das datas ou início do curso, uma campanha de e-mail marketing divulgará para os inscritos na lista de espera e para coordenações de pós-graduações selecionadas.\nAs vagas são limitadas e a seleção será feita por ordem de inscrição. Após o preenchimento das vagas, os demais interessados serão inscritos automaticamente numa lista de espera e, tempestivamente, serão avisados sobre a próxima edição do curso. Após selecionados, os inscritos receberão um e-mail com instruções para acesso à plataforma de aulas síncronas e para a realização das atividades prévias ao curso.",
     "crumbs": [
-      "O Curso 🏢"
+      "\\emojitext{🏢} O Curso"
     ]
   },
   {
@@ -34,9 +44,9 @@
     "href": "index.html#sec-ementa",
     "title": "Artigo à Prova de Futuro",
     "section": "Ementa",
-    "text": "Ementa\nIntrodução da Ciência Aberta / Repositórios da Ciência Aberta / Gerenciamento de Referências e Bibliotecas / Gestão de Projetos, Dados e Scripts / Controle de Versão / Documentos Reprodutíveis / Controle de Ambiente / IA Aplicada à Pesquisa Científica.",
+    "text": "Ementa\nIntrodução da Ciência Aberta / Repositórios da Ciência Aberta / Gerenciamento de Referências e Bibliotecas / Gestão de Projetos, Dados e Scripts / Controle de Versão / Documentos Dinâmicos e Reprodutíveis / Controle de Ambiente / IA Aplicada à Pesquisa Reprodutível.",
     "crumbs": [
-      "O Curso 🏢"
+      "\\emojitext{🏢} O Curso"
     ]
   },
   {
@@ -44,9 +54,9 @@
     "href": "index.html#sec-method",
     "title": "Artigo à Prova de Futuro",
     "section": "Metodologia",
-    "text": "Metodologia\nNum primeiro momento, o curso foi concebido para acontecer de forma remota e síncrona, com aulas expositivas e teóricas, porém em grande medida, o conteúdo é essencialmente prático. Algumas aulas poderão ser gravadas e disponibilizadas no canal do YouTube do projeto Psico&Econo_METRIA, mas a intenção é que o conteúdo principal seja síncrono, para uma maior interação entre os participantes.\nNesse sentido, o material do curso organizado nesse site refere-se ao roteiro estruturado (enrendo) de tudo que se vê nas aulas síncronas e conteúdos adicionais (bibliografia, notas de aulas, links, etc).\nA proposta do curso busca seguir de perto a mensagem de Dogucu & Çetinkaya-Rundel (2022). Nesse artigo as autoras abordam a importância da reprodutibilidade na ciência de dados, tanto na pesquisa quanto no ensino. Elas recomendam que os professores-pesquisadores adotem fluxos de trabalho reprodutíveis em suas pesquisas e ensinem esses fluxos de trabalho aos seus alunos. Elas propõem uma dimensão para as práticas de reprodutibilidade, focada exclusivamente nas ferramentas para o ensino (todos os materiais de ensino devem ser computacionalmente reprodutíveis, bem documentados e abertos).",
+    "text": "Metodologia\nO curso foi concebido para acontecer de forma remota e síncrona, com aulas expositivas, porém em grande medida, o conteúdo é essencialmente prático. As aulas serão gravadas e disponibilizadas no canal do YouTube do projeto Psico&Econo_METRIA (se inscreva 🥰). O conteúdo principal do curso é síncrono, e pode mudar de edição para edição, no entanto, algumas aulas, principalmente para cadastros e instalações das ferramentas utilizadas, podem ser disponibilizadas de forma assíncrona, tal como na página Pré-requisitos.\nA proposta do curso busca seguir de perto a mensagem de Dogucu & Çetinkaya-Rundel (2022) e ser um Recurso Educacional Aberto (REA). Nesse artigo as autoras abordam a importância da reprodutibilidade na ciência de dados, tanto na pesquisa quanto no ensino. Elas recomendam que os professores-pesquisadores adotem fluxos de trabalho reprodutíveis em suas pesquisas e ensinem esses fluxos de trabalho aos seus alunos. Elas propõem uma dimensão para as práticas de reprodutibilidade, focada exclusivamente nas ferramentas para o ensino (todos os materiais de ensino devem ser computacionalmente reprodutíveis, bem documentados e abertos).",
     "crumbs": [
-      "O Curso 🏢"
+      "\\emojitext{🏢} O Curso"
     ]
   },
   {
@@ -56,107 +66,117 @@
     "section": "Citação",
     "text": "Citação\nSe você utilizar o material desse curso em algum trabalho acadêmico, por favor, cite o livro do curso da seguinte forma:\n\n\n\n\n\n\nRogers, P. (2024). Artigo à Prova de Futuro: Jornada de Open Science na Prática (1.0). Disponível em: https://phdpablo.github.io/curso-open-science/. https://doi.org/10.5281/zenodo.12593928\n\n\n\nBibTex:\n@misc{rogers2024,\n  author       = {Rogers, Pablo},\n  title        = {{Artigo à Prova de Futuro: Jornada de Open Science \n                   na Prática}},\n  month        = jun,\n  year         = 2024,\n  publisher    = {Zenodo},\n  version      = {1.0},\n  doi          = {10.5281/zenodo.12593928},\n  url          = {https://phdpablo.github.io/curso-open-science/}\n}",
     "crumbs": [
-      "O Curso 🏢"
+      "\\emojitext{🏢} O Curso"
     ]
   },
   {
-    "objectID": "index.html#licença",
-    "href": "index.html#licença",
+    "objectID": "index.html#sec-lice",
+    "href": "index.html#sec-lice",
     "title": "Artigo à Prova de Futuro",
     "section": "Licença",
     "text": "Licença\n\nArtigo à Prova de Futuro: Jornada de Open Science na Prática by Pablo Rogers is licensed under CC BY-NC-SA 4.0\n\n\n\n\n\nDogucu, M., & Çetinkaya-Rundel, M. (2022). Tools and Recommendations for Reproducible Teaching. Journal of Statistics and Data Science Education, 30(3), 251–260. https://doi.org/10.1080/26939169.2022.2138645",
     "crumbs": [
-      "O Curso 🏢"
+      "\\emojitext{🏢} O Curso"
+    ]
+  },
+  {
+    "objectID": "00-schedule.html",
+    "href": "00-schedule.html",
+    "title": "📅 Agenda",
+    "section": "",
+    "text": "Planejamento dos dias 📅 e horários das aulas ⏲️, conforme a ementa do curso. Na seção de cada uma das aulas temos materiais adicionais para o respectivo conteúdo. Quando disponível, por aqui, poderás acessar os slides utilizados nas aulas 🗣, aulas gravadas ou indicações de vídeo 🎥 e leituras básica sobre os conteúdos 📓.\n\n\n\nAula/Conteúdo\nData\nMaterial Principal\nInstrutor\n\n\n\n\nIntrodução à CA\n📅13/11/25⏲️19:00\n🗣🎥📓\nRicardo Limongi\n\n\nRepositórios da CA\n📅18/11/25⏲️19:00\n🗣️🎥📓\nPablo Rogers\n\n\nGerenciamento de Referências\n📅25/11/25⏲️19:00\n🗣️🎥📓\nPablo Rogers\n\n\nGestão de Projetos\n📅27/11/27⏲️19:00\n🗣️🎥📓\nPablo Rogers\n\n\nControle de Versão\n📅02/12/25⏲️19:00\n🗣️🎥📓\nPablo Rogers\n\n\nDocumentos Dinâmicos\n📅04/12/25⏲️19:00\n🗣️🎥📓\nPablo Rogers\n\n\nControle de Ambiente\n📅09/12/25⏲️19:00\n🗣️🎥📓\nPablo Rogers\n\n\nIA para Pesquisas Reprodutíveis\n📅11/12/25⏲️19:00\n🗣️🎥📓\nRicardo Limongi",
+    "crumbs": [
+      "\\emojitext{📅} Agenda"
     ]
   },
   {
     "objectID": "00-prework.html",
     "href": "00-prework.html",
-    "title": "Pré-requisitos 📇",
+    "title": "📇 Pré-requisitos",
     "section": "",
-    "text": "Github\nPrimeiramente, se cadastre no Github: https://github.com/signup, pois com ele você poderá acessar o material do curso e interagir com os demais participantes. E com a conta do Github você também poderá se cadastrar em outras plataformas, como o Zenodo, OSF, etc. Algumas features que aprenderemos no curso exigem o vínculo entre as contas. Se for professor ou estudante, você pode solicitar o GitHub Education e ter acesso, por exemplo, ao Copilot, uma das ferramentas de IA mais interessante. Por isso, é importante que você se cadastre com um e-mail institucional. Use o mesmo e-mail para se cadastrar em todas plataformas.",
+    "text": "Github\nO curso não exige conhecimento prévio em programação, mas é recomendável que o aluno tenha familiaridade com o uso de computadores (ambiente Windows) e com a escrita de textos científicos. Nesse sentido, não é necessário ter conhecimento prévio sobre as ferramentas e plataformas que utilizaremos no curso: Zotero, OSF, Zenodo, Git, Github, RStudio, Quarto/RMarkdown, Docker, etc; mas desejável que o aluno já as tenha instalado e/ou cadastro nas plataformas.\nAbaixo descrevemos sucintamente o que é cada uma dessas ferramentas e plataformas, e como você pode se preparar para o curso. Também apresentamos um vídeo curto sobre a instalação e cadastro em cada uma delas. A ideia é que você já tenha todas as ferramentas e plataformas instaladas e/ou cadastro antes do início do curso, para que possamos focar no conteúdo e prática durante as aulas síncronas. Mas pode ficar tranquilo, pois na primeira aula do curso abordaremos essas tarefas, e caso ainda haja alguma dúvida na instalação e cadastro, dedicaremos algum tempo para saná-las.\nOutras soluções que iremos discutir e testar durante o curso, como alguns pacotes do R, e aplicações de IA no último módulo, deixaremos para as aulas remotas. Essas soluções na sua maioria requerem cadastros rápidos, e podem ser feitos de forma instantânea via conta Google/Microsoft/Apple.\nPrimeiramente, se cadastre no Github: https://github.com/signup, pois com ele você poderá acessar o material do curso e interagir com os demais participantes. E com a conta do Github você também poderá se cadastrar em outras plataformas, como o Zenodo, OSF, etc. Algumas features que aprenderemos no curso exigem o vínculo entre as contas. Se for professor ou estudante, você pode solicitar o GitHub Education e ter acesso, por exemplo, ao Copilot, uma das ferramentas de IA mais interessante. Por isso, é importante que você se cadastre com um e-mail institucional. Use o mesmo e-mail para se cadastrar em todas plataformas.",
     "crumbs": [
-      "Pré-requisitos 📇"
+      "\\emojitext{📇} Pré-requisitos"
     ]
   },
   {
     "objectID": "00-prework.html#sec-gitprework",
     "href": "00-prework.html#sec-gitprework",
-    "title": "Pré-requisitos 📇",
+    "title": "📇 Pré-requisitos",
     "section": "Git",
     "text": "Git\nGithub não é a mesma coisa que Git. O Github é uma plataforma, e o Git é uma ferramenta. Instale a versão mais recente do Git: https://git-scm.com/downloads. O Git é uma ferramenta de controle de versão, e o Github é uma plataforma que utiliza o Git. O Git é uma ferramenta essencial para a prática da CA, e é uma das ferramentas mais importantes para o pesquisador que deseja tornar sua pesquisa mais transparente e reprodutível.",
     "crumbs": [
-      "Pré-requisitos 📇"
+      "\\emojitext{📇} Pré-requisitos"
     ]
   },
   {
     "objectID": "00-prework.html#sec-zoteroprework",
     "href": "00-prework.html#sec-zoteroprework",
-    "title": "Pré-requisitos 📇",
+    "title": "📇 Pré-requisitos",
     "section": "Zotero",
     "text": "Zotero\nBaixe a versão mais recente do Zotero: https://www.zotero.org/download/ e cadastre uma conta: https://www.zotero.org/user/register/. Vamos discutir sobre o Zotero e diversos plugins que são úteis no dia-a-dia do pesquisador. Atualmente, o Zotero é a ferramenta mais completa para gerenciamento de referências e bibliotecas, e se integra nativamente com o RStudio e diversas ferramentas de IA.",
     "crumbs": [
-      "Pré-requisitos 📇"
+      "\\emojitext{📇} Pré-requisitos"
     ]
   },
   {
     "objectID": "00-prework.html#sec-osfprework",
     "href": "00-prework.html#sec-osfprework",
-    "title": "Pré-requisitos 📇",
+    "title": "📇 Pré-requisitos",
     "section": "OSF",
     "text": "OSF\nCadastre no Open Science Framework (OSF): https://osf.io/register/. Como veremos, essa plataforma é uma das mais importantes para a prática da CA. Ela está no começo (pré-registro) e no final (repositório de dados e pré-print) do ciclo de vida (workflow) de um projeto de pesquisa.",
     "crumbs": [
-      "Pré-requisitos 📇"
+      "\\emojitext{📇} Pré-requisitos"
     ]
   },
   {
     "objectID": "00-prework.html#sec-zenodoprework",
     "href": "00-prework.html#sec-zenodoprework",
-    "title": "Pré-requisitos 📇",
+    "title": "📇 Pré-requisitos",
     "section": "Zenodo",
     "text": "Zenodo\nApesar do Zenodo cumprir funções similares ao OSF e até mesmo ao Github, ele é mais voltado para a publicação de dados e publicações científicas pontuais. Cadastre no Zenodo: https://zenodo.org/login/ e víncule sua conta com o Github. Isso será útil, principalmente, para geração de DOI de repositórios do Github.",
     "crumbs": [
-      "Pré-requisitos 📇"
+      "\\emojitext{📇} Pré-requisitos"
     ]
   },
   {
     "objectID": "00-prework.html#sec-rstudioprework",
     "href": "00-prework.html#sec-rstudioprework",
-    "title": "Pré-requisitos 📇",
+    "title": "📇 Pré-requisitos",
     "section": "RStudio",
     "text": "RStudio\nBaixe a versão mais recente do RStudio: https://posit.co/download/rstudio-desktop/. O RStudio é uma Integrated Development Environment (IDE) para a linguagem R. O RStudio é uma ferramenta essencial para a prática da CA em R, pois integra as principais soluções que abordaremos no curso (Zotero, Quarto, Git/Github, etc.). A empresa RStudio recentemente mudou o nome para Posit, com o objetivo refletir melhor a expansão da empresa para além do desenvolvimento de ferramentas para R, incluindo Python e outras linguagens. Nesse mesmo link você pode baixar o R, que é a linguagem de programação que utilizaremos no curso.",
     "crumbs": [
-      "Pré-requisitos 📇"
+      "\\emojitext{📇} Pré-requisitos"
     ]
   },
   {
     "objectID": "00-prework.html#sec-quartoprework",
     "href": "00-prework.html#sec-quartoprework",
-    "title": "Pré-requisitos 📇",
+    "title": "📇 Pré-requisitos",
     "section": "Quarto",
     "text": "Quarto\nBaixe a versão mais recente do Quarto CLI (Command Line Interface): https://www.quarto.org/. O Quarto é uma linguagem de marcação que permite a criação de documentos reprodutíveis e dinâmicos. Ele é uma evolução e tende a substituir o RMarkdown, que é a principal linguagem de marcação do R. O Quarto engloba e adiciona diversas outras vantagens ao RMarkdown, tal como a possibilidade de criar documentos reprodutíveis em Python, Julia, etc. Se você já tem algum conhecimento de RMarkdown, não se preocupe, pois o Quarto é uma extensão natural.",
     "crumbs": [
-      "Pré-requisitos 📇"
+      "\\emojitext{📇} Pré-requisitos"
     ]
   },
   {
     "objectID": "00-prework.html#sec-dockerprework",
     "href": "00-prework.html#sec-dockerprework",
-    "title": "Pré-requisitos 📇",
+    "title": "📇 Pré-requisitos",
     "section": "Docker",
     "text": "Docker\nBaixe a versão mais recente do Docker: https://www.docker.com/products/docker-desktop. Nesse mesmo link você cria uma conta. O Docker é uma plataforma para desenvolvimento, envio e execução de aplicativos. O Docker é uma ferramenta essencial para a prática da CA, pois permite a criação de ambientes reprodutíveis.",
     "crumbs": [
-      "Pré-requisitos 📇"
+      "\\emojitext{📇} Pré-requisitos"
     ]
   },
   {
-    "objectID": "00-schedule.html#footnotes",
-    "href": "00-schedule.html#footnotes",
-    "title": "Agenda 📅",
+    "objectID": "01-intro.html",
+    "href": "01-intro.html",
+    "title": "1  Introdução à Ciência Aberta",
     "section": "",
-    "text": "Na primeira edição do curso a equipe organizadora decidiu não publicar as aulas. Elas estarão disponíveis apenas privativamente para os inscritos no curso, através da platorma de reuniões adotada (Microsoft Teams). No futuro, quando o coordenador considerar que o curso esteja efetivamente formatado, as aulas gravadas serão publicadas no canal Psico&Econo_METRIA↩︎",
+    "text": "A pesquisa científica atual1 enfrenta vários desafios (Munafò et al., 2017). Problemas como o pequeno tamanho da amostra, pequenos tamanhos de efeito, p-hacking e HARKing (viés positivo de publicação), conflitos de interesse e a competição entre cientistas que trabalham isoladamente sem combinar seus esforços, têm sido apontados como catalizadores do que se convencionou chamar de “crise de reprodutibilidade” na ciência (M. Baker, 2016; Munafò et al., 2017).\nPesquisas apontam que mais de 70% de pesquisadores que tentaram, falharam em reproduzir os experimentos de outros cientistas, e mais da metade falhou em reproduzir seus próprios experimentos (M. Baker, 2016), com estimativa de que 85% dos esforços de pesquisas estejam sendo desperdiçados (Munafò et al., 2017), gerando custos econômicos bilionários (Freedman et al., 2015).\nA despeito daqueles que advogam que não existe essa tal “crise de reprodutibilidade” (Bernard, 2023; Fanelli, 2018; Protzko et al., 2023), a grande maioria da comunidade científica concorda com sua existência e defende a melhoria da transparência, reprodutibilidade e eficiência na ciência (M. Baker, 2016).\nNesse contexto, o movimento da Ciência Aberta (CA) tem ganhado notoriedade e mudado a percepção sobre o cenário científico global (Crüwell et al., 2019). Ele busca tornar o conhecimento científico mais acessível, transparente e colaborativo. Se apresenta como uma coleção de práticas de democratização do conhecimento e ruptura com o formato único de divulgação do conhecimento científico (Crüwell et al., 2019; Heinz & Miranda, 2024; Munafò et al., 2017). Ele surge do embate entre aqueles que buscam compartilhar o conhecimento e aqueles que defendem mecanismos de apropriação privada para a produção científica (Heinz & Miranda, 2024).\nA CA é um termo múltiplo e genérico (Vicente-Saez & Martinez-Fuentes, 2018), que representa diversas interpretações, e é considerada um novo modelo de divulgação e produção de resultados científicos por meio do acesso livre e irrestrito ao conhecimento (Heinz & Miranda, 2024). A CA não é apenas um conceito, mas uma prática multifacetada que influencia o ciclo de vida da pesquisa, desde a concepção até a disseminação dos resultados (Silva & Silveira, 2019).\nExistem pelo menos cinco escolas de pensamento dentro da CA. Estas escolas abrangem desde a arquitetura tecnológica necessária para suportar a ciência até a inclusão do público geral na criação de conhecimento, passando pela medição do impacto alternativo, acesso ao conhecimento como um direito humano, e a pesquisa colaborativa como inovação aberta (Silva & Silveira, 2019).\nA taxonomia proposta pela FOSTER (Facilitate Open Science Training for Eurpean Research), e sua releitura revisada e ampliada para o contexto latino americano por Silveira et al. (2023), tendo em vista as recomendações da UNESCO (2021), nos dá uma dimensão da complexidade do assunto (vide ilustração em: https://doi.org/10.5281/zenodo.7836884).\nExistem vários argumentos que sustentam a importância da CA (Heinz & Miranda, 2024). Primeiramente, a CA pode trazer benefícios sociais significativos, pois contribui para o avanço do conhecimento, a inovação, a educação, a transparência e a participação cidadã. Além disso, a CA pode trazer benefícios científicos ao aumentar a qualidade, a reprodutibilidade, a eficiência e o impacto da pesquisa científica. Ela também facilita a colaboração, a comunicação e a interdisciplinaridade entre os pesquisadores. Por fim, a CA pode trazer benefícios éticos ao promover a integridade, a responsabilidade, a equidade e a diversidade na ciência, além de respeitar os direitos dos autores, dos participantes e da sociedade como um todo.\nEsses argumentos são fundamentais para legitimar a CA e destacar sua importância no mundo atual (Heinz & Miranda, 2024), principalmente, como potencial transformador para reduzir desigualdades existentes em tecnologias de informação e comunicação – reduzir exclusões digitais, tecnológicas e de conhecimento –, e acelerar o progresso rumo à implementação da Agenda 2030 e realização dos Objetivos de Desenvolvimento Sustentável (UNESCO, 2021).\nO movimento da CA no Brasil está em uma fase transitória (Rezende & Falgueras, 2020) – ainda consolidando o acesso aberto – com o governo desempenhando um papel crucial nesse processo. O Brasil tem ganhado destaque por sua abordagem única na implementação da CA. Esta abordagem é moldada por marcos regulatórios que se estendem desde o governo até as instituições e agências de financiamento. Os regulamentos brasileiros, particularmente aqueles que promovem a abertura de dados governamentais, têm um impacto direto na prática científica. Eles incentivam a transparência e facilitam o acesso a dados científicos originados de instituições públicas (Rezende & Falgueras, 2020).\nA trajetória brasileira rumo à CA inicia com a abertura de dados na esfera governamental entre 2009 e 2016, evoluindo para a criação de um grupo de trabalho em 2017 pelo Ministério da Ciência, Tecnologia, Inovações e Comunicações (MCTIC) para desenvolver uma política nacional para a CA. Este esforço concentrou ênfase no reconhecimento dos dados de pesquisa como ativos de desenvolvimento científico, econômico e social, buscando facilitar seu acesso, compartilhamento e reutilização (Rezende & Falgueras, 2020).\nTalvez por esse motivo, as políticas institucionais brasileiras revelam um cenário ainda muito influenciado pela “via verde” do movimento de acesso aberto, caracterizado pelo depósito de dados em repositórios digitais abertos, e que o comprometimento efetivo do Brasil com a CA ainda é incipiente. As regulamentações atuais favorecem principalmente o acesso aberto, sem abordar de maneira abrangente outros aspectos da CA (Rezende & Falgueras, 2020). O Brasil é um dos líderes mundiais no fornecimento de acesso universal às suas pesquisas e estudos (Neto et al., 2016), com crescimento estável de sua produção científica disponível em acesso aberto, principalmente, as áreas de Agricultura e Ciência & Tecnologia (Caballero-Rivero et al., 2019).\nEm termos de pesquisa acadêmica sobre o tema no Brasil, os estudos são precoces e concentrados na área de Ciência da Informação (Albano et al., 2023). A despeito da maturidade da CA no Brasil, a importância do tema – materializada na quantidade de produção acadêmica – tem aumentado vertiginosamente (Albano et al., 2023), e a dispersão de autores e respectivas instituições que publicam sobre o assunto, parece ser a situação predominante.\nApesar de importantes atores nacionais, tais como CAPES, CNPq e Scielo, defenderem o crescimento de iniciativas de CA (Mendes-Da-Silva, 2023), o assunto no Brasil parece estar circunscrito em iniciativas de importantes periódicos nacionais sobre dados aberto, capitaneados pelas orientações da Scielo. Não foi encontrada nenhuma pesquisa empírica, sobre a prática da CA no Brasil.\nPor prática de CA entende-se a perspectiva micro da CA, relacionadas com as terminologias e conhecimento em torno do fluxo de trabalho do gerador de conhecimento científico aberto (Figura 1.1), ou seja, o cientista que se propõe tornar sua pesquisa transparente, reprodutível e replicável.\nExclui-se a perspectiva macro, relacionadas com as ramificações conceituais da CA concernentes às políticas públicas, infraestrutura, envolvimento aberto de atores sociais e diálogo aberto com outros sistemas de conhecimento (Figura 1.2). Essa última perspectiva está fora do escopo da discussão do curso, que se concentra em algumas das dimensões da perspectiva micro, particularmente, as ferramentas disponíveis para compilação dos produtos científicos que integram a publicação científica (UNESCO, 2021).\nApesar de uma verossímil expectativa desabonadora, tendo em vista o contexto da CA no Brasil, o diagnóstico da situação da prática da CA se mostra importante, per si, pois:\nSobre esse último ponto, até para aqueles que não reconhecem a “crise de reprodutibilidade” na ciência (Bernard, 2023), a comunidade científica e atores importantes do cenário advogam que a solução inclui educar os estudantes e pesquisadores desde cedo em todas as questões da CA (D. H. Baker et al., 2023; Bezjak et al., 2018; Chopik et al., 2018; Crüwell et al., 2019; Dogucu & Çetinkaya-Rundel, 2022; Janz, 2015; McAleer et al., 2022; Munafò et al., 2017; Toelch & Ostwald, 2018).\nA referida crise não deriva de má conduta científica, mas principalmente da confusão entre replicar conclusões, replicar resultados, falta de educação em estatística, lógica científica, método científico, alfabetização de dados, etc. Para combater essas questões é necessário investir em educação e disseminação de boas práticas de investigação para uma mudança de cultura (D. H. Baker et al., 2023; Bezjak et al., 2018; Chopik et al., 2018; Crüwell et al., 2019; Dogucu & Çetinkaya-Rundel, 2022; Janz, 2015; McAleer et al., 2022; Munafò et al., 2017; Toelch & Ostwald, 2018).\nInvestir em recursos humanos, treinamento, educação, alfabetização digital, capacitação sistemática e contínua, e fomentar uma cultura científica de CA, têm sido apresentadas como algumas das principais medidas simultâneas para superar o cenário atual (Committee on Reproducibility and Replicability in Science et al., 2019; European Commission. Directorate General for Research and Innovation., 2017; UNESCO, 2021). A proposta do curso pode contribuir para a literatura da CA no Brasil, pois pretende perseguir dois objetivos concomitantes: 1) diagnosticar sua prática junto aos pesquisadores brasileiros; e 2) promover o desenvolvimento de uma intervenção educacional sobre a prática (workflow) e principais ferramentas para compilação dos produtos científicos que integram uma publicação científica aberta.",
     "crumbs": [
-      "Agenda 📅"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução à Ciência Aberta</span>"
     ]
   },
   {
@@ -180,6 +200,16 @@
     ]
   },
   {
+    "objectID": "03-zotero.html",
+    "href": "03-zotero.html",
+    "title": "3  Gerenciamento de Referências e Bibliotecas",
+    "section": "",
+    "text": "Existem mais de 30 diferentes1 gerenciadores de referências (Proske et al., 2023). Entre eles podemos indicar o Citavi e o RefWorks. No entanto, os mais populares são o EndNote, Mendeley e Zotero. O primeiro é proprietário e descartamos enquanto opção para nosso workflow de Open Science. Os dois últimos são excelentes opções, no entanto, o Zotero se destaca por ser código aberto (totalmente gratuíto), enquanto o Mendeley, embora gratuito, é propriedade da Elsevier, uma editora comercial. Isso significa que o Zotero não tem restrições de uso e não exige pagamento por recursos adicionais, exceto por maior armazenamento na nuvem, que inclusive, é um destaque do Mendeley (2Gb vs 300Mb).\nAlém disso, o Zotero tem uma comunidade ativa e fóruns de suporte, o que pode ser útil para solucionar problemas e compartilhar conhecimento com outros usuários. Portanto, como aqui valorizamos a liberdade de código aberto e uma comunidade engajada, o Zotero é nossa escolha.\nEssa característica faz com que o Zotero se destaca em relação ao Mendeley, especialmente no que diz respeito ao Ecossitema de Plugins. O Zotero possui uma comunidade ativa de desenvolvedores e pesquisadores que criam e compartilham plugins. Esses plugins estendem as funcionalidades do Zotero, permitindo personalizações específicas e integrações com outras ferramentas (Behera & Jain, 2023). O plugin Better BibTeX, por exemplo, oferece recursos avançados de exportação e formatação de bibliografias, tornando-o uma escolha popular para usuários que trabalham com LaTeX, Markdown, HTML, e outras linguagens de marcação. Outro exemplo é o ZotFile, que permite gerenciar anexos de PDFs, renomeando arquivos automaticamente e organizando-os em pastas específicas (Behera & Jain, 2023). Assim, poderás estender o armazenamento do Zotero de 300Mb para o limite de seu serviço de armazenamento na nuvem (Google Drive, OneDrive, Dropbox, etc.)2.\nNesse sentido, uma recomendação importante é não deixar de dar uma olhada no página de plugins do Zotero no site oficial e uma busca por Zotero no Github. Com certeza você vai encontrar uma solução (plugin) interessante para potencializar as funcionalidades do Zotero. Algumas delas veremos ao longo do curso.\nA mensagem principal que pretendemos passar no curso sobre esse tópico é para você conceber os gerenciadores de referências e bibliotecas no contexto do processo de escrita, e não apenas como facilitadores operacionais (“time saver”) de citações e bibliografias. Somente usuários avançados podem aproveitar o suporte que a maioria dos sistemas de gerenciamento de referências oferece para o processo de escrita (Proske et al., 2023).\nAtualmente, gerenciadores de referências mais populares oferecem funcionalidades básicas, que incluem:\nEsse conteúdo é abordado em detalhes no trabalho de Thomas (2023), e veremos algumas dessas funcionalidades básica na aula, no entanto, daremos ênfase no Ecossitema de Plugins do Zotero.\nPara um curso mais aprofundado sobre o Zotero, recomendamos a playlist de vídeos Zotero do Zero da Biblioteca Ciências da Saúde UFES. Neles, você aprenderá praticamente tudo o que precisa saber para utilizar o Zotero de forma nativa, com muitas dicas ocultas e truques, e ainda, como instalar e configurar alguns plugins.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Gerenciamento de Referências e Bibliotecas</span>"
+    ]
+  },
+  {
     "objectID": "03-zotero.html#footnotes",
     "href": "03-zotero.html#footnotes",
     "title": "3  Gerenciamento de Referências e Bibliotecas",
@@ -194,7 +224,7 @@
     "href": "04-project.html",
     "title": "4  Gestão de Projetos",
     "section": "",
-    "text": "4.1 Gerenciamento de Dados",
+    "text": "4.1 Gerenciamento de Dados\nEssa seção é o elo entre as seções anteriores e as próximas. Aqui, você vai receber algumas dicas de como organizar seus dados, pasta e scripts em um projeto de pesquisa. Talvez você se pergunte: porque eu preciso aprender a organizar meus arquivos e pasta? Já faço isso, do meu jeito, há anos, e nunca tive problemas em entender o que eu faço! A resposta é simples: não trata somente de você entender e achar que o produto final da sua pesquisa (o artigo) seja suficiente. No contexto da Ciência Aberta (CA) a ideia é que deixe transparente o processo de análise, materiais e métodos, e que outros pesquisadores possam reproduzir seus resultados. Nesse sentido, deve haver uma padronização mínima de organização de arquivos, pastas e scripts para que outros pesquisadores possam entender e reproduzir seus resultados. Lembre-se que agora você pode compartilhar uma pasta compilada da sua pesquisa, via Google Drive ou OneDrive, no seu projeto do Open Science Framework.\nNesse sentido, a intenção é que adotemos certa padronização na organização de arquivos, pastas e scripts, seguindo algumas sugestões de boas práticas para que o processo da nossa pesquisa fique inteligível para qualquer um. Para você ver tanto que a “coisa” é séria, existe até protocolo de padronização de organização de arquivos e pastas, como o Project TIER, focado para pesquisas em ciências sociais. No caso de scripts, talvez o estilo de escrita e organização mais conhecido para o ambiente R seja o Tidyverse Style Guide. O livro de Zandonella Callegher & Massidda (2022) apresenta uma excelente discussão desses tópicos nos capítulos 3, 4 e 51.\nNo entanto, pelo menos nesse primeiro momento, resolvemos discutir um conjunto de boas práticas computacionais que todo pesquisador deve adotar, independentemente do seu nível atual de habilidade computacional, apresentadas por Wilson et al. (2017). Essas práticas abrangem gerenciamento de dados, programação, colaboração com colegas, organização de projetos, acompanhamento de trabalhos e redação de manuscritos. Especificamente, na aula dessa seção detalhamos o “Box 1. Summary of practices” do artigo (Wilson et al., 2017), que pontua 38 tópicos. Quais sejam:",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Gestão de Projetos</span>"
     ]
@@ -277,6 +307,16 @@
     "text": "Na verdade, se tivéssemos que indicar um único livro de leitura para abordar os temas do curso, esse livro seria o recomendado. Apesar de não contextualizar a CA como fizemos no começo, nem apresentar o Zotero e outras ferramentas de IA dentro desse contexto, talvez seja o compêndio que mais se assemelha à proposta de nosso curso.↩︎\nPedimos para o ChatGPT4o resumir as duas matérias e me nos dar resposta em português. Como sempre, revisamos o conteúdo para saber se batia com o que eu lemos.↩︎",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Gestão de Projetos</span>"
+    ]
+  },
+  {
+    "objectID": "05-git.html",
+    "href": "05-git.html",
+    "title": "5  Controle de versão",
+    "section": "",
+    "text": "Você1 em algum grau utiliza um sistema para versionar seu trabalho. Seja ele um simples Ctrl + Z ou Cmd + Z para desfazer a última ação, ou sistemas mais elaborados, como i) o controle de alterações do seu processador de texto ou ii) o histórico de versões do seu aplicativo de armazenamento nas nuvens (OneDrive, Google Drive ou Dropbox), você já está familiarizado com a ideia de controle de versão. Qual estudante ou pesquisador nunca se deparou com uma situação parecida da Figura 5.1?\nNo entanto, essas soluções são limitadas e não são adequadas para gerenciar projetos de pesquisa complexos, ou mesmo simples, pois no contexto da Ciência Aberta (CA), falham nos quesitos para reprodutibilidade e transparência. Para isso, é necessário um sistema de controle de versão (VCS) mais robusto, como o Git. O Git é um VCS distribuído, ou seja, ele armazena o histórico de alterações em um repositório local e remoto, permitindo que você controle as versões de seus arquivos e compartilhe-os com outras pessoas. O Git é amplamente utilizado em projetos de desenvolvimento de software, mas também é uma ferramenta valiosa para pesquisadores que desejam gerenciar e compartilhar seus ativos de pesquisa.\nOs controles2 de versionamento mais simples, como os oferecidos por processadores de texto e soluções de armazenamento em nuvem, são insuficientes para um workflow de pesquisa empírica no contexto da CA:\nGit e GitHub são ferramentas intimamente relacionadas, mas oferecem soluções distintas para o versionamento, atendendo a diferentes necessidades dos pesquisadores.\nGit é um sistema de controle de versão distribuído que permite aos usuários rastrear alterações em arquivos e coordenar o trabalho em projetos colaborativos. Uma das principais vantagens do Git é a capacidade de operar de forma totalmente local. Isso significa que os pesquisadores podem manter um histórico completo de alterações em seus arquivos sem a necessidade de conexão com a internet ou de um servidor externo. Essa funcionalidade é particularmente útil para aqueles que preferem manter seus dados em um ambiente controlado e privado.\nAlém disso, Git oferece funcionalidades avançadas de branching e merging. Isso permite que diferentes linhas de trabalho sejam desenvolvidas simultaneamente e depois combinadas de maneira controlada. Essa flexibilidade é essencial para experimentações e desenvolvimentos paralelos, comuns em projetos de pesquisa. O rastreamento detalhado é outra característica fundamental do Git. Cada commit no sistema é identificado de forma única e inclui metadados sobre quem fez a alteração e uma mensagem descritiva, permitindo um histórico minucioso das mudanças. Caso seja necessário, Git permite reverter para estados anteriores do projeto, recuperando versões passadas sem perder o histórico de alterações. Como um sistema distribuído, Git realiza operações de controle de versão localmente, o que resulta em um desempenho rápido e eficiente, sem depender da latência de rede.\nPor outro lado, GitHub é uma plataforma baseada na web que utiliza o Git como backend e adiciona funcionalidades colaborativas e de gerenciamento de projetos. Uma das maiores vantagens do GitHub é a hospedagem de repositórios Git, permitindo que os pesquisadores façam backup de seus projetos na nuvem e colaborem com outros usuários de qualquer lugar do mundo. Isso facilita a colaboração extensiva, um aspecto crucial no contexto da CA.\nGitHub também fornece ferramentas como pull requests e reviews de código, que simplificam a colaboração entre diferentes pesquisadores. Essas ferramentas permitem que propostas de mudanças sejam discutidas, revisadas e integradas de forma estruturada, promovendo um fluxo de trabalho colaborativo e transparente. Além disso, GitHub Actions oferece suporte à automação de testes, builds e outras tarefas, garantindo que cada alteração seja verificada e validada automaticamente. Essa funcionalidade é vital para assegurar a reprodutibilidade e a qualidade do projeto, aspectos centrais da CA.\nA plataforma GitHub também se destaca em termos de documentação e comunicação. Issues, wikis e páginas de projetos proporcionam meios para uma documentação detalhada, rastreamento de problemas e comunicação eficiente entre os membros da equipe. O controle de acesso e permissões é outro ponto forte do GitHub, permitindo que os gestores de projetos configurem quem pode fazer alterações ou revisar o código, assegurando a integridade do trabalho.\nAlém de todas essas funcionalidades, a hospedagem de projetos no GitHub aumenta significativamente a visibilidade da pesquisa. Isso facilita a disseminação de resultados e a colaboração com a comunidade científica global, promovendo uma cultura de transparência e compartilhamento de conhecimento.\nEm resumo, enquanto o Git fornece uma solução robusta para controle de versão local, ideal para quem necessita de um ambiente privado e eficiente, o GitHub expande essas capacidades com ferramentas que promovem a colaboração, automação, documentação e visibilidade pública. No contexto da CA, o GitHub se alinha melhor com os princípios de transparência, colaboração e reprodutibilidade, oferecendo um conjunto de ferramentas que suportam e amplificam as boas práticas da pesquisa científica.\nGit e GitHub têm sido fundamentais em projetos de grande escala, como o desenvolvimento do kernel do Linux e projetos de software de código aberto como o TensorFlow, mantido pelo Google. Estes projetos envolvem milhares de colaboradores ao redor do mundo, exigindo um sistema robusto de controle de versão que possa lidar com uma vasta quantidade de alterações simultâneas, fusões complexas e um alto nível de coordenação e colaboração. A capacidade do Git de gerenciar branches de forma eficiente e a integração contínua proporcionada pelo GitHub são elementos cruciais para o sucesso desses projetos. A Figura 5.2 ilustra um diagrama hipotético do fluxo de trabalho em um ambiente de desenvolvimento de software típico, com diversos ramos, e como a complexidade de gerenciamento de versões, apesar de tratada pelo Git e GitHub, pode escalar.\nNo entanto, o Git/Github são igualmente valiosos para projetos de menor escala. Em um projeto de pesquisa envolvendo três pesquisadores, Git e GitHub facilitam a colaboração ao permitir que cada pesquisador trabalhe em diferentes partes do projeto simultaneamente. Eles podem criar branches individuais para testar novas hipóteses ou desenvolver partes do projeto de forma independente. Quando uma nova contribuição está pronta, ela pode ser integrada ao projeto principal através de um pull request no GitHub, permitindo uma revisão por pares antes da fusão. Isso não só mantém a qualidade do trabalho como também documenta o processo de desenvolvimento de maneira transparente.\nA Figura 5.3 ilustra um Gitflow hipotético para uma colaboração científica envolvendo três autores. Note que cada autor tem seu próprio branch de produção, que é integrado ao branch principal através de pull requests, administrado pelo autor principal. Essa estrutura permite que cada autor trabalhe de forma independente, mantendo um histórico detalhado de suas contribuições e facilitando a revisão e a fusão de alterações. Com apenas três branches, o gerenciamento dessa hipotética pesquisa não seria tão complexo com o Git e GitHub.\nPara um único pesquisador, o Git oferece uma maneira eficaz de versionar seu trabalho, mantendo um histórico detalhado de todas as alterações. Isso pode ser especialmente útil para rastrear o progresso ao longo do tempo, revertendo alterações se necessário e experimentando diferentes abordagens sem o risco de perder trabalho anterior. Além disso, o GitHub fornece um backup seguro na nuvem, garantindo que os dados estejam protegidos contra perda.\nA Figura 5.4 ilustra um Gitflow hipotético para um único pesquisador. Neste caso, o pesquisador mantém um branch principal para o desenvolvimento do projeto e cria branches individuais para experimentos ou novas ideias. Cada commit é documentado com uma mensagem descritiva, permitindo que o pesquisador rastreie o progresso e o propósito de cada alteração. Esse processo garante que o projeto seja desenvolvido de forma estruturada e transparente, com um histórico detalhado de todas as contribuições, que podem ser acompanhadas, revisadas e auditadas por qualquer pessoa interessada, se o repositório remoto for público.\nPor outro lado, um pesquisador pode optar por tornar público seu trabalho (dados, materiais e histórico de mudanças) somente quando for submeter o artigo para publicação, como podemos ver na Figura 5.5. Essa figura ilustra um workflow em que o pesquisador desenvolveu seu trabalho localmente, fazendo uso do Git para seu controle de versões, e apenas quando da necessidade de tornar público, vinculou o repositório local com o repositório remoto.\nEmbora sejam projetadas para lidar com projetos extremamente complexos, as funcionalidades do Git/Github também se adaptam perfeitamente a projetos de pesquisa mais simples, seja com número pequeno de pesquisadores ou mesmo com um único pesquisador.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Controle de versão</span>"
     ]
   },
   {

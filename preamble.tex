@@ -1,9 +1,18 @@
+\makeatletter
+\@openrightfalse
+\makeatother
+
 \usepackage{makeidx}
 \makeindex
 \usepackage{titling}
 \usepackage{pdfpages}
-\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
+\usepackage{atbegshi}
 \let\oldmaketitle\maketitle
 \AtBeginDocument{\let\maketitle\relax}
-\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}} % Discard next blank page
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\newfontfamily\emoji{Segoe UI Emoji}
+\newcommand{\emojitext}[1]{{\emoji #1}}
 

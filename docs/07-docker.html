@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -58,12 +58,12 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-df6780cc2b117eb234b403a0900b78b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-229775fd8b3b9fa5809829b81cad07c1.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -102,9 +102,13 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
 </script>
 
 
-<meta property="og:title" content="Artigo à Prova de Futuro - 7&nbsp; Controle de Ambiente">
+<meta property="og:title" content="7&nbsp; Controle de Ambiente – Artigo à Prova de Futuro">
 <meta property="og:description" content="">
+<meta property="og:image" content="https://phdpablo.github.io/curso-open-science/img/vm-container.png">
 <meta property="og:site_name" content="Artigo à Prova de Futuro">
+<meta property="og:image:alt" content="Soluções para controle do ambiente de desenvolvimento">
+<meta property="og:image:height" content="2478">
+<meta property="og:image:width" content="3193">
 </head>
 
 <body class="nav-sidebar floating">
@@ -177,19 +181,19 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">O Curso 🏢</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./00-prework.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Pré-requisitos 📇</span></a>
+ <span class="menu-text">🏢 O Curso</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./00-schedule.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Agenda 📅</span></a>
+ <span class="menu-text">📅 Agenda</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./00-prework.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📇 Pré-requisitos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -255,10 +259,10 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"><span id="sec-docker" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Controle de Ambiente</span></span></h1></header>
 
 <header id="title-block-header">
-<h1 class="title display-7"><span id="sec-docker" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Controle de Ambiente</span></span></h1>
+
 
 </header>
 
@@ -267,7 +271,7 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
 <p>Então, prestativo como é, você sugere que vai enviar uma imagem do seu HD para ele. O pesquisador, educadamente, responde que não pode aceitar, pois o arquivo da imagem é muito grande e ele não tem espaço suficiente para armazenar a imagem. Além do mais, ele não entende muito bem (e não tem!) a infraestrutura para pode acessar seu HD. Inclusive, ele utiliza um sistema operacional (e estrutura de hardware) diferente do seu.</p>
 <p>Pois bem, essa situação poderia ser a única saída alguns anos atrás. No entanto, hoje em dia, com os serviços de armazenamento em nuvem, as soluções de virtualização (máquinas virtuais), containers e controle de ambiente, é possível compartilhar o ambiente de desenvolvimento de forma mais simples.</p>
 <p>Máquinas virtuais (VM) são ambientes que emulam um sistema operacional (SO) completo sobre um hardware físico, permitindo a execução de múltiplos sistemas operacionais em uma única máquina. Elas oferecem um alto nível de isolamento e controle, pois cada VM inclui seu próprio SO, bibliotecas e aplicativos. As VMs podem ser classificadas em dois tipos: <em>Type 1 Hypervisor</em> e <em>Type 2 Hypervisor</em>. Tipo 1 Hypervisor roda diretamente sobre o hardware, gerenciando várias VMs sem a necessidade de um SO subjacente, o que proporciona melhor desempenho e eficiência. Já o <em>Type 2 Hypervisor</em> roda sobre um SO existente, sendo menos eficiente, mas mais fácil de configurar e utilizar em ambientes de desktop <a href="#fig-vm-container" class="quarto-xref">Figura&nbsp;<span>7.1</span></a>.</p>
-<div id="fig-vm-container" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Soluções para controle do ambiente de desenvolvimento">
+<div id="fig-vm-container" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Soluções para controle do ambiente de desenvolvimento" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-vm-container-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://doi.org/10.5281/zenodo.12521134"><img src="img/vm-container.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Soluções para controle do ambiente de desenvolvimento"></a>
@@ -565,8 +569,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -682,7 +684,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

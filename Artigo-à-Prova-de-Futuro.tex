@@ -67,46 +67,6 @@
 \fi
 \makeatother
 
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{241,243,245}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
-\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
@@ -121,15 +81,17 @@
 \makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
 % Set default figure placement to htbp
-\makeatletter
 \def\fps@figure{htbp}
 \makeatother
 % definitions for citeproc citations
@@ -166,14 +128,23 @@
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
+\makeatletter
+\@openrightfalse
+\makeatother
+
 \usepackage{makeidx}
 \makeindex
 \usepackage{titling}
 \usepackage{pdfpages}
-\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
+\usepackage{atbegshi}
 \let\oldmaketitle\maketitle
 \AtBeginDocument{\let\maketitle\relax}
-\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}} % Discard next blank page
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\newfontfamily\emoji{Segoe UI Emoji}
+\newcommand{\emojitext}[1]{{\emoji #1}}
 
 \makeatletter
 \@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
@@ -237,6 +208,7 @@
 \makeatother
 \newcounter{quartocallouttipno}
 \newcommand{\quartocallouttip}[1]{\refstepcounter{quartocallouttipno}\label{#1}}
+
 \ifLuaTeX
 \usepackage[bidi=basic]{babel}
 \else
@@ -246,9 +218,6 @@
 % get rid of language-specific shorthands (see #6817):
 \let\LanguageShortHands\languageshorthands
 \def\languageshorthands#1{}
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
 \usepackage{bookmark}
 
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -264,6 +233,7 @@
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 
+
 \title{Artigo à Prova de Futuro}
 \usepackage{etoolbox}
 \makeatletter
@@ -273,7 +243,7 @@
 \makeatother
 \subtitle{Jornada de Open Science na Prática}
 \author{Pablo Rogers}
-\date{jun, 2024}
+\date{out, 2025}
 
 \begin{document}
 \frontmatter
@@ -294,78 +264,84 @@
 \setcounter{tocdepth}{2}
 \tableofcontents
 }
+
 \mainmatter
 \bookmarksetup{startatroot}
 
-\chapter*{O Curso 🏢}\label{sec-home}
-\addcontentsline{toc}{chapter}{O Curso 🏢}
+\chapter*{\texorpdfstring{\emojitext{🏢} O
+Curso}{ O Curso}}\label{sec-home}
+\addcontentsline{toc}{chapter}{\emojitext{🏢} O Curso}
 
-\markboth{O Curso 🏢}{O Curso 🏢}
+\markboth{\emojitext{🏢} O Curso}{\emojitext{🏢} O Curso}
 
-Página do curso \textbf{``Artigo à Prova de Futuro: Jornada de Open
-Science na Prática''}. Aqui você encontrará informações sobre o programa
-do curso, materiais para seu acompanhamento e sugestões de leituras
-sobre a prática da ciência aberta (artigos, notas de aulas, blogs,
-vídeos, etc.).
-
-Caso você caiu nessa página por acaso, saiba que o poderá se inscrever
-no curso \href{https://forms.gle/b6Zio7oL8XxxhhtS9}{aqui}: independente
-se ele estiver acontecendo no momento, será convidado a participar da
-próxima versão.
+Material didático do curso \textbf{``Artigo à Prova de Futuro: Jornada
+de Open Science na Prática''}. Nesse ebook você encontrará um conteúdo
+programático sobre Ciência Aberta (CA) e Pesquisa Reprodutível, com
+resumo de textos, recursos didáticos (notas de aulas e vídeos) e
+sugestões de leitura (artigos e livros).
 
 \section*{Sobre os instrutores}\label{sec-instrutor}
+\addcontentsline{toc}{section}{Sobre os instrutores}
 
 \markright{Sobre os instrutores}
 
-O curso é coordenado e ministrado por Pablo Rogers, doutor em
-administração pela Universidade de São Paulo (FEA/USP) e professor de
-finanças e métodos quantitativos desde 2005. Em sua
-\href{https://github.com/phdpablo}{página de perfil do Github} temos
-informações de seus trabalhos recentes, e no seu
+O curso é coordenado e ministrado por \href{https://phdpablo.com/}{Pablo
+Rogers}, Doutor em Administração pela Universidade de São Paulo
+(FEA/USP) e professor de finanças e métodos quantitativos desde 2005. Em
+sua \href{https://github.com/phdpablo}{página de perfil do Github} você
+encontra informações de seus trabalhos recentes, e no seu
 \href{https://phdpablo.com/}{site pessoal}, detalhes sobre suas
 formações, competências, trajetória e projetos.
 
-Na sua versão atual o curso também será ministrado por Ricardo Limongi,
-doutor em administração pela Fundação Getúlio Vargas (FGV-SP) e
-professor de marketing e métodos quantitativos desde 2008 e atual editor
-chefe da Brazilian Administration Review (BAR). Em seu
+O curso tem a parceria do Prof.~Ricardo Limongi, Doutor em Administração
+pela Fundação Getúlio Vargas (FGV-SP), professor de marketing e métodos
+quantitativos desde 2008 e atual editor chefe da Brazilian
+Administration Review (BAR). Em seu
 \href{https://www.instagram.com/limongi/}{perfil do Instagram} é
 possível acompanhar sua agenda de atividades, cursos e palestras sobre
-inteligência artificial aplicada aos negócios e pesquisa. Em seu
-\href{https://www.youtube.com/@ricardolimongi_ia}{canal do YouTube}, é
-possível encontrar vídeos das suas atividades: congressos, palestras,
-aulas, etc.
+Inteligência Artificial (IA) aplicada aos negócios e pesquisa. Em seu
+\href{https://www.youtube.com/@ricardolimongi_ia}{canal do YouTube},
+você encontra vídeos das suas atividades: congressos, palestras, aulas,
+etc.
 
 \section*{Objetivos}\label{sec-about}
+\addcontentsline{toc}{section}{Objetivos}
 
 \markright{Objetivos}
 
 O curso tem objetivo de introduzir os conceitos relacionados com a
-Ciência Aberta (CA) e a prática da pesquisa reprodutível. O curso aborda
+Ciência Aberta (CA) e a Prática da Pesquisa Reprodutível. O curso aborda
 temas introdutórios sobre CA, com foco no ferramental disponível para
-tornar a pesquisa mais transparente, reprodutível e acessível. O curso é
-voltado para pesquisadores e estudantes de pós-graduação, mas aberto a
-qualquer pessoa interessada em aprender sobre a prática da CA. O
-protagonista do curso é o pesquisador brasileiro que deseja aprimorar a
-qualidade e a transparência de sua pesquisa, e que busca ferramentas
-para tornar-lá mais eficiente e acessível.
+tornar a pesquisa mais transparente, reprodutível e acessível.
 
-Trata-se de um curso intermitente programado para acontecer em 4
-encontros de 4 horas/aula (ou 8 encontros de 2 horas/aula), totalizando
-16 horas/aula. Num primeiro momento, a ideia que o curso seja remoto e
-síncrono para alcançar um número maior de interessados. Ele poderá
+Ao final pretendemos que os pesquisadores e estudantes de pós-graduação
+estejam gabaritados para implementar o
+\href{https://phdpablo.github.io/article-template/}{ARTE (Article
+Reproducibility Template \& Environment)}, por exemplo, e os professores
+empenhados em desenvolver um Recurso Didático Aberto (REA), tal como o
+exemplo dessa disciplina: \href{https://fccp.phdpablo.com/}{Finanças
+Corporativas de Curto Prazo}.
+
+O protagonista do curso é o professor e/ou pesquisador brasileiro que
+deseja aprimorar a qualidade e a transparência de suas aulas e pesquisa,
+e que busca ferramentas para tornar-lás mais eficiente e acessível.
+
+Trata-se de um curso intermitente programado para acontecer em 8
+encontros de 2 horas/aula, totalizando 16 horas/aula. Para alcançar um
+número maior de interessadosO o curso é remoto e síncrono. Ele poderá
 acontecer mais de uma vez no ano, com datas e horários a serem
 definidos. Para o calendário atual do curso, consulte a seção
-\href{https://phdpablo.github.io/curso-open-science/00-schedule.html}{Agenda}.
+\href{00-schedule.html}{Agenda}.
 
 O curso é gratuito e com de certificado de extensão pela Universidade
 Federal de Uberlândia (UFU). As inscrições são feitas por meio de um
 \href{https://forms.gle/wRNWAU9Ffyp7o4Vq9}{formulário} intermediado pelo
 projeto
 \href{https://www.youtube.com/c/PsicoEconoMETRIA}{Psico\&Econo\_METRIA}.
-Quando da previsão das datas, uma campanha de e-mail marketing divulgará
-o link para a inscrição através de coordenações de pós-graduações
-selecionadas.
+Quando da previsão das datas ou início do curso, uma campanha de e-mail
+marketing divulgará para os inscritos na
+\href{https://forms.gle/wRNWAU9Ffyp7o4Vq9}{lista de espera} e para
+coordenações de pós-graduações selecionadas.
 
 As vagas são limitadas e a seleção será feita por ordem de inscrição.
 Após o preenchimento das vagas, os demais interessados serão inscritos
@@ -375,33 +351,34 @@ receberão um e-mail com instruções para acesso à plataforma de aulas
 síncronas e para a realização das atividades prévias ao curso.
 
 \section*{Ementa}\label{sec-ementa}
+\addcontentsline{toc}{section}{Ementa}
 
 \markright{Ementa}
 
 Introdução da Ciência Aberta / Repositórios da Ciência Aberta /
 Gerenciamento de Referências e Bibliotecas / Gestão de Projetos, Dados e
-Scripts / Controle de Versão / Documentos Reprodutíveis / Controle de
-Ambiente / IA Aplicada à Pesquisa Científica.
+Scripts / Controle de Versão / Documentos Dinâmicos e Reprodutíveis /
+Controle de Ambiente / IA Aplicada à Pesquisa Reprodutível.
 
 \section*{Metodologia}\label{sec-method}
+\addcontentsline{toc}{section}{Metodologia}
 
 \markright{Metodologia}
 
-Num primeiro momento, o curso foi concebido para acontecer de forma
-remota e síncrona, com aulas expositivas e teóricas, porém em grande
-medida, o conteúdo é essencialmente prático. Algumas aulas poderão ser
-gravadas e disponibilizadas no
+O curso foi concebido para acontecer de forma remota e síncrona, com
+aulas expositivas, porém em grande medida, o conteúdo é essencialmente
+prático. As aulas serão gravadas e disponibilizadas no
 \href{https://www.youtube.com/c/PsicoEconoMETRIA}{canal do YouTube do
-projeto Psico\&Econo\_METRIA}, mas a intenção é que o conteúdo principal
-seja síncrono, para uma maior interação entre os participantes.
-
-Nesse sentido, o material do curso organizado nesse site refere-se ao
-roteiro estruturado (enrendo) de tudo que se vê nas aulas síncronas e
-conteúdos adicionais (bibliografia, notas de aulas, links, etc).
+projeto Psico\&Econo\_METRIA} (se inscreva \emojitext{🥰}). O conteúdo
+principal do curso é síncrono, e pode mudar de edição para edição, no
+entanto, algumas aulas, principalmente para cadastros e instalações das
+ferramentas utilizadas, podem ser disponibilizadas de forma assíncrona,
+tal como na página \href{00-prework.html}{Pré-requisitos}.
 
 A proposta do curso busca seguir de perto a mensagem de Dogucu \&
-Çetinkaya-Rundel (2022). Nesse artigo as autoras abordam a importância
-da reprodutibilidade na ciência de dados, tanto na pesquisa quanto no
+Çetinkaya-Rundel (2022) e ser um \textbf{Recurso Educacional Aberto
+(REA)}. Nesse artigo as autoras abordam a importância da
+reprodutibilidade na ciência de dados, tanto na pesquisa quanto no
 ensino. Elas recomendam que os professores-pesquisadores adotem fluxos
 de trabalho reprodutíveis em suas pesquisas e ensinem esses fluxos de
 trabalho aos seus alunos. Elas propõem uma dimensão para as práticas de
@@ -412,13 +389,14 @@ reprodutíveis, bem documentados e abertos).
 \newpage
 
 \section*{Citação}\label{sec-cite}
+\addcontentsline{toc}{section}{Citação}
 
 \markright{Citação}
 
 Se você utilizar o material desse curso em algum trabalho acadêmico, por
 favor, cite o livro do curso da seguinte forma:
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, left=2mm, opacityback=0, bottomrule=.15mm, arc=.35mm, colback=white, colframe=quarto-callout-important-color-frame, rightrule=.15mm, toprule=.15mm, leftrule=.75mm]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, colframe=quarto-callout-important-color-frame, left=2mm, toprule=.15mm, colback=white, breakable, bottomrule=.15mm, arc=.35mm, rightrule=.15mm, leftrule=.75mm]
 
 Rogers, P. (2024). Artigo à Prova de Futuro: Jornada de Open Science na
 Prática (1.0). Disponível em:
@@ -427,25 +405,8 @@ https://doi.org/10.5281/zenodo.12593928
 
 \end{tcolorbox}
 
-BibTex:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\SpecialCharTok{@}\NormalTok{misc\{rogers2024,}
-\NormalTok{  author       }\OtherTok{=}\NormalTok{ \{Rogers, Pablo\},}
-\NormalTok{  title        }\OtherTok{=}\NormalTok{ \{\{Artigo à Prova de Futuro}\SpecialCharTok{:}\NormalTok{ Jornada de Open Science }
-\NormalTok{                   na Prática\}\},}
-\NormalTok{  month        }\OtherTok{=}\NormalTok{ jun,}
-\NormalTok{  year         }\OtherTok{=} \DecValTok{2024}\NormalTok{,}
-\NormalTok{  publisher    }\OtherTok{=}\NormalTok{ \{Zenodo\},}
-\NormalTok{  version      }\OtherTok{=}\NormalTok{ \{}\FloatTok{1.0}\NormalTok{\},}
-\NormalTok{  doi          }\OtherTok{=}\NormalTok{ \{}\FloatTok{10.5281}\SpecialCharTok{/}\NormalTok{zenodo}\FloatTok{.12593928}\NormalTok{\},}
-\NormalTok{  url          }\OtherTok{=}\NormalTok{ \{https}\SpecialCharTok{:}\ErrorTok{//}\NormalTok{phdpablo.github.io}\SpecialCharTok{/}\NormalTok{curso}\SpecialCharTok{{-}}\NormalTok{open}\SpecialCharTok{{-}}\NormalTok{science}\SpecialCharTok{/}\NormalTok{\}}
-\NormalTok{\}}
-\end{Highlighting}
-\end{Shaded}
-
-\section*{Licença}\label{licenuxe7a}
+\section*{Licença}\label{sec-lice}
+\addcontentsline{toc}{section}{Licença}
 
 \markright{Licença}
 
@@ -454,10 +415,79 @@ Rogers is licensed under CC BY-NC-SA 4.0
 
 \bookmarksetup{startatroot}
 
-\chapter*{Pré-requisitos 📇}\label{sec-prework}
-\addcontentsline{toc}{chapter}{Pré-requisitos 📇}
+\chapter*{\texorpdfstring{\emojitext{📅}
+Agenda}{ Agenda}}\label{sec-schedule}
+\addcontentsline{toc}{chapter}{\emojitext{📅} Agenda}
 
-\markboth{Pré-requisitos 📇}{Pré-requisitos 📇}
+\markboth{\emojitext{📅} Agenda}{\emojitext{📅} Agenda}
+
+Planejamento dos dias \emojitext{📅} e horários das aulas
+\emojitext{⏲️}, conforme a ementa do curso. Na seção de cada uma das
+aulas temos materiais adicionais para o respectivo conteúdo. Quando
+disponível, por aqui, poderás acessar os slides utilizados nas aulas
+\emojitext{🗣}, aulas gravadas ou indicações de vídeo \emojitext{🎥} e
+leituras básica sobre os conteúdos \emojitext{📓}.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Aula/Conteúdo
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Data
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Material Principal
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Instrutor
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\href{01-intro.html}{Introdução à CA} &
+\emojitext{📅}13/11/25\emojitext{⏲️}19:00 &
+\href{./resources/01-intro.pdf}{\emojitext{🗣}}\href{https://www.youtube.com/live/7ewEcTATkZM?si=Lq40IAoDgsy_A619}{\emojitext{🎥}}\href{https://doi.org/10.1590/S0034-759020230408}{\emojitext{📓}}
+& Ricardo Limongi \\
+\href{02-osf.html}{Repositórios da CA} &
+\emojitext{📅}18/11/25\emojitext{⏲️}19:00 &
+\href{https://osf.io/wm8vs}{\emojitext{🗣️}}\href{https://www.youtube.com/watch?v=B19MPDJX_vs}{\emojitext{🎥}}\href{https://doi.org/10.1002/cpet.32}{\emojitext{📓}}
+& Pablo Rogers \\
+\href{03-zotero.html}{Gerenciamento de Referências} &
+\emojitext{📅}25/11/25\emojitext{⏲️}19:00 &
+\href{https://osf.io/emxz8}{\emojitext{🗣️}}\href{https://youtu.be/tnbwKj6-pD8?si=Yx9IC2LhrplvA6g1}{\emojitext{🎥}}\href{https://kuscholarworks.ku.edu/handle/1808/34983}{\emojitext{📓}}
+& Pablo Rogers \\
+\href{04-project.html}{Gestão de Projetos} &
+\emojitext{📅}27/11/27\emojitext{⏲️}19:00 &
+\href{./resources/04-project.pdf}{\emojitext{🗣️}}\href{https://youtu.be/l8yh3f8Tbv8?si=Yeq-xRxmffF7S1dk}{\emojitext{🎥}}\href{https://doi.org/10.1371/journal.pcbi.1005510}{\emojitext{📓}}
+& Pablo Rogers \\
+\href{05-git.html}{Controle de Versão} &
+\emojitext{📅}02/12/25\emojitext{⏲️}19:00 &
+\href{./resources/05-git.pdf}{\emojitext{🗣️}}\href{https://youtu.be/uQL6NOSd9cc?si=TIYenlvIzKpoQ2dQ&t=1775}{\emojitext{🎥}}\href{https://doi.org/10.1177/2515245918754826}{\emojitext{📓}}
+& Pablo Rogers \\
+\href{06-quarto.html}{Documentos Dinâmicos} &
+\emojitext{📅}04/12/25\emojitext{⏲️}19:00 &
+\href{https://tracykteal.quarto.pub/intro-to-quarto/}{\emojitext{🗣️}}\href{https://youtu.be/XuxyzBhDvLg?si=iRCnXPJkmqbLuFty&t=1469}{\emojitext{🎥}}\href{https://doi.org/10.31219/osf.io/ur4xn}{\emojitext{📓}}
+& Pablo Rogers \\
+\href{07-docker.html}{Controle de Ambiente} &
+\emojitext{📅}09/12/25\emojitext{⏲️}19:00 &
+\href{https://kevinushey-2020-rstudio-conf.netlify.app/slides.html\#1}{\emojitext{🗣️}}\href{https://youtu.be/N2STULZ1dYo?si=LAxCXfI9J0irxADD&t=523}{\emojitext{🎥}}\href{https://doi.org/10.1177/25152459211017853}{\emojitext{📓}}
+& Pablo Rogers \\
+\href{08-AI.html}{IA para Pesquisas Reprodutíveis} &
+\emojitext{📅}11/12/25\emojitext{⏲️}19:00 &
+\href{https://admkt.face.ufg.br/p/49240-uso-de-ia-na-pesquisa-cientifica}{\emojitext{🗣️}}\href{https://www.youtube.com/playlist?list=PL8Norrhzu5QZA9ODYlmW2NtPhD7YL6Z3j}{\emojitext{🎥}}\href{https://doi.org/10.1590/1678-98732432e008}{\emojitext{📓}}
+& Ricardo Limongi \\
+\end{longtable}
+
+\bookmarksetup{startatroot}
+
+\chapter*{\texorpdfstring{\emojitext{📇}
+Pré-requisitos}{ Pré-requisitos}}\label{sec-prework}
+\addcontentsline{toc}{chapter}{\emojitext{📇} Pré-requisitos}
+
+\markboth{\emojitext{📇} Pré-requisitos}{\emojitext{📇} Pré-requisitos}
 
 O curso não exige conhecimento prévio em programação, mas é recomendável
 que o aluno tenha familiaridade com o uso de computadores (ambiente
@@ -483,7 +513,7 @@ para as aulas remotas. Essas soluções na sua maioria requerem cadastros
 rápidos, e podem ser feitos de forma instantânea via conta
 Google/Microsoft/Apple.
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, left=2mm, toptitle=1mm, opacityback=0, arc=.35mm, colback=white, rightrule=.15mm, breakable, leftrule=.75mm, bottomrule=.15mm, colbacktitle=quarto-callout-important-color!10!white, colframe=quarto-callout-important-color-frame, coltitle=black, bottomtitle=1mm, toprule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Tip \ref*{tip-prompt}: ChatGPT para suas notas de leituras}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-important-color-frame, left=2mm, toprule=.15mm, titlerule=0mm, bottomrule=.15mm, toptitle=1mm, opacityback=0, coltitle=black, colback=white, breakable, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Importante \ref*{tip-prompt}: ChatGPT para suas notas de leituras}, opacitybacktitle=0.6, arc=.35mm, bottomtitle=1mm, rightrule=.15mm, colbacktitle=quarto-callout-important-color!10!white]
 
 \quartocallouttip{tip-prompt} 
 
@@ -506,7 +536,7 @@ answer in Portuguese}''
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, left=2mm, toptitle=1mm, opacityback=0, arc=.35mm, colback=white, rightrule=.15mm, breakable, leftrule=.75mm, bottomrule=.15mm, colbacktitle=quarto-callout-caution-color!10!white, colframe=quarto-callout-caution-color-frame, coltitle=black, bottomtitle=1mm, toprule=.15mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Não confie cegamente na IA}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-caution-color-frame, left=2mm, toprule=.15mm, titlerule=0mm, bottomrule=.15mm, toptitle=1mm, opacityback=0, coltitle=black, colback=white, breakable, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Não confie cegamente na IA}, opacitybacktitle=0.6, arc=.35mm, bottomtitle=1mm, rightrule=.15mm, colbacktitle=quarto-callout-caution-color!10!white]
 
 Você simplesmente copia e cola os resultados do ChatGPT para compilar
 essas notas de leituras? Não. Após o resultado do ChatGPT você deve
@@ -519,7 +549,7 @@ abordado.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, left=2mm, toptitle=1mm, opacityback=0, arc=.35mm, colback=white, rightrule=.15mm, breakable, leftrule=.75mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, bottomtitle=1mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Outra curiosidade\ldots{}}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, toprule=.15mm, titlerule=0mm, bottomrule=.15mm, toptitle=1mm, opacityback=0, coltitle=black, colback=white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Outra curiosidade\ldots{}}, opacitybacktitle=0.6, arc=.35mm, bottomtitle=1mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white]
 
 A
 \href{https://phdpablo.github.io/curso-open-science/img/cover.png}{imagem
@@ -654,70 +684,6 @@ envio e execução de aplicativos. O Docker é uma ferramenta essencial
 para a prática da CA, pois permite a criação de ambientes reprodutíveis.
 
 \url{https://youtu.be/WjXQxhTLlrQ}
-
-\bookmarksetup{startatroot}
-
-\chapter*{Agenda 📅}\label{sec-schedule}
-
-\markboth{Agenda 📅}{Agenda 📅}
-
-Planejamento dos dias (📅) e horários das aulas (⏲️), conforme a ementa
-do curso. Na seção de cada uma das aulas temos materiais adicionais para
-o respectivo conteúdo. Quando disponível, por aqui, poderás acessar os
-slides utilizados nas aulas (🗣️), aulas gravadas ou indicações de vídeo
-(🎥)\footnote{Na primeira edição do curso a equipe organizadora decidiu
-  não publicar as aulas. Elas estarão disponíveis apenas privativamente
-  para os inscritos no curso, através da platorma de reuniões adotada
-  (Microsoft Teams). No futuro, quando o coordenador considerar que o
-  curso esteja efetivamente formatado, as aulas gravadas serão
-  publicadas no canal
-  \href{https://www.youtube.com/c/PsicoEconoMETRIA}{Psico\&Econo\_METRIA}}
-e leituras básica sobre os conteúdos (📓).
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0600}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0760}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.7960}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0680}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Aula/Conteúdo
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-Data
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-Material Principal
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-Instrutor
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Capítulo~\ref{sec-intro} & 📅04/06/24⏲️19:00 &
-\href{./resources/01-intro.pdf}{🗣}\href{https://www.youtube.com/live/7ewEcTATkZM?si=Lq40IAoDgsy_A619}{🎥}\href{https://doi.org/10.1590/S0034-759020230408}{📓}
-& Ricardo Limongi \\
-Capítulo~\ref{sec-osf} & 📅06/06/24⏲️19:00 &
-\href{https://osf.io/wm8vs}{🗣️}\href{https://www.youtube.com/watch?v=B19MPDJX_vs}{🎥}\href{https://doi.org/10.1002/cpet.32}{📓}
-& Pablo Rogers \\
-Capítulo~\ref{sec-zotero} & 📅11/06/24⏲️19:00 &
-\href{https://osf.io/emxz8}{🗣️}\href{https://youtu.be/tnbwKj6-pD8?si=Yx9IC2LhrplvA6g1}{🎥}\href{https://kuscholarworks.ku.edu/handle/1808/34983}{📓}
-& Pablo Rogers \\
-Capítulo~\ref{sec-project} & 📅13/06/24⏲️19:00 &
-\href{./resources/04-project.pdf}{🗣️}\href{https://youtu.be/l8yh3f8Tbv8?si=Yeq-xRxmffF7S1dk}{🎥}\href{https://doi.org/10.1371/journal.pcbi.1005510}{📓}
-& Pablo Rogers \\
-Capítulo~\ref{sec-git} & 📅18/06/24⏲️19:00 &
-\href{./resources/05-git.pdf}{🗣️}\href{https://youtu.be/uQL6NOSd9cc?si=TIYenlvIzKpoQ2dQ&t=1775}{🎥}\href{https://doi.org/10.1177/2515245918754826}{📓}
-& Pablo Rogers \\
-Capítulo~\ref{sec-quarto} & 📅20/06/24⏲️19:00 &
-\href{https://tracykteal.quarto.pub/intro-to-quarto/}{🗣️}\href{https://youtu.be/XuxyzBhDvLg?si=iRCnXPJkmqbLuFty&t=1469}{🎥}\href{https://doi.org/10.31219/osf.io/ur4xn}{📓}
-& Pablo Rogers \\
-Capítulo~\ref{sec-docker} & 📅25/06/24⏲️19:00 &
-\href{https://kevinushey-2020-rstudio-conf.netlify.app/slides.html\#1}{🗣️}\href{https://youtu.be/N2STULZ1dYo?si=LAxCXfI9J0irxADD&t=523}{🎥}\href{https://doi.org/10.1177/25152459211017853}{📓}
-& Pablo Rogers \\
-Capítulo~\ref{sec-AI} & 📅27/06/24⏲️19:00 &
-\href{https://admkt.face.ufg.br/p/49240-uso-de-ia-na-pesquisa-cientifica}{🗣️}\href{https://www.youtube.com/playlist?list=PL8Norrhzu5QZA9ODYlmW2NtPhD7YL6Z3j}{🎥}\href{https://doi.org/10.1590/1678-98732432e008}{📓}
-& Ricardo Limongi \\
-\end{longtable}
 
 \bookmarksetup{startatroot}
 
@@ -859,7 +825,7 @@ e replicável.
 
 \begin{figure}
 
-\href{https://doi.org/10.5281/zenodo.10835001}{\includegraphics{img/ca-micro.png}}
+\href{https://doi.org/10.5281/zenodo.10835001}{\pandocbounded{\includegraphics[keepaspectratio]{img/ca-micro.png}}}
 
 \caption{\label{fig-ca-micro}Perspectiva micro da CA. Taxonomia
 relacionada com terminologias e conhecimento em torno da prática (fluxo
@@ -879,7 +845,7 @@ integram a publicação científica (UNESCO, 2021).
 
 \begin{figure}
 
-\href{https://doi.org/10.5281/zenodo.10835001}{\includegraphics{img/ca-macro.png}}
+\href{https://doi.org/10.5281/zenodo.10835001}{\pandocbounded{\includegraphics[keepaspectratio]{img/ca-macro.png}}}
 
 \caption{\label{fig-ca-macro}Perspectiva macro da CA. Taxonomia
 relacionada com as ramificações conceituais da CA concernentes às
@@ -947,8 +913,8 @@ promover o desenvolvimento de uma intervenção educacional sobre a
 prática (workflow) e principais ferramentas para compilação dos produtos
 científicos que integram uma publicação científica aberta.
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, left=2mm, toptitle=1mm, opacityback=0, arc=.35mm, colback=white, rightrule=.15mm, breakable, leftrule=.75mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, bottomtitle=1mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\emph{A Pratical Guide for Transparency in Psychological Science}
-(Tip~\ref{tip-prompt})}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, toprule=.15mm, titlerule=0mm, bottomrule=.15mm, toptitle=1mm, opacityback=0, coltitle=black, colback=white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\emph{A Pratical Guide for Transparency in Psychological Science}
+(Tip~\ref{tip-prompt})}, opacitybacktitle=0.6, arc=.35mm, bottomtitle=1mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white]
 
 O artigo (Klein et al., 2018) é um guia prático para pesquisadores que
 desejam compartilhar os produtos de sua pesquisa. Os autores argumentam
@@ -1025,8 +991,8 @@ melhorar a qualidade e a credibilidade de seu trabalho.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, left=2mm, toptitle=1mm, opacityback=0, arc=.35mm, colback=white, rightrule=.15mm, breakable, leftrule=.75mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, bottomtitle=1mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\emph{Easing Into Open Science: A Guide for Graduate Students and Their
-Advisors} (Tip~\ref{tip-prompt})}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, toprule=.15mm, titlerule=0mm, bottomrule=.15mm, toptitle=1mm, opacityback=0, coltitle=black, colback=white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\emph{Easing Into Open Science: A Guide for Graduate Students and Their
+Advisors} (Tip~\ref{tip-prompt})}, opacitybacktitle=0.6, arc=.35mm, bottomtitle=1mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white]
 
 O artigo (Kathawalla et al., 2021) fornece um guia para ajudar
 estudantes de pós-graduação e seus orientadores a se envolverem na
@@ -1223,7 +1189,7 @@ pesquisadores e colaboradores.
 
 \centering{
 
-\href{https://help.osf.io/article/583-getting-to-know-the-osf-the-basics}{\includegraphics{img/osf-researchcycle.png}}
+\href{https://help.osf.io/article/583-getting-to-know-the-osf-the-basics}{\pandocbounded{\includegraphics[keepaspectratio]{img/osf-researchcycle.png}}}
 
 }
 
@@ -1238,7 +1204,7 @@ pesquisadores a iniciar sua jornada \textbf{OSF}. Claro que ele foi
 adaptado para nossos fins, principalmente, em decorrência do tempo
 destinado ao módulo.
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, left=2mm, toptitle=1mm, opacityback=0, arc=.35mm, colback=white, rightrule=.15mm, breakable, leftrule=.75mm, bottomrule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, bottomtitle=1mm, toprule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{\emph{Bifurcando ou duplicando um projeto}}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-tip-color-frame, left=2mm, toprule=.15mm, titlerule=0mm, bottomrule=.15mm, toptitle=1mm, opacityback=0, coltitle=black, colback=white, breakable, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{\emph{Bifurcando ou duplicando um projeto}}, opacitybacktitle=0.6, arc=.35mm, bottomtitle=1mm, rightrule=.15mm, colbacktitle=quarto-callout-tip-color!10!white]
 
 Você sabia que é possível executar um ``\emph{forking}'' (criar uma
 cópia do projeto existente) ou ``\emph{duplicate as template}''
@@ -1277,8 +1243,8 @@ nesse módulo passamos pelo
 que integra com o Github e tem a capacidade de gerar DOIs para as
 versões dos repositórios.
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, left=2mm, toptitle=1mm, opacityback=0, arc=.35mm, colback=white, rightrule=.15mm, breakable, leftrule=.75mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, bottomtitle=1mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\emph{Open and Reproducible Research on Open Science Framework}
-(Tip~\ref{tip-prompt})}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, toprule=.15mm, titlerule=0mm, bottomrule=.15mm, toptitle=1mm, opacityback=0, coltitle=black, colback=white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\emph{Open and Reproducible Research on Open Science Framework}
+(Tip~\ref{tip-prompt})}, opacitybacktitle=0.6, arc=.35mm, bottomtitle=1mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white]
 
 O artigo (Sullivan et al., 2019) apresenta um protocolo para a
 implementação de práticas de Ciência Aberta (CA), com foco no uso do
@@ -1629,10 +1595,10 @@ capítulos}\label{cenas-dos-pruxf3ximos-capuxedtulos}
 
 \url{https://www.youtube.com/watch?v=s3JldKoA0zw}
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, left=2mm, toptitle=1mm, opacityback=0, arc=.35mm, colback=white, rightrule=.15mm, breakable, leftrule=.75mm, bottomrule=.15mm, colbacktitle=quarto-callout-warning-color!10!white, colframe=quarto-callout-warning-color-frame, coltitle=black, bottomtitle=1mm, toprule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Você não vai querer cometer esses erros\ldots{}\footnote{Pedimos para o
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-warning-color-frame, left=2mm, toprule=.15mm, titlerule=0mm, bottomrule=.15mm, toptitle=1mm, opacityback=0, coltitle=black, colback=white, breakable, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Você não vai querer cometer esses erros\ldots{}\footnote{Pedimos para o
   ChatGPT4o resumir as duas matérias e me nos dar resposta em português.
   Como sempre, revisamos o conteúdo para saber se batia com o que eu
-  lemos.}}]
+  lemos.}}, opacitybacktitle=0.6, arc=.35mm, bottomtitle=1mm, rightrule=.15mm, colbacktitle=quarto-callout-warning-color!10!white]
 
 \href{https://www.bbc.com/news/magazine-22223190}{\textbf{Caso 1:
 Reinhart, Rogoff\ldots{} e Herndon: O aluno que pegou os
@@ -1759,7 +1725,7 @@ Figura~\ref{fig-funny-git}?
 
 \centering{
 
-\href{https://phdcomics.com/comics/archive.php?comicid=1531}{\includegraphics{img/funny-git.png}}
+\href{https://phdcomics.com/comics/archive.php?comicid=1531}{\pandocbounded{\includegraphics[keepaspectratio]{img/funny-git.png}}}
 
 }
 
@@ -2016,7 +1982,7 @@ apesar de tratada pelo Git e GitHub, pode escalar.
 
 \begin{figure}
 
-\href{https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Gitflow-release-branch-process-start-finish}{\includegraphics{img/gitflow.jpg}}
+\href{https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Gitflow-release-branch-process-start-finish}{\pandocbounded{\includegraphics[keepaspectratio]{img/gitflow.jpg}}}
 
 \caption{\label{fig-gitflow}Diagrama GitFlow hipotético num ambiente de
 desenvolvimento de software típico}
@@ -2046,7 +2012,7 @@ e GitHub.
 
 \begin{figure}
 
-\href{https://doi.org/10.5281/zenodo.12165926}{\includegraphics{img/git3autores.jpg}}
+\href{https://doi.org/10.5281/zenodo.12165926}{\pandocbounded{\includegraphics[keepaspectratio]{img/git3autores.jpg}}}
 
 \caption{\label{fig-git3autores}Um fluxo de trabalho hipotético do Git
 para uma colaboração científica envolvendo três autores. Cada círculo
@@ -2080,7 +2046,7 @@ remoto for público.
 
 \begin{figure}
 
-\href{https://doi.org/10.5281/zenodo.12165926}{\includegraphics{img/gitautorbegin.jpg}}
+\href{https://doi.org/10.5281/zenodo.12165926}{\pandocbounded{\includegraphics[keepaspectratio]{img/gitautorbegin.jpg}}}
 
 \caption{\label{fig-gitautorbegin}Um fluxo de trabalho hipotético do Git
 para a execução de uma pesquisa solo. Cada círculo representa um commit
@@ -2107,7 +2073,7 @@ público, vinculou o repositório local com o repositório remoto.
 
 \begin{figure}
 
-\href{https://doi.org/10.5281/zenodo.12165926}{\includegraphics{img/gitautorend.jpg}}
+\href{https://doi.org/10.5281/zenodo.12165926}{\pandocbounded{\includegraphics[keepaspectratio]{img/gitautorend.jpg}}}
 
 \caption{\label{fig-gitautorend}Um fluxo de trabalho hipotético do Git
 para a execução de uma pesquisa solo. Cada círculo representa um commit
@@ -2130,8 +2096,8 @@ as funcionalidades do Git/Github também se adaptam perfeitamente a
 projetos de pesquisa mais simples, seja com número pequeno de
 pesquisadores ou mesmo com um único pesquisador.
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, left=2mm, toptitle=1mm, opacityback=0, arc=.35mm, colback=white, rightrule=.15mm, breakable, leftrule=.75mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, bottomtitle=1mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\emph{Curating Research Assets: A Tutorial on the Git Version Control
-System} (Tip~\ref{tip-prompt})}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, toprule=.15mm, titlerule=0mm, bottomrule=.15mm, toptitle=1mm, opacityback=0, coltitle=black, colback=white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\emph{Curating Research Assets: A Tutorial on the Git Version Control
+System} (Tip~\ref{tip-prompt})}, opacitybacktitle=0.6, arc=.35mm, bottomtitle=1mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white]
 
 Como uma tentativa de enfrentar os desafios da reprodutibilidade na
 ciência empírica, um fator específico que se destaca é a forma como os
@@ -2201,8 +2167,8 @@ significativamente para a melhoria da reprodutibilidade na ciência.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, left=2mm, toptitle=1mm, opacityback=0, arc=.35mm, colback=white, rightrule=.15mm, breakable, leftrule=.75mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, bottomtitle=1mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\emph{Furthering Open Science in Behavior Analysis: An Introduction and
-Tutorial for Using} \emph{GitHub in Research} (Tip~\ref{tip-prompt})}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, toprule=.15mm, titlerule=0mm, bottomrule=.15mm, toptitle=1mm, opacityback=0, coltitle=black, colback=white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\emph{Furthering Open Science in Behavior Analysis: An Introduction and
+Tutorial for Using} \emph{GitHub in Research} (Tip~\ref{tip-prompt})}, opacitybacktitle=0.6, arc=.35mm, bottomtitle=1mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white]
 
 Este tutorial (Gilroy \& Kaplan, 2019) revisa as diretrizes de Práticas
 Transparentes e Abertas fornecidas pela Open Science Foundation e
@@ -2338,13 +2304,13 @@ plataformas, como é ilustrado na Figura~\ref{fig-quarto-illustration}.
 
 \begin{figure}
 
-\href{https://datascience.arizona.edu/events/reproducible-reporting-quarto}{\includegraphics{img/quarto-illustration.png}}
+\href{https://datascience.arizona.edu/events/reproducible-reporting-quarto}{\pandocbounded{\includegraphics[keepaspectratio]{img/quarto-illustration.png}}}
 
 \caption{\label{fig-quarto-illustration}Integração do Quarto}
 
 \end{figure}%
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, left=2mm, toptitle=1mm, opacityback=0, arc=.35mm, colback=white, rightrule=.15mm, breakable, leftrule=.75mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, bottomtitle=1mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figura~\ref{fig-quarto-illustration}?}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, toprule=.15mm, titlerule=0mm, bottomrule=.15mm, toptitle=1mm, opacityback=0, coltitle=black, colback=white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figura~\ref{fig-quarto-illustration}?}, opacitybacktitle=0.6, arc=.35mm, bottomtitle=1mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2427,13 +2393,13 @@ ampla flexibilidade na distribuição do conteúdo.
 
 \begin{figure}
 
-\href{https://r-cubed-advanced.rostools.org/sessions/build-website}{\includegraphics{img/quarto-process.png}}
+\href{https://r-cubed-advanced.rostools.org/sessions/build-website}{\pandocbounded{\includegraphics[keepaspectratio]{img/quarto-process.png}}}
 
 \caption{\label{fig-quarto-process}Workflow analítico do Quarto}
 
 \end{figure}%
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, left=2mm, toptitle=1mm, opacityback=0, arc=.35mm, colback=white, rightrule=.15mm, breakable, leftrule=.75mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, bottomtitle=1mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figura~\ref{fig-quarto-process}?}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, toprule=.15mm, titlerule=0mm, bottomrule=.15mm, toptitle=1mm, opacityback=0, coltitle=black, colback=white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figura~\ref{fig-quarto-process}?}, opacitybacktitle=0.6, arc=.35mm, bottomtitle=1mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2535,13 +2501,13 @@ por pesquisadores.
 
 \begin{figure}
 
-\href{https://ucsbcarpentry.github.io/Reproducible-Publications-with-RStudio-Quarto/02-quarto/03-quarto-documents/index.html}{\includegraphics{img/qmd-workflow.png}}
+\href{https://ucsbcarpentry.github.io/Reproducible-Publications-with-RStudio-Quarto/02-quarto/03-quarto-documents/index.html}{\pandocbounded{\includegraphics[keepaspectratio]{img/qmd-workflow.png}}}
 
 \caption{\label{fig-qmd-workflow}Workflow sintético do Quarto}
 
 \end{figure}%
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, left=2mm, toptitle=1mm, opacityback=0, arc=.35mm, colback=white, rightrule=.15mm, breakable, leftrule=.75mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, bottomtitle=1mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figura~\ref{fig-qmd-workflow}?}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, toprule=.15mm, titlerule=0mm, bottomrule=.15mm, toptitle=1mm, opacityback=0, coltitle=black, colback=white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figura~\ref{fig-qmd-workflow}?}, opacitybacktitle=0.6, arc=.35mm, bottomtitle=1mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2617,14 +2583,14 @@ público.
 
 \begin{figure}
 
-\href{https://towardsdatascience.com/technical-writing-and-publishing-data-rich-articles-with-quarto-d61a56bcaa64}{\includegraphics{img/all-workflow.png}}
+\href{https://towardsdatascience.com/technical-writing-and-publishing-data-rich-articles-with-quarto-d61a56bcaa64}{\pandocbounded{\includegraphics[keepaspectratio]{img/all-workflow.png}}}
 
 \caption{\label{fig-all-workflow}Workflow de uma pesquisa empírica
 utilizando Quarto}
 
 \end{figure}%
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, left=2mm, toptitle=1mm, opacityback=0, arc=.35mm, colback=white, rightrule=.15mm, breakable, leftrule=.75mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, bottomtitle=1mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figura~\ref{fig-all-workflow}?}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, toprule=.15mm, titlerule=0mm, bottomrule=.15mm, toptitle=1mm, opacityback=0, coltitle=black, colback=white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{O que o ChatGPT 4o nos diz sobre a Figura~\ref{fig-all-workflow}?}, opacitybacktitle=0.6, arc=.35mm, bottomtitle=1mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2814,7 +2780,7 @@ ambientes de desktop Figura~\ref{fig-vm-container}.
 
 \centering{
 
-\href{https://doi.org/10.5281/zenodo.12521134}{\includegraphics{img/vm-container.png}}
+\href{https://doi.org/10.5281/zenodo.12521134}{\pandocbounded{\includegraphics[keepaspectratio]{img/vm-container.png}}}
 
 }
 
@@ -2977,8 +2943,8 @@ oferecem um alto nível de reprodutibilidade, pois são ambientes
 integrados para criar, executar e compartilhar projetos de pesquisa
 reprodutíveis.
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, left=2mm, toptitle=1mm, opacityback=0, arc=.35mm, colback=white, rightrule=.15mm, breakable, leftrule=.75mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, bottomtitle=1mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\emph{Leveraging Containers for Reproducible Psychological Research}
-(Tip~\ref{tip-prompt})}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, toprule=.15mm, titlerule=0mm, bottomrule=.15mm, toptitle=1mm, opacityback=0, coltitle=black, colback=white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\emph{Leveraging Containers for Reproducible Psychological Research}
+(Tip~\ref{tip-prompt})}, opacitybacktitle=0.6, arc=.35mm, bottomtitle=1mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white]
 
 O artigo de Wiebels \& Moreau (2021) discute a importância e a aplicação
 das práticas de ciência aberta na pesquisa. Eles destacam que, desde
@@ -3080,7 +3046,7 @@ Vamos explorar essas ferramentas e discutir como elas podem ser
 aplicadas aos nossos próprios projetos de pesquisa, promovendo uma
 abordagem mais aberta, colaborativa e eficiente na ciência.
 
-\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, titlerule=0mm, left=2mm, toptitle=1mm, opacityback=0, arc=.35mm, colback=white, rightrule=.15mm, breakable, leftrule=.75mm, bottomrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, colframe=quarto-callout-note-color-frame, coltitle=black, bottomtitle=1mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Transcrição de uma das palestras do Prof.~Ricardo Limongi}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, colframe=quarto-callout-note-color-frame, left=2mm, toprule=.15mm, titlerule=0mm, bottomrule=.15mm, toptitle=1mm, opacityback=0, coltitle=black, colback=white, breakable, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Transcrição de uma das palestras do Prof.~Ricardo Limongi}, opacitybacktitle=0.6, arc=.35mm, bottomtitle=1mm, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white]
 
 Na lista de vídeos indicados em nossa Agenda temos uma recente
 \href{https://youtu.be/-WBfK9V1-ZE?si=Usd0KdyeJvoVmQ05}{palestra do
@@ -3610,5 +3576,6 @@ manual: Make your scientific research accessible and reproducible}.
 %back cover
 \includepdf[fitpaper=true,pages=-]{img/back-cover}
 \pagenumbering{gobble} 
+
 
 \end{document}

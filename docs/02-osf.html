@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -58,12 +58,12 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-df6780cc2b117eb234b403a0900b78b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-229775fd8b3b9fa5809829b81cad07c1.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -102,9 +102,12 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
 </script>
 
 
-<meta property="og:title" content="Artigo à Prova de Futuro - 2&nbsp; Repositórios da Ciência Aberta">
+<meta property="og:title" content="2&nbsp; Repositórios da Ciência Aberta – Artigo à Prova de Futuro">
 <meta property="og:description" content="">
+<meta property="og:image" content="https://phdpablo.github.io/curso-open-science/img/osf-researchcycle.png">
 <meta property="og:site_name" content="Artigo à Prova de Futuro">
+<meta property="og:image:height" content="367">
+<meta property="og:image:width" content="407">
 </head>
 
 <body class="nav-sidebar floating">
@@ -177,19 +180,19 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">O Curso 🏢</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./00-prework.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Pré-requisitos 📇</span></a>
+ <span class="menu-text">🏢 O Curso</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./00-schedule.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Agenda 📅</span></a>
+ <span class="menu-text">📅 Agenda</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./00-prework.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📇 Pré-requisitos</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -255,10 +258,10 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"><span id="sec-osf" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Repositórios da Ciência Aberta</span></span></h1></header>
 
 <header id="title-block-header">
-<h1 class="title display-7"><span id="sec-osf" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Repositórios da Ciência Aberta</span></span></h1>
+
 
 </header>
 
@@ -584,8 +587,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -701,7 +702,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
