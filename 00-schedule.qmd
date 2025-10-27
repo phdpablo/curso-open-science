@@ -3,9 +3,9 @@
 Planejamento dos dias \emojitext{📅} e horários das aulas \emojitext{⏲️}, conforme a ementa do curso. Na seção de cada uma das aulas temos materiais adicionais para o respectivo conteúdo. Quando disponível, por aqui, poderás acessar os slides utilizados nas aulas \emojitext{🗣}, aulas gravadas ou indicações de vídeo \emojitext{🎥} e leituras básica sobre os conteúdos \emojitext{📓}.
 
 | Aula/Conteúdo | Data | Material Principal | Instrutor |
-|:-----------------|:----------------:|:----------------:|:----------------:|
-| [Introdução à CA](01-intro.html) | \emojitext{📅}13/11/25\emojitext{⏲️}19:00 | [\emojitext{🗣}](/resources/01-intro.pdf)[\emojitext{🎥}](https://www.youtube.com/live/7ewEcTATkZM?si=Lq40IAoDgsy_A619)[\emojitext{📓}](https://doi.org/10.1590/S0034-759020230408) | Ricardo Limongi |
-| [Repositórios da CA](02-osf.html) | \emojitext{📅}18/11/25\emojitext{⏲️}19:00 | [\emojitext{🗣️}](https://osf.io/wm8vs)[\emojitext{🎥}](https://www.youtube.com/watch?v=B19MPDJX_vs)[\emojitext{📓}](https://doi.org/10.1002/cpet.32) | Pablo Rogers |
+|:---|:--:|:--:|:--:|
+| [Introdução à CA](01-intro.html) | \emojitext{📅}18/11/25\emojitext{⏲️}20:30 | [\emojitext{🗣}](/resources/01-intro.pdf)[\emojitext{🎥}](https://www.youtube.com/live/7ewEcTATkZM?si=Lq40IAoDgsy_A619)[\emojitext{📓}](https://doi.org/10.1590/S0034-759020230408) | Ricardo Limongi |
+| [Repositórios da CA](02-osf.html) | \emojitext{📅}13/11/25\emojitext{⏲️}19:00 | [\emojitext{🗣️}](https://osf.io/wm8vs)[\emojitext{🎥}](https://www.youtube.com/watch?v=B19MPDJX_vs)[\emojitext{📓}](https://doi.org/10.1002/cpet.32) | Pablo Rogers |
 | [Gerenciamento de Referências](03-zotero.html) | \emojitext{📅}25/11/25\emojitext{⏲️}19:00 | [\emojitext{🗣️}](https://osf.io/emxz8)[\emojitext{🎥}](https://youtu.be/tnbwKj6-pD8?si=Yx9IC2LhrplvA6g1)[\emojitext{📓}](https://kuscholarworks.ku.edu/handle/1808/34983) | Pablo Rogers |
 | [Gestão de Projetos](04-project.html) | \emojitext{📅}27/11/27\emojitext{⏲️}19:00 | [\emojitext{🗣️}](/resources/04-project.pdf)[\emojitext{🎥}](https://youtu.be/l8yh3f8Tbv8?si=Yeq-xRxmffF7S1dk)[\emojitext{📓}](https://doi.org/10.1371/journal.pcbi.1005510) | Pablo Rogers |
 | [Controle de Versão](05-git.html) | \emojitext{📅}02/12/25\emojitext{⏲️}19:00 | [\emojitext{🗣️}](/resources/05-git.pdf)[\emojitext{🎥}](https://youtu.be/uQL6NOSd9cc?si=TIYenlvIzKpoQ2dQ&t=1775)[\emojitext{📓}](https://doi.org/10.1177/2515245918754826) | Pablo Rogers |

@@ -64,12 +64,6 @@ Baixe a versão mais recente do RStudio: <https://posit.co/download/rstudio-desk
 
 {{< video https://youtu.be/KM2jxaNIEUk >}}
 
-## Quarto {#sec-quartoprework}
-
-Baixe a versão mais recente do Quarto CLI (Command Line Interface): <https://www.quarto.org/>. O Quarto é uma linguagem de marcação que permite a criação de documentos reprodutíveis e dinâmicos. Ele é uma evolução e tende a substituir o RMarkdown, que é a principal linguagem de marcação do R. O Quarto engloba e adiciona diversas outras vantagens ao RMarkdown, tal como a possibilidade de criar documentos reprodutíveis em Python, Julia, etc. Se você já tem algum conhecimento de RMarkdown, não se preocupe, pois o Quarto é uma extensão natural.
-
-{{< video https://youtu.be/-HvOMVkk6I4 >}}
-
 ## Docker {#sec-dockerprework}
 
 Baixe a versão mais recente do Docker: <https://www.docker.com/products/docker-desktop>. Nesse mesmo link você cria uma conta. O Docker é uma plataforma para desenvolvimento, envio e execução de aplicativos. O Docker é uma ferramenta essencial para a prática da CA, pois permite a criação de ambientes reprodutíveis.

@@ -1,8 +1,6 @@
 # Introdução à Ciência Aberta {#sec-intro}
 
-A pesquisa científica atual[^01-intro-1] enfrenta vários desafios [@munafo2017]. Problemas como o pequeno tamanho da amostra, pequenos tamanhos de efeito, p-hacking e HARKing (viés positivo de publicação), conflitos de interesse e a competição entre cientistas que trabalham isoladamente sem combinar seus esforços, têm sido apontados como catalizadores do que se convencionou chamar de “crise de reprodutibilidade” na ciência [@baker2016; @munafo2017].
-
-[^01-intro-1]: O texto apresentado nessa seção é uma compilação de fragmentos do Projeto APQ-01225-24 submetido ao Edital Nº 001/2024 - Demanda Universal, da FAPEMIG, ainda em análise. O detalhamento desse projeto, quando se tornar público, poderá ser acompanhado no [OSF](http://osf.io/dnrgf): Rogers, P., Limongi, R., & Barboza, F. (2024, May 29). The Practice of Open Science in Brazil. Retrieved from osf.io/dnrgf
+A pesquisa científica atual enfrenta vários desafios [@munafo2017]. Problemas como o pequeno tamanho da amostra, pequenos tamanhos de efeito, p-hacking e HARKing (viés positivo de publicação), conflitos de interesse e a competição entre cientistas que trabalham isoladamente sem combinar seus esforços, têm sido apontados como catalizadores do que se convencionou chamar de “crise de reprodutibilidade” na ciência [@baker2016; @munafo2017].
 
 Pesquisas apontam que mais de 70% de pesquisadores que tentaram, falharam em reproduzir os experimentos de outros cientistas, e mais da metade falhou em reproduzir seus próprios experimentos [@baker2016], com estimativa de que 85% dos esforços de pesquisas estejam sendo desperdiçados [@munafo2017], gerando custos econômicos bilionários [@freedman2015].
 

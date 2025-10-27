@@ -5,11 +5,11 @@
 ::: {.content-visible unless-format="pdf"}
 -   \emojitext{📝} **FAÇA SUA INSCRIÇÃO [AQUI](https://forms.gle/wRNWAU9Ffyp7o4Vq9)**
 
-
 -   \emojitext{📅} **CONSULTE A AGENDA ATUALIZADA [AQUI](https://phdpablo.github.io/curso-open-science/00-schedule.html)**
 
-
 -   \emojitext{🛠️} **NO CURSO VOCÊ VAI APRENDER A IMPLEMENTAR UM ARTIGO COMO [ESSE](https://phdpablo.github.io/article-template/) E/OU DESENVOLVER UMA DISCIPLINA COMO [ESSA](https://fccp.phdpablo.com/).**
+
+-   \emojitext{🔁} **DURANTE O CURSO, ESSE SITE SERÁ ATUALIZADO REGULARMENTE, PORTANTO, O CONTEÚDO QUE VOCÊ ESTÁ VISUALIZANDO AGORA PODE NÃO CORRESPONDER AO QUE SERÁ APRESENTADO NO CURSO.** Vide principais [Mudanças](#sec-change) previstas.
 
 <br>
 
@@ -20,7 +20,7 @@ Página do curso **"Artigo à Prova de Futuro: Jornada de Open Science na Práti
 Material didático do curso **"Artigo à Prova de Futuro: Jornada de Open Science na Prática"**. Nesse ebook você encontrará um conteúdo programático sobre Ciência Aberta (CA) e Pesquisa Reprodutível, com resumo de textos, recursos didáticos (notas de aulas e vídeos) e sugestões de leitura (artigos e livros).
 :::
 
-## Sobre os instrutores {#sec-instrutor .unnumbered}
+## Instrutores {#sec-instrutor .unnumbered}
 
 O curso é coordenado e ministrado por [Pablo Rogers](https://phdpablo.com/), Doutor em Administração pela Universidade de São Paulo (FEA/USP) e professor de finanças e métodos quantitativos desde 2005. Em sua [página de perfil do Github](https://github.com/phdpablo) você encontra informações de seus trabalhos recentes, e no seu [site pessoal](https://phdpablo.com/), detalhes sobre suas formações, competências, trajetória e projetos.
 
@@ -49,6 +49,24 @@ Introdução da Ciência Aberta / Repositórios da Ciência Aberta / Gerenciamen
 O curso foi concebido para acontecer de forma remota e síncrona, com aulas expositivas, porém em grande medida, o conteúdo é essencialmente prático. As aulas serão gravadas e disponibilizadas no [canal do YouTube do projeto Psico&Econo_METRIA](https://www.youtube.com/c/PsicoEconoMETRIA) (se inscreva \emojitext{🥰}). O conteúdo principal do curso é síncrono, e pode mudar de edição para edição, no entanto, algumas aulas, principalmente para cadastros e instalações das ferramentas utilizadas, podem ser disponibilizadas de forma assíncrona, tal como na página [Pré-requisitos](00-prework.html).
 
 A proposta do curso busca seguir de perto a mensagem de @dogucu2022 e ser um **Recurso Educacional Aberto (REA)**. Nesse artigo as autoras abordam a importância da reprodutibilidade na ciência de dados, tanto na pesquisa quanto no ensino. Elas recomendam que os professores-pesquisadores adotem fluxos de trabalho reprodutíveis em suas pesquisas e ensinem esses fluxos de trabalho aos seus alunos. Elas propõem uma dimensão para as práticas de reprodutibilidade, focada exclusivamente nas ferramentas para o ensino (todos os materiais de ensino devem ser computacionalmente reprodutíveis, bem documentados e abertos).
+
+## Mudanças {#sec-change .unnumbered}
+
+As principais mudanças previstas para serem implementadas nesta edição do curso em relação à edição anterior:
+
+1️⃣ **OSF atualizado** – exploraremos a nova estrutura e layout do repositório.
+
+2️⃣ **Zotero 7** – avançando em relação à versão 6 trabalhada anteriormente
+
+3️⃣ **Projeto TIER 4.0** – boas práticas para organização de pastas e arquivos.
+
+4️⃣ [**ARTE – Article Template Reproducibility & Environment**](https://phdpablo.github.io/article-template/) – modelo para artigos reprodutíveis.
+
+5️⃣ **Conteinerização com Docker** – foco maior em ambientes portáveis.
+
+6️⃣ **Inteligência Artificial aplicada à Pesquisa Reprodutível.**
+
+7️⃣ **Material totalmente reformulado** – atualizado e implementado com recursos didáticos extras.
 
 \newpage
 
