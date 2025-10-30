@@ -6,28 +6,6 @@ Abaixo descrevemos sucintamente o que é cada uma dessas ferramentas e plataform
 
 Outras soluções que iremos discutir e testar durante o curso, como alguns pacotes do R, e aplicações de IA no último módulo, deixaremos para as aulas remotas. Essas soluções na sua maioria requerem cadastros rápidos, e podem ser feitos de forma instantânea via conta Google/Microsoft/Apple.
 
-::: {#tip-prompt .callout-important collapse="true"}
-## ChatGPT para suas notas de leituras
-
-Os resumos das bibliografias que apresentamos em cada uma das seções foram elaborados com o auxílio do ChatGPT 4, seja pelo o [webapp da OpenAI](https://chat.openai.com/) ou pelo [Copilot](https://copilot.microsoft.com/) (ou buscador Bing) da Microsoft.\vspace{0.5em}
-
-Destacamos (selecionamos através de marca texto no Zotero, por exemplo) as passagens que consideramos importante do artigo científico, tendo em vista a perspectiva e fins no momento da leitura, e posteriormente se copia e cola as notas de leitura com a seguinte prompt:\vspace{0.5em}
-
-"*Senteces in the text are reading notes, that is, what I found most important and interesting, from a scientific article on the topic open science. I would like you to summarize the notes in a descriptive text and concatenate the arguments highlighted in the notes. Give your answer in Portuguese*"
-:::
-
-::: {.callout-caution collapse="true"}
-## Não confie cegamente na IA
-
-Você simplesmente copia e cola os resultados do ChatGPT para compilar essas notas de leituras? Não. Após o resultado do ChatGPT você deve revisar o sumário das notas de leituras e fazer ajustes, que somente são possíveis porque leu o artigo por completo. A despeito do ChatGPT fazer um bom serviço nesse sentido, ele ainda comete muitos deslizes. Deslizes esses que você não pode deixar passar num texto científico, e somente captaria a partir da leitura do artigo ou sendo conhecedor do assunto abordado.
-:::
-
-::: {.callout-note collapse="true"}
-## Outra curiosidade...
-
-A [imagem cover desse curso](https://phdpablo.github.io/curso-open-science/img/cover.png) foi gerada por uma IA, com posteriores ajustes (off course!). Existem diversos geradores de imagens que você pode testar gratuitamente, mas eu costumo utilizar o i) [DALL-E](https://openai.com/dall-e/), que é uma solução da OpenAI que também pode ser utilizada no [Copilot da Microsoft](https://copilot.microsoft.com/); ii) o [PlaygroundAI](https://playgroundai.com/), e iii) o [Gemini](https://gemini.google.com/app) do Google.
-:::
-
 ## Github {#sec-githubprework}
 
 Primeiramente, se cadastre no Github: <https://github.com/signup>, pois com ele você poderá acessar o material do curso e interagir com os demais participantes. E com a conta do Github você também poderá se cadastrar em outras plataformas, como o Zenodo, OSF, etc. Algumas features que aprenderemos no curso exigem o vínculo entre as contas. Se for professor ou estudante, você pode solicitar o [GitHub Education](https://education.github.com/) e ter acesso, por exemplo, ao Copilot, uma das ferramentas de IA mais interessante. Por isso, é importante que você se cadastre com um e-mail institucional. Use o mesmo e-mail para se cadastrar em todas plataformas.
@@ -44,11 +22,11 @@ Github não é a mesma coisa que Git. O Github é uma plataforma, e o Git é uma
 
 Baixe a versão mais recente do Zotero: <https://www.zotero.org/download/> e cadastre uma conta: <https://www.zotero.org/user/register/>. Vamos discutir sobre o Zotero e diversos plugins que são úteis no dia-a-dia do pesquisador. Atualmente, o Zotero é a ferramenta mais completa para gerenciamento de referências e bibliotecas, e se integra nativamente com o RStudio e diversas ferramentas de IA.
 
-{{< video https://youtu.be/ZSFq6LHaDJ4 >}}
+{{< video https://youtu.be/Nyi3moDTQ64 >}}
 
 ## OSF {#sec-osfprework}
 
-Cadastre no Open Science Framework (OSF): <https://osf.io/register/>. Como veremos, essa plataforma é uma das mais importantes para a prática da CA. Ela está no começo (pré-registro) e no final (repositório de dados e pré-print) do ciclo de vida (workflow) de um projeto de pesquisa.
+Cadastre no Open Science Framework (OSF): <https://osf.io/register/>. Como veremos, essa plataforma é uma das mais importantes para a prática da CA. Ela está no começo (pré-registro) e no final (repositório de dados e pré-print) do ciclo de vida (workflow) de um projeto de pesquisa. O vídeo abaixo mostra o cadastro nessa plataforma antes das mudanças de outubro de 2025, mas o processo continua o mesmo.
 
 {{< video https://youtu.be/WQ4O-8O6MwI >}}
 
@@ -60,7 +38,7 @@ Apesar do Zenodo cumprir funções similares ao OSF e até mesmo ao Github, ele 
 
 ## RStudio {#sec-rstudioprework}
 
-Baixe a versão mais recente do RStudio: <https://posit.co/download/rstudio-desktop/>. O RStudio é uma Integrated Development Environment (IDE) para a linguagem R. O RStudio é uma ferramenta essencial para a prática da CA em R, pois integra as principais soluções que abordaremos no curso (Zotero, Quarto, Git/Github, etc.). A empresa RStudio recentemente mudou o nome para Posit, com o objetivo refletir melhor a expansão da empresa para além do desenvolvimento de ferramentas para R, incluindo Python e outras linguagens. Nesse mesmo link você pode baixar o R, que é a linguagem de programação que utilizaremos no curso.
+Baixe a versão mais recente do RStudio: <https://posit.co/download/rstudio-desktop/>. O RStudio é uma Integrated Development Environment (IDE) para a linguagem R. O RStudio é uma ferramenta essencial para a prática da CA em R, pois integra as principais soluções que abordaremos no curso (Zotero, Quarto, Git/Github, etc.). A empresa RStudio recentemente mudou o nome para Posit, com o objetivo refletir melhor a expansão da empresa para além do desenvolvimento de ferramentas para R, incluindo Python e outras linguagens. Nesse mesmo link você pode baixar o R, que é a linguagem de programação mais utilizada por cientistas. No curso utilizaremos as versões 4.5.1 do R, 2025.05.1+513 do RStudio e Quarto 1.6.42 (que já vem integrado no RStudio). Assim como o Quarto tem substituído o RMarkdown, a Posit está substituindo o RStudio pelo [Positron](https://positron.posit.co/), que é um "misto" de RStudio + VS Code, e potencialmente veremos em edições futuras de nosso curso. Por hora, focaremos no RStudio. 
 
 {{< video https://youtu.be/KM2jxaNIEUk >}}
 
@@ -69,3 +47,32 @@ Baixe a versão mais recente do RStudio: <https://posit.co/download/rstudio-desk
 Baixe a versão mais recente do Docker: <https://www.docker.com/products/docker-desktop>. Nesse mesmo link você cria uma conta. O Docker é uma plataforma para desenvolvimento, envio e execução de aplicativos. O Docker é uma ferramenta essencial para a prática da CA, pois permite a criação de ambientes reprodutíveis.
 
 {{< video https://youtu.be/WjXQxhTLlrQ >}}
+
+## Máquinas Virtuais {#sec-vmprework}
+
+Embora o curso foque na utilização de containers via Docker para garantir ambientes reprodutíveis, muitos dos Recursos Educacionais Abertos (REA) apresentados ao longo da jornada foram organizados e testados dentro de uma máquina virtual (VM). Por isso, disponibilizamos abaixo uma sequência de vídeos que mostram como configurar uma VM no Windows 11, utilizando duas abordagens:
+
+- **Sandbox**: ambiente temporário e isolado, ideal para testes rápidos.
+- **Hyper-V**: solução mais robusta e permanente para virtualização.
+
+Esses vídeos são opcionais e não serão abordados diretamente nas aulas, mas podem ser úteis para quem deseja explorar outras formas de garantir reprodutibilidade e organização dos seus REA.
+
+### Sandbox no Windows 11
+
+- [Como habilitar o Sandbox no Windows 11 Pro](https://www.youtube.com/watch?v=7BitIt4KbPs)
+- [Como habilitar o Sandbox no Windows 11 Home](https://www.youtube.com/watch?v=HHqWrxUy6ps)
+
+> Esses vídeos mostram como ativar o recurso de Sandbox, mesmo em versões onde ele não está disponível oficialmente. Ideal para quem quer testar rapidamente scripts ou softwares em ambiente isolado.
+
+### Hyper-V no Windows 11
+
+- [Como habilitar o Hyper-V no Windows 11 Pro](https://www.youtube.com/watch?v=3bCbjinblhg)
+- [Como habilitar o Hyper-V no Windows 11 Home](https://www.youtube.com/watch?v=TmMRFB1U_ns)
+
+> Esses vídeos explicam como ativar o Hyper-V, mesmo em versões Home, permitindo a criação de ambientes virtuais persistentes e mais completos.
+
+### Configuração da Máquina Virtual
+
+- [Como configurar sua primeira máquina virtual no Hyper-V](https://www.youtube.com/watch?v=AyYA_-jZsSs)
+
+> Este vídeo mostra passo a passo como criar e configurar uma VM no Hyper-V, incluindo alocação de recursos e instalação do sistema operacional.
