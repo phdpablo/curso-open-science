@@ -1,13 +1,15 @@
 # \emojitext{📅} Agenda {#sec-schedule .unnumbered}
 
+<br>
+
 Planejamento dos dias \emojitext{📅} e horários das aulas \emojitext{⏲️}, conforme a ementa do curso. Na seção de cada uma das aulas temos materiais adicionais para o respectivo conteúdo. Quando disponível, por aqui, poderás acessar os slides utilizados nas aulas \emojitext{🗣}, aulas gravadas ou indicações de vídeo \emojitext{🎥} e leituras básica sobre os conteúdos \emojitext{📓}.
 
 | Aula/Conteúdo | Data | Material Principal | Instrutor |
-|:---|:--:|:--:|:--:|
-| [Introdução à CA](01-intro.html) | \emojitext{📅}18/11/25\emojitext{⏲️}20:30 | [\emojitext{🗣}](/resources/01-intro.pdf)[\emojitext{🎥}](https://www.youtube.com/live/7ewEcTATkZM?si=Lq40IAoDgsy_A619)[\emojitext{📓}](https://doi.org/10.1590/S0034-759020230408) | Ricardo Limongi |
-| [Repositórios da CA](02-osf.html) | \emojitext{📅}13/11/25\emojitext{⏲️}19:00 | [\emojitext{🗣️}](https://osf.io/wm8vs)[\emojitext{🎥}](https://www.youtube.com/watch?v=B19MPDJX_vs)[\emojitext{📓}](https://doi.org/10.1002/cpet.32) | Pablo Rogers |
-| [Gerenciamento de Referências](03-zotero.html) | \emojitext{📅}25/11/25\emojitext{⏲️}19:00 | [\emojitext{🗣️}](https://osf.io/emxz8)[\emojitext{🎥}](https://youtu.be/tnbwKj6-pD8?si=Yx9IC2LhrplvA6g1)[\emojitext{📓}](https://kuscholarworks.ku.edu/handle/1808/34983) | Pablo Rogers |
-| [Gestão de Projetos](04-project.html) | \emojitext{📅}27/11/27\emojitext{⏲️}19:00 | [\emojitext{🗣️}](/resources/04-project.pdf)[\emojitext{🎥}](https://youtu.be/l8yh3f8Tbv8?si=Yeq-xRxmffF7S1dk)[\emojitext{📓}](https://doi.org/10.1371/journal.pcbi.1005510) | Pablo Rogers |
+|:-----------------|:----------------:|:----------------:|:----------------:|
+| [Introdução à CA](01-intro.html) | \emojitext{📅}18/11/25\emojitext{⏲️}20:30 | [\emojitext{🗣}](/resources/01-intro.pdf)[\emojitext{🎥}](https://www.youtube.com/live/7ewEcTATkZM?si=Lq40IAoDgsy_A619)[\emojitext{📓}](https://doi.org/10.1590/1807-7692bar2025250079) | Ricardo Limongi |
+| [Repositórios da CA](02-osf.html) | \emojitext{📅}13/11/25\emojitext{⏲️}19:00 | [\emojitext{🗣️}](https://osf.io/wm8vs)[\emojitext{🎥}](https://youtu.be/i5H9BmOF5Ng?si=pqRbjsu32HEjrElG)[\emojitext{📓}](https://doi.org/10.1590/1807-7692bar2025250116) | Pablo Rogers |
+| [Gerenciamento de Referências](03-zotero.html) | \emojitext{📅}25/11/25\emojitext{⏲️}19:00 | [\emojitext{🗣️}](https://www.ufrgs.br/super8/wp-content/uploads/apresentacoes/zotero-gerenciador-referencias.pdf)[\emojitext{🎥}](https://www.youtube.com/live/gdYMiezOFiE)[\emojitext{📓}](https://kuscholarworks.ku.edu/entities/publication/258d14fa-beee-49ce-a245-f5280798b5ef) | Pablo Rogers |
+| [Gestão de Projetos](04-project.html) | \emojitext{📅}27/11/27\emojitext{⏲️}19:00 | [\emojitext{🗣️}](/resources/04-project.pdf)[\emojitext{🎥}](https://youtu.be/l8yh3f8Tbv8?si=Yeq-xRxmffF7S1dk)[\emojitext{📓}](https://bar.anpad.org.br/index.php/bar/article/view/722) | Pablo Rogers |
 | [Controle de Versão](05-git.html) | \emojitext{📅}02/12/25\emojitext{⏲️}19:00 | [\emojitext{🗣️}](/resources/05-git.pdf)[\emojitext{🎥}](https://youtu.be/uQL6NOSd9cc?si=TIYenlvIzKpoQ2dQ&t=1775)[\emojitext{📓}](https://doi.org/10.1177/2515245918754826) | Pablo Rogers |
 | [Documentos Dinâmicos](06-quarto.html) | \emojitext{📅}04/12/25\emojitext{⏲️}19:00 | [\emojitext{🗣️}](https://tracykteal.quarto.pub/intro-to-quarto/)[\emojitext{🎥}](https://youtu.be/XuxyzBhDvLg?si=iRCnXPJkmqbLuFty&t=1469)[\emojitext{📓}](https://doi.org/10.31219/osf.io/ur4xn) | Pablo Rogers |
 | [Controle de Ambiente](07-docker.html) | \emojitext{📅}09/12/25\emojitext{⏲️}19:00 | [\emojitext{🗣️}](https://kevinushey-2020-rstudio-conf.netlify.app/slides.html#1)[\emojitext{🎥}](https://youtu.be/N2STULZ1dYo?si=LAxCXfI9J0irxADD&t=523)[\emojitext{📓}](https://doi.org/10.1177/25152459211017853) | Pablo Rogers |

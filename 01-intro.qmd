@@ -1,5 +1,7 @@
 # Introdução à Ciência Aberta {#sec-intro}
 
+<br>
+
 A pesquisa científica atual enfrenta vários desafios [@munafo2017]. Problemas como o pequeno tamanho da amostra, pequenos tamanhos de efeito, p-hacking e HARKing (viés positivo de publicação), conflitos de interesse e a competição entre cientistas que trabalham isoladamente sem combinar seus esforços, têm sido apontados como catalizadores do que se convencionou chamar de “crise de reprodutibilidade” na ciência [@baker2016; @munafo2017].
 
 Pesquisas apontam que mais de 70% de pesquisadores que tentaram, falharam em reproduzir os experimentos de outros cientistas, e mais da metade falhou em reproduzir seus próprios experimentos [@baker2016], com estimativa de que 85% dos esforços de pesquisas estejam sendo desperdiçados [@munafo2017], gerando custos econômicos bilionários [@freedman2015].
@@ -55,7 +57,7 @@ A referida crise não deriva de má conduta científica, mas principalmente da c
 Investir em recursos humanos, treinamento, educação, alfabetização digital, capacitação sistemática e contínua, e fomentar uma cultura científica de CA, têm sido apresentadas como algumas das principais medidas simultâneas para superar o cenário atual [@crrs2019; @EU2017; @unesco2021]. A proposta do curso pode contribuir para a literatura da CA no Brasil, pois pretende perseguir dois objetivos concomitantes: 1) diagnosticar sua prática junto aos pesquisadores brasileiros; e 2) promover o desenvolvimento de uma intervenção educacional sobre a prática (workflow) e principais ferramentas para compilação dos produtos científicos que integram uma publicação científica aberta.
 
 ::: {.callout-note collapse="true"}
-## *A Pratical Guide for Transparency in Psychological Science* (@tip-prompt)
+## *A Pratical Guide for Transparency in Psychological Science*
 
 O artigo [@klein2018] é um guia prático para pesquisadores que desejam compartilhar os produtos de sua pesquisa. Os autores argumentam que as práticas de pesquisa transparentes são essenciais para melhorar a credibilidade e a cumulatividade da ciência.\vspace{0.5em}
 
@@ -93,7 +95,7 @@ Em conclusão, o artigo fornece informações valiosas para pesquisadores que de
 :::
 
 ::: {.callout-note collapse="true"}
-## *Easing Into Open Science: A Guide for Graduate Students and Their Advisors* (@tip-prompt)
+## *Easing Into Open Science: A Guide for Graduate Students and Their Advisors*
 
 O artigo [@kathawalla2021] fornece um guia para ajudar estudantes de pós-graduação e seus orientadores a se envolverem na prática da ciência aberta (CA). A CA é descrita como um termo amplo que se refere a uma variedade de princípios e comportamentos relacionados à transparência, credibilidade, reprodutibilidade e acessibilidade.\vspace{0.5em}
 

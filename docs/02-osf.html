@@ -104,10 +104,8 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
 
 <meta property="og:title" content="2&nbsp; Repositórios da Ciência Aberta – Artigo à Prova de Futuro">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://phdpablo.github.io/curso-open-science/img/osf-researchcycle.png">
+<meta property="og:image" content="https://phdpablo.github.io/curso-open-science/img/osf-researchcycle.jpg">
 <meta property="og:site_name" content="Artigo à Prova de Futuro">
-<meta property="og:image:height" content="367">
-<meta property="og:image:width" content="407">
 </head>
 
 <body class="nav-sidebar floating">
@@ -240,7 +238,7 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./08-AI.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">IA Aplicada à Pesquisa Científica</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">IA Aplicada à Pesquisa Reprodutível</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -254,8 +252,20 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#objetivos-de-aprendizagem" id="toc-objetivos-de-aprendizagem" class="nav-link active" data-scroll-target="#objetivos-de-aprendizagem"><span class="header-section-number">2.1</span> Objetivos de Aprendizagem</a></li>
+  <li><a href="#contextualização" id="toc-contextualização" class="nav-link" data-scroll-target="#contextualização"><span class="header-section-number">2.2</span> Contextualização</a></li>
+  <li><a href="#pré-registro-e-transparência-metodológica" id="toc-pré-registro-e-transparência-metodológica" class="nav-link" data-scroll-target="#pré-registro-e-transparência-metodológica"><span class="header-section-number">2.3</span> Pré-registro e Transparência Metodológica</a></li>
+  <li><a href="#identificadores-persistentes-e-rastreabilidade" id="toc-identificadores-persistentes-e-rastreabilidade" class="nav-link" data-scroll-target="#identificadores-persistentes-e-rastreabilidade"><span class="header-section-number">2.4</span> Identificadores Persistentes e Rastreabilidade</a></li>
+  <li><a href="#osf-no-ecossistema-de-ferramentas" id="toc-osf-no-ecossistema-de-ferramentas" class="nav-link" data-scroll-target="#osf-no-ecossistema-de-ferramentas"><span class="header-section-number">2.5</span> OSF no Ecossistema de Ferramentas</a></li>
+  <li><a href="#quando-não-usar-osf" id="toc-quando-não-usar-osf" class="nav-link" data-scroll-target="#quando-não-usar-osf"><span class="header-section-number">2.6</span> Quando Não Usar OSF</a></li>
+  <li><a href="#preparação-para-a-aula" id="toc-preparação-para-a-aula" class="nav-link" data-scroll-target="#preparação-para-a-aula"><span class="header-section-number">2.7</span> Preparação para a Aula</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"><span id="sec-osf" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Repositórios da Ciência Aberta</span></span></h1></header>
@@ -266,7 +276,35 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
 </header>
 
 
-<p>No contexto da CA, existem diversos repositórios disponíveis, cada um com suas funções e propósitos específicos. Esses repositórios são essenciais para promover a transparência, acessibilidade e colaboração na pesquisa científica. Eles assumem um papel crucial na democratização do conhecimento e na promoção da colaboração científica. Cada qual com suas particularidades, oferecem aos pesquisadores ferramentas para armazenar, compartilhar e gerenciar dados, publicações e outros materiais de pesquisa, ou se preferir, todo o ciclo de vida da pesquisa.</p>
+<p><br></p>
+<section id="objetivos-de-aprendizagem" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="objetivos-de-aprendizagem"><span class="header-section-number">2.1</span> Objetivos de Aprendizagem</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🎯 Ao final deste módulo, você será capaz de:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Criar e configurar projetos no OSF, incluindo metadados, componentes hierárquicos e integrações com serviços externos</li>
+<li>Conectar o OSF a armazenamentos em nuvem (OneDrive, Google Drive), gerenciadores de referências (Zotero) e repositórios de código (GitHub)</li>
+<li>Onde criar e submeter pré-registros utilizando templates apropriados ao desenho de pesquisa (OSF Preregistration, Secondary Data, Registered Reports)</li>
+<li>Distinguir entre preregistration e registration, compreendendo quando aplicar cada modalidade no ciclo de pesquisa</li>
+<li>Gerar DOIs para projetos e componentes, tornando materiais de pesquisa citáveis e rastreáveis permanentemente</li>
+<li>Compartilhar projetos com colaboradores, gerenciar permissões e criar links anônimos para revisão por pares</li>
+<li>Publicar preprints através do OSF Preprints ou serviços disciplinares (PsyArXiv, SocArXiv)</li>
+<li>Avaliar quando escolher OSF versus outras plataformas</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="contextualização" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="contextualização"><span class="header-section-number">2.2</span> Contextualização</h2>
+<p>No contexto da CA, existem diversos repositórios disponíveis, cada um com suas funções e propósitos específicos. Esses repositórios são essenciais para promover a transparência, acessibilidade e colaboração na pesquisa científica. Eles assumem um papel muito relevante na democratização do conhecimento e na promoção da colaboração científica. Cada qual com suas particularidades, oferecem aos pesquisadores ferramentas para armazenar, compartilhar e gerenciar dados, publicações e outros materiais de pesquisa, ou se preferir, todo o ciclo de vida da pesquisa.</p>
 <ul>
 <li><a href="https://www.zenodo.org"><strong>Zenodo</strong></a>: é um repositório gerido pelo CERN em colaboração com o projeto <a href="https://www.openaire.eu/">OpenAIRE</a> da União Europeia. Oferece armazenamento gratuito e seguro para dados de pesquisa, com a capacidade de gerar DOIs para facilitar a citação dos dados.</li>
 <li><a href="https://www.figshare.com"><strong>Figshare</strong></a>: é um repositório comercial que permite aos pesquisadores armazenar, compartilhar e descobrir dados de pesquisa. Oferece ferramentas para visualização de documentos, gráficos e outros tipos de dados diretamente no navegador, além de gerar DOIs para os projetos.</li>
@@ -275,7 +313,7 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
 <li><a href="https://arxiv.org"><strong>arXiv</strong></a>: é um repositório de pré-impressões de artigos científicos em física, matemática, ciência da computação e outras áreas. Ele permite aos pesquisadores compartilhar seus trabalhos antes da revisão por pares, facilitando o acesso à pesquisa em estágios iniciais.</li>
 <li><a href="https://github.com"><strong>Github</strong></a>: é uma plataforma de desenvolvimento colaborativo baseada em Git, amplamente utilizada por pesquisadores para compartilhar código, documentos e outros materiais de pesquisa. Ele oferece controle de versões, rastreamento de problemas e integração com outras ferramentas de desenvolvimento.</li>
 </ul>
-<p>Além desses exemplos, poderíamos citar outras soluções que cumprem papeis semelhantes ou focado em certas disciplinas: <a href="https://databrary.org">Databrary</a>, <a href="https://dataverse.no">DataverseNO</a>, <a href="https://dataone.org">DataONE</a>, <a href="https://datacite.org">DataCite</a>, <a href="https://datahub.io">DataHub</a>, <a href="https://datamed.org">DataMed</a>, <a href="https://datashare.is.ed.ac.uk">DataShare</a>, <a href="https://dataverse.org">DataVerse</a>, <a href="https://datadryad.org">Dryad</a>, <a href="https://earthchem.org">EarthChem</a>, <a href="https://eudat.eu">EUDAT</a>, <a href="https://www.ebi.ac.uk/ena/browser/home">European Nucleotide Archive (ENA)</a>, <a href="https://ncbi.nlm.nih.gov/genbank">GenBank</a>, <a href="https://datasetsearch.research.google.com">Google Dataset Search</a>, <a href="https://hathitrust.org">HathiTrust Research Center</a>, <a href="https://icpsr.umich.edu">ICPSR</a>, <a href="https://jstor.org">JSTOR Data for Research</a>, <a href="https://ncbi.nlm.nih.gov">National Center for Biotechnology Information (NCBI)</a>, <a href="https://nih.gov">National Institutes of Health (NIH) Data Sharing Repositories</a>, <a href="https://data.noaa.gov">National Oceanographic Data Center (NODC)</a>, <a href="https://plos.org">PLOS ONE</a>, <a href="https://ncbi.nlm.nih.gov/pmc">PubMed Central</a>, <a href="http://researchdata.ands.org.au">Research Data Australia</a> e <a href="https://ukdataservice.ac.uk">UK Data Service</a>; e em última instância, as redes sociais acadêmicas como <a href="https://academia.edu">Academia.edu</a>, <a href="https://scholar.google.com">Google Scholar</a>, <a href="https://orcid.org">ORCID</a> e <a href="https://researchgate.net">ResearchGate</a>, também podem ser usadas para compartilhar e descobrir pesquisas.</p>
+<p>Além desses exemplos, poderíamos citar diversas outras soluções que cumprem papeis semelhantes ou focado em disciplinas específicas: <a href="https://databrary.org">Databrary</a>, <a href="https://dataverse.no">DataverseNO</a>, <a href="https://dataone.org">DataONE</a>, <a href="https://datacite.org">DataCite</a>, <a href="https://datahub.io">DataHub</a>, <a href="https://datamed.org">DataMed</a>, <a href="https://datashare.is.ed.ac.uk">DataShare</a>, <a href="https://dataverse.org">DataVerse</a>, <a href="https://datadryad.org">Dryad</a>, <a href="https://earthchem.org">EarthChem</a>, <a href="https://eudat.eu">EUDAT</a>, <a href="https://www.ebi.ac.uk/ena/browser/home">European Nucleotide Archive (ENA)</a>, <a href="https://ncbi.nlm.nih.gov/genbank">GenBank</a>, <a href="https://datasetsearch.research.google.com">Google Dataset Search</a>, <a href="https://hathitrust.org">HathiTrust Research Center</a>, <a href="https://icpsr.umich.edu">ICPSR</a>, <a href="https://jstor.org">JSTOR Data for Research</a>, <a href="https://ncbi.nlm.nih.gov">National Center for Biotechnology Information (NCBI)</a>, <a href="https://nih.gov">National Institutes of Health (NIH) Data Sharing Repositories</a>, <a href="https://data.noaa.gov">National Oceanographic Data Center (NODC)</a>, <a href="https://plos.org">PLOS ONE</a>, <a href="https://ncbi.nlm.nih.gov/pmc">PubMed Central</a>, <a href="http://researchdata.ands.org.au">Research Data Australia</a> e <a href="https://ukdataservice.ac.uk">UK Data Service</a>; e em última instância, as redes sociais acadêmicas como <a href="https://academia.edu">Academia.edu</a>, <a href="https://scholar.google.com">Google Scholar</a>, <a href="https://orcid.org">ORCID</a> e <a href="https://researchgate.net">ResearchGate</a>, também podem ser usadas para compartilhar e descobrir pesquisas.</p>
 <p>A despeito de todas essas opções, vamos focar na plataforma <a href="https://osf.io/"><strong>Open Science Framework (OSF)</strong></a> para a realização do nosso curso. O <strong>OSF</strong> é uma plataforma de código aberto para colaboração em pesquisa, que oferece uma estrutura para conectar os fluxos de trabalho de pesquisa, desde a concepção do projeto até a publicação. O <strong>OSF</strong> é mantido pelo <a href="https://www.cos.io/">Center for Open Science (COS)</a>, uma organização sem fins lucrativos com sede nos Estados Unidos. O <strong>OSF</strong> é um dos principais produtos do COS e é usado por pesquisadores de todo o mundo para colaborar em projetos de pesquisa.</p>
 <p>O <strong>OSF</strong> oferece uma série de recursos para ajudar os pesquisadores a gerenciar seus projetos de pesquisa, incluindo:</p>
 <ul>
@@ -288,62 +326,92 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
 <div id="fig-osf-researchcycle" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-osf-researchcycle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://help.osf.io/article/583-getting-to-know-the-osf-the-basics"><img src="img/osf-researchcycle.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a>
+<a href="https://help.osf.io/article/583-getting-to-know-the-osf-the-basics"><img src="img/osf-researchcycle.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-osf-researchcycle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;2.1: OSF Research Lifecycle
 </figcaption>
 </figure>
 </div>
-<p>O material utilizado nesse módulo do curso segue de perto a proposta de <span class="citation" data-cites="olson2022">Olson et al. (<a href="references.html#ref-olson2022" role="doc-biblioref">2022</a>)</span>, um <a href="https://osf.io/yaqe8/">projeto oficial do COS</a> que possui recursos, modelos e práticas para ajudar os pesquisadores a iniciar sua jornada <strong>OSF</strong>. Claro que ele foi adaptado para nossos fins, principalmente, em decorrência do tempo destinado ao módulo.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<em>Bifurcando ou duplicando um projeto</em>
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Você sabia que é possível executar um “<em>forking</em>” (criar uma cópia do projeto existente) ou “<em>duplicate as template</em>” (duplicar apenas a estrutura do projeto e seus componentes) de um projeto público no OSF?</p>
-<p>Você que se interessa em iniciar seu próprio projeto OSF com um modelo, pode criar sua própria duplicata do projeto <span class="citation" data-cites="olson2022">Olson et al. (<a href="references.html#ref-olson2022" role="doc-biblioref">2022</a>)</span> para começar!</p>
-<p>Neste <a href="https://osf.io/yaqe8/">projeto</a>, existem templates e recursos básicos para diversos casos de uso encontrados no OSF; coordenação de equipes de pesquisa, planejamento de gerenciamento de dados, documentos reprodutíveis e até mesmo gerenciamento de cursos.</p>
-</div>
-</div>
-</div>
 <p>Para os alunos que desejam uma leitura sobre o <strong>OSF</strong> na prática, indicamos os artigos de <span class="citation" data-cites="sullivan2019">Sullivan et al. (<a href="references.html#ref-sullivan2019" role="doc-biblioref">2019</a>)</span> e <span class="citation" data-cites="soderberg2018">Soderberg (<a href="references.html#ref-soderberg2018" role="doc-biblioref">2018</a>)</span>. Apesar de o leitor poder encontrar <em>prints</em> das telas da plataforma desatualizadas, esses dois artigos podem ser um bom começo para entender a lógica da plataforma. E <em>off course</em>, recomendamos fortemente você dar uma olhada no <a href="https://help.osf.io/article/342-getting-started-on-the-osf">suporte do <strong>OSF</strong></a>, onde podemos encontrar vídeos introdutórios excelentes.</p>
-<p>Esse curso poderia ter sido concebido e gerenciado dentro do <strong>OSF</strong>, no entanto, devido a proposta de apresentarmos também o <a href="https://phdpablo.github.io/curso-open-science/05-git.html">Git/Github</a> e sua integração com documentos reprodutíveis no <a href="https://phdpablo.github.io/curso-open-science/06-quarto.html">RStudio/Quarto</a>, optamos por priorizar o repositório do Github. Por isso, que também nesse módulo passamos pelo <a href="https://phdpablo.github.io/curso-open-science/00-prework.html#sec-zenodoprework">Zenodo</a>, que integra com o Github e tem a capacidade de gerar DOIs para as versões dos repositórios.</p>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<em>Open and Reproducible Research on Open Science Framework</em> (<a href="00-prework.html#tip-prompt" class="quarto-xref">Tip&nbsp;<span>1</span></a>)
+<em>Duplicando um projeto</em>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>O artigo <span class="citation" data-cites="sullivan2019">(<a href="references.html#ref-sullivan2019" role="doc-biblioref">Sullivan et al., 2019</a>)</span> apresenta um protocolo para a implementação de práticas de Ciência Aberta (CA), com foco no uso do Open Science Framework (OSF). As principais ideias do texto são as seguintes:</p>
-<ul>
-<li><p>A CA é um movimento que promove a transparência, a reprodutibilidade e a acessibilidade dos resultados de pesquisa;</p></li>
-<li><p>As práticas de CA podem contribuir para a melhoria da qualidade da pesquisa científica, tornando-a mais confiável e robusta;</p></li>
-<li><p>O OSF é uma plataforma gratuita e de código aberto que pode ser usada para implementar práticas de CA;</p></li>
-</ul>
-<p>O protocolo apresentado no texto fornece instruções passo a passo para as seguintes práticas de CA:</p>
-<ul>
-<li><p><strong>Planejamento de gerenciamento de dados</strong>: O planejamento de gerenciamento de dados é essencial para garantir que os dados de pesquisa sejam armazenados, organizados e gerenciados de forma eficiente e eficaz. O OSF fornece ferramentas para ajudar os pesquisadores a planejar e implementar seus planos de gerenciamento de dados.</p></li>
-<li><p><strong>Pré-registro de estudos</strong>: O pré-registro de estudos é uma prática que consiste em publicar um plano de pesquisa antes de iniciar o estudo. Isso ajuda a garantir que o estudo seja realizado de forma objetiva e transparente. O OSF fornece um recurso para pré-registrar estudos.</p></li>
-<li><p><strong>Controle de versão</strong>: O controle de versão é uma prática que consiste em rastrear as alterações feitas em arquivos de texto. Isso ajuda a garantir que os resultados de pesquisa sejam reprodutíveis e que as alterações feitas nos dados sejam rastreáveis. O OSF fornece ferramentas para gerenciar o controle de versão de arquivos de pesquisa.</p></li>
-<li><p><strong>Compartilhamento de dados e materias</strong>: O compartilhamento de dados e materiais de pesquisa é uma prática importante para aumentar a transparência e a reprodutibilidade da pesquisa. O OSF fornece um repositório para compartilhar dados e materiais de pesquisa.</p></li>
-<li><p><strong>Publicação de pré-impressões</strong>: As pré-impressões são versões preliminares de artigos científicos que são publicadas online antes de serem revisados por pares. As pré-impressões podem ajudar a acelerar a divulgação da pesquisa e a promover o debate científico. O OSF fornece um repositório para publicar pré-impressões.</p></li>
-</ul>
-<p>O artigo fornece informações valiosas para os pesquisadores que desejam implementar práticas de CA. O protocolo apresentado pode ser usado como um guia para implementar essas práticas de forma eficaz.</p>
+<p>Você sabia que é possível executar um “<em>duplicate</em>” e criar uma cópia do projeto existente ou duplicar apenas a estrutura do projeto e seus componentes de um projeto público no OSF?</p>
+<p>Você que se interessa em iniciar seu próprio projeto OSF com um modelo, pode criar sua própria duplicata do projeto <span class="citation" data-cites="olson2022">Olson et al. (<a href="references.html#ref-olson2022" role="doc-biblioref">2022</a>)</span> para começar!</p>
+<p>Neste <a href="https://osf.io/yaqe8/">projeto</a>, existem templates e recursos básicos para diversos casos de uso encontrados no OSF; coordenação de equipes de pesquisa, planejamento de gerenciamento de dados, documentos reprodutíveis e até mesmo gerenciamento de cursos.</p>
 </div>
+</div>
+</div>
+</section>
+<section id="pré-registro-e-transparência-metodológica" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="pré-registro-e-transparência-metodológica"><span class="header-section-number">2.3</span> Pré-registro e Transparência Metodológica</h2>
+<p>Pré-registro documenta hipóteses e planos de análise antes da coleta de dados. A prática mitiga vieses de confirmação e decisões <em>post-hoc</em> que comprometem a validade dos resultados. Registrar decisões metodológicas antes de observar os dados torna explícito o que foi planejado versus o que foi exploratório - uma distinção que a ciência tradicional frequentemente obscurece.</p>
+<p>O <strong>OSF</strong> distingue duas modalidades. <em>Preregistration</em> é criado antes da coleta ou análise de dados, quando os dados ainda não existem ou não foram observados. <em>Registration</em> documenta estudos já concluídos ou cria <em>snapshots</em> permanentes de projetos em qualquer estágio. Ambos geram registros imutáveis com timestamps, mas o timing difere. Preregistration tem maior valor para transparência metodológica porque compromete o pesquisador com um plano antes de conhecer os resultados.</p>
+<div id="fig-osf-registration" class="quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-osf-registration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<video autoplay="" loop="" muted="" playsinline="" style="max-width: 100%; height: auto;">
+  <source src="resources/02-registration.webm" type="video/webm">
+  Seu navegador não suporta vídeos WebM.
+</video>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-osf-registration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2.2: <a href="https://youtu.be/i5H9BmOF5Ng?si=euF4o1of0-YDXVnc&amp;t=1282">OSF Registration</a>
+</figcaption>
+</figure>
+</div>
+<p>O <strong>OSF</strong> oferece múltiplos templates adaptados a diferentes desenhos. <em>OSF Preregistration</em> é o mais utilizado e abrangente, cobrindo hipóteses, métodos de coleta, planos de análise e critérios de exclusão. <em>Secondary Data Preregistration</em> é específico para análises de dados já coletados por outros ou por você em projetos anteriores - ele inclui questões sobre seu conhecimento prévio dos dados, tornando transparente o que já foi explorado. <em>Registered Report Protocol</em> é para submissão a periódicos que revisam protocolos antes da coleta (Stage 1), oferecendo aceitação provisória baseada na qualidade metodológica, independentemente dos resultados futuros. <em>Generalized Systematic Review Registration</em> é voltado para revisões sistemáticas e meta-análises, documentando estratégias de busca, critérios de inclusão/exclusão e métodos de síntese.</p>
+<p>Preregistros podem ser embargados por até quatro anos, permitindo trabalhar em projetos sem exposição prematura a concorrentes. O histórico de versionamento permanece preservado mesmo durante embargo. Após publicação, o registro torna-se imutável, mas você pode vincular outputs futuros (artigos, datasets, preprints) através da funcionalidade <em>Connected Resources</em>, criando uma rede rastreável entre protocolo e produtos finais.</p>
+</section>
+<section id="identificadores-persistentes-e-rastreabilidade" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="identificadores-persistentes-e-rastreabilidade"><span class="header-section-number">2.4</span> Identificadores Persistentes e Rastreabilidade</h2>
+<p>DOIs tornam materiais de pesquisa citáveis permanentemente. O <strong>OSF</strong> gera DOIs para projetos e componentes individuais, transformando qualquer elemento do seu workflow em objeto citável com endereço permanente na web. Datasets, protocolos, códigos de análise, instrumentos - todos ganham identidade própria no registro acadêmico.</p>
+<p>A integração com ORCiD vincula automaticamente outputs ao perfil permanente do pesquisador. Cada DOI gerado no <strong>OSF</strong> pode ser associado ao seu ORCiD, construindo um registro completo da sua produção que transcende afiliações institucionais. Metadados estruturados alimentam sistemas de descoberta como Google Scholar e DataCite, aumentando a visibilidade e o impacto dos materiais compartilhados.</p>
+<p>Zenodo e OSF diferem na granularidade. Zenodo gera DOIs por versão de arquivo, permitindo citar exatamente a versão 1.2 de um dataset. OSF gera DOIs por projeto ou componente, citando o container que pode evoluir ao longo do tempo. A escolha depende das necessidades: Zenodo favorece imutabilidade estrita; OSF favorece flexibilidade e evolução do projeto com rastreamento de versões interno.</p>
+</section>
+<section id="osf-no-ecossistema-de-ferramentas" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="osf-no-ecossistema-de-ferramentas"><span class="header-section-number">2.5</span> OSF no Ecossistema de Ferramentas</h2>
+<p>Você pode configurar o <strong>OSF</strong> para funcionar como hub central, conectando ferramentas especializadas do seu workflow acadêmico. Ele não compete com GitHub ou Zotero - integra-se a eles. GitHub gerencia controle de versão detalhado de código-fonte, rastreando cada mudança com granularidade de linha. Zotero organiza referências bibliográficas e PDFs anotados. OSF orquestra tudo, vinculando repositórios GitHub como componentes do projeto, sincronizando bibliotecas Zotero, conectando armazenamentos em nuvem onde os dados vivem.</p>
+<p>Essa arquitetura modular respeita especializações. Use GitHub para o que ele faz melhor: versionamento de código e colaboração via pull requests. Use Zotero para gestão bibliográfica com plugins e automações. Use OneDrive ou Google Drive para arquivos grandes que excedem limites dos repositórios especializados. O OSF une tudo sob metadados estruturados, controle de acesso unificado e DOI citável que aponta para o projeto completo.</p>
+<p>RStudio e Quarto, que serão discutidos em módulos posteriores, produzem documentos dinâmicos onde análises, código e narrativa coexistem. Hospedar esses projetos no GitHub, vinculá-los ao OSF e depositar versões finais no Zenodo com DOI cria pipeline completo: desenvolvimento transparente (GitHub), coordenação de projeto (OSF), arquivo permanente versionado (Zenodo). Cada ferramenta contribui com sua força, nenhuma tenta fazer tudo.</p>
+</section>
+<section id="quando-não-usar-osf" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="quando-não-usar-osf"><span class="header-section-number">2.6</span> Quando Não Usar OSF</h2>
+<p>GitHub é superior para projetos centrados em código onde colaboração via <em>issues</em>, <em>pull requests</em> e integração contínua são centrais. Desenvolvedores de software preferem GitHub porque ele foi desenhado para esse workflow. O OSF conecta-se ao GitHub, mas não substitui suas funcionalidades nativas de desenvolvimento colaborativo.</p>
+<p>arXiv permanece padrão para física, matemática e ciência da computação por razões históricas e culturais. Submeter preprints ao arXiv sinaliza conformidade com normas disciplinares. O OSF oferece OSF Preprints e serviços disciplinares (PsyArXiv, SocArXiv), mas em campos onde arXiv domina, migrar traz pouco benefício.</p>
+<p>Repositórios disciplinares específicos são exigidos por journals ou agências de fomento em algumas áreas como genômica (GenBank) e cristalografia (Protein Data Bank). Nesses casos, depositar no repositório mandatado é obrigatório. O OSF pode complementar, vinculando o projeto ao depósito externo via metadados e <em>Connected Resources</em>, mas não substitui requisitos formais.</p>
+<p>Dados sensíveis com restrições éticas ou legais severas podem exigir infraestrutura institucional com controles de acesso mais rígidos que os oferecidos pelo OSF. Dados de saúde identificáveis, por exemplo, frequentemente precisam permanecer em servidores certificados pela instituição. O OSF pode hospedar metadados e documentação enquanto os dados permanecem em repositório restrito.</p>
+</section>
+<section id="preparação-para-a-aula" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="preparação-para-a-aula"><span class="header-section-number">2.7</span> Preparação para a Aula</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Pré-requisitos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Antes da aula síncrona, certifique-se de completar <strong>todos</strong> os passos abaixo. Um vídeo com instruções detalhadas está disponível na <a href="00-prework.html#sec-osfprework">página de pré-trabalho do curso</a>.</p>
+<p><strong>Checklist de Preparação:</strong></p>
+<ol type="1">
+<li>✅ Criar conta no <a href="https://osf.io/register">OSF</a></li>
+<li>✅ Atualizar seu perfil no OSF (Opcional)</li>
+<li>✅ Explorar a interface inicial do OSF e familiarizar-se com a navegação</li>
+<li>✅ Dar uma “olhada” nos templates de preregistro disponíveis em <a href="https://help.osf.io/article/330-welcome-to-registrations#Select-a-Registration-Template-1g4YO">OSF Registries</a> (Opcional)</li>
+</ol>
 </div>
 </div>
 
@@ -359,6 +427,7 @@ Soderberg, C. K. (2018). Using OSF to Share Data: A Step-by-Step Guide. <em>Adva
 Sullivan, I., DeHaven, A., &amp; Mellor, D. (2019). Open and Reproducible Research on Open Science Framework. <em>Current Protocols Essential Laboratory Techniques</em>, <em>18</em>(1), e32. <a href="https://doi.org/10.1002/cpet.32">https://doi.org/10.1002/cpet.32</a>
 </div>
 </div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

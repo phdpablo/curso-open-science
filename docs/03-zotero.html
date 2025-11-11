@@ -104,6 +104,7 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
 
 <meta property="og:title" content="3&nbsp; Gerenciamento de Referências e Bibliotecas – Artigo à Prova de Futuro">
 <meta property="og:description" content="">
+<meta property="og:image" content="https://phdpablo.github.io/curso-open-science/img/zotero-ilustration.jpg">
 <meta property="og:site_name" content="Artigo à Prova de Futuro">
 </head>
 
@@ -237,7 +238,7 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./08-AI.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">IA Aplicada à Pesquisa Científica</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">IA Aplicada à Pesquisa Reprodutível</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -251,8 +252,20 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#objetivos-de-aprendizagem" id="toc-objetivos-de-aprendizagem" class="nav-link active" data-scroll-target="#objetivos-de-aprendizagem"><span class="header-section-number">3.1</span> Objetivos de Aprendizagem</a></li>
+  <li><a href="#contextualização" id="toc-contextualização" class="nav-link" data-scroll-target="#contextualização"><span class="header-section-number">3.2</span> Contextualização</a></li>
+  <li><a href="#o-zotero-no-ciclo-de-pesquisa" id="toc-o-zotero-no-ciclo-de-pesquisa" class="nav-link" data-scroll-target="#o-zotero-no-ciclo-de-pesquisa"><span class="header-section-number">3.3</span> O Zotero no Ciclo de Pesquisa</a></li>
+  <li><a href="#integração-com-fluxos-de-trabalho-reprodutíveis" id="toc-integração-com-fluxos-de-trabalho-reprodutíveis" class="nav-link" data-scroll-target="#integração-com-fluxos-de-trabalho-reprodutíveis"><span class="header-section-number">3.4</span> Integração com Fluxos de Trabalho Reprodutíveis</a></li>
+  <li><a href="#ia-e-descoberta-de-literatura" id="toc-ia-e-descoberta-de-literatura" class="nav-link" data-scroll-target="#ia-e-descoberta-de-literatura"><span class="header-section-number">3.5</span> IA e Descoberta de Literatura</a></li>
+  <li><a href="#indo-além-das-funcionalidades-básicas" id="toc-indo-além-das-funcionalidades-básicas" class="nav-link" data-scroll-target="#indo-além-das-funcionalidades-básicas"><span class="header-section-number">3.6</span> Indo Além das Funcionalidades Básicas</a></li>
+  <li><a href="#preparação-para-a-aula" id="toc-preparação-para-a-aula" class="nav-link" data-scroll-target="#preparação-para-a-aula"><span class="header-section-number">3.7</span> Preparação para a Aula</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"><span id="sec-zotero" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Gerenciamento de Referências e Bibliotecas</span></span></h1></header>
@@ -263,21 +276,119 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
 </header>
 
 
-<p>Existem mais de 30 diferentes<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> gerenciadores de referências <span class="citation" data-cites="proske2023">(<a href="references.html#ref-proske2023" role="doc-biblioref">Proske et al., 2023</a>)</span>. Entre eles podemos indicar o <a href="https://www.citavi.com/en">Citavi</a> e o <a href="https://refworks.proquest.com/learn-more/">RefWorks</a>. No entanto, os mais populares são o <a href="https://endnote.com/">EndNote</a>, <a href="https://www.mendeley.com/reference-management/reference-manager/">Mendeley</a> e <a href="https://www.zotero.org/">Zotero</a>. O primeiro é proprietário e descartamos enquanto opção para nosso workflow de Open Science. Os dois últimos são excelentes opções, no entanto, o Zotero se destaca por ser código aberto (totalmente gratuíto), enquanto o Mendeley, embora gratuito, é propriedade da Elsevier, uma editora comercial. Isso significa que o Zotero não tem restrições de uso e não exige pagamento por recursos adicionais, exceto por maior armazenamento na nuvem, que inclusive, é um destaque do Mendeley (2Gb <em>vs</em> 300Mb).</p>
-<p>Além disso, o Zotero tem uma comunidade ativa e fóruns de suporte, o que pode ser útil para solucionar problemas e compartilhar conhecimento com outros usuários. Portanto, como aqui valorizamos a liberdade de código aberto e uma comunidade engajada, o Zotero é nossa escolha.</p>
-<p>Essa característica faz com que o Zotero se destaca em relação ao Mendeley, especialmente no que diz respeito ao <strong>Ecossitema de Plugins</strong>. O Zotero possui uma comunidade ativa de desenvolvedores e pesquisadores que criam e compartilham plugins. Esses plugins estendem as funcionalidades do Zotero, permitindo personalizações específicas e integrações com outras ferramentas <span class="citation" data-cites="prashantakumarbehera2023">(<a href="references.html#ref-prashantakumarbehera2023" role="doc-biblioref">Behera &amp; Jain, 2023</a>)</span>. O plugin <a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a>, por exemplo, oferece recursos avançados de exportação e formatação de bibliografias, tornando-o uma escolha popular para usuários que trabalham com LaTeX, Markdown, HTML, e outras linguagens de marcação. Outro exemplo é o <a href="https://zotfile.com/">ZotFile</a>, que permite gerenciar anexos de PDFs, renomeando arquivos automaticamente e organizando-os em pastas específicas <span class="citation" data-cites="prashantakumarbehera2023">(<a href="references.html#ref-prashantakumarbehera2023" role="doc-biblioref">Behera &amp; Jain, 2023</a>)</span>. Assim, poderás estender o armazenamento do Zotero de 300Mb para o limite de seu serviço de armazenamento na nuvem (Google Drive, OneDrive, Dropbox, etc.)<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
-<p>Nesse sentido, uma recomendação importante é não deixar de dar uma olhada no <a href="https://www.zotero.org/support/plugins">página de plugins</a> do Zotero no site oficial e uma <a href="https://github.com/search?q=zotero&amp;type=repositories">busca por Zotero</a> no Github. Com certeza você vai encontrar uma solução (plugin) interessante para potencializar as funcionalidades do Zotero. Algumas delas veremos ao longo do curso.</p>
-<p>A mensagem principal que pretendemos passar no curso sobre esse tópico é para você conceber os gerenciadores de referências e bibliotecas no contexto do processo de escrita, e não apenas como facilitadores operacionais (“<em>time saver</em>”) de citações e bibliografias. Somente usuários avançados podem aproveitar o suporte que a maioria dos sistemas de gerenciamento de referências oferece para o processo de escrita <span class="citation" data-cites="proske2023">(<a href="references.html#ref-proske2023" role="doc-biblioref">Proske et al., 2023</a>)</span>.</p>
-<p>Atualmente, gerenciadores de referências mais populares oferecem funcionalidades básicas, que incluem:</p>
+<p><br></p>
+<section id="objetivos-de-aprendizagem" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="objetivos-de-aprendizagem"><span class="header-section-number">3.1</span> Objetivos de Aprendizagem</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🎯 Ao final deste módulo, você será capaz de:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Configurar o Zotero 7 com plugins essenciais (Better BibTeX, Zotero Attanger etc.) e sincronização com serviços de nuvem</li>
+<li>Organizar referências em coleções temáticas e utilizar tags para categorizar estágios do processo de pesquisa</li>
+<li>Criar anotações e marcações em PDF como material para análises qualitativas e sínteses de literatura</li>
+<li>Gerar arquivos <code>.bib</code> automatizados para integração com documentos dinâmicos (Quarto/RStudio)</li>
+<li>Produzir citações em documentos Word/LibreOffice e em documentos reprodutíveis via chaves BibTeX</li>
+<li>Compartilhar bibliotecas através de grupos do Zotero</li>
+<li>Automatizar renomeação de PDFs e contornar limitações de armazenamento usando nuvem externa</li>
+<li>Informar sobre as diversas possibilidades de integração do Zotero com ferramentas de IA (NotebookLM, Elicit, plugins de sumarização) e gestão de conhecimento (Obsidian, Notion)</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="contextualização" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="contextualização"><span class="header-section-number">3.2</span> Contextualização</h2>
+<p>Existem mais de 15 diferentes<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> gerenciadores de referências <span class="citation" data-cites="proske2023">(<a href="references.html#ref-proske2023" role="doc-biblioref">Proske et al., 2023</a>)</span>. Entre eles podemos indicar o <a href="https://www.citavi.com/en">Citavi</a> e o <a href="https://refworks.proquest.com/learn-more/">RefWorks</a>. No entanto, os mais populares são o <a href="https://endnote.com/">EndNote</a>, <a href="https://www.mendeley.com/reference-management/reference-manager/">Mendeley</a> e <a href="https://www.zotero.org/">Zotero</a>. O primeiro é proprietário e descartamos enquanto opção para nosso workflow de Open Science. Os dois últimos são excelentes opções, no entanto, o Zotero se destaca por ser código aberto (totalmente gratuíto), enquanto o Mendeley, embora gratuito, é propriedade da Elsevier, uma editora comercial. Isso significa que o Zotero não tem restrições de uso e não exige pagamento por recursos adicionais, exceto por maior armazenamento na nuvem, que inclusive, é um destaque do Mendeley (2Gb <em>vs</em> 300Mb).</p>
+<div id="fig-zotilus" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-zotilus-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://library.ethz.ch/en/news-and-courses/courses/zotero-literaturverwaltung.html"><img src="img/zotero-ilustration.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-zotilus-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3.1: Mapa de decisão para escolha do gerenciador de referências
+</figcaption>
+</figure>
+</div>
+<p>Essa aparente desvantagem do Zotero é, na prática, contornável. O limite de 300Mb refere-se apenas à sincronização dos metadados (os dados da referência). O armazenamento dos arquivos PDF, que consomem mais espaço, pode ser direcionado para seu serviço de nuvem preferido (OneDrive, Google Drive, etc.) através de configurações e plugins específicos. Essa configuração, que será demonstrada na aula, resolve a limitação.</p>
+<p>O Zotero tem uma comunidade ativa e fóruns de suporte, o que pode ser útil para solucionar problemas e compartilhar conhecimento com outros usuários. Como aqui valorizamos a liberdade de código aberto e uma comunidade engajada, o Zotero é nossa escolha.</p>
+<p>Essa característica faz com que o Zotero se destaque em relação ao Mendeley, especialmente no que diz respeito ao <strong>Ecossitema de Plugins</strong>. O Zotero possui uma comunidade ativa de desenvolvedores e pesquisadores que criam e compartilham plugins. Esses plugins estendem as funcionalidades do Zotero, permitindo personalizações específicas e integrações com outras ferramentas <span class="citation" data-cites="prashantakumarbehera2023">(<a href="references.html#ref-prashantakumarbehera2023" role="doc-biblioref">Behera &amp; Jain, 2023</a>)</span>.</p>
+<p>O plugin <a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a>, por exemplo, oferece recursos avançados de exportação e formatação de bibliografias, tornando-o uma escolha popular para usuários que trabalham com LaTeX, Markdown, HTML, e outras linguagens de marcação.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> O ecossistema de plugins é tão ativo que já inclui diversas integrações com ferramentas de Inteligência Artificial (IA) para sumarização e análise de artigos (A.I.R.A., PapersGPT, ZotAi, entre outros).</p>
+<p>A mensagem principal que pretendemos passar no curso sobre esse tópico é para você conceber os gerenciadores de referências e bibliotecas, especialmente o Zotero, no contexto do processo de pesquisa, e não apenas para citações e referências. Usuários avançados aproveitam o suporte que a maioria dos sistemas de gerenciamento de referências oferece para o ciclo da pesquisa reprodutível <span class="citation" data-cites="proske2023">(<a href="references.html#ref-proske2023" role="doc-biblioref">Proske et al., 2023</a>)</span>.</p>
+</section>
+<section id="o-zotero-no-ciclo-de-pesquisa" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="o-zotero-no-ciclo-de-pesquisa"><span class="header-section-number">3.3</span> O Zotero no Ciclo de Pesquisa</h2>
+<p>O Zotero pode ser integrado desde a fase de revisão sistemática ou exploratória. Você organiza referências em coleções temáticas e utiliza tags para categorizar estágios do processo. Tags como “Para Ler”, “Lido”, “Importante”, ou “Artigo X” transformam o gerenciador em sistema de rastreamento do progresso da leitura e análise. Coleções aninhadas permitem estruturar a literatura por tema, metodologia ou relevância, criando uma arquitetura de conhecimento que cresce organicamente com a pesquisa.</p>
+<div id="fig-zotcol" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-zotcol-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://youtu.be/qTH0VWKJbS8?si=fPjMV-Xurrb0nLcD"><img src="img/zotero-colecoes.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-zotcol-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3.2: Exemplos de organização de coleções no Zotero
+</figcaption>
+</figure>
+</div>
+<p>As notas e marcações em PDF não servem apenas para lembrar trechos. Elas alimentam análises qualitativas e sínteses de literatura. Cada anotação pode ser exportada, revisitada e reorganizada conforme o argumento do seu texto se desenvolve. A integração entre leitura, anotação e escrita torna-se dinâmica. O Zotero pode funcionar como repositório vivo de ideias, não apenas de referências bibliográficas.</p>
+<p>Ferramentas de gestão de conhecimento como <a href="https://obsidian.md/">Obsidian</a> e <a href="https://www.notion.com/pt">Notion</a> podem ser integradas ao Zotero, criando redes de notas interconectadas. Suas anotações no Zotero alimentam bases de conhecimento pessoal, onde conceitos de diferentes artigos dialogam entre si. Isso transforma a revisão de literatura em processo iterativo de construção de sentido.</p>
+</section>
+<section id="integração-com-fluxos-de-trabalho-reprodutíveis" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="integração-com-fluxos-de-trabalho-reprodutíveis"><span class="header-section-number">3.4</span> Integração com Fluxos de Trabalho Reprodutíveis</h2>
+<p>O fluxo de trabalho de pesquisa reprodutível exige ferramentas que se integram com documentos dinâmicos, como Quarto e RStudio. As citações são gerenciadas por chaves BibTeX, conceito que será central na aula. O plugin <a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a>, como já comentado, viabiliza essa integração de forma transparente.</p>
+<p>O <a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a> permite criar e atualizar automaticamente arquivos <code>.bib</code> que se sincronizam com seus documentos dinâmicos. Você adiciona uma referência no Zotero, e o arquivo <code>.bib</code> reflete a mudança instantaneamente. Trabalho manual é eliminado. A gestão de referências e a escrita do manuscrito acontecem em paralelo, sem retrabalho entre coleta de literatura e produção de texto.</p>
+<p>Manter seu arquivo <code>.bib</code> no GitHub junto com seus scripts garante que colegas possam reproduzir exatamente as mesmas citações. Versionamento de referências torna-se parte do controle de versão do projeto. Quando você compartilha o repositório, compartilha também a biblioteca bibliográfica exata que usou - rastreabilidade completa da cadeia de conhecimento.</p>
+<p>Grupos do Zotero permitem compartilhar bibliotecas completas com equipes de pesquisa. Colaboração e transparência se expandem: todos os membros do grupo acessam as mesmas referências, anotações e anexos. Mudanças feitas por um membro sincronizam automaticamente com os demais. Projetos colaborativos ganham uma base bibliográfica unificada.</p>
+<p>Gerenciadores preservam DOIs, abstracts e metadados que facilitam a citação correta e rastreabilidade das fontes. Metadados completos permitem que outros pesquisadores localizem rapidamente os materiais citados. Isso é requisito para pesquisa aberta e transparente - não basta citar, é preciso facilitar o acesso à fonte original.</p>
+</section>
+<section id="ia-e-descoberta-de-literatura" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="ia-e-descoberta-de-literatura"><span class="header-section-number">3.5</span> IA e Descoberta de Literatura</h2>
+<p>Fluxos de trabalho baseados em RAGs (Retrieval-Augmented Generation) com LLMs locais ou ferramentas como <a href="https://www.papersgpt.com/">PapersGPT</a> podem ser alimentados diretamente pela sua biblioteca Zotero. RAGs na nuvem, como o <a href="https://notebooklm.google.com/">NotebookLM</a> do Google, também são mais facilmente acionados com a organização eficiente das coleções/pastas do Zotero. Você constrói assistentes de pesquisa personalizados que conhecem profundamente sua literatura, respondem perguntas contextualizadas e sugerem conexões entre artigos.</p>
+<p>Plataformas de descoberta de literatura assistida por IA, como <a href="https://www.researchrabbit.ai/">ResearchRabbit</a>, <a href="https://elicit.com/">Elicit</a> e <a href="https://scispace.com/">SciSpace</a>, complementam o Zotero. <a href="https://www.researchrabbit.ai/">ResearchRabbit</a> descobre conexões importantes entre a literatura; <a href="https://elicit.com/">Elicit</a> automatiza revisões de literatura a partir de perguntas de pesquisa; <a href="https://scispace.com/">SciSpace</a> oferece explicações contextuais de artigos complexos. Essas ferramentas não substituem a leitura crítica, mas aceleram a triagem inicial e a identificação de estudos relevantes. Integradas ao Zotero, formam um ecossistema de pesquisa potencializado por IA.</p>
+</section>
+<section id="indo-além-das-funcionalidades-básicas" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="indo-além-das-funcionalidades-básicas"><span class="header-section-number">3.6</span> Indo Além das Funcionalidades Básicas</h2>
+<p>Atualmente, gerenciadores de referências oferecem funcionalidades que incluem:</p>
 <ul>
 <li><p>Recursos para coletar referências com textos completos e organizá-las em pastas e/ou (sub)coleções;</p></li>
 <li><p>Marcar entradas de referência, fazer anotações e destacar o texto completo por meio de visualizadores de PDF integrados;</p></li>
-<li><p>Citar referências em diferentes estilos de citação por meio de complementos para software de processamento de texto ou criando e atualizando automaticamente arquivos BIB para outras linguagens de marcação;</p></li>
+<li><p>Citar referências em diferentes estilos de citação por meio de complementos para software de processamento de texto ou criando e atualizando automaticamente arquivos <code>.bib</code> para outras linguagens de marcação;</p></li>
 <li><p>Sincronizar referências entre o aplicativo de desktop e a versão móvel, bem como entre diferentes computadores; e</p></li>
-<li><p>Compartilhar referências com colegas <span class="citation" data-cites="proske2023">(<a href="references.html#ref-proske2023" role="doc-biblioref">Proske et al., 2023</a>)</span></p></li>
+<li><p>Compartilhar referências <span class="citation" data-cites="proske2023">(<a href="references.html#ref-proske2023" role="doc-biblioref">Proske et al., 2023</a>)</span></p></li>
 </ul>
-<p>Esse conteúdo é abordado em detalhes no trabalho de <span class="citation" data-cites="thomas2023">Thomas (<a href="references.html#ref-thomas2023" role="doc-biblioref">2023</a>)</span>, e veremos algumas dessas funcionalidades básica na aula, no entanto, daremos ênfase no Ecossitema de Plugins do Zotero.</p>
-<p>Para um curso mais aprofundado sobre o Zotero, recomendamos a playlist de vídeos <a href="https://youtube.com/playlist?list=PLEbpo1iiweYXhQs1-yKJhTLPio1PlBD0i&amp;si=bI3_sDEQe58XOCTf">Zotero do Zero</a> da Biblioteca Ciências da Saúde UFES. Neles, você aprenderá praticamente tudo o que precisa saber para utilizar o Zotero de forma nativa, com muitas dicas ocultas e truques, e ainda, como instalar e configurar alguns plugins.</p>
+<p>Mas o Zotero permite ir além. Plugins como Zotero Attanger automatizam a renomeação e o armazenamento de PDFs. Você define padrões de nomenclatura - por exemplo, “Autor_Ano_Título” - e o plugin renomeia todos os arquivos de forma consistente. PDFs podem ser organizados em pastas externas no OneDrive, Google Drive ou Dropbox, sincronizando automaticamente entre dispositivos e contornando a limitação de armazenamento oficial do Zotero nas nuvens.</p>
+<p>Essa automação transforma a desorganização de centenas de PDFs mal nomeados em biblioteca estruturada. Arquivos tornam-se localizáveis por nome, navegáveis por pastas temáticas, e acessíveis em qualquer dispositivo conectado à sua nuvem. A organização deixa de ser tarefa manual e passa a ser processo sistemático.</p>
+<p>A integração entre Zotero e ferramentas de gestão de conhecimento cria camadas adicionais de valor. O <a href="https://obsidian.md/">Obsidian</a>, por exemplo, pode importar metadados e notas do Zotero, permitindo que você construa redes de conceitos interligados. Cada artigo torna-se nó em uma rede maior de ideias, conectado a outros artigos, a conceitos teóricos e a seus próprios insights. O <a href="https://www.notion.com/pt">Notion</a> oferece alternativa visual, organizando referências em bancos de dados relacionais que você personaliza conforme a necessidade do projeto.</p>
+<p>Um conteúdo básico é abordado em detalhes no trabalho de <span class="citation" data-cites="thomas2023">Thomas (<a href="references.html#ref-thomas2023" role="doc-biblioref">2023</a>)</span>, e veremos algumas dessas funcionalidades na aula. No entanto, daremos ênfase em outras funcionalidades do Zotero 7, especialmente sua integração no workflow reprodutível, por exemplo, com o RStudio/Quarto para citações/referências em documentos dinâmicos.</p>
+</section>
+<section id="preparação-para-a-aula" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="preparação-para-a-aula"><span class="header-section-number">3.7</span> Preparação para a Aula</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Pré-requisitos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Antes da aula síncrona, certifique-se de completar <strong>todos</strong> os passos abaixo. Um vídeo com instruções detalhadas está disponível na <a href="00-prework.html#sec-zoteroprework">página de pré-trabalho do curso</a>.</p>
+<p><strong>Checklist de Preparação:</strong></p>
+<ol type="1">
+<li>✅ Realizar o cadastro no <a href="https://www.zotero.org/user/register">Zotero.org</a></li>
+<li>✅ Innstalar o <a href="https://www.zotero.org/download/">software Zotero</a> no seu computador</li>
+<li>✅ Instalar o <a href="https://www.zotero.org/download/">Zotero Connector</a> no seu navegador (Chrome, Firefox, Edge ou Safari)</li>
+<li>✅ Configurar a sincronização entre instalação local e nuvem Zotero</li>
+<li>✅ Instalar o <a href="https://github.com/syt2/zotero-addons">“Add-on Market for Zotero”</a> (gerenciador de plugins)</li>
+<li>✅ Instalar o estilo de citação <a href="https://retorque.re/zotero-better-bibtex/citing/migrating/">Better BibTeX</a></li>
+</ol>
+</div>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
@@ -294,11 +405,12 @@ Proske, A., Wenzel, C., &amp; Queitsch, M. B. (2023). Reference Management Syste
 Thomas, P. A. (2023). <em>Using Zotero for Citation Management: A Step-by-Step Guide to Organizing and Citing Your Research</em>. University of Kansas Libraries. <a href="https://kuscholarworks.ku.edu/handle/1808/34983">https://kuscholarworks.ku.edu/handle/1808/34983</a>
 </div>
 </div>
+</section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn1"><p><a href="https://en.wikipedia.org/wiki/Comparison_of_reference_management_software">Esta lista</a> no Wikipedia, que é atualizada constantemente, faz uma comparação entre eles.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Outro importante plugin é a integração com o <a href="https://github.com/ethanwillis/zotero-scihub">SciHub</a> <span class="citation" data-cites="prashantakumarbehera2023">(<a href="references.html#ref-prashantakumarbehera2023" role="doc-biblioref">Behera &amp; Jain, 2023</a>)</span>. Coloquei essa informação em nota, pois ele é questionável do ponto de vista ético, apesar de extensivamente utilizado no Brasil por estudantes de pós-graduação stricto sensu de diferentes áreas <span class="citation" data-cites="oddone2024">(<a href="references.html#ref-oddone2024" role="doc-biblioref">Oddone &amp; Souza, 2024</a>)</span>. Ou se enxergarmos o problema sob outro ponto de vista, a ampla adoção do SciHub no Brasil e em todo o mundo reflete a resposta dos cientistas ao desgastado sistema de comunicação científica mantido pelas editoras internacionais.&nbsp;Além disso, reforça a relevância dos princípios da Ciência Aberta <span class="citation" data-cites="oddone2024">(<a href="references.html#ref-oddone2024" role="doc-biblioref">Oddone &amp; Souza, 2024</a>)</span>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Outro plugin discutido é a integração com o <a href="https://github.com/syt2/zotero-scipdf">SciHub</a> <span class="citation" data-cites="prashantakumarbehera2023">(<a href="references.html#ref-prashantakumarbehera2023" role="doc-biblioref">Behera &amp; Jain, 2023</a>)</span>. Coloquei essa informação em nota, pois ele é questionável do ponto de vista ético, apesar de extensivamente utilizado no Brasil por estudantes de pós-graduação stricto sensu de diferentes áreas <span class="citation" data-cites="oddone2024">(<a href="references.html#ref-oddone2024" role="doc-biblioref">Oddone &amp; Souza, 2024</a>)</span>. Ou se enxergarmos o problema sob outro ponto de vista, a ampla adoção do SciHub no Brasil e em todo o mundo reflete a resposta dos cientistas ao desgastado sistema de comunicação científica mantido pelas editoras internacionais. Reforça, também, a relevância dos princípios da Ciência Aberta <span class="citation" data-cites="oddone2024">(<a href="references.html#ref-oddone2024" role="doc-biblioref">Oddone &amp; Souza, 2024</a>)</span>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 

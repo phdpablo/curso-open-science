@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; IA Aplicada à Pesquisa Científica – Artigo à Prova de Futuro</title>
+<title>8&nbsp; IA Aplicada à Pesquisa Reprodutível – Artigo à Prova de Futuro</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -82,7 +102,7 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
 </script>
 
 
-<meta property="og:title" content="8&nbsp; IA Aplicada à Pesquisa Científica – Artigo à Prova de Futuro">
+<meta property="og:title" content="8&nbsp; IA Aplicada à Pesquisa Reprodutível – Artigo à Prova de Futuro">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Artigo à Prova de Futuro">
 </head>
@@ -96,7 +116,7 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./08-AI.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">IA Aplicada à Pesquisa Científica</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./08-AI.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">IA Aplicada à Pesquisa Reprodutível</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -217,7 +237,7 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./08-AI.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">IA Aplicada à Pesquisa Científica</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">IA Aplicada à Pesquisa Reprodutível</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -231,11 +251,21 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#aplicações-da-ia-neste-curso" id="toc-aplicações-da-ia-neste-curso" class="nav-link active" data-scroll-target="#aplicações-da-ia-neste-curso"><span class="header-section-number">8.1</span> 📋 Aplicações da IA neste Curso</a>
+  <ul class="collapse">
+  <li><a href="#princípios-norteadores" id="toc-princípios-norteadores" class="nav-link" data-scroll-target="#princípios-norteadores"><span class="header-section-number">8.1.1</span> 🎯 Princípios Norteadores</a></li>
+  <li><a href="#contexto-da-ciência-aberta" id="toc-contexto-da-ciência-aberta" class="nav-link" data-scroll-target="#contexto-da-ciência-aberta"><span class="header-section-number">8.1.2</span> 🌟 Contexto da Ciência Aberta</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"><span id="sec-AI" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">IA Aplicada à Pesquisa Científica</span></span></h1></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"><span id="sec-AI" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">IA Aplicada à Pesquisa Reprodutível</span></span></h1></header>
 
 <header id="title-block-header">
 
@@ -243,109 +273,47 @@ gtag('config', 'G-JB1J9LKDKC', { 'anonymize_ip': true});
 </header>
 
 
-<p>Nesta última aula discutiremos o papel da inteligência artificial (IA) na pesquisa científica, com ênfase em como essas tecnologias podem ser integradas a práticas de ciência aberta. A IA oferece ferramentas para a análise da literatura, fichamento, identificação de problemas de pesquisa, lacuna, escrita e muito mais. Algumas plataformas que discutiremos: Semantic Scholar, Research Rabbit e Inciteful. Além disso, abordaremos ferramentas como Scholarcy que oferece resumos automáticos e explicações detalhadas de artigos científicos, tornando o processo de revisão e compreensão da literatura mais eficiente. Com essas tecnologias, podemos dedicar mais tempo ao desenvolvimento de hipóteses e à análises, enquanto a IA cuida da análise preliminar e da organização de dados.</p>
-<p>Vamos explorar essas ferramentas e discutir como elas podem ser aplicadas aos nossos próprios projetos de pesquisa, promovendo uma abordagem mais aberta, colaborativa e eficiente na ciência.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Transcrição de uma das palestras do Prof.&nbsp;Ricardo Limongi
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Na lista de vídeos indicados em nossa Agenda temos uma recente <a href="https://youtu.be/-WBfK9V1-ZE?si=Usd0KdyeJvoVmQ05">palestra do Prof.&nbsp;Ricardo Limongi</a> sobre o uso de IA na pesquisa científica. Em cerca de duas horas o professor abordou o uso prático, questões éticas, ferramentas e reflexões sobre IA e métodos de síntese de conhecimento com o Grupo PBE-USP.</p>
-<p>Podemos utilizar alguma ferramenta de IA para nos ajudar a entender o enrendo e tópicos da palestra? Pois bem, fomos no Youtube, copiamos a transcrição da palestra, e depois utilizamos o <a href="https://aistudio.google.com">AI Studio do Google</a> com a seguinte prompt:</p>
-<p><em>O texto abaixo é a transcrição de uma aula sobre Ferramentas de IA aplicadas à Pesquisa Científica. Gostaria que elencasse os pontos abordados nesse vídeo.</em></p>
-<p><strong>OBS:</strong> Não colamos a transcrição aqui devido a quantidade de palavras (2 horas de palestra!). Inclusive, por esse motivo, utilizamos <a href="https://aistudio.google.com">AI Studio do Google</a>, que na sua versão teste aceita um milhão de tokens.</p>
-<p>Eis a resposta:</p>
-<p><strong>Pontos abordados na aula sobre Ferramentas de IA aplicadas à Pesquisa Científica:</strong></p>
-<p><strong>1. Introdução e Apresentação:</strong></p>
+<p><br></p>
+<section id="aplicações-da-ia-neste-curso" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="aplicações-da-ia-neste-curso"><span class="header-section-number">8.1</span> 📋 Aplicações da IA neste Curso</h2>
+<p>Este curso adota o uso de <strong>Inteligência Artificial Generativa (IA)</strong> 🤖 como ferramenta de apoio metodológico e pedagógico, alinhado às diretrizes éticas e responsáveis propostas por <span class="citation" data-cites="sampaio2024a">Sampaio et al. (<a href="references.html#ref-sampaio2024a" role="doc-biblioref">2024</a>)</span>. A IA é utilizada exclusivamente em funções complementares, que ampliam a eficiência do trabalho científico e a acessibilidade dos conteúdos, <strong>sem substituir o trabalho intelectual, crítico e autoral do pesquisador</strong>.</p>
+<p>Consideramos que o uso da IA generativa na pesquisa científica representa um <strong>caminho sem volta</strong> 🚀. Por isso, o ensino de CA e reprodutibilidade deve incorporar essa realidade — tanto no processo de <strong>produção do conhecimento</strong>, quanto na <strong>transmissão e avaliação</strong> do aprendizado. Ignorar essa transformação tecnológica seria negligenciar o potencial de inovação, transparência e inclusão que ela oferece para a prática da ciência aberta.</p>
+<p>Seguindo os princípios de <strong>preservação da agência humana</strong>, <strong>transparência</strong> e <strong>uso eticamente orientado</strong> preconizados por <span class="citation" data-cites="sampaio2024a">Sampaio et al. (<a href="references.html#ref-sampaio2024a" role="doc-biblioref">2024</a>)</span>, a IA tem sido empregada nas seguintes funções ao longo do desenvolvimento e execução deste curso:</p>
+<ol type="1">
+<li><p>📚 <strong>Resumo de materiais didáticos</strong>: Síntese de artigos científicos, documentações técnicas e materiais extensos para facilitar a compreensão inicial e identificação de pontos-chave, sempre com revisão e contextualização humana.</p></li>
+<li><p>💻 <strong>Auxílio na codificação</strong>: Suporte para escrita, depuração e otimização de códigos em R, Python e outras linguagens, acelerando o desenvolvimento de exemplos práticos e soluções técnicas.</p></li>
+<li><p>🧭 <strong>Reflexão e estruturação de conteúdos</strong>: Apoio na concepção de roteiros didáticos, organização lógica de tópicos e desenvolvimento de sequências de aprendizagem mais coerentes.</p></li>
+<li><p>🔍 <strong>Busca e seleção de literatura</strong>: Identificação preliminar de referências relevantes, mapeamento de debates atuais e descoberta de fontes complementares, sempre com curadoria humana final.</p></li>
+<li><p>🎨 <strong>Elaboração de imagens e vídeos</strong>: Criação de elementos visuais e recursos multimídia para enriquecer a experiência de aprendizado e tornar conceitos complexos mais acessíveis. Nessa função utilizamos “com força”, pois temos zero habilidade artística ou sensibilidade estética 😁.</p></li>
+<li><p>✅ <strong>Revisão de conteúdo</strong>: Suporte na revisão gramatical, clareza textual e coerência argumentativa dos materiais didáticos, mantendo a autoria e decisão final humanas.</p></li>
+<li><p>🌐 <strong>Tradução de literatura</strong>: Tradução preliminar de materiais em idiomas estrangeiros para ampliar o acesso a recursos internacionais, com revisão técnica posterior.</p></li>
+<li><p>🎓 <strong>Ensino preliminar de tópicos</strong>: Exploração inicial de áreas fora da zona de conhecimento consolidado do instrutor, servindo como ponto de partida para aprofundamento posterior com fontes especializadas.</p></li>
+</ol>
+<section id="princípios-norteadores" class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="princípios-norteadores"><span class="header-section-number">8.1.1</span> 🎯 Princípios Norteadores</h3>
+<p>Conforme <span class="citation" data-cites="sampaio2024a">Sampaio et al. (<a href="references.html#ref-sampaio2024a" role="doc-biblioref">2024</a>)</span>, a IA deve ser utilizada como <strong>apoio à expressão humana</strong> — e não como substituto da reflexão, da análise crítica ou da autoria. É essa perspectiva que orienta todas as aplicações tecnológicas neste curso. Os autores destacam que a <strong>supervisão humana contínua</strong> é essencial para evitar que a IA incorpore erros, vieses ou problemas de integridade acadêmica.</p>
+<p>Ademais, seguimos os seguintes princípios práticos estabelecidos no guia:</p>
 <ul>
-<li>Apresentação do grupo de pesquisa de prática baseada em evidências na saúde e dos palestrantes.</li>
-<li>Breve currículo do professor Ricardo Limongi, especialista em Inteligência Artificial e marketing.</li>
-<li>Ênfase na importância de compartilhar conhecimento e ser generoso dentro da comunidade acadêmica.</li>
+<li>✨ <strong>Transparência</strong>: Documentar quando e como a IA foi utilizada na produção de materiais</li>
+<li>🎯 <strong>Integridade acadêmica</strong>: Garantir originalidade, evitar plágio e preservar direitos autorais</li>
+<li>👤 <strong>Agência humana</strong>: Manter o pesquisador/instrutor como responsável final por todas as decisões</li>
+<li>🧠 <strong>Letramento em IA</strong>: Desenvolver compreensão crítica sobre limitações e potencialidades das ferramentas</li>
+<li>🔄 <strong>Uso complementar</strong>: Empregar a IA como ferramenta auxiliar, nunca como substituta do trabalho científico</li>
 </ul>
-<p><strong>2. Inteligência Artificial como Meio e não Fim:</strong></p>
-<ul>
-<li>Discussão sobre a rápida ascensão da IA e a necessidade de aprendizado, especialmente após o lançamento do ChatGPT.</li>
-<li>Alerta sobre o uso excessivo da IA como ferramenta para gerar artigos completos, enfatizando que a IA deve ser vista como uma ferramenta auxiliar e não substituir o papel do pesquisador.</li>
-<li>Importância da reflexão crítica e da capacidade de análise e interpretação do ser humano.</li>
-</ul>
-<p><strong>3. Ciência Aberta e Replicação:</strong></p>
-<ul>
-<li>Discussão sobre o movimento de ciência aberta e sua importância para a replicabilidade de pesquisas.</li>
-<li>Ênfase na transparência, compartilhamento de dados e o escrutínio crítico na comunidade científica.</li>
-<li>Menção a plataformas como “ArXiv” para disponibilização de materiais para avaliação e crítica.</li>
-</ul>
-<p><strong>4. Inteligência Artificial como Automação de Tarefas:</strong></p>
-<ul>
-<li>Conceituação da IA como ferramenta de automação de tarefas, desde a revisão da literatura à análise de dados.</li>
-<li>Apresentação de plataformas de IA categorizadas por tipo de tarefa e de diferentes modelos de acesso (gratuitas e pagas).</li>
-<li>Menção ao crescimento do mercado da IA e à necessidade de recursos para acesso a plataformas mais avançadas.</li>
-</ul>
-<p><strong>5. A Importância da Organização e Transparência na Pesquisa:</strong></p>
-<ul>
-<li>Discussão sobre a necessidade de organização do processo de pesquisa desde o início, incluindo declaração de hipóteses, objetivos e metodologia.</li>
-<li>Importância da clareza nas informações fornecidas à IA para evitar vieses e garantir a qualidade do resultado.</li>
-<li>Críticas à falta de transparência na metodologia de alguns artigos, dificultando a replicação e o aprendizado da IA.</li>
-<li>Sugestão de incluir informações sobre o uso de IA na sessão de métodos dos artigos para promover transparência e aprendizado.</li>
-</ul>
-<p><strong>6. Ferramentas de IA para Revisão da Literatura:</strong></p>
-<ul>
-<li>Apresentação do Semantic Scholar como ferramenta de busca e análise de literatura, e sua integração com plataformas como o Google Scholar e o LitMaps.</li>
-<li>Demonstração do LitMaps como plataforma para revisão da literatura com interface visual, recursos de fichamento e funcionalidades para identificar estudos similares.</li>
-<li>Menção à plataforma “Research Gate” como rede social para pesquisadores e sua limitação em relação à publicação de artigos.</li>
-<li>Sugestão de criar perfis nas plataformas de IA para beneficiar do aprendizado personalizado do algoritmo.</li>
-<li>Explicação do recurso “TLDR” (Too Long, Didn’t Read) como resumo do resumo para facilitar a análise inicial de artigos.</li>
-</ul>
-<p><strong>7. Ferramentas de IA para Detecção de Plágio e Uso da IA:</strong></p>
-<ul>
-<li>Diferenciação entre plágio e uso de IA na escrita, e a necessidade de entender o contexto e o percentual de similaridade para identificar possíveis problemas.</li>
-<li>Apresentação de ferramentas de detecção de IA em textos como o “Detector de IA”, disponível no LitMaps.</li>
-<li>Discussão sobre a tolerância ao uso da IA na escrita, e a necessidade de diretrizes para a utilização ética e transparente.</li>
-<li>Sugestão de submeter tanto a versão humana quanto a versão editada pela IA para a avaliação dos editores.</li>
-</ul>
-<p><strong>8. Ferramentas de IA para Análise de Dados:</strong></p>
-<ul>
-<li>Demonstração do “Consensus” como ferramenta para analisar e avaliar relações entre variáveis, utilizando dados do Semantic Scholar.</li>
-<li>Apresentação do CoPilot como recurso de interação com os dados e geração de insights.</li>
-<li>Discussão sobre a importância de entender os algoritmos e a capacidade de interpretação crítica dos resultados da IA.</li>
-</ul>
-<p><strong>9. Desafios e Limitações da IA na Pesquisa:</strong></p>
-<ul>
-<li>Discussão sobre a questão da privacidade de dados e os riscos de vazamento de informações confidenciais ao utilizar plataformas de IA.</li>
-<li>Menção ao Microsoft CoPilot como alternativa com maior segurança de dados.</li>
-<li>Alerta sobre a falta de leitura dos termos de uso e a necessidade de atenção para a proteção de dados sensíveis.</li>
-<li>Discussão sobre a dificuldade de rastrear e evitar o uso indevido da IA em pareceres e trabalhos acadêmicos.</li>
-<li>Menção ao problema da falta de acesso a conteúdos científicos pagos, limitando o aprendizado da IA e criando desigualdade de acesso.</li>
-<li>Ênfase na necessidade de acesso aberto a artigos científicos para facilitar o aprendizado e democratizar o acesso à informação.</li>
-</ul>
-<p><strong>10. Letramento Digital e a Importância do Ensino da IA:</strong></p>
-<ul>
-<li>Discussão sobre a importância do letramento digital e da educação para o uso ético e responsável da IA na pesquisa.</li>
-<li>Ênfase na necessidade de repensar as disciplinas de metodologia e integrar o ensino da IA de forma crítica e consciente.</li>
-<li>Compartilhamento de exemplos de iniciativas de letramento digital para professores e pesquisadores, como o “Academia GPT”.</li>
-<li>Alerta sobre a necessidade de desenvolver habilidades para identificar o uso indevido da IA e avaliar criticamente os resultados.</li>
-<li>Ênfase na importância de entender os processos de pesquisa e os fundamentos da metodologia para utilizar a IA de forma eficiente e ética.</li>
-</ul>
-<p><strong>11. Conclusões e Considerações Finais:</strong></p>
-<ul>
-<li>Reconhecimento da IA como ferramenta fundamental para a pesquisa, mas com a necessidade de uso consciente e responsável.</li>
-<li>Importância de desenvolver um letramento digital para a pesquisa, com foco na ética, na crítica e na interpretação.</li>
-<li>Incentivo à participação em debates e à criação de diretrizes para o uso da IA na pesquisa.</li>
-<li>Ênfase na necessidade de adaptação do ensino da metodologia para incorporar o uso da IA de forma crítica e consciente.</li>
-<li>Reconhecimento da importância do conhecimento e da expertise humana para a análise e interpretação dos resultados da IA.</li>
-</ul>
-<p>Em suma, a aula abordou a utilização da IA como ferramenta auxiliar na pesquisa científica, destacando sua potencialidade e os desafios para seu uso ético e responsável. A principal mensagem é que a IA deve ser integrada ao processo de pesquisa como um complemento e não como um substituto, sendo crucial o desenvolvimento de um letramento digital para o uso crítico e consciente da ferramenta.</p>
-</div>
-</div>
-</div>
+</section>
+<section id="contexto-da-ciência-aberta" class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="contexto-da-ciência-aberta"><span class="header-section-number">8.1.2</span> 🌟 Contexto da Ciência Aberta</h3>
+<p>O uso transparente e documentado de ferramentas de IA alinha-se perfeitamente com os princípios da <strong>CA</strong> 🔓: <strong>transparência</strong>, <strong>reprodutibilidade</strong> e <strong>compartilhamento</strong> de processos e recursos. Ao adotar IA de forma ética e responsável, contribuímos para uma cultura científica mais eficiente, inclusiva e, sobretudo, <strong>transparente sobre seus métodos e ferramentas</strong>.</p>
+<p>Nenhum conteúdo é gerado de forma integral ou automatizada sem supervisão docente. Todo material passou por processo de curadoria, validação e contextualização humana, respeitando os princípios de autoria, originalidade e responsabilidade acadêmica <span class="citation" data-cites="sampaio2024a">(<a href="references.html#ref-sampaio2024a" role="doc-biblioref">Sampaio et al., 2024</a>)</span>.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-sampaio2024a" class="csl-entry" role="listitem">
+Sampaio, R. C., Sabbatini, M., &amp; Limongi, R. (2024). <em>Diretrizes para o uso ético e responsável da inteligência artificial generativa: um guia prático para pesquisadores</em>. Sociedade Brasileira de Estudos Interdisciplinares da Comunicação - Intercom. <a href="https://portcom.intercom.org.br/ebooks/detalheEbook.php?id=57203">https://portcom.intercom.org.br/ebooks/detalheEbook.php?id=57203</a>
+</div>
+</div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

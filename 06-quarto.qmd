@@ -1,5 +1,7 @@
 # Documentos Reprodutíveis {#sec-quarto}
 
+<br>
+
 Você pode ter chegado até aqui e pensado: esse negócio de reprodutibilidade e transparência não é para mim! Eu sou um pesquisador qualitativo e não tenho nada a ver com essas "coisas" de código e programação. Talvez a aula de Git te assustou! Se você pensou isso, eu tenho uma boa notícia: você está enganado! A reprodutibilidade e a transparência são para todos os pesquisadores, independentemente da abordagem metodológica que você adote. E, para provar isso, eu vou mostrar como você pode usar o [Quarto](https://quarto.org/), através do RStudio, para organizar e documentar o seu projeto de pesquisa, mesmo que qualitativo.
 
 De qualquer forma, como refletimos até a penúltima seção, talvez dominar a plataforma [OSF](https://osf.io/), o [Zotero](https://www.zotero.org/) e um protocolo rígido de organização de dados e projetos (vide [Protocolo TIER](https://www.projecttier.org/tier-protocol/protocol-4-0/), por exemplo) seja suficiente para você. A integração dessas soluções com outras que você já utiliza no dia a dia (armazenamento nas nuvens, processadores de texto, softwares específicos de análise qualitativa, etc) já lhe capacita para ter um projeto de pesquisa organizado e documentado com boas práticas da Ciência Aberta (CA).

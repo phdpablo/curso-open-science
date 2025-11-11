@@ -50,6 +50,11 @@ O curso foi concebido para acontecer de forma remota e síncrona, com aulas expo
 
 A proposta do curso busca seguir de perto a mensagem de @dogucu2022 e ser um **Recurso Educacional Aberto (REA)**. Nesse artigo as autoras abordam a importância da reprodutibilidade na ciência de dados, tanto na pesquisa quanto no ensino. Elas recomendam que os professores-pesquisadores adotem fluxos de trabalho reprodutíveis em suas pesquisas e ensinem esses fluxos de trabalho aos seus alunos. Elas propõem uma dimensão para as práticas de reprodutibilidade, focada exclusivamente nas ferramentas para o ensino (todos os materiais de ensino devem ser computacionalmente reprodutíveis, bem documentados e abertos).
 
+O REA aqui proposto é para orientação e contextualização dos participantes do curso sobre cada um dos módulos ministrados. Dessa forma, esperamos que em cada uma das aulas (módulos) os alunos façam uma leitura prévia da página do conteúdo a ser ministrado, para que possam acompanhar melhor as explicações e demonstrações feitas durante as aulas síncronas.
+
+Este curso adota o uso de **Inteligência Artificial Generativa (IA)** \emojitext{🤖} como ferramenta de apoio metodológico e pedagógico, alinhado às diretrizes éticas e responsáveis propostas por @sampaio2024a. A IA é utilizada exclusivamente em funções complementares — como resumo de materiais, auxílio na codificação, estruturação de conteúdos, busca de literatura, elaboração de recursos visuais, revisão e tradução — **sem substituir o trabalho intelectual, crítico e autoral do pesquisador**. Consideramos que o uso ético e transparente de IA alinha-se perfeitamente com os princípios da **Ciência Aberta** \emojitext{🔓}: transparência, reprodutibilidade e compartilhamento de processos. Para conhecer em detalhes as aplicações específicas da IA neste curso e os princípios norteadores dessa prática, consulte a seção final [**"Uso de Inteligência Artificial no Curso"**](08-AI.html).
+
+
 ## Mudanças {#sec-change .unnumbered}
 
 As principais mudanças previstas para serem implementadas nesta edição do curso em relação à edição anterior:

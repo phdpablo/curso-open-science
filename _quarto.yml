@@ -89,6 +89,7 @@ format:
     include-before-body: first.tex
     include-after-body: backcover.tex
     toc: true
+    toc-depth: 2
     colorlinks: true
     fig-width: 5
     fig-height: 5

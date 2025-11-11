@@ -1,10 +1,10 @@
 # \emojitext{📇} Pré-requisitos {#sec-prework .unnumbered}
 
-O curso não exige conhecimento prévio em programação, mas é recomendável que o aluno tenha familiaridade com o uso de computadores (ambiente Windows) e com a escrita de textos científicos. Nesse sentido, não é necessário ter conhecimento prévio sobre as ferramentas e plataformas que utilizaremos no curso: Zotero, OSF, Zenodo, Git, Github, RStudio, Quarto/RMarkdown, Docker, etc; mas desejável que o aluno já as tenha instalado e/ou cadastro nas plataformas.
+<br>
 
-Abaixo descrevemos sucintamente o que é cada uma dessas ferramentas e plataformas, e como você pode se preparar para o curso. Também apresentamos um vídeo curto sobre a instalação e cadastro em cada uma delas. A ideia é que você já tenha todas as ferramentas e plataformas instaladas e/ou cadastro antes do início do curso, para que possamos focar no conteúdo e prática durante as aulas síncronas. Mas pode ficar tranquilo, pois na primeira aula do curso abordaremos essas tarefas, e caso ainda haja alguma dúvida na instalação e cadastro, dedicaremos algum tempo para saná-las.
+O curso não exige conhecimento prévio em programação, mas é recomendável que o aluno tenha familiaridade com o uso de computadores e com a escrita de textos científicos. Nesse sentido, não é necessário ter conhecimento prévio sobre as ferramentas e plataformas que utilizaremos no curso: Zotero, OSF, Zenodo, Git, Github, RStudio, Quarto/RMarkdown, Docker, etc; mas desejável que o aluno já as tenha instalado e/ou cadastro nas plataformas.
 
-Outras soluções que iremos discutir e testar durante o curso, como alguns pacotes do R, e aplicações de IA no último módulo, deixaremos para as aulas remotas. Essas soluções na sua maioria requerem cadastros rápidos, e podem ser feitos de forma instantânea via conta Google/Microsoft/Apple.
+Abaixo descrevemos sucintamente o que é cada uma dessas ferramentas e plataformas, e como você pode se preparar para o curso. Também apresentamos um vídeo curto sobre a instalação e/ou cadastro em cada uma delas. A ideia é que você já tenha todas as ferramentas e plataformas instaladas e/ou cadastro antes do início do curso, para que possamos focar no conteúdo e prática durante as aulas síncronas.
 
 ## Github {#sec-githubprework}
 
@@ -59,15 +59,15 @@ Esses vídeos são opcionais e não serão abordados diretamente nas aulas, mas 
 
 ### Sandbox no Windows 11
 
-- [Como habilitar o Sandbox no Windows 11 Pro](https://www.youtube.com/watch?v=7BitIt4KbPs)
-- [Como habilitar o Sandbox no Windows 11 Home](https://www.youtube.com/watch?v=HHqWrxUy6ps)
+- [Como habilitar o Sandbox no Windows 11 Pro Pro](https://www.youtube.com/watch?v=7BitIt4KbPs)
+- [Como habilitar o Sandbox no Windows 11 Home Home](https://www.youtube.com/watch?v=HHqWrxUy6ps)
 
 > Esses vídeos mostram como ativar o recurso de Sandbox, mesmo em versões onde ele não está disponível oficialmente. Ideal para quem quer testar rapidamente scripts ou softwares em ambiente isolado.
 
 ### Hyper-V no Windows 11
 
-- [Como habilitar o Hyper-V no Windows 11 Pro](https://www.youtube.com/watch?v=3bCbjinblhg)
-- [Como habilitar o Hyper-V no Windows 11 Home](https://www.youtube.com/watch?v=TmMRFB1U_ns)
+- [Como habilitar o Hyper-V no Windows 11 Pro Pro](https://www.youtube.com/watch?v=3bCbjinblhg)
+- [Como habilitar o Hyper-V no Windows 11 Home Home](https://www.youtube.com/watch?v=TmMRFB1U_ns)
 
 > Esses vídeos explicam como ativar o Hyper-V, mesmo em versões Home, permitindo a criação de ambientes virtuais persistentes e mais completos.
 

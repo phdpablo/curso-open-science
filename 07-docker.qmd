@@ -1,5 +1,7 @@
 # Controle de Ambiente {#sec-docker}
 
+<br>
+
 Imagine a seguinte situação: você publicou uma pesquisa quantitativa, disponibilizando o código e os dados para que outros pesquisadores possam reproduzir os resultados. Um pesquisador entra em contato e diz que não conseguiu replicar seus resultados. Você como bom mineiro, responde: "Uai, comigo funcionou!". Prestativo como é sugere para o pesquisador, da Polônia, que venha até sua casa para que você possa ajudá-lo, e aproveitar para tomar um café e comer um pão de queijo. O pesquisador, educadamente, responde que não pode ir até sua casa, pois está do outro lado do mundo.
 
 Então, prestativo como é, você sugere que vai enviar uma imagem do seu HD para ele. O pesquisador, educadamente, responde que não pode aceitar, pois o arquivo da imagem é muito grande e ele não tem espaço suficiente para armazenar a imagem. Além do mais, ele não entende muito bem (e não tem!) a infraestrutura para pode acessar seu HD. Inclusive, ele utiliza um sistema operacional (e estrutura de hardware) diferente do seu.
@@ -49,7 +51,7 @@ As soluções apresentadas sobrepostas à nuvem do lado direito na @fig-vm-conta
 Podemos dizer que em termos de níveis de reprodutibilidade, Google Colab e Posit Cloud atendem a um nível básico, porque a reprodutibilidade pode ser limitada pela variabilidade das dependências das sessões e cabe ao usuário uma configuração cuidadosa dos pacotes e versões. Binder e JupyterHub fornecem um nível intermediário de reprodutibilidade, pois apesar de um melhor controle sobre o ambiente, requer configuração e manutenção adequadas das dependências. Por fim, Code Ocean e Nextjournal oferecem um alto nível de reprodutibilidade, pois são ambientes integrados para criar, executar e compartilhar projetos de pesquisa reprodutíveis.
 
 ::: {.callout-note collapse="true"}
-## *Leveraging Containers for Reproducible Psychological Research* (@tip-prompt)
+## *Leveraging Containers for Reproducible Psychological Research*
 
 O artigo de @wiebels2021 discute a importância e a aplicação das práticas de ciência aberta na pesquisa. Eles destacam que, desde 2019, cerca de 35% dos pesquisadores de psicologia adotaram práticas de CA, um aumento significativo em relação aos 5% de apenas cinco anos antes.\vspace{0.5em}
 

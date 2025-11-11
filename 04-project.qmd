@@ -1,5 +1,7 @@
 # Gestão de Projetos {#sec-project}
 
+<br>
+
 Essa seção é o elo entre as seções anteriores e as próximas. Aqui, você vai receber algumas dicas de como organizar seus dados, pasta e scripts em um projeto de pesquisa. Talvez você se pergunte: porque eu preciso aprender a organizar meus arquivos e pasta? Já faço isso, do meu jeito, há anos, e nunca tive problemas em entender o que eu faço! A resposta é simples: não trata somente de você entender e achar que o produto final da sua pesquisa (o artigo) seja suficiente. No contexto da Ciência Aberta (CA) a ideia é que deixe transparente o processo de análise, materiais e métodos, e que outros pesquisadores possam reproduzir seus resultados. Nesse sentido, deve haver uma padronização mínima de organização de arquivos, pastas e scripts para que outros pesquisadores possam entender e reproduzir seus resultados. Lembre-se que agora você pode compartilhar uma pasta compilada da sua pesquisa, via Google Drive ou OneDrive, no seu projeto do [Open Science Framework](https://osf.io/).
 
 Nesse sentido, a intenção é que adotemos certa padronização na organização de arquivos, pastas e scripts, seguindo algumas sugestões de boas práticas para que o processo da nossa pesquisa fique inteligível para qualquer um. Para você ver tanto que a "coisa" é séria, existe até protocolo de padronização de organização de arquivos e pastas, como o [Project TIER](https://www.projecttier.org/), focado para pesquisas em ciências sociais. No caso de scripts, talvez o estilo de escrita e organização mais conhecido para o ambiente R seja o [Tidyverse Style Guide](https://style.tidyverse.org/). O livro de @zandonella2022 apresenta uma excelente discussão desses tópicos nos capítulos 3, 4 e 5[^04-project-1].
@@ -58,7 +60,7 @@ E por fim, também sugerimos que os pesquisadores se engajem em comunidades de p
 {{< video https://www.youtube.com/watch?v=s3JldKoA0zw >}}
 
 ::: {.callout-warning collapse="true"}
-## Você não vai querer cometer esses erros...[^04-project-2]
+## Você não vai querer cometer esses erros...
 
 [**Caso 1: Reinhart, Rogoff... e Herndon: O aluno que pegou os professores**](https://www.bbc.com/news/magazine-22223190)\vspace{1em}
 
@@ -92,5 +94,3 @@ Essa mudança foi bem recebida pela comunidade científica, que expressou entusi
 
 Essa decisão ilustra como a ciência pode se adaptar para superar desafios práticos, garantindo que a pesquisa continue de maneira eficiente e precisa.\vspace{0.5em}
 :::
-
-[^04-project-2]: Pedimos para o ChatGPT4o resumir as duas matérias e me nos dar resposta em português. Como sempre, revisamos o conteúdo para saber se batia com o que eu lemos.

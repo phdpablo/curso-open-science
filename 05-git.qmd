@@ -1,5 +1,7 @@
 # Controle de versão {#sec-git}
 
+<br>
+
 Você[^05-git-1] em algum grau utiliza um sistema para versionar seu trabalho. Seja ele um simples `Ctrl + Z` ou `Cmd + Z` para desfazer a última ação, ou sistemas mais elaborados, como i) o controle de alterações do seu processador de texto ou ii) o histórico de versões do seu aplicativo de armazenamento nas nuvens (`OneDrive`, `Google Drive` ou `Dropbox`), você já está familiarizado com a ideia de controle de versão. Qual estudante ou pesquisador nunca se deparou com uma situação parecida da @fig-funny-git?
 
 [^05-git-1]: A [literatura sobre controle de versão](https://git-scm.com/book/en/v2), especialmente Git e Github, é "farta". Tanto em inglês como em português. Uma pesquisa simples vai achar muitas referências a blogs e textos de profissionais especializados, inclusive, [para os nossos fins](https://happygitwithr.com/). No Youtube existem muitos vídeos sobre o tema. Seja o que escrevessemos por aqui, seria de pouca contribuição. Dessa forma, buscamos contextualizar o versionamento de arquivos num empreendimento de pesquisa de nosso dia a dia: um pesquisador com viés quantitativo, envolvido em pesquisas sem pouca colaboração, mas que achou no controle de versão uma solução impar para diversas demandas preconizadas pela Ciência Aberta.
@@ -80,7 +82,7 @@ Por outro lado, um pesquisador pode optar por tornar público seu trabalho (dado
 Embora sejam projetadas para lidar com projetos extremamente complexos, as funcionalidades do Git/Github também se adaptam perfeitamente a projetos de pesquisa mais simples, seja com número pequeno de pesquisadores ou mesmo com um único pesquisador.
 
 ::: {.callout-note collapse="true"}
-## *Curating Research Assets: A Tutorial on the Git Version Control System* (@tip-prompt)
+## *Curating Research Assets: A Tutorial on the Git Version Control System*
 
 Como uma tentativa de enfrentar os desafios da reprodutibilidade na ciência empírica, um fator específico que se destaca é a forma como os pesquisadores organizam, curam, compartilham e colaboram em seus ativos de pesquisa [@vuorre2018]. Para mitigar essas dificuldades, sistemas de controle de versão (VCS), como o Git, têm sido amplamente adotados, uma vez que facilitam o acompanhamento das mudanças, versões e colaboração em projetos científicos.\vspace{0.5em}
 
@@ -100,7 +102,7 @@ Em suma, a adoção de sistemas de controle de versão como o Git, especialmente
 :::
 
 ::: {.callout-note collapse="true"}
-## *Furthering Open Science in Behavior Analysis: An Introduction and Tutorial for Using* *GitHub in Research* (@tip-prompt)
+## *Furthering Open Science in Behavior Analysis: An Introduction and Tutorial for Using* *GitHub in Research*
 
 Este tutorial [@gilroy2019] revisa as diretrizes de Práticas Transparentes e Abertas fornecidas pela Open Science Foundation e explora como os pesquisadores podem utilizar a transparência do GitHub em suas pesquisas. Ele exemplifica como os pesquisadores podem usar o GitHub para compartilhar código, dados e materiais de pesquisa, permitindo a inspeção e replicação por parte de revisores e outros pesquisadores através do **Github Desktop**.\vspace{0.5em}
 
