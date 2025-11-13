@@ -4,6 +4,7 @@
 
 ::: {.content-visible unless-format="pdf"}
 -   \emojitext{📝} **FAÇA SUA INSCRIÇÃO [AQUI](https://forms.gle/wRNWAU9Ffyp7o4Vq9)**
+  - Turma Nov/25 fechada, volte em Dez/25 e faça sua inscrição para a próxima edição!
 
 -   \emojitext{📅} **CONSULTE A AGENDA ATUALIZADA [AQUI](https://phdpablo.github.io/curso-open-science/00-schedule.html)**
 

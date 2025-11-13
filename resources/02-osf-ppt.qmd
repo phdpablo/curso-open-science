@@ -1,0 +1,673 @@
+---
+title: "Artigo à Prova de Futuro"
+subtitle: "Jornada de Open Science na Prática"
+author: "Dr. Pablo Rogers"
+format:
+  revealjs:
+    theme: sky
+    slide-number: true
+    chalkboard: true
+    height: 750
+    width: 1600
+    preview-links: auto
+    logo: "../img/psicoeconometria.png"
+    footer: "Repositórios da Ciência Aberta | OSF"
+    transition: slide
+    background-transition: fade
+    smaller: false
+    scrollable: true
+    incremental: false
+    center: true
+    html-math-method: katex
+---
+
+## APRESENTAÇÃO {.smaller}
+
+::: {.column width="30%"}
+
+![](../img/eu.png){fig-align="left"}
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="65%"}
+**Pablo Rogers:**
+
+- Professor na Universidade Federal de Uberlândia (UFU)
+- Finanças e Ciência de Dados
+- I'm not an TI guy
+- Coordenador do [Psico&Econo_METRIA](https://www.youtube.com/c/PsicoEconoMETRIA)
+
+<br>
+
+**Redes Sociais:**
+
+- Website: [www.phdpablo.com](https://www.phdpablo.com)
+- GitHub: [https://github.com/phdpablo/](https://github.com/phdpablo/)
+- Linkedin: [https://www.linkedin.com/in/phdpablo/](https://www.linkedin.com/in/phdpablo/)
+- ResearchGate: [https://www.researchgate.net/profile/Pablo-Rogers](https://www.researchgate.net/profile/Pablo-Rogers)
+- Psico&Econo_METRIA: [https://www.youtube.com/c/PsicoEconoMETRIA](https://www.youtube.com/c/PsicoEconoMETRIA)
+:::
+
+------------------------------------------------------------------------
+
+## INSTRUÇÕES GERAIS {.smaller}
+
+::: incremental
+**Site do Curso:**
+
+- <https://phdpablo.github.io/curso-open-science/>
+- Roteiro estruturado
+- Fonte de pesquisa
+- Bibliografia para estudo
+- Em desenvolvimento
+
+**Aulas Gravadas:**
+
+- Publicadas no canal [Psico&Econo_METRIA](https://www.youtube.com/c/PsicoEconoMETRIA)
+- Não necessariamente imediatas
+:::
+
+------------------------------------------------------------------------
+
+## INSTRUÇÕES GERAIS
+
+::: incremental
+**Certificação:**
+
+- Ao final do curso será emitido certificado
+- Toda reunião terá uma lista de presença
+- Para aqueles com 75% de presença
+- Responderem o questionário final
+- Informarem os documentos necessários
+:::
+
+------------------------------------------------------------------------
+
+## AGENDA {.smaller}
+
+:::: columns
+::: {.column width="70%"}
+
+```{=html}
+
+<iframe src="../00-schedule.html" width="100%" height="600" style="border:1px solid #ccc;"></iframe>
+
+```
+
+:::
+
+::: {.column width="30%"}
+
+::: incremental
+**Observações:**
+
+- Terças e quintas às 19:00
+- Em torno de duas horas, com 10 min de intervalo
+- Qualquer imprevisto "jogaremos as aulas para frente" ou reposição na segunda ou quarta
+- A comunicação se dará através de e-mails
+:::
+:::
+::::
+
+------------------------------------------------------------------------
+
+## PRÉ-REQUISITOS {.smaller}
+
+```{=html}
+
+<iframe src="../00-prework.html" width="100%" height="500" style="border:1px solid #ccc;"></iframe>
+
+```
+
+- Utilizaremos o [Article Reproducibility Template & Environment (ARTE)](https://phdpablo.github.io/article-template/) como showcase
+
+
+-----------------------------------------------------------------------
+
+## Repositórios da Ciência Aberta {.center background-color="#4d7c8a"}
+
+### Open Science Framework (OSF)
+
+-----------------------------------------------------------------------
+
+## Objetivos de Aprendizagem
+
+::: incremental
+Ao final deste módulo, você será capaz de:
+
+- Criar e configurar projetos no OSF, incluindo metadados, componentes hierárquicos e integrações
+- Conectar o OSF a armazenamentos em nuvem, gerenciadores de referências e repositórios de código
+- Criar e submeter pré-registros utilizando templates apropriados
+- Distinguir entre *preregistration* e *registration*
+- Gerar DOIs para projetos e componentes
+- Compartilhar projetos com colaboradores e gerenciar permissões
+- Publicar preprints através do OSF
+:::
+
+------------------------------------------------------------------------
+
+## Contextualização
+
+::: incremental
+**Por que repositórios de Ciência Aberta?**
+
+- Promovem transparência, acessibilidade e colaboração na pesquisa
+- Democratizam o conhecimento científico
+- Gerenciam todo o ciclo de vida da pesquisa
+- Cada repositório tem suas particularidades e propósitos específicos
+:::
+
+------------------------------------------------------------------------
+
+## Ecossistema de Repositórios {.smaller}
+
+::: columns
+::: {.column width="50%"}
+::: {.fragment}
+**Repositórios Gerais:**
+
+- **Zenodo**: CERN + OpenAIRE
+- **Figshare**: Comercial, visualização integrada
+- **Mendeley Data**: Elsevier
+- **Harvard Dataverse**: Rede institucional
+:::
+:::
+
+::: {.column width="50%"}
+
+::: {.fragment}
+**Repositórios Especializados:**
+
+- **arXiv**: Preprints (física, matemática, CS)
+- **GitHub**: Código e desenvolvimento colaborativo
+- **OSF**: Ciclo completo de pesquisa
+:::
+:::
+:::
+
+::: {.fragment}
+**Outros:** Databrary, DataONE, DataCite, Dryad, GenBank, PubMed Central, etc.
+:::
+
+------------------------------------------------------------------------
+
+## Por que OSF? {.smaller}
+
+::: columns
+::: {.column width="70%"}
+
+![OSF Research Lifecycle](../img/osf-researchcycle.jpg){fig-align="left"}
+:::
+
+::: {.column width="30%"}
+::: incremental
+**Diferenciais:**
+
+- Foco em todo o ciclo de vida da pesquisa
+- Ferramentas robustas de colaboração
+- Integração com múltiplas plataformas
+- Comunidade ativa
+- Código aberto e gratuito
+- Mantido pelo Center for Open Science
+:::
+:::
+:::
+
+-----------------------------------------------------------------------
+
+## Recursos Principais do OSF
+
+::: incremental
+**Funcionalidades:**
+
+- Criar projetos de pesquisa hierárquicos
+- Carregar e publicar dados com DOI
+- Colaboração em equipe com controle de permissões
+- Integração com armazenamentos em nuvem (OneDrive, Google Drive, Box, Dropbox)
+- Integração com gerenciadores de referências (Zotero, Mendeley)
+- Integração com repositórios de código (GitHub, GitLab, Bitbucket)
+- Pré-registro e registro de estudos
+- Publicação de preprints
+:::
+
+------------------------------------------------------------------------
+
+## Demonstração Prática {.center background-color="#4d7c8a"}
+
+### Navegando pela Plataforma
+
+------------------------------------------------------------------------
+
+## Perfil no OSF
+
+::: incremental
+**Estrutura do Perfil:**
+
+- Informações pessoais e afiliações institucionais
+- ORCID vinculado
+- Projetos públicos e privados
+- Sistema de busca de projetos, registros e preprints
+- Configurações e *add-ons*
+:::
+
+<!-- Inserir screenshot do perfil -->
+
+
+-----------------------------------------------------------------------
+
+## Buscas no OSF {.center background-color="#4d7c8a"}
+
+### Descobrindo Conteúdo
+
+-----------------------------------------------------------------------
+
+## Sistema de Busca
+
+::: incremental
+**Filtros Principais:**
+
+- **Subject:** Áreas de conhecimento
+- **Resource type:** Projects, Registrations, Preprints
+
+**Filtros Adicionais (por tipo):**
+
+- **Projects:** Associated preprint
+- **Registrations:** Template + categorias de recursos
+- **Preprints:** Tipo de preprint
+:::
+
+::: {.fragment}
+**Acesso:** Search OSF (barra superior)
+:::
+
+-----------------------------------------------------------------------
+
+## Projetos no OSF {.center background-color="#4d7c8a"}
+
+### Features Principais
+
+-----------------------------------------------------------------------
+
+## Criando um Projeto {.smaller}
+
+::: incremental
+**Estrutura Hierárquica:**
+
+- **Projeto Principal** (nível superior)
+  - **Sub-projetos** (componentes)
+    - **Sub-sub-projetos** (hierarquias inferiores)
+
+**Exemplo:** Lab de Pesquisa → Iniciativa de Pesquisa → Hipótese/Protocolo/Dados
+
+**Formulário de Criação:**
+
+- Título (obrigatório)
+- Storage Location (escolher localização)
+- Description (opcional)
+- Template (opcional)
+:::
+
+<!-- Inserir diagrama de hierarquia -->
+
+-----------------------------------------------------------------------
+
+## Componentes do Projeto {.smaller}
+
+::: columns
+::: {.column width="50%"}
+
+::: fragment
+**Overview:**
+
+- Descrição do projeto
+- Metadatos estruturados
+- Colaboradores
+- Tags e palavras-chave
+- Subjects (áreas de conhecimento)
+- License e DOI
+:::
+::: fragment
+**Files:**
+
+- Upload de arquivos
+- Organização em pastas
+- Integração com add-ons
+:::
+:::
+
+::: {.column width="50%"}
+
+::: fragment
+**Wiki:**
+
+- Documentação colaborativa
+- Suporte a Markdown
+- Versionamento automático
+- Múltiplas páginas
+:::
+::: fragment
+
+**Outros:**
+
+- Registrations
+- Analytics
+- Contributors
+- Settings
+:::
+:::
+:::
+
+-----------------------------------------------------------------------
+
+## Add-ons em Projetos
+
+::: incremental
+**Configuração por Componente:**
+
+- Cada componente pode ter seus próprios add-ons
+- Conectar repositório GitHub específico
+- Vincular pasta OneDrive específica
+- Integrar biblioteca Zotero ao projeto
+:::
+
+<!-- Inserir screenshot de add-ons do projeto -->
+
+-----------------------------------------------------------------------
+
+## Pré-registro e Registro {.center background-color="#4d7c8a"}
+
+### Transparência Metodológica
+
+------------------------------------------------------------------------
+
+## Preregistration vs Registration {.smaller}
+
+::: columns
+::: {.column width="50%"}
+**Preregistration:**
+
+::: incremental
+- Criado **antes** da coleta/análise de dados
+- Compromisso metodológico prévio
+- Mitiga vieses de confirmação
+- Distingue análises confirmatórias de exploratórias
+- Maior valor para transparência
+:::
+:::
+
+::: {.column width="50%"}
+**Registration:**
+
+::: incremental
+- Documenta estudos **já concluídos**
+- *Snapshot* permanente do projeto
+- Pode ser criado em qualquer estágio
+- Registro imutável com timestamp
+- Útil para arquivamento
+:::
+:::
+:::
+
+::: {.fragment}
+**Ambos geram registros permanentes e imutáveis**
+:::
+
+------------------------------------------------------------------------
+
+## Fluxo de Registro
+
+<!-- Inserir diagrama ou vídeo do fluxo -->
+
+::: incremental
+**Etapas:**
+
+1. **Design:** Preencher formulário do template escolhido
+2. **Submit form:** Revisar informações
+3. **Embargo (opcional):** Até 4 anos
+4. **Publish:** Registro se torna público e imutável
+5. **Connected Resources:** Vincular outputs futuros
+:::
+
+------------------------------------------------------------------------
+
+## Templates de Preregistro {.smaller}
+
+::: columns
+::: {.column width="50%"}
+
+::: {.fragment}
+**Uso Geral:**
+
+- **OSF Preregistration:** Mais abrangente e recomendado
+- **Open-Ended Registration:** Flexível, sem estrutura rígida
+:::
+
+::: {.fragment}
+**Estudos Específicos:**
+
+- **Secondary Data Preregistration:** Dados já coletados
+- **Registered Report Protocol:** Submissão a journals
+:::
+
+:::
+
+::: {.column width="50%"}
+
+::: {.fragment}
+**Revisões:**
+
+- **Generalized Systematic Review:** Revisões sistemáticas e meta-análises
+:::
+
+::: {.fragment}
+**Replicações:**
+
+- **Replication Recipe (Pre-Registration):** Planejar replicações
+- **Replication Recipe (Post-Completion):** Documentar replicações
+:::
+
+:::
+:::
+
+------------------------------------------------------------------------
+
+## OSF Preregistration {.smaller}
+
+::: incremental
+**Template Mais Utilizado:**
+
+- Abrangente para diversos desenhos de pesquisa
+- Hipóteses e questões de pesquisa
+- Métodos de coleta de dados
+- Planos de análise detalhados
+- Critérios de exclusão/inclusão
+- Variáveis e instrumentos
+- Tamanho amostral e justificativa
+:::
+
+
+------------------------------------------------------------------------
+
+## Secondary Data Preregistration
+
+::: incremental
+**Específico para Dados Secundários:**
+
+- Análise de dados já coletados (por outros ou em projetos anteriores)
+- Questões sobre conhecimento prévio dos dados
+- Torna transparente o que já foi explorado
+- Essencial para bases públicas ou repositórios institucionais
+- Distingue análises planejadas de *data fishing*
+:::
+
+------------------------------------------------------------------------
+
+## Registered Report Protocol
+
+::: incremental
+**Para Submissão a Periódicos:**
+
+- Revisão por pares do protocolo **antes** da coleta (Stage 1)
+- Aceitação provisória baseada na qualidade metodológica
+- Coleta e análise após aprovação
+- Submissão dos resultados (Stage 2)
+- Publicação garantida, independentemente dos achados
+- Elimina viés de publicação
+:::
+
+------------------------------------------------------------------------
+
+## Embargo e Versionamento
+
+::: incremental
+**Embargo:**
+
+- Possibilidade de embargar por até 4 anos
+- Trabalhar sem exposição prematura a concorrentes
+- Histórico permanece preservado
+
+**Após Publicação:**
+
+- Registro se torna **imutável**
+- Controle de versões interno mantido
+- Connected Resources permite vincular outputs futuros
+:::
+
+------------------------------------------------------------------------
+
+## Connected Resources
+
+::: incremental
+**Criar Relacionamentos:**
+
+- Vincular artigos publicados
+- Conectar datasets depositados
+- Linkar preprints
+- Associar apresentações e materiais suplementares
+- Criar rede rastreável entre protocolo e produtos finais
+:::
+
+::: {.fragment}
+**Única modificação permitida após criar um registro**
+:::
+
+------------------------------------------------------------------------
+
+## Preprints {.center background-color="#4d7c8a"}
+
+### Compartilhamento Rápido de Resultados
+
+------------------------------------------------------------------------
+
+## OSF Preprints {.smaller}
+
+::: incremental
+**Serviços Disponíveis:**
+
+- **OSF Preprints:** Genérico (descontinuado para novos preprints)
+- **PsyArXiv:** Psicologia
+- **SocArXiv:** Ciências Sociais
+- **Outros:** Serviços disciplinares específicos
+
+**Campos de Entrada:**
+
+- Mesmas seções independente do serviço
+- Metadados estruturados
+- Upload de arquivo (PDF)
+- Licença de uso
+- Conflitos de interesse
+:::
+
+------------------------------------------------------------------------
+
+## Submissão de Preprint {.smaller}
+
+::: incremental
+**Etapas:**
+
+1. **Upload:** Arquivo PDF do manuscrito
+2. **Metadados Básicos:**
+   - Título
+   - Autores e afiliações
+   - Abstract
+   - Palavras-chave
+   - Disciplina/Subject
+3. **Metadados Adicionais:**
+   - Licença (CC-BY recomendada)
+   - Conflitos de interesse
+   - Financiamento
+4. **Supplemental Materials (opcional):** Vincular projeto OSF
+5. **Review & Submit**
+:::
+
+------------------------------------------------------------------------
+
+## Benefícios dos Preprints
+
+::: incremental
+**Vantagens:**
+
+- Compartilhamento rápido de resultados
+- Estabelecimento de prioridade (*timestamp*)
+- Feedback da comunidade antes da revisão formal
+- Visibilidade e citações precoces
+- Acesso aberto imediato
+- Rastreamento de métricas (downloads, visualizações)
+:::
+
+------------------------------------------------------------------------
+
+## Dicas Práticas {.smaller}
+
+:::: incremental
+::: columns
+::: {.column width="50%"}
+
+**Organização:**
+
+- Nomeação consistente de arquivos
+- Estrutura hierárquica lógica
+- Documentação contínua no Wiki
+- Tags e metadados desde o início
+
+**Colaboração:**
+
+- Definir permissões adequadas
+- Comunicação clara sobre mudanças
+- Versionamento explícito
+:::
+
+::: {.column width="50%"}
+**Transparência:**
+
+- Preregistrar sempre que possível
+- Documentar desvios do protocolo
+- Compartilhar materiais e dados
+- Vincular todos os outputs
+
+**Citação:**
+
+- Gerar DOIs para componentes citáveis
+- Usar citações estruturadas
+- Manter ORCiD atualizado
+:::
+:::
+::::
+
+------------------------------------------------------------------------
+
+## Perguntas? {.center}
+
+<br>
+
+::: {style="font-size: 1.8em; text-align: center;"}
+**Contato:**
+
+📧 [pablorogers@ufu.br]
+
+🌐 [www.phdpablo.com](https://www.phdpablo.com)
+
+💬 [Psico&Econo_METRIA](https://www.youtube.com/c/PsicoEconoMETRIA)
+:::
