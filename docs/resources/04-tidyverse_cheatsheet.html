@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tidyverse Style Guide - Cheat Sheet</title>
+    <style>
+        /* ========== RESET & BASE ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 9pt;
+            line-height: 1.3;
+            color: #0D232C;
+            background: #f8f9fa;
+        }
+
+        code, pre {
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 8pt;
+        }
+
+        /* ========== CONTAINER ========== */
+        .cheatsheet {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+
+        /* ========== HEADER ========== */
+        .header {
+            background: linear-gradient(135deg, #0D232C 0%, #F18C22 100%);
+            color: white;
+            padding: 25px 30px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 28pt;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .header .subtitle {
+            font-size: 11pt;
+            opacity: 0.95;
+            margin-top: 5px;
+        }
+
+        .header .version {
+            text-align: right;
+            font-size: 9pt;
+            opacity: 0.9;
+        }
+
+        /* ========== COLUMNS LAYOUT ========== */
+        .columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* ========== SECTION BOXES ========== */
+        .section {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 0;
+            break-inside: avoid;
+            page-break-inside: avoid;
+            margin-bottom: 15px;
+        }
+
+        .section-header {
+            padding: 10px 15px;
+            font-weight: bold;
+            font-size: 13pt;
+            color: white;
+            border-radius: 4px 4px 0 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-header .icon {
+            font-size: 16pt;
+            margin-right: 10px;
+        }
+
+        .files .section-header {
+            background: linear-gradient(135deg, #87CBCC 0%, #0D232C 100%);
+        }
+
+        .syntax .section-header {
+            background: linear-gradient(135deg, #F18C22 0%, #87CBCC 100%);
+        }
+
+        .functions .section-header {
+            background: linear-gradient(135deg, #0D232C 0%, #87CBCC 100%);
+        }
+
+        .pipes .section-header {
+            background: linear-gradient(135deg, #87CBCC 0%, #F18C22 100%);
+        }
+
+        .section-content {
+            padding: 12px 15px;
+        }
+
+        /* ========== RULES ========== */
+        .rule {
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+
+        .rule:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .rule-title {
+            font-weight: bold;
+            color: #0D232C;
+            margin-bottom: 5px;
+            font-size: 9.5pt;
+        }
+
+        .rule-desc {
+            font-size: 8.5pt;
+            color: #555;
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+
+        /* ========== EXAMPLES ========== */
+        .examples {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 5px;
+        }
+
+        .example {
+            padding: 6px 8px;
+            border-radius: 4px;
+            font-size: 7.5pt;
+        }
+
+        .good {
+            background-color: #d4edda;
+            border-left: 3px solid #28a745;
+        }
+
+        .bad {
+            background-color: #f8d7da;
+            border-left: 3px solid #dc3545;
+        }
+
+        .example-label {
+            font-weight: bold;
+            font-size: 7pt;
+            margin-bottom: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .good .example-label {
+            color: #155724;
+        }
+
+        .bad .example-label {
+            color: #721c24;
+        }
+
+        .example pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .example code {
+            background: none;
+            padding: 0;
+        }
+
+        /* ========== INLINE CODE ========== */
+        .inline-code {
+            background: #f4f4f4;
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 8pt;
+            color: #F18C22;
+        }
+
+        /* ========== TIPS ========== */
+        .tip {
+            background: #fff3cd;
+            border-left: 3px solid #F18C22;
+            padding: 6px 8px;
+            margin-top: 6px;
+            font-size: 8pt;
+            border-radius: 3px;
+        }
+
+        .tip strong {
+            color: #0D232C;
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background: #0D232C;
+            color: white;
+            border-radius: 6px;
+            font-size: 8pt;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: #F18C22;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+            color: #87CBCC;
+        }
+
+        /* ========== PRINT STYLES ========== */
+        @media print {
+            body {
+                background: white;
+                font-size: 8pt;
+            }
+
+            .cheatsheet {
+                max-width: 100%;
+                padding: 10px;
+            }
+
+            .header {
+                padding: 15px 20px;
+            }
+
+            .header h1 {
+                font-size: 20pt;
+            }
+
+            .columns {
+                gap: 15px;
+            }
+
+            .section {
+                margin-bottom: 10px;
+            }
+
+            .section-header {
+                padding: 8px 12px;
+                font-size: 11pt;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .section-content {
+                padding: 10px 12px;
+            }
+
+            .rule {
+                margin-bottom: 8px;
+                padding-bottom: 8px;
+            }
+
+            .example {
+                padding: 5px 6px;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .tip {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .footer {
+                margin-top: 15px;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            /* Evitar quebras de página dentro de elementos */
+            .section, .rule, .examples {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media screen and (max-width: 768px) {
+            .columns {
+                grid-template-columns: 1fr;
+            }
+
+            .examples {
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header .version {
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cheatsheet">
+        <!-- HEADER -->
+        <div class="header">
+            <div>
+                <h1>📊 Tidyverse Style Guide</h1>
+                <div class="subtitle">Guia Rápido de Boas Práticas em R para Analistas e Cientista de Dados</div>
+            </div>
+            <div class="version">
+                <strong>Versão 2025</strong><br>
+                Atualizado: Outubro 2025<br>
+                style.tidyverse.org
+            </div>
+        </div>
+
+        <!-- TWO-COLUMN LAYOUT -->
+        <div class="columns">
+            <!-- LEFT COLUMN: FILES + PIPES -->
+            <div class="column-left">
+
+                <!-- SECTION 1: FILES -->
+                <div class="section files">
+                    <div class="section-header">
+                        <span class="icon">📁</span>
+                        <span>FILES (Arquivos)</span>
+                    </div>
+                    <div class="section-content">
+
+                        <div class="rule">
+                            <div class="rule-title">1. Nomenclatura de Arquivos</div>
+                            <div class="rule-desc">Use apenas letras minúsculas, números e underscores (<span class="inline-code">_</span>) ou hífens (<span class="inline-code">-</span>). Nomes devem ser significativos e descritivos.</div>
+                            <div class="examples">
+                                <div class="example good">
+                                    <div class="example-label">✓ Correto</div>
+                                    <pre><code>01_importar_dados.R
+funcoes_auxiliares.R
+modelo_regressao.R</code></pre>
+                                </div>
+                                <div class="example bad">
+                                    <div class="example-label">✗ Incorreto</div>
+                                    <pre><code>Análise Final.R
+dadosTemp.R
+foo.R</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rule">
+                            <div class="rule-title">2. Prefixos Numéricos</div>
+                            <div class="rule-desc">Use prefixos numéricos para indicar ordem de execução.</div>
+                            <div class="examples">
+                                <div class="example good">
+                                    <div class="example-label">✓ Correto</div>
+                                    <pre><code>00_download.R
+01_processar.R
+02_visualizar.R</code></pre>
+                                </div>
+                                <div class="example bad">
+                                    <div class="example-label">✗ Incorreto</div>
+                                    <pre><code>download.R
+processar.R
+# Sem ordem</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rule">
+                            <div class="rule-title">3. Estrutura Interna</div>
+                            <div class="rule-desc">Organize: (1) Cabeçalho/descrição, (2) Pacotes, (3) Funções, (4) Código. <strong>NUNCA</strong> use <span class="inline-code">install.packages()</span> em scripts.</div>
+                            <div class="examples">
+                                <div class="example good">
+                                    <div class="example-label">✓ Correto</div>
+                                    <pre><code># Análise - 2025
+# Autor: Nome
+
+library(tidyverse)
+
+calc <- function(x) {...}
+
+dados <- read_csv(...)</code></pre>
+                                </div>
+                                <div class="example bad">
+                                    <div class="example-label">✗ Incorreto</div>
+                                    <pre><code>install.packages("tidyverse")
+x <- 5
+library(tidyverse)
+# Código misturado</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- SECTION 4: PIPES (INCLUDING GGPLOT2) -->
+                <div class="section pipes">
+                    <div class="section-header">
+                        <span class="icon">🔗</span>
+                        <span>PIPES (incluindo ggplot2)</span>
+                    </div>
+                    <div class="section-content">
+
+                        <div class="rule">
+                            <div class="rule-title">1. Operador de Pipe</div>
+                            <div class="rule-desc">Use <span class="inline-code">|&gt;</span> (pipe nativo, R ≥ 4.1) ou <span class="inline-code">%&gt;%</span> (magrittr). Preferência: <span class="inline-code">|&gt;</span> para código novo.</div>
+                            <div class="examples">
+                                <div class="example good">
+                                    <div class="example-label">✓ Correto</div>
+                                    <pre><code>resultado <- dados |>
+  filter(ano == 2025) |>
+  group_by(regiao) |>
+  summarise(total = sum(valor))</code></pre>
+                                </div>
+                                <div class="example bad">
+                                    <div class="example-label">✗ Incorreto</div>
+                                    <pre><code>resultado <- summarise(
+  group_by(
+    filter(dados, ano == 2025),
+    regiao
+  ), total = sum(valor)
+)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rule">
+                            <div class="rule-title">2. Formatação de Pipes</div>
+                            <div class="rule-desc"><strong>Uma operação por linha.</strong> Quebre linha <strong>DEPOIS</strong> do pipe (<span class="inline-code">|&gt;</span>), nunca antes. Indente com 2 espaços.</div>
+                            <div class="examples">
+                                <div class="example good">
+                                    <div class="example-label">✓ Correto</div>
+                                    <pre><code>dados |>
+  filter(status == "ativo") |>
+  mutate(
+    valor_corrigido = valor * fator
+  ) |>
+  select(id, valor_corrigido)</code></pre>
+                                </div>
+                                <div class="example bad">
+                                    <div class="example-label">✗ Incorreto</div>
+                                    <pre><code># Pipe no INÍCIO (ERRADO!)
+dados 
+  |> filter(status == "ativo")
+  |> select(id, valor)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rule">
+                            <div class="rule-title">3. Atribuição com Pipes</div>
+                            <div class="rule-desc">Atribuição (<span class="inline-code">&lt;-</span>) sempre no <strong>início</strong>, nunca no final com <span class="inline-code">-&gt;</span>.</div>
+                            <div class="examples">
+                                <div class="example good">
+                                    <div class="example-label">✓ Correto</div>
+                                    <pre><code>dados_proc <- dados_brutos |>
+  filter(!is.na(valor)) |>
+  mutate(log_valor = log(valor))</code></pre>
+                                </div>
+                                <div class="example bad">
+                                    <div class="example-label">✗ Incorreto</div>
+                                    <pre><code>dados_brutos |>
+  filter(!is.na(valor)) ->
+    dados_proc</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rule">
+                            <div class="rule-title">4. Quando Usar Pipes</div>
+                            <div class="rule-desc"><strong>Use:</strong> sequências de 2+ operações lineares. <strong>Evite:</strong> pipes muito longos (&gt;10 etapas), múltiplos inputs/outputs.</div>
+                            <div class="examples">
+                                <div class="example good">
+                                    <div class="example-label">✓ Correto</div>
+                                    <pre><code># Dividir em etapas
+dados_limpos <- dados |>
+  filter(!is.na(valor))
+
+dados_final <- dados_limpos |>
+  group_by(categoria) |>
+  summarise(total = sum(valor))</code></pre>
+                                </div>
+                                <div class="example bad">
+                                    <div class="example-label">✗ Incorreto</div>
+                                    <pre><code># Pipe desnecessário
+media <- dados$valor |> mean()
+
+# Pipe muito longo
+# Difícil de debugar</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rule">
+                            <div class="rule-title">5. ggplot2: Uso de +</div>
+                            <div class="rule-desc">ggplot2 usa <span class="inline-code">+</span> (não pipes!). Espaço antes do <span class="inline-code">+</span>, quebra de linha depois. Uma camada por linha.</div>
+                            <div class="examples">
+                                <div class="example good">
+                                    <div class="example-label">✓ Correto</div>
+                                    <pre><code>ggplot(dados, aes(x = x, y = y)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(title = "Título") +
+  theme_minimal()</code></pre>
+                                </div>
+                                <div class="example bad">
+                                    <div class="example-label">✗ Incorreto</div>
+                                    <pre><code># + no INÍCIO (ERRADO!)
+ggplot(dados, aes(x = x, y = y))
+  + geom_point()
+  + theme_minimal()</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rule">
+                            <div class="rule-title">6. ggplot2: Combinação com Pipes</div>
+                            <div class="rule-desc">Combine pipes com ggplot2: use <span class="inline-code">|&gt;</span> para preparar dados, depois <span class="inline-code">+</span> para camadas.</div>
+                            <div class="examples">
+                                <div class="example good">
+                                    <div class="example-label">✓ Correto</div>
+                                    <pre><code>iris |>
+  filter(Species == "setosa") |>
+  ggplot(aes(x = Sepal.Width, 
+             y = Sepal.Length)) +
+  geom_point() +
+  theme_minimal()</code></pre>
+                                </div>
+                                <div class="example bad">
+                                    <div class="example-label">✗ Incorreto</div>
+                                    <pre><code># Filtro dentro do ggplot
+ggplot(
+  filter(iris, Species == "setosa"),
+  aes(x = Sepal.Width, y = Sepal.Length)
+) + geom_point()</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rule">
+                            <div class="rule-title">7. ggplot2: Argumentos Longos</div>
+                            <div class="rule-desc">Se argumentos não couberem em uma linha, coloque cada um em sua própria linha com indentação.</div>
+                            <div class="examples">
+                                <div class="example good">
+                                    <div class="example-label">✓ Correto</div>
+                                    <pre><code>ggplot(iris, aes(
+  x = Sepal.Width,
+  y = Sepal.Length,
+  color = Species
+)) +
+  geom_point() +
+  labs(
+    x = "Sepal width, cm",
+    y = "Sepal length, cm"
+  )</code></pre>
+                                </div>
+                                <div class="example bad">
+                                    <div class="example-label">✗ Incorreto</div>
+                                    <pre><code>ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length, color = Species)) +
+  geom_point() +
+  labs(x = "Sepal width, cm", y = "Sepal length, cm")
+# Linha muito longa</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: SYNTAX + FUNCTIONS -->
+            <div class="column-right">
+
+                <!-- SECTION 2: SYNTAX -->
+                <div class="section syntax">
+                    <div class="section-header">
+                        <span class="icon">🎨</span>
+                        <span>SYNTAX (Sintaxe)</span>
+                    </div>
+                    <div class="section-content">
+
+                        <div class="rule">
+                            <div class="rule-title">1. Nomenclatura: snake_case</div>
+                            <div class="rule-desc">Use <strong>snake_case</strong> para objetos, variáveis e funções. Evite camelCase, PascalCase ou pontos.</div>
+                            <div class="examples">
+                                <div class="example good">
+                                    <div class="example-label">✓ Correto</div>
+                                    <pre><code>dados_vendas <- read_csv(...)
+taxa_conversao <- 0.15
+numero_clientes <- 1000</code></pre>
+                                </div>
+                                <div class="example bad">
+                                    <div class="example-label">✗ Incorreto</div>
+                                    <pre><code>dadosVendas <- read_csv(...)
+TaxaConversao <- 0.15
+numero.clientes <- 1000</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rule">
+                            <div class="rule-title">2. Espaçamento</div>
+                            <div class="rule-desc">Use espaços ao redor de operadores e depois de vírgulas. Não use espaços dentro de parênteses/colchetes ou antes de parênteses em funções.</div>
+                            <div class="examples">
+                                <div class="example good">
+                                    <div class="example-label">✓ Correto</div>
+                                    <pre><code>x <- 5
+media <- mean(x, na.rm = TRUE)
+dados[1, 5]
+if (x > 10) print("alto")</code></pre>
+                                </div>
+                                <div class="example bad">
+                                    <div class="example-label">✗ Incorreto</div>
+                                    <pre><code>x<-5
+media<-mean(x,na.rm=TRUE)
+log (x)
+if(x>10)print("alto")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rule">
+                            <div class="rule-title">3. Operador de Atribuição</div>
+                            <div class="rule-desc">Use sempre <span class="inline-code">&lt;-</span> para atribuição, nunca <span class="inline-code">=</span>.</div>
+                            <div class="examples">
+                                <div class="example good">
+                                    <div class="example-label">✓ Correto</div>
+                                    <pre><code>x <- 5
+resultado <- calcular(dados)</code></pre>
+                                </div>
+                                <div class="example bad">
+                                    <div class="example-label">✗ Incorreto</div>
+                                    <pre><code>x = 5
+resultado = calcular(dados)</code></pre>
+                                </div>
+                            </div>
+                            <div class="tip">
+                                <strong>💡 Atalho RStudio:</strong> Alt + - (Win/Linux) ou Option + - (Mac)
+                            </div>
+                        </div>
+
+                        <div class="rule">
+                            <div class="rule-title">4. Indentação</div>
+                            <div class="rule-desc">Use <strong>2 espaços</strong> (nunca tabs). Quebre linhas longas (máx 80 caracteres).</div>
+                            <div class="examples">
+                                <div class="example good">
+                                    <div class="example-label">✓ Correto</div>
+                                    <pre><code>dados_filtrados <- filter(
+  dados,
+  ano >= 2020,
+  !is.na(valor)
+)</code></pre>
+                                </div>
+                                <div class="example bad">
+                                    <div class="example-label">✗ Incorreto</div>
+                                    <pre><code>dados_filtrados <- filter(dados, ano >= 2020, !is.na(valor))
+
+# Indentação inconsistente</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rule">
+                            <div class="rule-title">5. Aspas</div>
+                            <div class="rule-desc">Prefira aspas duplas (<span class="inline-code">"</span>) para strings.</div>
+                            <div class="examples">
+                                <div class="example good">
+                                    <div class="example-label">✓ Correto</div>
+                                    <pre><code>nome <- "João Silva"
+arquivo <- "dados/vendas.csv"</code></pre>
+                                </div>
+                                <div class="example bad">
+                                    <div class="example-label">✗ Evite</div>
+                                    <pre><code>nome <- 'João Silva'
+arquivo <- 'dados/vendas.csv'</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- SECTION 3: FUNCTIONS -->
+                <div class="section functions">
+                    <div class="section-header">
+                        <span class="icon">⚙️</span>
+                        <span>FUNCTIONS (Funções)</span>
+                    </div>
+                    <div class="section-content">
+
+                        <div class="rule">
+                            <div class="rule-title">1. Quando Criar Funções</div>
+                            <div class="rule-desc">Se você copiou e colou código mais de 2 vezes, crie uma função! Regra: <strong>DRY</strong> (Don't Repeat Yourself).</div>
+                        </div>
+
+                        <div class="rule">
+                            <div class="rule-title">2. Nomes de Funções</div>
+                            <div class="rule-desc">Use <strong>verbos descritivos</strong> em snake_case. Evite nomes genéricos ou muito curtos.</div>
+                            <div class="examples">
+                                <div class="example good">
+                                    <div class="example-label">✓ Correto</div>
+                                    <pre><code>calcular_media_movel()
+limpar_dados_ausentes()
+validar_cpf()
+gerar_relatorio()</code></pre>
+                                </div>
+                                <div class="example bad">
+                                    <div class="example-label">✗ Incorreto</div>
+                                    <pre><code>f()
+minha_funcao()
+dados()  # substantivo
+calc()   # muito curto</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rule">
+                            <div class="rule-title">3. Ordem dos Argumentos</div>
+                            <div class="rule-desc">Argumentos obrigatórios primeiro, depois opcionais com valores padrão.</div>
+                            <div class="examples">
+                                <div class="example good">
+                                    <div class="example-label">✓ Correto</div>
+                                    <pre><code>calcular_taxa <- function(
+  valor_atual,      # obrigatório
+  valor_anterior,   # obrigatório
+  casas = 2         # opcional
+) { ... }</code></pre>
+                                </div>
+                                <div class="example bad">
+                                    <div class="example-label">✗ Incorreto</div>
+                                    <pre><code>calcular_taxa <- function(
+  casas = 2,        # opcional primeiro!
+  valor_atual,
+  valor_anterior
+) { ... }</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rule">
+                            <div class="rule-title">4. Retorno de Funções</div>
+                            <div class="rule-desc">Use <span class="inline-code">return()</span> <strong>apenas</strong> para retornos antecipados. A última expressão é o retorno implícito.</div>
+                            <div class="examples">
+                                <div class="example good">
+                                    <div class="example-label">✓ Correto</div>
+                                    <pre><code>somar <- function(a, b) {
+  a + b  # implícito
+}
+
+validar <- function(x) {
+  if (x < 0) return(NA)
+  if (x < 18) return("menor")
+  "maior"  # implícito
+}</code></pre>
+                                </div>
+                                <div class="example bad">
+                                    <div class="example-label">✗ Incorreto</div>
+                                    <pre><code>somar <- function(a, b) {
+  resultado <- a + b
+  return(resultado)  # desnecessário
+}
+
+validar <- function(x) {
+  if (x < 18) {
+    return("menor")
+  } else {
+    return("maior")  # desnecessário
+  }
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rule">
+                            <div class="rule-title">5. Comentários em Funções</div>
+                            <div class="rule-desc">Explique o <strong>"porquê"</strong>, não o "o quê". Documente propósito, argumentos e retorno.</div>
+                            <div class="examples">
+                                <div class="example good">
+                                    <div class="example-label">✓ Correto</div>
+                                    <pre><code># Usa log1p() para evitar -Inf
+# quando x = 0
+transformar <- function(x) {
+  log1p(x)
+}</code></pre>
+                                </div>
+                                <div class="example bad">
+                                    <div class="example-label">✗ Incorreto</div>
+                                    <pre><code># Transforma valores
+transformar <- function(x) {
+  log1p(x)  # aplica log1p
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <p><strong>Fonte:</strong> <a href="https://style.tidyverse.org/" target="_blank">Tidyverse Style Guide</a> | 
+            Wickham, H. (2024). The tidyverse style guide. | 
+            <strong>Ferramentas:</strong> <a href="https://styler.r-lib.org/" target="_blank">styler</a> (formatação automática) e <a href="https://lintr.r-lib.org/" target="_blank">lintr</a> (verificação de estilo)</p>
+            <p style="margin-top: 8px; opacity: 0.8;"> <a href="https://phdpablo.github.io/curso-open-science/" target="_blank">
+  Artigo à Prova de Futuro: Jornada de Open Science na Prática
+</a> | <strong>Licença:</strong> CC BY 4.0</p>
+        </div>
+
+    </div>
+</body>
+</html>
