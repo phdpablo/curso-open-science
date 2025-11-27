@@ -5,7 +5,7 @@
 Planejamento dos dias \emojitext{📅} e horários das aulas \emojitext{⏲️}, conforme a ementa do curso. Na seção de cada uma das aulas temos materiais adicionais para o respectivo conteúdo. Quando disponível, por aqui, poderás acessar os slides utilizados nas aulas \emojitext{🗣}, aulas gravadas ou indicações de vídeo \emojitext{🎥} e leituras básica sobre os conteúdos \emojitext{📓}.
 
 | Aula/Conteúdo | Data | Material Principal | Instrutor |
-|:-----------------|:----------------:|:----------------:|:----------------:|
+|:---|:--:|:--:|:--:|
 | [Introdução à CA](01-intro.html) | \emojitext{📅}18/11/25\emojitext{⏲️}20:30 | [\emojitext{🗣}](/resources/01-intro.pdf)[\emojitext{🎥}](https://www.youtube.com/live/7ewEcTATkZM?si=Lq40IAoDgsy_A619)[\emojitext{📓}](https://bar.anpad.org.br/index.php/bar/article/view/702) | Ricardo Limongi |
 | [Repositórios da CA](02-osf.html) | \emojitext{📅}13/11/25\emojitext{⏲️}19:00 | [\emojitext{🗣️}](/resources/02-osf-ppt.html)[\emojitext{🎥}](https://youtu.be/i5H9BmOF5Ng?si=pqRbjsu32HEjrElG)[\emojitext{📓}](https://bar.anpad.org.br/index.php/bar/article/view/712) | Pablo Rogers |
 | [Gerenciamento de Referências](03-zotero.html) | \emojitext{📅}25/11/25\emojitext{⏲️}19:00 | [\emojitext{🗣️}](https://www.ufrgs.br/super8/wp-content/uploads/apresentacoes/zotero-gerenciador-referencias.pdf)[\emojitext{🎥}](https://www.youtube.com/live/gdYMiezOFiE)[\emojitext{📓}](https://bar.anpad.org.br/index.php/bar/article/view/722) | Pablo Rogers |
