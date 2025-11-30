@@ -223,7 +223,7 @@ push (sem fork). Branches virão depois.
 
 ## Pensando em Linha do Tempo: Branches
 
-![](../img/git-branches-timeline.png){width="50%"}
+![](../img/git-branches-timeline.png){width="30%"}
 
 ::: notes
 Fonte:
@@ -240,7 +240,7 @@ código principal.
 
 ## Estratégias de Branching: Visão Geral
 
-![](../img/git-branching-strategies.png){width="50%"}
+![](../img/git-branching-strategies.png){width="30%"}
 
 
 ::: notes
