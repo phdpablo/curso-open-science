@@ -2,128 +2,91 @@
 
 <br>
 
-Você pode ter chegado até aqui e pensado: esse negócio de reprodutibilidade e transparência não é para mim! Eu sou um pesquisador qualitativo e não tenho nada a ver com essas "coisas" de código e programação. Talvez a aula de Git te assustou! Se você pensou isso, eu tenho uma boa notícia: você está enganado! A reprodutibilidade e a transparência são para todos os pesquisadores, independentemente da abordagem metodológica que você adote. E, para provar isso, eu vou mostrar como você pode usar o [Quarto](https://quarto.org/), através do RStudio, para organizar e documentar o seu projeto de pesquisa, mesmo que qualitativo.
+## Objetivos de aprendizagem
 
-De qualquer forma, como refletimos até a penúltima seção, talvez dominar a plataforma [OSF](https://osf.io/), o [Zotero](https://www.zotero.org/) e um protocolo rígido de organização de dados e projetos (vide [Protocolo TIER](https://www.projecttier.org/tier-protocol/protocol-4-0/), por exemplo) seja suficiente para você. A integração dessas soluções com outras que você já utiliza no dia a dia (armazenamento nas nuvens, processadores de texto, softwares específicos de análise qualitativa, etc) já lhe capacita para ter um projeto de pesquisa organizado e documentado com boas práticas da Ciência Aberta (CA).
+::: {.callout-tip icon="false"}
+## \emojitext{🎯} Ao final deste módulo, você será capaz de:
 
-Ou talvez você, mesmo sendo um pesquisador que utiliza métodos quantitativos, empregue o mesmo argumento: eu nem gosto dessas "coisas" de código e programação. Prefiro soluções *point-and-click*, tal como o SPSS e Stata! Tenho uma boa notícia para você também: existem dois outros softwares com essa funcionalidade e boa compatilidade com os princípios da CA: o [JASP](https://jasp-stats.org/) e o [Jamovi](https://www.jamovi.org/).
+-   Compreender o papel dos documentos dinâmicos no fluxo de trabalho científico reprodutível
+-   Entender o funcionamento do Quarto como sistema de publicação científica
+-   Reconhecer a integração entre narrativa, código e dados em um documento reprodutível
+-   Aplicar o conceito de "reprodutibilidade adequada" através do template ARTE
+-   Preparar o ambiente de trabalho (RStudio, Git, Zotero) para criar documentos dinâmicos
+-   Explorar o template ARTE em sua versão publicada
+-   Utilizar os editores Source e Visual do RStudio para criar e formatar documentos `.qmd`
+-   Integrar referências bibliográficas do Zotero diretamente nos documentos Quarto
+-   Praticar a transição de um manuscrito Word tradicional para o formato reprodutível Quarto
+-   Incorporar códigos de análise (*chunks*) e gerar saídas dinâmicas (tabelas, gráficos)
+-   Compilar e publicar o projeto através do GitHub Pages
+:::
 
-Primeiramente, os dois são softwares gratuitos e de código aberto. Segundo, ambos possuem uma interface gráfica amigável e intuitiva, que permite a execução de análises estatísticas sem a necessidade de programação. Terceiro, em ambos os outputs das análises ficam disponíveis, quando salvos, no mesmo arquivo da base de dados. Através da tela dos outputs o usuário pode editar os títulos, adicionar notas, copiar as citações dos pacotes do R que estão sendo utilizados, copiar as análises para edição em outros softwares e duplicar as análises [@rogers2024]. Essas últimas funcionalidades são extremamente úteis para a reprodutibilidade.
+## Contextualização
 
-No entanto, ambos os softwares ainda são recentes e ainda não englobam todas as análises dos softwares mais tradicionais, como o SPSS e o Stata. Eles não possuem a mesma quantidade de pacotes do R, o que pode ser um limitante para pesquisadores que necessitam de análises mais complexas. Os dois carecem de funcionalidades para a organização e estruturação dos dados, ficando o ETL (*Extration, Transform and Loading*) a cargo de outros softwares, colocando dificuldade ao controle de versões, De qualquer forma, acreditamos que a tendência é que esses softwares evoluam e se tornem mais populares, principalmente entre pesquisadores que não têm familiaridade com a programação.
+A reprodutibilidade e a transparência são princípios fundamentais da Ciência Aberta (CA), independentemente da abordagem metodológica adotada pelo pesquisador [@limongi2025a]. Seja você um pesquisador qualitativo, quantitativo ou misto, as ferramentas e práticas discutidas neste módulo podem ser aplicadas para organizar, documentar e compartilhar seu projeto de pesquisa de forma mais transparente e verificável.
 
-De qualquer forma, o foco dessa seção é mostrar como você pode usar o Quarto para documentos dinâmicos, independente se você é um pesquisador qualitativo ou quantitativo, que prefere ou não usar recursos *point-and-click*. O Quarto é uma ferramenta de código aberto que permite a criação de documentos dinâmicos, tal como o R Markdown, mas com uma interface gráfica mais amigável e intuitiva. Através do Quarto, você pode criar documentos dinâmicos com texto, imagens, tabelas, gráficos, equações, referências bibliográficas, etc. E, o melhor de tudo, você pode fazer isso com pouca necessidade de programação, caso seu interesse seja apenas utilizar o Quarto como editor de documentos dinâmicos, ou seja, somente para escrever e organizar seu projeto de pesquisa.
+Como discutido nos módulos anteriores, dominar a plataforma [OSF](https://osf.io/), o [Zotero](https://www.zotero.org/) e um protocolo de organização como o [Protocolo TIER](https://www.projecttier.org/tier-protocol/protocol-4-0/) pode ser suficiente para estabelecer um nível básico de reprodutibilidade [@limongi2025b]. A integração dessas soluções com outras ferramentas já utilizadas no dia a dia (armazenamento em nuvens, processadores de texto, softwares específicos de análise) já capacita o pesquisador para ter um projeto organizado e documentado, minimamente, segundo as boas práticas da CA.
 
-O Quarto é integrado ao RStudio, o que facilita a sua utilização por pesquisadores que já estão familiarizados com o R. Através do RStudio, você pode criar, editar e renderizar documentos dinâmicos em Quarto. Entretando, o Quarto integra várias linguagens de programação (R, Python, Julia e Observable). No RStudio, os usuários escrevem seus códigos e análises em R e Python, e o Quarto processa esse conteúdo e exporta o resultado em diferentes formatos, como HTML, PDF e DOCX, facilitando a disseminação e o compartilhamento do trabalho em múltiplas plataformas, como é ilustrado na @fig-quarto-illustration.
+Para pesquisadores que preferem interfaces gráficas em vez de programação, existem soluções *no-code* compatíveis com os princípios da CA. Softwares como [JASP](https://jasp-stats.org/) e [Jamovi](https://www.jamovi.org/) oferecem interfaces amigáveis para análises estatísticas, mantendo os outputs salvos junto com os dados, facilitando a reprodutibilidade [@rogers2025]. Adicionalmente, ferramentas como [KNIME](https://www.knime.com/), [Orange](https://orangedatamining.com/) e [OpenRefine](https://openrefine.org/) fornecem ambientes visuais para limpeza, transformação e análise de dados através de workflows baseados em nós, sem exigir programação. Embora essas alternativas ainda apresentem limitações quanto ao controle de versões e à amplitude de análises disponíveis, representam opções válidas, uma porta de entrada, para pesquisadores que buscam aderir aos princípios da CA sem dominar linguagens de programação.
+
+## Quarto: Sistema de Publicação Científica
+
+O foco deste módulo é apresentar o Quarto como ferramenta para criação de documentos dinâmicos reprodutíveis. O [Quarto](https://quarto.org/) é um sistema de publicação científica de código aberto que permite a integração de narrativa, código e resultados em um único documento [@limongi2025b]. Através do Quarto, pesquisadores podem criar documentos com texto, imagens, tabelas, gráficos, equações e referências bibliográficas, com pouca necessidade de programação, especialmente quando utilizado apenas como editor de documentos dinâmicos.
+
+O Quarto é integrado ao RStudio, facilitando sua utilização por pesquisadores já familiarizados com o ambiente R. Entretanto, o Quarto suporta múltiplas linguagens de programação (R, Python, Julia e Observable). No RStudio, os usuários escrevem narrativas e códigos, e o Quarto processa esse conteúdo, exportando o resultado em diferentes formatos como HTML, PDF e DOCX, facilitando a disseminação em múltiplas plataformas.
+
+### Markdown: A Linguagem Base
+
+O Quarto utiliza Markdown como linguagem de marcação para formatação de texto [@limongi2025b]. Markdown é uma sintaxe leve e intuitiva que permite formatar texto de forma simples, utilizando caracteres especiais para indicar títulos, listas, ênfases, links e outros elementos. Por exemplo, `**texto**` produz **texto em negrito**, `## Título` cria um título de segundo nível, e `[link](url)` gera um hiperlink. Esta simplicidade torna o Markdown acessível mesmo para pesquisadores sem experiência em programação.
+
+Neste módulo, não nos aprofundaremos extensivamente na sintaxe Markdown, pois existem recursos excelentes disponíveis. Recomendamos consultar a documentação oficial do Quarto sobre [Markdown Basics](https://quarto.org/docs/authoring/markdown-basics.html) e o [R Markdown Cheat Sheet](https://posit.co/wp-content/uploads/2022/10/rmarkdown-1.pdf) da Posit/RStudio para referência rápida. Durante a aula prática, demonstraremos os elementos mais utilizados na escrita científica, e você poderá consultar esses recursos conforme necessário.
+
+### Arquitetura e Fluxo de Trabalho
+
+As quatro figuras apresentadas a seguir ilustram, em camadas progressivas, como o Quarto organiza e integra texto, código e dados para gerar documentos dinâmicos e reprodutíveis. A sequência é pedagógica: cada figura aprofunda o entendimento do fluxo de trabalho.
+
+A primeira figura (@fig-quarto-illustration) apresenta a visão geral da arquitetura do Quarto. No lado esquerdo, múltiplas linguagens de programação (R, Python, Julia, Observable) podem ser utilizadas como entrada. O Quarto, representado ao centro, atua como plataforma de integração que combina códigos dessas diferentes linguagens para criar documentos ricos em conteúdo. À direita, o sistema pode exportar para diversos formatos de saída (HTML para web, PDF para documentos portáteis, DOCX para edição), oferecendo flexibilidade na distribuição do conteúdo [@limongi2025b].
 
 [![Integração do Quarto](img/quarto-illustration.png){#fig-quarto-illustration}](https://datascience.arizona.edu/events/reproducible-reporting-quarto)
 
-::: {.callout-note collapse="true"}
-## O que o ChatGPT 4o nos diz sobre a @fig-quarto-illustration?
-
-1.  **Múltiplas Linguagens de Programação**:
-    -   No lado esquerdo da imagem, temos ícones representando várias linguagens de programação e plataformas suportadas pelo Quarto, incluindo:
-        -   **R**: Linguagem popular para análise estatística e visualização de dados.
-        -   **Python**: Linguagem versátil utilizada em ciência de dados, aprendizado de máquina, entre outras áreas.
-        -   **Julia**: Linguagem de programação de alto desempenho para computação técnica.
-        -   **Observable**: Plataforma para criar visualizações de dados interativas.
-    -   O texto "+ more!" indica que o Quarto suporta outras linguagens além das mencionadas.
-2.  **Quarto**:
-    -   No centro da imagem, há um círculo azul com o logo do Quarto, representando a ferramenta em si.
-    -   Quarto atua como uma plataforma de integração, permitindo que os usuários combinem códigos de diferentes linguagens e criem documentos ricos em conteúdo.
-3.  **Exportação para Diversos Formatos**:
-    -   À direita, a imagem mostra os diferentes formatos para os quais o Quarto pode exportar:
-        -   **HTML**: Para visualização web.
-        -   **PDF**: Para documentos portáteis e impressos.
-        -   **Word (DOCX)**: Para edição e compartilhamento em formato de texto.
-    -   O texto "+ more!" indica que o Quarto pode exportar para outros formatos além dos ilustrados.
-:::
-
-A @fig-quarto-process explica o fluxo de trabalho de criação e publicação de documentos com Quarto de forma mais analítica. Inicia-se com um arquivo `.qmd` que é processado por ferramentas como knitr ou Jupyter para gerar um arquivo Markdown. Esse arquivo Markdown é então convertido pelo Pandoc para os formatos finais de saída, permitindo uma ampla flexibilidade na distribuição do conteúdo.
+A segunda figura (@fig-quarto-process) detalha o fluxo analítico de processamento. O processo inicia com um arquivo `.qmd` (Quarto Markdown) que contém texto, código e elementos dinâmicos. Este arquivo é processado por ferramentas como knitr (pacote R para integração de código e texto) ou Jupyter (ambiente interativo para múltiplas linguagens), gerando um arquivo Markdown intermediário. Em seguida, o Pandoc, ferramenta poderosa de conversão de documentos, transforma o Markdown nos formatos finais desejados (HTML, PDF, DOCX). Esta camada de processamento garante a conversão adequada do conteúdo dinâmico para formatos estáticos ou interativos.
 
 [![Workflow analítico do Quarto](img/quarto-process.png){#fig-quarto-process}](https://r-cubed-advanced.rostools.org/sessions/build-website)
 
-::: {.callout-note collapse="true"}
-## O que o ChatGPT 4o nos diz sobre a @fig-quarto-process?
-
-1.  **Documentos Quarto (qmd)**:
-    -   O processo começa com um documento no formato Quarto Markdown (qmd), que é um arquivo que pode conter texto, código e outros elementos dinâmicos.
-2.  **Processamento com knitr ou Jupyter**:
-    -   A próxima etapa do fluxo envolve a escolha de um processador para converter o conteúdo do documento qmd:
-        -   **knitr**: Um pacote no R que permite a integração de código e texto, frequentemente usado para documentos R Markdown.
-        -   **Jupyter**: Um ambiente interativo de notebooks que suporta várias linguagens de programação, como Python.
-    -   A imagem mostra que o documento `qmd` pode ser processado por qualquer uma dessas ferramentas, resultando em um documento Markdown intermediário (md).
-3.  **Markdown (md)**:
-    -   Após o processamento inicial, o documento é convertido em um arquivo Markdown padrão (md). Este arquivo contém o texto e as marcações, mas ainda precisa ser convertido para o formato de saída final desejado.
-4.  **Conversão com Pandoc**:
-    -   O arquivo Markdown é então processado pelo Pandoc, uma ferramenta poderosa de conversão de documentos. Pandoc é capaz de transformar arquivos Markdown em uma variedade de formatos de saída.
-    -   A imagem retrata o Pandoc como uma máquina que processa o documento `md` e o converte para os formatos finais.
-5.  **Formatos de Saída**:
-    -   O resultado final do processo pode ser exportado para diversos formatos, conforme ilustrado na imagem:
-        -   **HTML**: Para publicação na web.
-        -   **PDF**: Para distribuição de documentos portáveis e impressos.
-        -   **Word (DOCX)**: Para edição e compartilhamento em formato de texto.
-    -   Novamente, o texto "+ more!" indica que o Pandoc pode converter os documentos para outros formatos além dos mencionados.
-:::
-
-Se quisermos pensar o fluxo de trabalho com Quarto com enfoque específico nos passos de criação e renderização de um documento, oferecendo um guia passo a passo um pouco mais sintético, podemos consider a ilustração da @fig-qmd-workflow. Essa figura ilustra de maneira didática e sequencial as etapas que um usuário deve seguir, desde a criação do arquivo até a renderização do documento final em múltiplos formatos. Nessa imagem destacamos explicitamente a incorporação e a renderização de código R, que é software mais utilizado por pesquisadores.
+A terceira figura (@fig-qmd-workflow) oferece uma visão sintética e didática dos passos práticos. O usuário (1) abre um novo arquivo `.qmd`, (2) escreve o conteúdo usando sintaxe Quarto, (3) incorpora código (por exemplo, R) que gera saídas a serem incluídas no relatório, e (4) renderiza o documento, substituindo o código por suas saídas e gerando o documento final no formato desejado (slides, PDF, HTML ou MS Word). Esta sequência ilustra a simplicidade do workflow para o usuário final.
 
 [![Workflow sintético do Quarto](img/qmd-workflow.png){#fig-qmd-workflow}](https://ucsbcarpentry.github.io/Reproducible-Publications-with-RStudio-Quarto/02-quarto/03-quarto-documents/index.html)
 
-::: {.callout-note collapse="true"}
-## O que o ChatGPT 4o nos diz sobre a @fig-qmd-workflow?
-
-1.  **Open (Abrir)**:
-    -   **Passo**: Abrir um novo arquivo de tipo Quarto Document com a extensão `.qmd`.
-    -   **Detalhe**: Este passo inicial foca na criação do arquivo fonte que será usado para todo o fluxo de trabalho subsequente.
-2.  **Write (Escrever)**:
-    -   **Passo**: Escrever o conteúdo usando a sintaxe compatível com o Quarto.
-    -   **Detalhe**: Este passo enfatiza a fase de escrita, onde o usuário insere o texto e a estrutura básica do documento.
-3.  **Embed (Incorporar)**:
-    -   **Passo**: Incorporar código R que gera saída a ser incluída no relatório.
-    -   **Detalhe**: Este passo mostra como os usuários podem integrar blocos de código no documento. Aqui, o exemplo específico de código R (`hist(x)`) é dado, o que ilustra a capacidade do Quarto de processar e renderizar código dinâmico.
-4.  **Render (Renderizar)**:
-    -   **Passo**: Substituir o código R pela sua saída e transformar o relatório em uma apresentação de slides, PDF, HTML ou arquivo MS Word.
-    -   **Detalhe**: Este passo final detalha o processo de renderização, onde o Quarto processa o código embutido, gera os resultados e cria o documento final no formato desejado.
-:::
-
-E por fim, se desejamos melhorar nosso entendimento de como utilizar o Quarto no contexto de uma pesquisa científica empírica, a @fig-all-workflow enfatiza a integração da narrativa científica, código e dados, culminando na publicação de resultados. Esse fluxo de trabalho é ideal para pesquisas que requerem transparência e reprodutibilidade, permitindo que outros pesquisadores verifiquem e repliquem os resultados. A integração da narrativa científica, código e dados em um único documento facilita a manutenção e a atualização do trabalho. Além disso, a capacidade de publicar tanto em formatos estáticos quanto dinâmicos amplia o alcance e o impacto da pesquisa, atendendo a diferentes necessidades de distribuição e engajamento do público.
+Por fim, a quarta figura (@fig-all-workflow) contextualiza o uso do Quarto em uma pesquisa científica empírica completa. A narrativa científica (introdução, metodologia, resultados, discussão), o código de análise e os dados (sob controle de versão para rastreabilidade) são combinados em um editor de texto plano. O código embutido é executado, gerando saídas (gráficos, tabelas, estatísticas) automaticamente incorporadas ao documento. Após aplicação de template e conversão pelo Pandoc, o resultado pode ser um artigo PDF estático para submissão a revistas ou um website dinâmico onde leitores podem interagir com gráficos e visualizações [@rogers2025]. Este fluxo demonstra como o Quarto integra todo o ciclo de produção científica, da concepção à publicação, promovendo transparência e reprodutibilidade.
 
 [![Workflow de uma pesquisa empírica utilizando Quarto](img/all-workflow.png){#fig-all-workflow}](https://towardsdatascience.com/technical-writing-and-publishing-data-rich-articles-with-quarto-d61a56bcaa64)
 
-::: {.callout-note collapse="true"}
-## O que o ChatGPT 4o nos diz sobre a @fig-all-workflow?
+## ARTE: Da Reprodutibilidade Mínima à Adequada
 
-1.  **Narrativa e Código (Narrative story, Code, Data)**:
-    -   **Narrativa**: A história ou o contexto da pesquisa, incluindo introdução, metodologia, resultados e discussão, é escrita em texto plano.
-    -   **Código**: O código utilizado para análises, simulações ou geração de figuras e tabelas. Esse código pode ser gerido através de controle de versão, garantindo rastreabilidade e reprodutibilidade.
-    -   **Dados**: Os dados brutos ou processados usados na pesquisa, que também podem estar sob controle de versão.
-2.  **Edição de Texto (Text editing)**:
-    -   **Edição de Texto Plano**: A narrativa e o código são combinados em um editor de texto plano, formando um documento integral que contém a descrição da pesquisa e os scripts de análise.
-3.  **Execução (Execute)**:
-    -   **Executar Código**: O código embutido no documento é executado, gerando saídas como gráficos, tabelas e resultados estatísticos que são automaticamente incorporados ao documento.
-4.  **Publicação (Publish)**:
-    -   **Folha de Estilo (Style sheet)**: Um template pode ser aplicado para formatar o documento de acordo com as normas de publicação ou preferências estilísticas.
-    -   **Pandoc**: Ferramenta usada para converter o documento em vários formatos de saída.
-    -   **Resultados**:
-        -   **Artigo PDF Estático (Scholarly PDF article)**: Um documento PDF pronto para submissão a revistas acadêmicas ou para distribuição formal. É um formato estático, onde o conteúdo é fixo e não interativo.
-        -   **Website Dinâmico (Website)**: Um site interativo onde os leitores podem interagir com gráficos e visualizações de dados. Este formato permite uma experiência de leitura mais envolvente.
-5.  **Renderização (quarto render)**:
-    -   **Comando de Renderização**: O comando `quarto render` é utilizado para processar o documento (projeto) e gerar as versões finais nos formatos desejados.\vspace{0.5em}
+No módulo de organização de projetos, foi apresentado o conceito de "reprodutibilidade mínima", fundamentado na estruturação adequada de pastas (Protocolo TIER), documentação clara (arquivos README) e compartilhamento de materiais em repositórios como o OSF. Esse nível básico garante que dados, scripts e manuscritos estejam organizados logicamente e disponíveis para verificação [@limongi2025b].
 
-**Fluxo de Trabalho de uma Pesquisa Empírica Hipotética**:\vspace{0.5em}
+O template [ARTE](https://phdpablo.github.io/article-template/) (*Article Reproducibility Template & Environment*) avança para o que denominamos "reprodutibilidade adequada", incorporando ferramentas adicionais que garantem maior rigor e controle [@rogers2025]. O ARTE mantém a estrutura TIER como fundação, mas adiciona:
 
-1.  **Início**:
-    -   Começa com a escrita da narrativa da pesquisa e o desenvolvimento do código para análise dos dados.
-    -   Os dados são coletados e preparados, podendo ser versões controladas para assegurar integridade e reprodutibilidade.
-2.  **Edição e Integração**:
-    -   O texto da narrativa, o código e os dados são integrados em um único documento Quarto (.qmd), utilizando um editor de texto plano.
-3.  **Execução de Análises**:
-    -   O código é executado dentro do documento, gerando os resultados das análises que são automaticamente incorporados à narrativa.
-4.  **Preparação para Publicação**:
-    -   Aplicação de um template para garantir que o documento final esteja formatado corretamente.
-    -   Uso do Pandoc para converter o documento em formatos de saída, tanto estáticos (PDF) quanto dinâmicos (site web interativo).
-5.  **Publicação e Distribuição**:
-    -   **PDF Estático**: Criado para ser submetido a revistas científicas ou compartilhado formalmente.
-    -   **Website Dinâmico**: Disponibilizado para o público, permitindo interação com os dados e gráficos, promovendo maior engajamento e entendimento dos resultados da pesquisa.
+-   **Controle de versão com Git/GitHub**: rastreamento rigoroso de todas as mudanças no projeto, permitindo retornar a versões anteriores e colaborar de forma transparente
+-   **Documentos dinâmicos com Quarto**: integração entre análise e escrita, eliminando erros de cópia manual de resultados
+-   **Gerenciamento de dependências com renv**: registro das versões exatas de pacotes utilizados, garantindo que o ambiente computacional possa ser recriado
+-   **Integração com Zotero**: gestão automatizada de referências bibliográficas diretamente no fluxo de trabalho
+
+Esta transição representa a evolução de um projeto bem organizado (reprodutibilidade mínima) para um projeto computacionalmente reprodutível (reprodutibilidade adequada), onde outros pesquisadores podem não apenas acessar os materiais, mas também executar as análises e gerar os mesmos resultados [@rogers2025]. O ARTE ainda oferece a opção de "reprodutibilidade completa" através de containerização com Docker, encapsulando todo o ambiente computacional (sistema operacional, versões de software, dependências), mas este nível será explorado no módulo seguinte.
+
+## Preparação para a Aula
+
+::: callout-important
+## Pré-requisitos
+
+Para aproveitar ao máximo este módulo, certifique-se de ter completado **todas** as etapas de preparação descritas na seção de [pré-requisitos](https://phdpablo.github.io/curso-open-science/00-prework.html):
+
+\vspace{10pt}
+
+**Checklist de Preparação:**
+
+\vspace{10pt}
+
+1.  \emojitext{✅} **R e RStudio**: Certifique-se de ter o R e o RStudio instalados em seu computador
+2.  \emojitext{✅} **Git e GitHub**: Instale o Git em seu computador e crie uma conta no GitHub. Configure a integração do Git/GitHub com o RStudio conforme as instruções do módulo anterior
+3.  \emojitext{✅} **Zotero**: Instale o Zotero e o plugin Better BibTeX para gerenciamento de referências bibliográficas
 :::
