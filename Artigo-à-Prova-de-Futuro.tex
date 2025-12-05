@@ -445,7 +445,7 @@ com recursos didáticos extras.
 Se você utilizar o material desse curso em algum trabalho acadêmico, por
 favor, cite o livro do curso da seguinte forma:
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, colframe=quarto-callout-important-color-frame, rightrule=.15mm, opacityback=0, colback=white, arc=.35mm, toprule=.15mm, breakable, leftrule=.75mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-important-color-frame, left=2mm, arc=.35mm, opacityback=0, rightrule=.15mm, toprule=.15mm, leftrule=.75mm, bottomrule=.15mm, colback=white, breakable]
 
 Rogers, P. (2024). Artigo à Prova de Futuro: Jornada de Open Science na
 Prática (1.0). Disponível em:
@@ -751,13 +751,49 @@ operacional.
 
 \chapter{Introdução à Ciência Aberta}\label{sec-intro}
 
+\section{Objetivos de Aprendizagem}\label{objetivos-de-aprendizagem}
+
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-tip-color!10!white, left=2mm, coltitle=black, bottomrule=.15mm, toprule=.15mm, titlerule=0mm, colback=white, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, arc=.35mm, opacityback=0, rightrule=.15mm, title={\emojitext{🎯} Ao final deste módulo, você será capaz de:}, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, breakable]
+
+\begin{itemize}
+\tightlist
+\item
+  Compreender o contexto histórico da crise de reprodutibilidade e o
+  surgimento do movimento de Ciência Aberta como resposta aos desafios
+  contemporâneos da pesquisa científica
+\item
+  Identificar as diferentes escolas de pensamento e dimensões
+  conceituais da Ciência Aberta, distinguindo entre perspectivas macro
+  (políticas, infraestrutura) e micro (práticas do pesquisador)
+\item
+  Reconhecer as especificidades da trajetória brasileira rumo à Ciência
+  Aberta, incluindo marcos regulatórios, limitações atuais e correntes
+  críticas no debate nacional
+\item
+  Compreender o espectro de reprodutibilidade como continuum que
+  organiza práticas abertas em três dimensões (Assets, Platforms,
+  Practices) e três níveis de integração (Data, Code, Linked)
+\item
+  Identificar os três níveis de reprodutibilidade propostos pelo
+  workflow ARTE (mínima, adequada, completa) e suas respectivas
+  exigências técnicas e metodológicas
+\item
+  Mapear o arsenal de ferramentas disponíveis para operacionalizar
+  práticas de Ciência Aberta em cada nível do espectro de
+  reprodutibilidade, reconhecendo a adoção não-linear
+\end{itemize}
+
+\end{tcolorbox}
+
+\section{Contextualização}\label{contextualizauxe7uxe3o}
+
 A pesquisa científica atual enfrenta vários desafios (Munafò et al.,
 2017). Problemas como o pequeno tamanho da amostra, pequenos tamanhos de
-efeito, p-hacking e HARKing (viés positivo de publicação), conflitos de
-interesse e a competição entre cientistas que trabalham isoladamente sem
-combinar seus esforços, têm sido apontados como catalizadores do que se
-convencionou chamar de ``crise de reprodutibilidade'' na ciência (M.
-Baker, 2016; Munafò et al., 2017).
+efeito, p-hacking (ajuste indevido de significância estatística) e
+HARKing (viés positivo de publicação), conflitos de interesse e a
+competição entre cientistas, têm sido apontados como catalizadores do
+que se convencionou chamar de ``crise de reprodutibilidade'' (M. Baker,
+2016; Munafò et al., 2017).
 
 Pesquisas apontam que mais de 70\% de pesquisadores que tentaram,
 falharam em reproduzir os experimentos de outros cientistas, e mais da
@@ -767,10 +803,10 @@ desperdiçados (Munafò et al., 2017), gerando custos econômicos
 bilionários (Freedman et al., 2015).
 
 A despeito daqueles que advogam que não existe essa tal ``crise de
-reprodutibilidade'' (Bernard, 2023; Fanelli, 2018; Protzko et al.,
-2023), a grande maioria da comunidade científica concorda com sua
+reprodutibilidade'' na ciência (Bernard, 2023; Fanelli, 2018; Protzko et
+al., 2023), a grande maioria da comunidade científica concorda com sua
 existência e defende a melhoria da transparência, reprodutibilidade e
-eficiência na ciência (M. Baker, 2016).
+eficiência (M. Baker, 2016).
 
 Nesse contexto, o movimento da Ciência Aberta (CA) tem ganhado
 notoriedade e mudado a percepção sobre o cenário científico global
@@ -783,11 +819,11 @@ que buscam compartilhar o conhecimento e aqueles que defendem mecanismos
 de apropriação privada para a produção científica (Heinz \& Miranda,
 2024).
 
-A CA é um termo múltiplo e genérico (Vicente-Saez \& Martinez-Fuentes,
+A CA é um termo complexo e genérico (Vicente-Saez \& Martinez-Fuentes,
 2018), que representa diversas interpretações, e é considerada um novo
 modelo de divulgação e produção de resultados científicos por meio do
 acesso livre e irrestrito ao conhecimento (Heinz \& Miranda, 2024). A CA
-não é apenas um conceito, mas uma prática multifacetada que influencia o
+não é apenas um conceito, mas uma proposta prática que influencia o
 ciclo de vida da pesquisa, desde a concepção até a disseminação dos
 resultados (Silva \& Silveira, 2019).
 
@@ -799,35 +835,17 @@ conhecimento como um direito humano, e a pesquisa colaborativa como
 inovação aberta (Silva \& Silveira, 2019).
 
 A taxonomia proposta pela
-\href{https://www.fosteropenscience.eu/foster-taxonomy/open-workflow-tools}{FOSTER}
-(Facilitate Open Science Training for Eurpean Research), e sua releitura
-revisada e ampliada para o contexto latino americano por Silveira et al.
-(2023), tendo em vista as recomendações da UNESCO (2021), nos dá uma
-dimensão da complexidade do assunto (vide ilustração em:
+\href{https://openscience.eu/article/project/foster}{FOSTER} (Facilitate
+Open Science Training for Eurpean Research), e sua releitura revisada e
+ampliada para o contexto latino americano por Silveira et al. (2023),
+tendo em vista as recomendações da UNESCO (2021), nos dá uma dimensão da
+complexidade do assunto (vide ilustração em:
 \url{https://doi.org/10.5281/zenodo.7836884}).
 
-Existem vários argumentos que sustentam a importância da CA (Heinz \&
-Miranda, 2024). Primeiramente, a CA pode trazer benefícios sociais
-significativos, pois contribui para o avanço do conhecimento, a
-inovação, a educação, a transparência e a participação cidadã. Além
-disso, a CA pode trazer benefícios científicos ao aumentar a qualidade,
-a reprodutibilidade, a eficiência e o impacto da pesquisa científica.
-Ela também facilita a colaboração, a comunicação e a
-interdisciplinaridade entre os pesquisadores. Por fim, a CA pode trazer
-benefícios éticos ao promover a integridade, a responsabilidade, a
-equidade e a diversidade na ciência, além de respeitar os direitos dos
-autores, dos participantes e da sociedade como um todo.
-
-Esses argumentos são fundamentais para legitimar a CA e destacar sua
-importância no mundo atual (Heinz \& Miranda, 2024), principalmente,
-como potencial transformador para reduzir desigualdades existentes em
-tecnologias de informação e comunicação -- reduzir exclusões digitais,
-tecnológicas e de conhecimento --, e acelerar o progresso rumo à
-implementação da Agenda 2030 e realização dos Objetivos de
-Desenvolvimento Sustentável (UNESCO, 2021).
+\section{Ciência Aberta no Brasil}\label{ciuxeancia-aberta-no-brasil}
 
 O movimento da CA no Brasil está em uma fase transitória (Rezende \&
-Falgueras, 2020) -- ainda consolidando o acesso aberto -- com o governo
+Falgueras, 2020), ainda consolidando o acesso aberto, com o governo
 desempenhando um papel crucial nesse processo. O Brasil tem ganhado
 destaque por sua abordagem única na implementação da CA. Esta abordagem
 é moldada por marcos regulatórios que se estendem desde o governo até as
@@ -839,8 +857,9 @@ instituições públicas (Rezende \& Falgueras, 2020).
 
 A trajetória brasileira rumo à CA inicia com a abertura de dados na
 esfera governamental entre 2009 e 2016, evoluindo para a criação de um
-grupo de trabalho em 2017 pelo Ministério da Ciência, Tecnologia,
-Inovações e Comunicações (MCTIC) para desenvolver uma política nacional
+grupo de trabalho em 2017 pelo
+\href{https://www.gov.br/mcti/pt-br}{Ministério da Ciência, Tecnologia,
+Inovações e Comunicações (MCTIC)} para desenvolver uma política nacional
 para a CA. Este esforço concentrou ênfase no reconhecimento dos dados de
 pesquisa como ativos de desenvolvimento científico, econômico e social,
 buscando facilitar seu acesso, compartilhamento e reutilização (Rezende
@@ -860,18 +879,64 @@ Ciência \& Tecnologia (Caballero-Rivero et al., 2019).
 
 Em termos de pesquisa acadêmica sobre o tema no Brasil, os estudos são
 precoces e concentrados na área de Ciência da Informação (Albano et al.,
-2023). A despeito da maturidade da CA no Brasil, a importância do tema
--- materializada na quantidade de produção acadêmica -- tem aumentado
+2023). A despeito da maturidade da CA no Brasil, a importância do tema,
+materializada na quantidade de produção acadêmica, tem aumentado
 vertiginosamente (Albano et al., 2023), e a dispersão de autores e
 respectivas instituições que publicam sobre o assunto, parece ser a
 situação predominante.
 
-Apesar de importantes atores nacionais, tais como CAPES, CNPq e Scielo,
-defenderem o crescimento de iniciativas de CA (Mendes-Da-Silva, 2023), o
-assunto no Brasil parece estar circunscrito em iniciativas de
-importantes periódicos nacionais sobre dados aberto, capitaneados pelas
-orientações da Scielo. Não foi encontrada nenhuma pesquisa empírica,
-sobre a prática da CA no Brasil.
+Apesar de importantes atores nacionais, tais como
+\href{https://www.gov.br/capes/}{CAPES},
+\href{https://www.gov.br/cnpq/}{CNPq} e
+\href{https://scielo.org/}{SciELO}, defenderem o crescimento de
+iniciativas de CA (Mendes-Da-Silva, 2023), o assunto no Brasil parece
+estar circunscrito em iniciativas de importantes periódicos nacionais
+sobre dados aberto, capitaneados pelas orientações da
+\href{https://scielo.org/}{SciELO}. Considerando o ano de 2024, não
+encontramos nenhuma pesquisa empírica, sobre a prática da CA no Brasil.
+
+\section{Críticas brasileiras à Ciência
+Aberta}\label{cruxedticas-brasileiras-uxe0-ciuxeancia-aberta}
+
+A literatura brasileira apresenta uma corrente crítica que questiona se
+a CA representa efetivamente uma democratização do conhecimento ou se
+pode funcionar como nova forma de apropriação e dominação de países
+centrais sobre os periféricos, especialmente por meio do colonialismo de
+dados, da dependência de infraestruturas digitais externas e da
+concentração de poder informacional em grandes empresas e instituições
+do Norte Global (Guimarães Furtado \& Evangelista Cunha, 2024; Kronbauer
+\& Oliveira, 2024; Sinãni \& Accorssi, 2023). Essas análises destacam
+riscos de extrativismo de dados, perda de soberania digital e
+aprofundamento de assimetrias, em um cenário no qual parte significativa
+dos sistemas nacionais de informação científica opera sobre plataformas
+controladas por corporações estrangeiras (Guimarães Furtado \&
+Evangelista Cunha, 2024; Sinãni \& Accorssi, 2023).
+
+Outra vertente crítica enfatiza a mercantilização da publicação
+científica e o capitalismo acadêmico, apontando que modelos baseados em
+Article Processing Charges (APCs) podem deslocar a barreira de acesso
+para a barreira de publicação, penalizando pesquisadores de contextos
+periféricos com menor financiamento (Bechi \& Almeida, 2024; Neubert \&
+Rodrigues, 2021; Silveira et al., 2025). Ao mesmo tempo, analisa-se a
+geopolítica do conhecimento e a relação da agenda de CA com lógicas
+neoliberais, indicando que, se implementada sem considerar as
+especificidades do Sul Global, a CA pode reforçar padrões epistêmicos
+eurocêntricos, métricas competitivas e usos privados de resultados
+gerados com recursos públicos (Albagli \& Maciel, 2004; Bechi \&
+Almeida, 2024).
+
+Por outro lado, o debate também reconhece alternativas e resistências,
+como o modelo diamante de publicação predominante em parte das revistas
+latino-americanas, iniciativas de soberania digital e infraestruturas
+descentralizadas que buscam reduzir dependências estruturais (Abreu,
+2022; Silveira et al., 2025). Nessa perspectiva, as críticas não
+rejeitam a CA em si, mas reforçam a necessidade de políticas e práticas
+que integrem preocupações com justiça socioeconômica, fortalecimento de
+infraestruturas locais e um projeto de CA genuinamente emancipatório, em
+vez de uma nova face da dominação capitalista e colonial.
+
+\section{Perspectiva da Ciência
+Aberta}\label{perspectiva-da-ciuxeancia-aberta}
 
 Por prática de CA entende-se a perspectiva micro da CA, relacionadas com
 as terminologias e conhecimento em torno do fluxo de trabalho do gerador
@@ -883,10 +948,11 @@ e replicável.
 
 \href{https://doi.org/10.5281/zenodo.10835001}{\pandocbounded{\includegraphics[keepaspectratio]{img/ca-micro.png}}}
 
-\caption{\label{fig-ca-micro}Perspectiva micro da CA. Taxonomia
-relacionada com terminologias e conhecimento em torno da prática (fluxo
-de trabalho) do gerador de conhecimento científico aberto. Ilustração
-disponível em: https://doi.org/10.5281/zenodo.10835001.}
+\caption{\label{fig-ca-micro}Perspectiva micro da Ciência Aberta.
+Taxonomia relacionada com terminologias e conhecimento em torno da
+prática (fluxo de trabalho) do gerador de conhecimento científico
+aberto. Ilustração disponível em:
+https://doi.org/10.5281/zenodo.10835001.}
 
 \end{figure}%
 
@@ -903,215 +969,359 @@ integram a publicação científica (UNESCO, 2021).
 
 \href{https://doi.org/10.5281/zenodo.10835001}{\pandocbounded{\includegraphics[keepaspectratio]{img/ca-macro.png}}}
 
-\caption{\label{fig-ca-macro}Perspectiva macro da CA. Taxonomia
-relacionada com as ramificações conceituais da CA concernentes às
-políticas (públicas), infraestrutura, envolvimento aberto de atores
+\caption{\label{fig-ca-macro}Perspectiva macro da Ciência Aberta (CA).
+Taxonomia relacionada com as ramificações conceituais da CA concernentes
+às políticas (públicas), infraestrutura, envolvimento aberto de atores
 sociais (sociedade) e diálogo aberto com outros sistemas de
 conhecimento. Ilustração disponível em:
 https://doi.org/10.5281/zenodo.10835001}
 
 \end{figure}%
 
-Apesar de uma verossímil expectativa desabonadora, tendo em vista o
-contexto da CA no Brasil, o diagnóstico da situação da prática da CA se
-mostra importante, \emph{per si}, pois:
+\section{Educação em Ciência
+Aberta}\label{educauxe7uxe3o-em-ciuxeancia-aberta}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  ajuda a compreender a natureza exata do problema, suas causas, efeitos
-  e riscos;
-\item
-  auxilia a alocação eficiente de recursos pelos atores envolvidos
-  (e.g., os programas de pós-graduação podem direcionar os recursos para
-  onde eles são mais necessários e onde terão o maior impacto;
-\item
-  orienta indicadores de desempenho e metas realistas, o que facilita a
-  avaliação do progresso e a eficácia das ações tomadas;
-\item
-  permite que os atores envolvidos aprendam com os problemas
-  enfrentados, adaptando-se e melhorando suas estratégias e processos
-  para o futuro; e
-\item
-  torna possível desenvolver soluções ou intervenções que sejam
-  diretamente direcionadas ao problema em questão, aumentando as chances
-  de sucesso.
-\end{enumerate}
-
-Sobre esse último ponto, até para aqueles que não reconhecem a ``crise
-de reprodutibilidade'' na ciência (Bernard, 2023), a comunidade
-científica e atores importantes do cenário advogam que a solução inclui
-educar os estudantes e pesquisadores desde cedo em todas as questões da
-CA (D. H. Baker et al., 2023; Bezjak et al., 2018; Chopik et al., 2018;
-Crüwell et al., 2019; Dogucu \& Çetinkaya-Rundel, 2022; Janz, 2015;
-McAleer et al., 2022; Munafò et al., 2017; Toelch \& Ostwald, 2018).
+A comunidade científica e atores importantes do cenário advogam que a
+solução para a ``crise de reprodutibilidade'' passa por educar os
+estudantes e pesquisadores desde cedo em todas as questões da CA (D. H.
+Baker et al., 2023; Bezjak et al., 2018; Chopik et al., 2018; Crüwell et
+al., 2019; Dogucu \& Çetinkaya-Rundel, 2022; Janz, 2015; McAleer et al.,
+2022; Munafò et al., 2017; Toelch \& Ostwald, 2018).
 
 A referida crise não deriva de má conduta científica, mas principalmente
 da confusão entre replicar conclusões, replicar resultados, falta de
-educação em estatística, lógica científica, método científico,
-alfabetização de dados, etc. Para combater essas questões é necessário
-investir em educação e disseminação de boas práticas de investigação
-para uma mudança de cultura (D. H. Baker et al., 2023; Bezjak et al.,
-2018; Chopik et al., 2018; Crüwell et al., 2019; Dogucu \&
-Çetinkaya-Rundel, 2022; Janz, 2015; McAleer et al., 2022; Munafò et al.,
-2017; Toelch \& Ostwald, 2018).
+literacia em dados, estatística, programação, lógica e método
+científico. Para combater essas questões é necessário investir em
+educação e disseminação de boas práticas de investigação para uma
+mudança de cultura (D. H. Baker et al., 2023; Bezjak et al., 2018;
+Chopik et al., 2018; Crüwell et al., 2019; Dogucu \& Çetinkaya-Rundel,
+2022; Janz, 2015; McAleer et al., 2022; Munafò et al., 2017; Toelch \&
+Ostwald, 2018).
 
 Investir em recursos humanos, treinamento, educação, alfabetização
-digital, capacitação sistemática e contínua, e fomentar uma cultura
-científica de CA, têm sido apresentadas como algumas das principais
-medidas simultâneas para superar o cenário atual (Committee on
-Reproducibility and Replicability in Science et al., 2019; European
-Commission. Directorate General for Research and Innovation., 2017;
-UNESCO, 2021). A proposta do curso pode contribuir para a literatura da
-CA no Brasil, pois pretende perseguir dois objetivos concomitantes: 1)
-diagnosticar sua prática junto aos pesquisadores brasileiros; e 2)
-promover o desenvolvimento de uma intervenção educacional sobre a
-prática (workflow) e principais ferramentas para compilação dos produtos
-científicos que integram uma publicação científica aberta.
+digital, capacitação sistemática e contínua, e fomentar uma cultura de
+CA, têm sido apresentadas como algumas das principais medidas
+simultâneas para superar o cenário atual (Committee on Reproducibility
+and Replicability in Science et al., 2019; European Commission.
+Directorate General for Research and Innovation., 2017; UNESCO, 2021).
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\emph{A Pratical Guide for Transparency in Psychological Science}}, toprule=.15mm, left=2mm, titlerule=0mm, colframe=quarto-callout-note-color-frame, opacityback=0, colback=white, arc=.35mm, breakable, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, coltitle=black]
+\section{Da Teoria à Prática: Implementando Ciência
+Aberta}\label{da-teoria-uxe0-pruxe1tica-implementando-ciuxeancia-aberta}
 
-O artigo (Klein et al., 2018) é um guia prático para pesquisadores que
-desejam compartilhar os produtos de sua pesquisa. Os autores argumentam
-que as práticas de pesquisa transparentes são essenciais para melhorar a
-credibilidade e a cumulatividade da ciência.\vspace{0.5em}
+Embora os princípios da CA sejam amplamente defendidos, sua
+implementação prática permanece um desafio significativo para
+pesquisadores, especialmente nas Ciências Sociais Aplicadas (Limongi \&
+Rogers, 2025b). A crise de reprodutibilidade, embora catalisadora do
+movimento de CA, é apenas sintoma de desafios estruturais mais profundos
+(Crüwell et al., 2019). Taxonomias como as de Silveira et al. (2023) e
+Zarghani et al. (2023) mapeiam um ecossistema complexo que vão desde
+infraestrutura até governança, cuja amplitude, à primeira vista,
+intimida o pesquisador individual e exige um recorte estratégico
+(Limongi \& Rogers, 2025b).
 
-O artigo fornece recomendações específicas sobre como compartilhar os
-seguintes produtos de pesquisa:\vspace{0.5em}
+A solução para a crise e a construção de uma ciência mais transparente
+começam com mudanças pragmáticas, implementáveis no nível do pesquisador
+(Alessandroni \& Byers-Heinlein, 2022; Limongi \& Rogers, 2025b). A
+transição para uma ciência mais aberta inicia-se com mudanças concretas
+e gerenciáveis em nossos ambientes de trabalho, digitais ou não, uma
+abordagem \emph{bottom-up} onde o pesquisador é protagonista (Limongi \&
+Rogers, 2025b). Nessa perspectiva, o foco recai sobre a dimensão micro
+da CA: o fluxo de trabalho do cientista que busca tornar sua pesquisa
+transparente, reprodutível e replicável.
+
+\subsection{Espectro de
+Reprodutibilidade}\label{espectro-de-reprodutibilidade}
+
+Para compreender os níveis de compromisso com práticas abertas, é útil
+visualizar a reprodutibilidade como um espectro contínuo, não como um
+estado binário. Essa perspectiva foi proposta por Zaragozí et al. (2020)
+e adaptada para o contexto das Ciências Sociais Aplicadas, organizando
+práticas de reprodutibilidade em três dimensões essenciais:
+\textbf{Assets} (ferramentas e dados locais), \textbf{Platforms}
+(serviços em nuvem para colaboração) e \textbf{Practices} (metodologias
+de trabalho) (Figura~\ref{fig-spectrum-conceptual}).
+
+\begin{figure}
+
+\pandocbounded{\includegraphics[keepaspectratio]{img/spectrum-conceptual.jpg}}
+
+\caption{\label{fig-spectrum-conceptual}Espectro de reprodutibilidade em
+Ciências Sociais Aplicadas: dimensões conceituais. O gradiente de cores
+representa níveis crescentes de compromisso com práticas abertas,
+organizados em três dimensões (Assets, Platforms, Practices) e três
+colunas que representam diferentes estágios de integração: Data
+(organização e compartilhamento de dados), Code (versionamento e
+documentação de código), e Linked (integração computacional de dados,
+código e narrativa). Ilustração disponível em:
+https://doi.org/10.5281/zenodo.17830903.}
+
+\end{figure}%
+
+O espectro apresenta três colunas que representam progressão na
+integração: \textbf{Data} (organização e compartilhamento de dados),
+\textbf{Code} (versionamento e documentação de código), e
+\textbf{Linked} (integração computacional de dados, código e narrativa).
+O gradiente de cores - do vermelho (práticas básicas) ao amarelo
+(práticas intermediárias) e verde (práticas avançadas) - comunica
+visualmente que a reprodutibilidade não é um objetivo único, mas um
+continuum onde diferentes níveis de sofisticação tecnológica e
+metodológica coexistem e são válidos (Zaragozí et al., 2020).
+
+Um aspecto crítico do espectro é que \textbf{Practices} (práticas
+metodológicas) alcançam tons mais intensos de verde mesmo em estágios
+intermediários, indicando que metodologia adequada pode ser mais
+determinante que sofisticação tecnológica (Zaragozí et al., 2020). Por
+exemplo, metadados bem estruturados e documentação clara podem ser mais
+valiosos para a reprodutibilidade que código complexo sem explicação
+(Zaragozí et al., 2020).
+
+\subsection{ARTE: Operacionalizando o
+Espectro}\label{arte-operacionalizando-o-espectro}
+
+Neste contexto, o workflow
+\href{https://phdpablo.github.io/article-template/}{\textbf{ARTE}
+(\emph{Article Reproducibility Template \& Environment})} emerge como
+proposta pedagógica para operacionalizar o espectro de reprodutibilidade
+em pesquisas na área de Ciências Sociais Aplicadas (Limongi \& Rogers,
+2025a, 2025b; Rogers \& Limongi, 2025). O
+\href{(https://phdpablo.github.io/article-template/)}{ARTE} não impõe
+uma trajetória única, mas oferece um roteiro estruturado em três níveis
+progressivos que materializam as dimensões do espectro de
+reprodutibilidade.
+
+O \href{https://phdpablo.github.io/article-template/}{ARTE} propõe uma
+taxonomia de reprodutibilidade em três níveis - \textbf{mínima},
+\textbf{adequada} e \textbf{completa} - que permite adoção progressiva
+de práticas abertas sem sobrecarregar pesquisadores iniciantes (Rogers
+\& Limongi, 2025). Esta abordagem alinha-se com a recomendação
+pragmática de que ``compartilhar algo é melhor que nada compartilhar''
+(Klein et al., 2018), reconhecendo que diferentes estágios de abertura
+são válidos e contribuem para o avanço científico (Kathawalla et al.,
+2021).
+
+A reprodutibilidade \textbf{mínima} concentra-se na organização e
+compartilhamento de dados segundo o
+\href{https://www.projecttier.org/tier-protocol/protocol-4-0/}{TIER
+Protocol}, exigindo apenas conhecimentos de gestão de arquivos
+(literacia em dados) e familiaridade com plataformas como o
+\href{https://osf.io/}{Open Science Framework (OSF)} (Limongi \& Rogers,
+2025b). Corresponde às zonas vermelhas e amarelas da coluna
+\textbf{Data} no espectro, estabelecendo a base: estrutura de pastas
+padronizada, metadados descritivos e licenciamento adequado.
+
+A reprodutibilidade \textbf{adequada} adiciona controle de versão de
+código
+(\href{https://git-scm.com/}{Git}/\href{https://github.com/}{GitHub}) e
+gestão de dependências (\href{https://rstudio.github.io/renv/}{renv}
+para
+\href{https://www.r-project.org/}{R}/\href{https://docs.conda.io/}{conda}
+para \href{https://www.python.org/}{Python}), introduzindo a publicação
+de documentos dinâmicos com
+\href{https://quarto.org/}{Quarto}/\href{https://posit.co/products/open-source/rstudio/}{RStudio}
+(Limongi \& Rogers, 2025b). Este nível integra as colunas \textbf{Data}
+e \textbf{Code} do espectro, avançando para as zonas amarelas e verdes
+iniciais: versionamento, documentação de código, documentos dinâmicos e
+controle de dependências.
+
+A reprodutibilidade \textbf{completa} integra dados, código e narrativa
+em ambientes computacionais encapsulados
+(\href{https://www.docker.com/}{Docker}), garantindo execução idêntica
+em qualquer máquina (Limongi \& Rogers, 2025b). Representa a coluna
+\textbf{Linked} do espectro em sua expressão mais avançada (zonas
+verdes), onde documentos dinâmicos, gerenciadores de dependências e
+tecnologias de containerização convergem para criar artefatos
+científicos completamente reproduzíveis.
+
+\subsection{Ferramentas Práticas e Adoção
+Incremental}\label{ferramentas-pruxe1ticas-e-adouxe7uxe3o-incremental}
+
+A operacionalização do
+\href{https://phdpablo.github.io/article-template/}{ARTE} requer
+ferramentas concretas em cada nível. A Figura~\ref{fig-spectrum-tools}
+apresenta o espectro de reprodutibilidade com ferramentas específicas
+recomendadas para Ciências Sociais Aplicadas, permitindo que
+pesquisadores identifiquem soluções práticas para cada estágio de
+compromisso com a CA.
+
+\begin{figure}
+
+\pandocbounded{\includegraphics[keepaspectratio]{img/spectrum-tools.jpg}}
+
+\caption{\label{fig-spectrum-tools}Espectro de reprodutibilidade em
+Ciências Sociais Aplicadas: ferramentas recomendadas. Esta versão do
+espectro destaca ferramentas específicas organizadas nas mesmas três
+dimensões (Assets, Platforms, Practices) e colunas (Data, Code, Linked).
+As ferramentas apresentadas constituem o arsenal prático que o ARTE
+mobiliza em cada nível de reprodutibilidade. Ilustração disponível em:
+https://doi.org/10.5281/zenodo.17830903.}
+
+\end{figure}%
+
+Na zona mínima (tons avermelhados), priorizam-se formatos de dados
+tabulares (CSV), APIs públicas para dados abertos, repositórios
+institucionais (\href{https://osf.io/}{OSF},
+\href{https://zenodo.org/}{Zenodo},
+\href{https://dataverse.org/}{Dataverse},
+\href{https://www.icpsr.umich.edu/}{ICPSR}) e práticas de documentação
+básica (metadados, licenciamento) (Rogers \& Limongi, 2025). Estas
+ferramentas exigem curva de aprendizado mínima e constituem o ponto de
+entrada natural para pesquisadores que iniciam sua jornada em CA.
+
+Na zona adequada (tons amarelados), introduzem-se interfaces
+estatísticas (\href{https://jasp-stats.org/}{JASP},
+\href{https://www.jamovi.org/}{Jamovi},
+\href{https://orangedatamining.com/}{Orange},
+\href{https://www.knime.com/}{Knime}), linguagens de programação
+(\href{https://www.r-project.org/}{R},
+\href{https://www.python.org/}{Python}), ambientes de desenvolvimento
+(\href{https://posit.co/products/open-source/rstudio/}{RStudio},
+\href{https://jupyter.org/}{Jupyter}), versionamento
+(\href{https://git-scm.com/}{Git}), plataformas colaborativas
+(\href{https://github.com/}{GitHub},
+\href{https://about.gitlab.com/}{GitLab}), e gestão de dependências
+(\href{https://rstudio.github.io/renv/}{renv} para R,
+\href{https://docs.conda.io/}{conda} para Python) (Rogers \& Limongi,
+2025). \href{https://jasp-stats.org/}{JASP} e
+\href{https://www.jamovi.org/}{Jamovi} servem como pontes para
+pesquisadores acostumados a interfaces gráficas, gradualmente
+introduzindo conceitos de código reproduzível (D. H. Baker et al., 2023;
+Limongi \& Rogers, 2025b). \href{https://www.zotero.org/}{Zotero}
+complementa este ecossistema como ferramenta de gerenciamento de
+referências, integrando-se aos fluxos de trabalho com
+\href{https://posit.co/products/open-source/rstudio/}{RStudio} para
+facilitar inserção de citações em documentos dinâmicos (Rogers \&
+Limongi, 2025).
+
+Na zona completa (tons esverdeados), integram-se sistemas de publicação
+científica (\href{https://quarto.org/}{Quarto},
+\href{https://rmarkdown.rstudio.com/}{RMarkdown}), gestão avançada de
+ambientes (\href{https://www.docker.com/}{Docker},
+\href{https://podman.io/}{Podman}), hospedagem estática
+(\href{https://pages.github.com/}{GitHub Pages},
+\href{https://quartopub.com/}{Quarto Pub}), notebooks executáveis
+(\href{https://mybinder.org/}{Binder}), computação em nuvem
+(\href{https://posit.cloud/}{Posit Cloud},
+\href{https://colab.research.google.com/}{Google Colab}), e automação de
+workflows (Rodrigues, 2023; Rogers \& Limongi, 2025).
+\href{https://www.docker.com/}{Docker} e
+\href{https://rocker-project.org/}{Project Rocker} encapsulam o ambiente
+computacional completo, solucionando o ``inferno de dependências'' e
+garantindo reprodutibilidade de longo prazo (Moreau et al., 2023;
+Zandonella Callegher \& Massidda, 2022).
+
+A flexibilidade do espectro permite \textbf{adoção não-linear}: um
+pesquisador pode utilizar \href{https://git-scm.com/}{Git} e
+compartilhar scripts no \href{https://osf.io/}{OSF} sem necessariamente
+usar \href{https://github.com/}{GitHub}, ou adotar
+\href{https://quarto.org/}{Quarto} e
+\href{https://rstudio.github.io/renv/}{renv} sem jamais usar
+\href{https://www.docker.com/}{Docker} (Limongi \& Rogers, 2025b). Esta
+característica alinha-se com a filosofia do
+\href{https://phdpablo.github.io/article-template/}{ARTE} de que ``o
+perfeito é inimigo do bom'' (Klein et al., 2018) - melhor compartilhar
+dados organizados hoje que esperar anos para dominar containerização
+(Kathawalla et al., 2021).
+
+Ambientes de computação em nuvem -
+\href{https://colab.research.google.com/}{Google Colab},
+\href{https://posit.cloud/}{Posit Cloud},
+\href{https://jupyter.org/hub}{JupyterHub},
+\href{https://mybinder.org/}{Binder},
+\href{https://nextjournal.com/}{Nextjournal} e
+\href{https://codeocean.com/}{Code Ocean} - abstraem a complexidade da
+containerização, oferecendo ambientes pré-configurados acessíveis via
+navegador que democratizam o acesso a ferramentas computacionais
+(Limongi \& Rogers, 2025b; Wiebels \& Moreau, 2021). Estas plataformas
+servem diferentes pontos do espectro, desde reprodutibilidade básica
+(Colab) até encapsulamento completo (Code Ocean e Nextjournal)
+(Clyburne-Sherin et al., 2019).
+
+Para pesquisadores do ecossistema \href{https://cran.r-project.org/}{R},
+o \href{https://posit.co/products/open-source/rstudio/}{RStudio IDE}
+consolida-se como hub que integra estas soluções em interface única,
+combinando nativamente \href{https://quarto.org/}{Quarto},
+\href{https://git-scm.com/}{Git}/\href{https://github.com/}{GitHub},
+\href{https://rstudio.github.io/renv/}{renv}, e
+\href{https://www.zotero.org/}{Zotero} (Rodrigues, 2023; Vuorre \&
+Curley, 2018; Zandonella Callegher \& Massidda, 2022). Este ambiente
+integrado pode ser potencializado ao executar o próprio
+\href{https://posit.co/products/open-source/rstudio/}{RStudio} dentro de
+um container \href{https://www.docker.com/}{Docker} via
+\href{https://rocker-project.org/}{Project Rocker}, encapsulando todo o
+ambiente de desenvolvimento (Rodrigues, 2023).
+
+\subsection{Perspectivas e Desafios}\label{perspectivas-e-desafios}
+
+Embora o \href{https://phdpablo.github.io/article-template/}{ARTE}
+ofereça roteiro estruturado, barreiras persistem. A falta de treinamento
+formal em ferramentas computacionais, a pressão por publicações rápidas,
+e a ausência de incentivos institucionais para práticas abertas
+dificultam a adoção em larga escala (Kathawalla et al., 2021; Limongi \&
+Rogers, 2025b). No contexto brasileiro, onde políticas de CA ainda
+favorecem predominantemente o acesso aberto sem abordar outros aspectos
+da reprodutibilidade (Rezende \& Falgueras, 2020), iniciativas
+educacionais como este curso tornam-se ainda mais críticas.
+
+O movimento rumo à ciência reproduzível não requer abandonar práticas
+estabelecidas, mas \textbf{integrá-las progressivamente} ao workflow de
+pesquisa (Limongi \& Rogers, 2025b). Como apontam Alston \& Rick (2021),
+pesquisa reproduzível ``não se trata apenas de ferramentas avançadas,
+mas também de hábitos simples de trabalho''. A jornada para a CA é
+contínua, construída sobre hábitos consistentes (Limongi \& Rogers,
+2025b).
+
+A CA, portanto, não é uma revolução disruptiva, mas uma \textbf{evolução
+metodológica} que fortalece a credibilidade científica sem comprometer a
+autonomia do pesquisador. O ARTE, que adotaremos transversalmente nesse
+curso, oferece um mapa para esta jornada, reconhecendo que diferentes
+trajetos são válidos desde que orientados pelos princípios de
+transparência, reprodutibilidade e abertura. Talvez mais importante que
+o produto final, seja o processo que levou ao produto final.
+
+\section{Preparação para a Aula}\label{preparauxe7uxe3o-para-a-aula}
+
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-important-color!10!white, left=2mm, coltitle=black, bottomrule=.15mm, toprule=.15mm, titlerule=0mm, colback=white, colframe=quarto-callout-important-color-frame, opacitybacktitle=0.6, arc=.35mm, opacityback=0, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Pré-requisitos}, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, breakable]
+
+Este módulo é focado na apresentação e discussão de conceitos
+fundamentais sobre Ciência Aberta e reprodutibilidade. A aula será
+conduzida por meio de exposição dialogada, sem atividades práticas
+programadas.
+
+\textbf{Leituras Recomendadas}
+
+Para aprofundar sua compreensão dos temas abordados neste módulo,
+recomendamos a leitura da trilogia de editoriais ``Open Science in Three
+Acts'':
 
 \begin{itemize}
-\tightlist
 \item
-  Protocolo de estudo
+  \textbf{Primeiro Ato} (Limongi \& Rogers, 2025a): apresenta os
+  fundamentos da Ciência Aberta, discutindo a crise de reprodutibilidade
+  e defendendo o engajamento de orientadores e programas de
+  pós-graduação. Disponível em:
+  \url{https://doi.org/10.1590/1807-7692bar2025250079}
 \item
-  Materiais
+  \textbf{Segundo Ato} (Limongi \& Rogers, 2025b): aprofunda a dimensão
+  prática, apresentando o arsenal de ferramentas e soluções para
+  operacionalizar os princípios de transparência e compartilhamento no
+  workflow individual do pesquisador. Disponível em:
+  \url{https://doi.org/10.1590/1807-7692bar2025250116}
 \item
-  Dados e metadados
-\item
-  Procedimento de análise
-\item
-  Relatórios de pesquisa\vspace{0.5em}
+  \textbf{Terceiro Ato} (Rogers \& Limongi, 2025): apresenta o template
+  \href{https://phdpablo.github.io/article-template/}{ARTE} como solução
+  pedagógica para implementação incremental de práticas reproduzíveis em
+  pesquisas quantitativas. Disponível em:
+  \url{https://doi.org/10.1590/1807-7692bar2025250162}
 \end{itemize}
 
-As recomendações gerais dos autores são as seguintes:\vspace{0.5em}
+\textbf{Pré-requisitos Técnicos}
 
-\begin{itemize}
-\item
-  \textbf{Torne a transparência um padrão}: isso significa compartilhar
-  o máximo possível de informações sobre sua pesquisa, desde o início do
-  processo.
-\item
-  \textbf{Não deixe que o perfeito seja inimigo do bom}: mesmo que você
-  não possa compartilhar todos os detalhes de sua pesquisa, compartilhar
-  alguma coisa é melhor do que nada.
-\item
-  \textbf{Compartilhe e documente o que puder}: isso ajudará a garantir
-  que sua pesquisa seja reproduzível e confiável.
-\item
-  \textbf{Comece cedo}: começar a compartilhar informações sobre sua
-  pesquisa no início do processo pode ajudá-lo a evitar problemas e
-  economizar tempo.\vspace{0.5em}
-\end{itemize}
-
-Os autores também discutem algumas preocupações comuns que os
-pesquisadores têm sobre as práticas de pesquisa transparentes. Eles
-argumentam que essas preocupações são geralmente infundadas e que as
-práticas transparentes têm muitos benefícios.\vspace{0.5em}
-
-Os principais benefícios das práticas de pesquisa transparentes
-são:\vspace{0.5em}
-
-\begin{itemize}
-\item
-  \textbf{Melhor credibilidade da pesquisa}: os pesquisadores
-  transparentes são mais propensos a serem vistos como confiáveis e
-  honestos.
-\item
-  \textbf{Maior cumulatividade da ciência}: os pesquisadores
-  transparentes tornam mais fácil para outros pesquisadores construir
-  sobre seu trabalho.
-\item
-  \textbf{Mais oportunidades de colaboração e financiamento}: os
-  pesquisadores transparentes são mais propensos a serem convidados para
-  colaborar com outros pesquisadores e a receber financiamento.
-\item
-  \textbf{Maior eficiência da pesquisa}: as práticas transparentes podem
-  ajudar os pesquisadores a economizar tempo e recursos.\vspace{0.5em}
-\end{itemize}
-
-Em conclusão, o artigo fornece informações valiosas para pesquisadores
-que desejam compartilhar os produtos de sua pesquisa. As recomendações
-dos autores são baseadas em evidências e podem ajudar os pesquisadores a
-melhorar a qualidade e a credibilidade de seu trabalho.
-
-\end{tcolorbox}
-
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{\emph{Easing Into Open Science: A Guide for Graduate Students and Their
-Advisors}}, toprule=.15mm, left=2mm, titlerule=0mm, colframe=quarto-callout-note-color-frame, opacityback=0, colback=white, arc=.35mm, breakable, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-note-color!10!white, leftrule=.75mm, coltitle=black]
-
-O artigo (Kathawalla et al., 2021) fornece um guia para ajudar
-estudantes de pós-graduação e seus orientadores a se envolverem na
-prática da ciência aberta (CA). A CA é descrita como um termo amplo que
-se refere a uma variedade de princípios e comportamentos relacionados à
-transparência, credibilidade, reprodutibilidade e
-acessibilidade.\vspace{0.5em}
-
-O artigo sugere oito práticas de CA (das quais destaco sete) que
-estudantes de pós-graduação iniciantes podem começar a adotar hoje. Cada
-comportamento é classificado em termos de dificuldade (fácil, médio,
-difícil) e apresentado em ordem de adoção sugerida. Em cada prática,
-eles seguem o formato de o quê, por quê, como e
-preocupações.\vspace{0.5em}
-
-Algumas das práticas sugeridas incluem:\vspace{0.5em}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  \textbf{Fluxo de Trabalho do Projeto (Nível Fácil)}: isso inclui a
-  estrutura da pasta do arquivo, convenções de nomenclatura de
-  documentos, controle de versão, armazenamento em nuvem e outros
-  detalhes. Ter um sistema de fluxo de trabalho de projeto dedicado
-  ajuda a manter sua pesquisa organizada, melhorando a
-  reprodutibilidade, minimizando erros e facilitando colaborações com
-  outros e com você no futuro.
-\item
-  \textbf{Preprints (Nível Fácil)}: postar um manuscrito antes de
-  submetê-lo a uma revista permite um feedback mais amplo do que o que é
-  proporcionado pela revisão por pares e pode ajudar a melhorar um
-  artigo antes da submissão, identificando quaisquer falhas importantes.
-\item
-  \textbf{Código Reprodutível (Nível Médio)}: o código reprodutível para
-  análise de dados e visualizações (por exemplo, tabelas, figuras)
-  refere-se a uma versão detalhada e escrita do seu código que
-  permitiria a outra pessoa (ou a você no futuro) gerar a mesma saída
-  relatada em seu manuscrito.
-\item
-  \textbf{Compartilhamento de Dados (Nível Médio)}: compartilhar dados
-  refere-se a tornar o conjunto de dados desidentificado usado para um
-  projeto disponível para outros pesquisadores.
-\item
-  \textbf{Escrita de Manuscrito Transparente (Nível Médio)}: Para
-  escrever um manuscrito transparente, claro e reprodutível, é útil
-  seguir as diretrizes ou padrões de escrita de manuscritos.
-\item
-  \textbf{Pré-registro (Nível Médio)}: o pré-registro refere-se à
-  postagem de um esboço cronometrado das perguntas de pesquisa,
-  hipóteses, método e plano de análise para um projeto específico antes
-  da coleta de dados e/ou análise.
-\item
-  \textbf{Relatório Registrado (Nível Difícil)}: os Relatórios
-  Registrados envolvem um processo de submissão em duas partes, onde os
-  autores primeiro enviam uma proposta de Estágio 1, que inclui a
-  introdução, método e plano de análise - tudo antes que a coleta de
-  dados e/ou análise tenha sido feita.\vspace{0.5em}
-\end{enumerate}
-
-O artigo enfatiza que se envolver em uma prática de CA é melhor do que
-nenhuma e que a CA é apenas uma boa ciência. Além disso, sugere-se que
-se construa sobre o trabalho que já foi feito em vez de reinventar a
-roda. A maioria das práticas sugeridas se concentra no uso do
-\href{https://osf.io}{Open Science Framework}.
+Embora este módulo seja teórico, os módulos seguintes do curso
+envolverão atividades práticas. Recomendamos que você \textbf{antecipe a
+instalação e configuração das ferramentas necessárias} seguindo as
+instruções detalhadas na seção de
+\href{https://phdpablo.github.io/curso-open-science/00-prework.html}{\textbf{Pré-requisitos
+do Curso}}
 
 \end{tcolorbox}
 
@@ -1119,9 +1329,9 @@ roda. A maioria das práticas sugeridas se concentra no uso do
 
 \chapter{Repositórios da Ciência Aberta}\label{sec-osf}
 
-\section{Objetivos de Aprendizagem}\label{objetivos-de-aprendizagem}
+\section{Objetivos de Aprendizagem}\label{objetivos-de-aprendizagem-1}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6, title={\emojitext{🎯} Ao final deste módulo, você será capaz de:}, toprule=.15mm, left=2mm, titlerule=0mm, colframe=quarto-callout-tip-color-frame, opacityback=0, colback=white, arc=.35mm, breakable, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, leftrule=.75mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-tip-color!10!white, left=2mm, coltitle=black, bottomrule=.15mm, toprule=.15mm, titlerule=0mm, colback=white, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, arc=.35mm, opacityback=0, rightrule=.15mm, title={\emojitext{🎯} Ao final deste módulo, você será capaz de:}, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, breakable]
 
 \begin{itemize}
 \tightlist
@@ -1154,7 +1364,7 @@ roda. A maioria das práticas sugeridas se concentra no uso do
 
 \end{tcolorbox}
 
-\section{Contextualização}\label{contextualizauxe7uxe3o}
+\section{Contextualização}\label{contextualizauxe7uxe3o-1}
 
 No contexto da CA, existem diversos repositórios disponíveis, cada um
 com suas funções e propósitos específicos. Esses repositórios são
@@ -1300,7 +1510,7 @@ você dar uma olhada no
 do \textbf{OSF}}, onde podemos encontrar vídeos introdutórios
 excelentes.
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{\emph{Duplicando um projeto}}, toprule=.15mm, left=2mm, titlerule=0mm, colframe=quarto-callout-tip-color-frame, opacityback=0, colback=white, arc=.35mm, breakable, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, leftrule=.75mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-tip-color!10!white, left=2mm, coltitle=black, bottomrule=.15mm, toprule=.15mm, titlerule=0mm, colback=white, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, arc=.35mm, opacityback=0, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{\emph{Duplicando um projeto}}, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, breakable]
 
 Você sabia que é possível executar um ``\emph{duplicate}'' e criar uma
 cópia do projeto existente ou duplicar apenas a estrutura do projeto e
@@ -1445,9 +1655,9 @@ frequentemente precisam permanecer em servidores certificados pela
 instituição. O OSF pode hospedar metadados e documentação enquanto os
 dados permanecem em repositório restrito.
 
-\section{Preparação para a Aula}\label{preparauxe7uxe3o-para-a-aula}
+\section{Preparação para a Aula}\label{preparauxe7uxe3o-para-a-aula-1}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Pré-requisitos}, toprule=.15mm, left=2mm, titlerule=0mm, colframe=quarto-callout-important-color-frame, opacityback=0, colback=white, arc=.35mm, breakable, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, leftrule=.75mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-important-color!10!white, left=2mm, coltitle=black, bottomrule=.15mm, toprule=.15mm, titlerule=0mm, colback=white, colframe=quarto-callout-important-color-frame, opacitybacktitle=0.6, arc=.35mm, opacityback=0, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Pré-requisitos}, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, breakable]
 
 Antes da aula síncrona, certifique-se de completar \textbf{todos} os
 passos abaixo. Um vídeo com instruções detalhadas está disponível na
@@ -1482,9 +1692,9 @@ passos abaixo. Um vídeo com instruções detalhadas está disponível na
 
 \chapter{Gerenciamento de Referências e Bibliotecas}\label{sec-zotero}
 
-\section{Objetivos de Aprendizagem}\label{objetivos-de-aprendizagem-1}
+\section{Objetivos de Aprendizagem}\label{objetivos-de-aprendizagem-2}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6, title={\emojitext{🎯} Ao final deste módulo, você será capaz de:}, toprule=.15mm, left=2mm, titlerule=0mm, colframe=quarto-callout-tip-color-frame, opacityback=0, colback=white, arc=.35mm, breakable, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, leftrule=.75mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-tip-color!10!white, left=2mm, coltitle=black, bottomrule=.15mm, toprule=.15mm, titlerule=0mm, colback=white, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, arc=.35mm, opacityback=0, rightrule=.15mm, title={\emojitext{🎯} Ao final deste módulo, você será capaz de:}, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, breakable]
 
 \begin{itemize}
 \tightlist
@@ -1516,7 +1726,7 @@ passos abaixo. Um vídeo com instruções detalhadas está disponível na
 
 \end{tcolorbox}
 
-\section{Contextualização}\label{contextualizauxe7uxe3o-1}
+\section{Contextualização}\label{contextualizauxe7uxe3o-2}
 
 Existem mais de 15 diferentes\footnote{\href{https://en.wikipedia.org/wiki/Comparison_of_reference_management_software}{Esta
   lista} no Wikipedia, que é atualizada constantemente, faz uma
@@ -1749,9 +1959,9 @@ e veremos algumas dessas funcionalidades na aula. No entanto, daremos
 integração no workflow reprodutível, por exemplo, com o RStudio/Quarto
 para citações/referências em documentos dinâmicos.
 
-\section{Preparação para a Aula}\label{preparauxe7uxe3o-para-a-aula-1}
+\section{Preparação para a Aula}\label{preparauxe7uxe3o-para-a-aula-2}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Pré-requisitos}, toprule=.15mm, left=2mm, titlerule=0mm, colframe=quarto-callout-important-color-frame, opacityback=0, colback=white, arc=.35mm, breakable, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, leftrule=.75mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-important-color!10!white, left=2mm, coltitle=black, bottomrule=.15mm, toprule=.15mm, titlerule=0mm, colback=white, colframe=quarto-callout-important-color-frame, opacitybacktitle=0.6, arc=.35mm, opacityback=0, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Pré-requisitos}, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, breakable]
 
 Antes da aula síncrona, certifique-se de completar \textbf{todos} os
 passos abaixo. Um vídeo com instruções detalhadas está disponível na
@@ -1796,9 +2006,9 @@ passos abaixo. Um vídeo com instruções detalhadas está disponível na
 
 \chapter{Organização de Projetos}\label{sec-project}
 
-\section{Objetivos de Aprendizagem}\label{objetivos-de-aprendizagem-2}
+\section{Objetivos de Aprendizagem}\label{objetivos-de-aprendizagem-3}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6, title={\emojitext{🎯} Ao final deste módulo, você será capaz de:}, toprule=.15mm, left=2mm, titlerule=0mm, colframe=quarto-callout-tip-color-frame, opacityback=0, colback=white, arc=.35mm, breakable, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, leftrule=.75mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-tip-color!10!white, left=2mm, coltitle=black, bottomrule=.15mm, toprule=.15mm, titlerule=0mm, colback=white, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, arc=.35mm, opacityback=0, rightrule=.15mm, title={\emojitext{🎯} Ao final deste módulo, você será capaz de:}, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, breakable]
 
 \begin{itemize}
 \tightlist
@@ -1830,7 +2040,7 @@ passos abaixo. Um vídeo com instruções detalhadas está disponível na
 
 \end{tcolorbox}
 
-\section{Contextualização}\label{contextualizauxe7uxe3o-2}
+\section{Contextualização}\label{contextualizauxe7uxe3o-3}
 
 Essa seção é o elo entre as seções anteriores e as próximas. Aqui, você
 vai receber algumas dicas de como organizar seus dados, pasta e scripts
@@ -2199,9 +2409,9 @@ detalharemos como essas práticas se concretizam em ferramentas,
 templates e fluxos de trabalho específicos, sempre fornecendo
 referências para aprofundamento posterior.
 
-\section{Preparação para a Aula}\label{preparauxe7uxe3o-para-a-aula-2}
+\section{Preparação para a Aula}\label{preparauxe7uxe3o-para-a-aula-3}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Pré-requisitos}, toprule=.15mm, left=2mm, titlerule=0mm, colframe=quarto-callout-important-color-frame, opacityback=0, colback=white, arc=.35mm, breakable, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, leftrule=.75mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-important-color!10!white, left=2mm, coltitle=black, bottomrule=.15mm, toprule=.15mm, titlerule=0mm, colback=white, colframe=quarto-callout-important-color-frame, opacitybacktitle=0.6, arc=.35mm, opacityback=0, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Pré-requisitos}, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, breakable]
 
 Para melhor aproveitamento da aula, recomendamos que você realize os
 seguintes preparativos:
@@ -2274,9 +2484,9 @@ tópico relacionado com o desenvolvimento de pacotes.
 
 \chapter{Controle de versão}\label{sec-git}
 
-\section{Objetivos de Aprendizagem}\label{objetivos-de-aprendizagem-3}
+\section{Objetivos de Aprendizagem}\label{objetivos-de-aprendizagem-4}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6, title={\emojitext{🎯} Ao final deste módulo, você será capaz de:}, toprule=.15mm, left=2mm, titlerule=0mm, colframe=quarto-callout-tip-color-frame, opacityback=0, colback=white, arc=.35mm, breakable, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, leftrule=.75mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-tip-color!10!white, left=2mm, coltitle=black, bottomrule=.15mm, toprule=.15mm, titlerule=0mm, colback=white, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, arc=.35mm, opacityback=0, rightrule=.15mm, title={\emojitext{🎯} Ao final deste módulo, você será capaz de:}, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, breakable]
 
 \begin{itemize}
 \tightlist
@@ -2307,7 +2517,7 @@ tópico relacionado com o desenvolvimento de pacotes.
 
 \end{tcolorbox}
 
-\section{Contextualização}\label{contextualizauxe7uxe3o-3}
+\section{Contextualização}\label{contextualizauxe7uxe3o-4}
 
 Você em algum grau utiliza um sistema para versionar seu trabalho. Seja
 ele um simples \texttt{Ctrl\ +\ Z} ou \texttt{Cmd\ +\ Z} para desfazer a
@@ -2685,9 +2895,9 @@ torna o fluxo de trabalho mais eficiente, transparente e reprodutível,
 alinhando-se com os princípios fundamentais da CA (Braga et al., 2023;
 Rodrigues, 2023; Weberpals \& Wang, 2024).
 
-\section{Preparação para a Aula}\label{preparauxe7uxe3o-para-a-aula-3}
+\section{Preparação para a Aula}\label{preparauxe7uxe3o-para-a-aula-4}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Pré-requisitos}, toprule=.15mm, left=2mm, titlerule=0mm, colframe=quarto-callout-important-color-frame, opacityback=0, colback=white, arc=.35mm, breakable, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, leftrule=.75mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-important-color!10!white, left=2mm, coltitle=black, bottomrule=.15mm, toprule=.15mm, titlerule=0mm, colback=white, colframe=quarto-callout-important-color-frame, opacitybacktitle=0.6, arc=.35mm, opacityback=0, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Pré-requisitos}, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, breakable]
 
 Antes da aula síncrona, certifique-se de completar \textbf{todos} os
 passos abaixo. Instruções detalhadas estão disponíveis na
@@ -2728,9 +2938,9 @@ de pré-trabalho do curso}.
 
 \chapter{Documentos Reprodutíveis}\label{sec-quarto}
 
-\section{Objetivos de aprendizagem}\label{objetivos-de-aprendizagem-4}
+\section{Objetivos de aprendizagem}\label{objetivos-de-aprendizagem-5}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6, title={\emojitext{🎯} Ao final deste módulo, você será capaz de:}, toprule=.15mm, left=2mm, titlerule=0mm, colframe=quarto-callout-tip-color-frame, opacityback=0, colback=white, arc=.35mm, breakable, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, leftrule=.75mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-tip-color!10!white, left=2mm, coltitle=black, bottomrule=.15mm, toprule=.15mm, titlerule=0mm, colback=white, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, arc=.35mm, opacityback=0, rightrule=.15mm, title={\emojitext{🎯} Ao final deste módulo, você será capaz de:}, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, breakable]
 
 \begin{itemize}
 \tightlist
@@ -2769,7 +2979,7 @@ de pré-trabalho do curso}.
 
 \end{tcolorbox}
 
-\section{Contextualização}\label{contextualizauxe7uxe3o-4}
+\section{Contextualização}\label{contextualizauxe7uxe3o-5}
 
 A reprodutibilidade e a transparência são princípios fundamentais da
 Ciência Aberta (CA), independentemente da abordagem metodológica adotada
@@ -2977,9 +3187,9 @@ containerização com Docker, encapsulando todo o ambiente computacional
 (sistema operacional, versões de software, dependências), mas este nível
 será explorado no módulo seguinte.
 
-\section{Preparação para a Aula}\label{preparauxe7uxe3o-para-a-aula-4}
+\section{Preparação para a Aula}\label{preparauxe7uxe3o-para-a-aula-5}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Pré-requisitos}, toprule=.15mm, left=2mm, titlerule=0mm, colframe=quarto-callout-important-color-frame, opacityback=0, colback=white, arc=.35mm, breakable, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, leftrule=.75mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-important-color!10!white, left=2mm, coltitle=black, bottomrule=.15mm, toprule=.15mm, titlerule=0mm, colback=white, colframe=quarto-callout-important-color-frame, opacitybacktitle=0.6, arc=.35mm, opacityback=0, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Pré-requisitos}, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, breakable]
 
 Para aproveitar ao máximo este módulo, certifique-se de ter completado
 \textbf{todas} as etapas de preparação descritas na seção de
@@ -3012,9 +3222,9 @@ Para aproveitar ao máximo este módulo, certifique-se de ter completado
 
 \chapter{Controle de Ambiente}\label{sec-docker}
 
-\section{Objetivos de Aprendizagem}\label{objetivos-de-aprendizagem-5}
+\section{Objetivos de Aprendizagem}\label{objetivos-de-aprendizagem-6}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6, title={\emojitext{🎯} Ao final deste módulo, você será capaz de:}, toprule=.15mm, left=2mm, titlerule=0mm, colframe=quarto-callout-tip-color-frame, opacityback=0, colback=white, arc=.35mm, breakable, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, leftrule=.75mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-tip-color!10!white, left=2mm, coltitle=black, bottomrule=.15mm, toprule=.15mm, titlerule=0mm, colback=white, colframe=quarto-callout-tip-color-frame, opacitybacktitle=0.6, arc=.35mm, opacityback=0, rightrule=.15mm, title={\emojitext{🎯} Ao final deste módulo, você será capaz de:}, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, breakable]
 
 \begin{itemize}
 \tightlist
@@ -3042,7 +3252,7 @@ Para aproveitar ao máximo este módulo, certifique-se de ter completado
 
 \end{tcolorbox}
 
-\section{Contextualização}\label{contextualizauxe7uxe3o-5}
+\section{Contextualização}\label{contextualizauxe7uxe3o-6}
 
 Imagine a seguinte situação: você publicou uma pesquisa quantitativa,
 disponibilizando o código e os dados para que outros pesquisadores
@@ -3404,9 +3614,9 @@ container. Esses scripts utilizam o \texttt{Dockerfile} e
 \texttt{docker-compose.yml} incluídos no template, que definem o
 ambiente computacional completo necessário para o projeto.
 
-\section{Preparação para a Aula}\label{preparauxe7uxe3o-para-a-aula-5}
+\section{Preparação para a Aula}\label{preparauxe7uxe3o-para-a-aula-6}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomrule=.15mm, rightrule=.15mm, opacitybacktitle=0.6, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Pré-requisitos}, toprule=.15mm, left=2mm, titlerule=0mm, colframe=quarto-callout-important-color-frame, opacityback=0, colback=white, arc=.35mm, breakable, bottomtitle=1mm, toptitle=1mm, colbacktitle=quarto-callout-important-color!10!white, leftrule=.75mm, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-important-color!10!white, left=2mm, coltitle=black, bottomrule=.15mm, toprule=.15mm, titlerule=0mm, colback=white, colframe=quarto-callout-important-color-frame, opacitybacktitle=0.6, arc=.35mm, opacityback=0, rightrule=.15mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Pré-requisitos}, leftrule=.75mm, toptitle=1mm, bottomtitle=1mm, breakable]
 
 Antes da aula síncrona, certifique-se de completar \textbf{todos} os
 passos abaixo. Vídeos com instruções detalhadas estão disponíveis na
@@ -3581,6 +3791,16 @@ autoria, originalidade e responsabilidade acadêmica (Sampaio et al.,
 
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-abreu2022}
+Abreu, R. de A. dos S. (2022). Ciência Aberta e Periódicos Científicos:
+desafios do novo modelo de comunicar a ciência. \emph{Revista Fitos},
+\emph{16}(1), 6--8. \url{https://doi.org/10.32712/2446-4775.2022.1445}
+
+\bibitem[\citeproctext]{ref-albagli2004}
+Albagli, S., \& Maciel, M. L. (2004). Informação e conhecimento na
+inovação e no desenvolvimento local. \emph{Ciência da Informação},
+\emph{33}, 9--16. \url{https://doi.org/10.1590/s0100-19652004000300002}
+
 \bibitem[\citeproctext]{ref-albano2023}
 Albano, C. S., Pedroso, P. de O., \& Caetano, D. O. (2023). Ci{ê}ncia
 {Aberta}: {Um Panorama} Sobre as {Publica{ç}{õ}es} No {Cen{á}rio
@@ -3590,6 +3810,11 @@ Brasileiro}. \emph{Saber Cient{í}fico}, \emph{12}(1), 1--12.
 Alessandroni, N., \& Byers-Heinlein, K. (2022). Ten Strategies to Foster
 Open Science in Psychology and Beyond. \emph{Collabra: Psychology},
 \emph{8}(1), 57545. \url{https://doi.org/10.1525/collabra.57545}
+
+\bibitem[\citeproctext]{ref-alston2021}
+Alston, J. M., \& Rick, J. A. (2021). A Beginner's Guide to Conducting
+Reproducible Research. \emph{The Bulletin of the Ecological Society of
+America}, \emph{102}(2), e01801. \url{https://doi.org/10.1002/bes2.1801}
 
 \bibitem[\citeproctext]{ref-baker2023}
 Baker, D. H., Berg, M., Hansford, K., Quinn, B. P. A., Segala, F. G., \&
@@ -3601,6 +3826,12 @@ Computational Reproducibility} {[}Preprint{]}. PsyArXiv.
 Baker, M. (2016). 1,500 Scientists Lift the Lid on Reproducibility.
 \emph{Nature}, \emph{533}(7604), 452--454.
 \url{https://doi.org/10.1038/533452a}
+
+\bibitem[\citeproctext]{ref-bechi2024}
+Bechi, D., \& Almeida, M. D. L. P. D. (2024). A Privatização Exógena e
+os Avanços do Capitalismo Acadêmico no Brasil e na Argentina.
+\emph{Educação em Revista}, \emph{40}, e40036.
+\url{https://doi.org/10.1590/0102-469840036}
 
 \bibitem[\citeproctext]{ref-prashantakumarbehera2023}
 Behera, P. K., \& Jain, S. J. (2023). \emph{Zotero -- An Open-Source
@@ -3651,6 +3882,12 @@ Chopik, W. J., Bremner, R. H., Defever, A. M., \& Keller, V. N. (2018).
 How (and {Whether}) to {Teach Undergraduates About} the {Replication
 Crisis} in {Psychological Science}. \emph{Teaching of Psychology},
 \emph{45}(2), 158--163. \url{https://doi.org/10.1177/0098628318762900}
+
+\bibitem[\citeproctext]{ref-clyburne-sherin2019}
+Clyburne-Sherin, A., Fei, X., \& Green, S. A. (2019). Computational
+{Reproducibility} via {Containers} in {Psychology}.
+\emph{Meta-Psychology}, \emph{3}.
+\url{https://doi.org/10.15626/MP.2018.892}
 
 \bibitem[\citeproctext]{ref-crrs2019}
 Committee on Reproducibility and Replicability in Science, Board on
@@ -3708,6 +3945,12 @@ Gilroy, S. P., \& Kaplan, B. A. (2019). Furthering {Open Science} in
 in {Research}. \emph{Perspectives on Behavior Science}, \emph{42}(3),
 565--581. \url{https://doi.org/10.1007/s40614-019-00202-5}
 
+\bibitem[\citeproctext]{ref-furtado2024}
+Guimarães Furtado, R., \& Evangelista Cunha, S. (2024). Inteligência
+artificial, data centers e colonialismo digital: Impactos
+socioambientais e geopolíticos a partir do Sul Global. \emph{Liinc em
+Revista}, \emph{20}(2). \url{https://doi.org/10.18617/liinc.v20i2.7272}
+
 \bibitem[\citeproctext]{ref-heinz2024}
 Heinz, M., \& Miranda, M. (2024). Ci{ê}ncia {Aberta}: Argumentos e
 Desafios Para Sua Legitima{ç}{ã}o Cient{í}fica. \emph{Em Quest{ã}o},
@@ -3735,6 +3978,12 @@ A. H., IJzerman, H., Nilsonne, G., Vanpaemel, W., \& Frank, M. C.
 (2018). A {Practical Guide} for {Transparency} in {Psychological
 Science}. \emph{Collabra: Psychology}, \emph{4}(1), 20.
 \url{https://doi.org/10.1525/collabra.158}
+
+\bibitem[\citeproctext]{ref-kronbauer2024}
+Kronbauer, J., \& Oliveira, R. S. de. (2024). Tecnologias de
+reconhecimento facial e colonialismo de dados no Brasil. \emph{Revista
+Jurídica Cesumar - Mestrado}, \emph{24}(2), 387--398.
+\url{https://doi.org/10.17765/2176-9184.2024v24n2.e12166}
 
 \bibitem[\citeproctext]{ref-li2021}
 Li, L., Parulian, N., \& Ludäscher, B. (2021). Automatic Module
@@ -3784,6 +4033,12 @@ Neto, S. C., Willinsky, J., \& Alperin, J. P. (2016). Measuring, Rating,
 Supporting, and Strengthening Open Access Scholarly Publishing in
 {Brazil}. \emph{Education Policy Analysis Archives}, \emph{24}, 54--54.
 \url{https://doi.org/10.14507/epaa.24.2391}
+
+\bibitem[\citeproctext]{ref-neubert2021}
+Neubert, P. D. S., \& Rodrigues, R. S. (2021). Oligopólios e publicação
+científica: a busca por impacto na América Latina.
+\emph{Transinformação}, \emph{33}, e200069.
+\url{https://doi.org/10.1590/2318-0889202133e200069}
 
 \bibitem[\citeproctext]{ref-oddone2024}
 Oddone, N., \& Souza, L. V. R. L. (2024). Acesso ao conhecimento no
@@ -3866,6 +4121,20 @@ Bibli: revista eletr{ô}nica de biblioteconomia e ci{ê}ncia da
 informa{ç}{ã}o}, \emph{28}.
 \url{https://doi.org/10.5007/1518-2924.2023.e91712}
 
+\bibitem[\citeproctext]{ref-silveira2025}
+Silveira, L. D., Ribeiro, N. C., Salas, D., Penabad-Camacho, L., Córdoba
+González, S., Rogel-Salazar, R., Espinoza De Los Monteros, M. A. T.,
+Abedrapo Rosen, I., Polanco-Cortés, J., Ruz Fuenzalida, C., \& al., et.
+(2025). Ameaça velada ao acesso aberto diamante: quando os indicadores
+se tornam armas de exclusão. \emph{Ciência da Informação Express},
+\emph{6}, 1--12. \url{https://doi.org/10.60144/v6i.2025.152}
+
+\bibitem[\citeproctext]{ref-sinani2023}
+Sinãni, M. C. F., \& Accorssi, A. (2023). Colonialismo digital e
+processos de disputas: as mídias como {«sistemas educativos»} da
+população. \emph{Liinc em Revista}, \emph{19}(2), e6646.
+\url{https://doi.org/10.18617/liinc.v19i2.6646}
+
 \bibitem[\citeproctext]{ref-soderberg2018}
 Soderberg, C. K. (2018). Using OSF to Share Data: A Step-by-Step Guide.
 \emph{Advances in Methods and Practices in Psychological Science},
@@ -3942,6 +4211,19 @@ Teal, T. K. (2017). Good enough practices in scientific computing.
 Zandonella Callegher, C., \& Massidda, D. (2022). \emph{The open science
 manual: Make your scientific research accessible and reproducible}.
 \url{https://doi.org/10.5281/zenodo.6521850}
+
+\bibitem[\citeproctext]{ref-zaragozi2020}
+Zaragozí, B. M., Trilles, S., \& Navarro-Carrión, J. T. (2020).
+Leveraging Container Technologies in a GIScience Project: A Perspective
+from Open Reproducible Research. \emph{ISPRS International Journal of
+Geo-Information}, \emph{9}(3), 138.
+\url{https://doi.org/10.3390/ijgi9030138}
+
+\bibitem[\citeproctext]{ref-zarghani2023}
+Zarghani, M., Nemati-Anaraki, L., Sedghi, S., Noroozi Chakoli, A., \&
+Rowhani-Farid, A. (2023). The Application of Open Science Potentials in
+Research Processes: A Comprehensive Literature Review. \emph{Libri},
+\emph{73}(2), 167--186. \url{https://doi.org/10.1515/libri-2022-0007}
 
 \end{CSLReferences}
 
