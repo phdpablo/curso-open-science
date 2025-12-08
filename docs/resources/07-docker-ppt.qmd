@@ -1,0 +1,823 @@
+---
+title: "Controle de Ambiente"
+subtitle: "Jornada de Open Science na Prática"
+author: "Dr. Pablo Rogers"
+format:
+  revealjs:
+    theme: sky
+    slide-number: true
+    chalkboard: true
+    height: 750
+    width: 1600
+    preview-links: auto
+    logo: "../img/psicoeconometria.png"
+    footer: "Controle de Ambiente | Docker + renv"
+    transition: slide
+    background-transition: fade
+    smaller: false
+    scrollable: true
+    incremental: false
+    center: true
+    html-math-method: katex
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+## Objetivos da Aula
+
+<br>
+
+::: incremental
+-   🔄 Compreender níveis de controle de ambiente (VMs, Containers,
+    renv)
+-   📦 Distinguir pacotes (renv) de ambiente completo (Docker)
+-   🐳 Operar Docker Desktop via interface gráfica
+-   🔧 Combinar renv + Docker para reprodutibilidade completa
+-   📊 Aplicar conceitos no template ARTE
+-   🚀 Compartilhar ambientes reprodutíveis
+:::
+
+::: notes
+Esta aula conecta-se diretamente com módulos anteriores de organização
+de projetos (TIER), Git/GitHub e Quarto. Agora adicionamos a camada
+final: controle total do ambiente computacional. Foco será em Docker
+Desktop GUI para público com baixa literacia computacional.
+:::
+
+------------------------------------------------------------------------
+
+## O Problema: "Uai, Comigo Funcionou!"
+
+<br>
+
+::::: incremental
+::: {.column with="50%"}
+**Situação hipotética:**
+
+-   📊 Você publica pesquisa quantitativa com código e dados
+-   🌍 Pesquisador da Polônia tenta reproduzir
+-   ❌ **Não consegue replicar os resultados**
+-   🤔 "Uai, comigo funcionou!"
+:::
+
+::: {.column with="50%"}
+**Por que isso acontece?**
+
+-   Diferentes versões de pacotes
+-   Diferentes sistemas operacionais
+-   Diferentes bibliotecas do sistema
+-   Diferentes versões do R
+:::
+:::::
+
+::: notes
+Situação real que todos enfrentamos. O "dependency hell" - inferno das
+dependências. Mesmo com código e dados disponíveis, reprodução pode
+falhar por diferenças no ambiente computacional. É aqui que Docker
+brilha: garante mesmo ambiente para todos.
+:::
+
+------------------------------------------------------------------------
+
+## Evolução Histórica da Solução
+
+<br>
+
+::::: incremental
+::: {.column with="50%"}
+**Antigamente (anos 2000):**
+
+-   💾 Enviar imagem completa do HD
+-   ⚠️ Arquivos gigantes (GB)
+-   ⚠️ Requer infraestrutura complexa
+-   ⚠️ Incompatível entre sistemas
+:::
+
+::: {.column with="50%"}
+**Hoje (2025):**
+
+-   ☁️ Armazenamento em nuvem
+-   🖥️ Virtualização (VMs)
+-   🐳 **Containers (Docker)**
+-   📦 Controle de pacotes (renv, Conda)
+:::
+:::::
+
+::: notes
+Progressão natural da tecnologia. VMs resolveram parte do problema mas
+são pesadas. Containers (Docker) revolucionaram ao criar isolamento leve
+e eficiente. Para pesquisa científica, Docker + renv é combinação ideal.
+:::
+
+------------------------------------------------------------------------
+
+## Soluções para Controle de Ambiente
+
+<br>
+
+[![](../img/vm-container.png){fig-align="center"
+width="45%"}](https://doi.org/10.5281/zenodo.12521134)
+
+::: notes
+Diagrama mostra espectro de soluções. Da esquerda para direita:
+isolamento crescente mas overhead também crescente. VMs = isolamento
+máximo mas pesadas. Containers = equilíbrio ideal. Ferramentas de
+pacotes (renv) = leves mas isolamento limitado. Nuvem = soluções
+híbridas abstraindo complexidade.
+:::
+
+------------------------------------------------------------------------
+
+## Máquinas Virtuais (VMs) {.smaller}
+
+<br>
+
+::::: incremental
+::: {.column width="50%"}
+**O que são:**
+
+-   Emulam sistema operacional completo
+-   Cada VM = SO próprio + bibliotecas + apps
+-   Tipo 1: roda direto no hardware (VMware ESXi, Hyper-V, Xen)
+-   Tipo 2: roda sobre SO existente (VirtualBox, VMware Workstation)
+:::
+
+::: {.column width="50%"}
+**Vantagens/Desvantagens:**
+
+-   ✅ Alto isolamento e segurança
+-   ✅ Executa diferentes SOs
+-   ❌ Consome muitos recursos (CPU, RAM, disco)
+-   ❌ Imagens grandes e difíceis de compartilhar
+-   ❌ **Impraticável para reprodutibilidade científica**
+
+**Uso em pesquisa:**
+
+-   Ferramenta útil para ensino/testes
+-   **Este curso está rodando numa VM!**
+:::
+:::::
+
+::: notes
+VMs são poderosas mas overkill para reprodutibilidade. Imagem de VM pode
+ter dezenas de GB. Para compartilhar pesquisa, queremos algo mais leve.
+VMs têm seu lugar (servidores, ambientes isolados) mas containers são
+superiores para ciência reprodutível.
+:::
+
+------------------------------------------------------------------------
+
+## Containers: A Solução Ideal {.smaller}
+
+<br>
+
+::::: incremental
+::: {.column width="50%"}
+**O que são:**
+
+-   Virtualização a nível de SO
+-   Compartilham kernel do host
+-   Contêm apenas app + dependências
+-   Ferramentas: **Docker**, Kubernetes, Podman
+
+**Analogia útil:**
+
+-   📝 **Imagem Docker** = receita de bolo
+-   🎂 **Container Docker** = bolo pronto
+-   🍰 Receita pode fazer infinitos bolos
+-   📤 Receita fácil de compartilhar
+:::
+
+::: {.column width="50%"}
+**Vantagens:**
+
+-   ✅ Leves e eficientes
+-   ✅ Rápidos (inicialização em segundos)
+-   ✅ Fáceis de distribuir
+-   ✅ **Resolvem "dependency hell"**
+
+**Docker em Pesquisa:**
+
+-   Ganhando força na ciência (Moreau et al., 2023)
+-   Empacota código + dependências + SO
+-   Qualquer pessoa, qualquer computador → mesmos resultados
+-   **Reprodutibilidade completa garantida**
+:::
+:::::
+
+::: notes
+Containers são revolução para pesquisa reprodutível. Wiebels & Moreau
+(2021) demonstram aplicação em psicologia. Docker permite encapsular
+ambiente completo em pacote portável. Imagens Docker têm centenas de MB
+vs dezenas de GB das VMs. Startup em segundos vs minutos.
+:::
+
+------------------------------------------------------------------------
+
+## Ferramentas de Controle de Dependências {.smaller}
+
+<br>
+
+::::: incremental
+::: {.column width="50%"}
+**Conda (Python/R multi-linguagem):**
+
+-   Gerencia pacotes e ambientes virtuais
+-   Cria ambientes isolados com versões específicas
+-   Popular em ciência de dados
+
+**renv (específico para R):**
+
+-   Biblioteca privada por projeto
+-   Arquivo `renv.lock` registra versões exatas
+-   `renv::restore()` recria ambiente
+-   Cache global evita duplicação
+:::
+
+::: {.column width="50%"}
+**Vantagens/Limitações:**
+
+-   ✅ Menor overhead de recursos
+-   ✅ Fácil configurar e usar
+-   ✅ Promove reprodutibilidade de pacotes
+-   ⚠️ **Não controla versão do R**
+-   ⚠️ **Não controla SO ou bibliotecas do sistema**
+-   ⚠️ Depende de disponibilidade futura de pacotes
+
+**Conclusão:**
+
+-   renv **mitiga** incompatibilidade
+-   Docker **resolve completamente**
+:::
+:::::
+
+::: notes
+renv é excelente ferramenta mas tem limites. Registra versão do R mas
+não a instala automaticamente. Não captura dependências do sistema
+(bibliotecas C++, compiladores). Rodrigues (2023) discute essas
+limitações em detalhe. A solução: combinar renv + Docker.
+:::
+
+------------------------------------------------------------------------
+
+## Combinando renv + Docker: O Melhor dos Dois Mundos
+
+<br>
+
+::: incremental
+::: {.column width="50%"}
+**Por que combinar?**
+
+-   📦 **renv**: gerencia pacotes R
+-   🐳 **Docker**: gerencia ambiente completo
+-   🤝 renv facilita construção de containers
+-   🔒 Docker garante reprodutibilidade total
+:::
+::: {.column width="50%"}
+**Workflow recomendado:**
+
+1.  Desenvolver projeto com `renv` ativo
+2.  `renv::snapshot()` cria `renv.lock`
+3.  Dockerfile usa `renv.lock` para instalar pacotes
+4.  Container inclui R + SO + pacotes exatos
+:::
+:::
+
+## Rocker Project
+
+::: incremental
+::: {.column width="50%"}
+**O que é:**
+
+-   Imagens Docker otimizadas para R
+-   `rocker/rstudio`: RStudio Server em container
+-   Versões fixas: `rocker/verse:4.5.1`
+-   Base confiável para pesquisa
+:::
+::: {.column width="50%"}
+**Benefício final:**
+
+-   ✅ Qualquer pessoa, qualquer lugar, qualquer momento
+-   ✅ Resultados **idênticos** garantidos
+-   ✅ Supera limitações de `renv `isolado
+:::
+:::
+
+::: notes
+Zandonella & Massidda (2022) e Rodrigues (2023) enfatizam essa
+combinação. renv.lock serve como "blueprint" para Docker. Pipeline:
+desenvolvimento local com renv → snapshot → Dockerfile consome lock →
+imagem reprodutível. Rocker fornece base sólida e versionada.
+:::
+
+------------------------------------------------------------------------
+
+## Docker Desktop: Interface Amigável
+
+<br>
+
+::::: incremental
+::: {.column width="50%"}
+**O que é:**
+
+-   Interface gráfica (GUI) para Docker
+-   **Ideal para pesquisadores não acostumados com CLI**
+-   Remove necessidade de comandos complexos
+:::
+::: {.column width="50%"}
+**Funcionalidades principais:**
+
+-   👀 Visualizar containers em execução
+-   ▶️ Iniciar/parar com um clique
+-   📊 Acessar logs e informações
+-   🖼️ Gerenciar imagens
+-   ⚙️ Configurar recursos (CPU, RAM)
+:::
+:::
+
+## Docker Desktop + RStudio Server
+
+::: incremental
+::: {.column width="50%"}
+**RStudio em Container:**
+
+-   🌐 Acesso via navegador web (`localhost:8787`)
+-   💻 Experiência familiar do RStudio
+-   🔒 Todas garantias de reprodutibilidade
+
+:::
+::: {.column width="50%"}
+
+**Foco do curso:**
+
+-   ✅ Tudo via GUI do Docker Desktop
+-   ✅ Demonstrações com compartilhamento de tela
+-   ✅ Comandos básicos apenas ao final (opcional)
+:::
+:::
+
+::: notes
+Docker Desktop democratiza containers. Público de ciências sociais
+aplicadas não precisa dominar terminal. GUI remove barreira de entrada.
+Aula prática mostrará: pull de imagem Rocker, executar container,
+acessar RStudio Server, trabalhar normalmente.
+:::
+
+------------------------------------------------------------------------
+
+## Soluções em Nuvem: Alternativas Práticas {.smaller}
+
+<br>
+
+::::: incremental
+::: {.column width="50%"}
+**Notebooks na nuvem (básico):**
+
+-   [Google Colab](https://colab.research.google.com/)
+-   [Posit Cloud](https://posit.cloud/)
+-   ⚠️ Reprodutibilidade limitada (depende de configuração manual)
+
+**Ambientes gerenciados (intermediário):**
+
+-   [Binder](https://mybinder.org/): transforma repos Git em ambientes
+    executáveis
+-   [JupyterHub](https://jupyter.org/hub): controle centralizado de
+    ambientes
+-   ✅ Melhor controle, mas requer configuração
+:::
+
+::: {.column width="50%"}
+**Plataformas científicas (avançado):**
+
+-   [Code Ocean](https://codeocean.com/): "cápsulas" reprodutíveis
+-   [Nextjournal](https://nextjournal.com/): notebooks interativos +
+    containers
+-   ✅ Alto nível de reprodutibilidade
+-   ✅ Interface intuitiva
+-   ⚠️ Soluções comerciais (limitações de recursos)
+
+**Relação com Docker:**
+
+-   Todas usam conteinerização nos bastidores
+-   Abstraem complexidade técnica
+-   **Tornam Docker acessível via GUI web**
+:::
+:::::
+
+::: notes
+Moreau et al. (2023) comparam essas plataformas. Code Ocean e
+Nextjournal oferecem reprodutibilidade similar a Docker local mas com UX
+superior. Ideal para quem quer benefícios sem curva de aprendizado.
+Wiebels & Moreau (2021) discutem quando usar cada solução. Para controle
+total e gratuito: Docker local. Code Ocean e
+Nextjournal para compartilharmento e não para uso diário.
+:::
+
+------------------------------------------------------------------------
+
+## ARTE: Reprodutibilidade em Três Níveis {.smaller}
+
+<br>
+
+::::: incremental
+::: {.column width="50%"}
+**Nível Mínimo (Módulo 4):**
+
+-   📁 TIER Protocol 4.0
+-   ☁️ OSF para compartilhamento
+-   ✅ Organização básica
+
+**Nível Adequado (Módulos 5-6):**
+
+-   🔧 Git/GitHub
+-   📝 RStudio + Quarto
+-   📦 renv
+-   ✅ Reprodutibilidade de código e pacotes
+:::
+
+::: {.column width="50%"}
+**Nível Completo (Este módulo - Padrão Ouro):**
+
+-   🐳 **Docker**
+-   ✅ Encapsula **tudo**: SO + R + pacotes
+-   ✅ Garantia de execução idêntica
+-   ✅ Reprodutibilidade **computacional completa**
+
+**Implementação prática:**
+
+-   Scripts `start.bat/stop.bat` (Windows)
+-   Scripts `start.sh/stop.sh` (Linux/Mac)
+-   Automatizam criação e execução
+-   `Dockerfile` + `docker-compose.yml` incluídos
+:::
+:::::
+
+::: notes
+ARTE (Limongi, 2025a, 2025b; Rogers, 2025) materializa conceitos deste
+curso. Espectro de práticas permite adoção gradual. Nível mínimo já é
+grande avanço. Nível adequado atende maioria das necessidades. Nível
+completo é ideal para artigos metodológicos, replicações
+pré-registradas, pesquisa de ponta.
+:::
+
+------------------------------------------------------------------------
+
+## ARTE: Automação com Scripts {.smaller}
+
+<br>
+
+::::: incremental
+::: {.column width="50%"}
+**Estrutura no repositório:**
+
+```    
+article-template/
+├── docker/
+│   ├── Dockerfile
+│   ├── docker-compose.yml
+│   ├── start.bat        \# Windows
+│   ├── stop.bat         \# Windows
+│   ├── start.sh         \# Linux/Mac
+│   └── stop.sh          \# Linux/Mac
+└── renv.lock
+```
+
+**O que os scripts fazem:**
+
+-   🔨 Constroem imagem Docker
+-   ▶️ Iniciam container com RStudio Server
+-   🌐 Expõem porta 8787
+-   📂 Montam diretório do projeto
+:::
+
+::: {.column width="50%"}
+**Uso na prática:**
+
+- Window duplo clique em `start.bat`
+- No Linux/Mac dua clique em `start.sh`
+
+**Resultado:**
+
+-   Navegador abre `http://127.0.0.x:8787`
+-   RStudio Server pronto para uso
+-   Ambiente **idêntico** ao dos autores
+-   Reprodução em **um clique**!
+
+:::
+:::::
+
+::: notes
+Automação remove fricção. Pesquisador não precisa entender Docker
+profundamente. Scripts encapsulam complexidade. Rodrigues (2023)
+demonstra workflow similar. Na aula prática, mostraremos execução
+completa: clonar ARTE → executar start.bat → trabalhar no RStudio
+containerizado → parar com stop.bat.
+:::
+
+------------------------------------------------------------------------
+
+## Níveis de Reprodutibilidade: Comparação {.smaller}
+
+<br>
+
+| Solução          | Pacotes |  R  | SO  | Bibliotecas Sistema | Nível             |
+|:-----------------|:-------:|:---:|:---:|:-------------------:|:------------------|
+| Google Colab     |   ⚠️    | ❌  | ❌  |         ❌          | Básico            |
+| Posit Cloud      |   ⚠️    | ⚠️  | ❌  |         ❌          | Básico            |
+| Binder           |   ✅    | ✅  | ⚠️  |         ⚠️          | Intermediário     |
+| JupyterHub       |   ✅    | ✅  | ⚠️  |         ⚠️          | Intermediário     |
+| **renv**         | **✅**  | ⚠️  | ❌  |       **❌**        | **Intermediário** |
+| Code Ocean       |   ✅    | ✅  | ✅  |         ✅          | Alto              |
+| Nextjournal      |   ✅    | ✅  | ✅  |         ✅          | Alto              |
+| **Docker local** | **✅**  | ✅  | ✅  |       **✅**        | **Completo**      |
+
+::: notes
+Tabela resume trade-offs. ✅ = controle completo. ⚠️ = controle
+parcial/manual. ❌ = sem controle. Docker local oferece controle máximo
+gratuitamente. Code Ocean/Nextjournal equivalentes mas comerciais (e para compartilhar, não para trabalhar). renv
+excelente para pacotes mas insuficiente sozinho. Combinação renv +
+Docker = solução definitiva.
+:::
+
+------------------------------------------------------------------------
+
+## Workflow Prático: Do Desenvolvimento ao Container {.smaller}
+
+<br>
+
+::::: incremental
+::: {.column width="50%"}
+**Fase 1: Desenvolvimento (local)**
+
+1.  Criar projeto RStudio + `renv`
+2.  Desenvolver análise normalmente
+3.  `renv::snapshot()` continuamente
+4.  Git para versionamento
+
+**Fase 2: Conteinerização**
+
+5.  Escrever `Dockerfile` usando `renv.lock`
+6.  Testar construção de imagem
+7.  Re-executar análise dentro do container
+8.  Verificar resultados idênticos
+:::
+
+::: {.column width="50%"}
+**Fase 3: Compartilhamento**
+
+9.  Push código + `Dockerfile` para GitHub
+10. (Opcional) Push imagem para Docker Hub
+11. Documentar no README
+
+**Pesquisadores reproduzem:**
+
+-   Clone repo GitHub
+-   `docker build` ou `docker pull` (sem ARTE)
+-   `docker run` → RStudio Server (sem ARTE)
+-   Executar análise
+-   ✅ **Resultados idênticos!**
+:::
+:::::
+
+::: notes
+Workflow linear e lógico. Zandonella & Massidda (2022) e Rodrigues
+(2023) descrevem processo similar. Desenvolvimento local mantém
+familiaridade. Conteinerização acontece após projeto estável. Teste
+crucial: re-run completo no container. Docker Hub opcional mas útil para
+preservação de longo prazo. Se utilizar o ARTE pode executar os scripts stat/stop diretamente.
+:::
+
+------------------------------------------------------------------------
+
+## Comandos Docker Essenciais (Opcional) {.smaller}
+
+<br>
+
+::::: incremental
+::: {.column width="50%"}
+**Gerenciamento de imagens:**
+
+```
+# Baixar imagem do Docker Hub
+
+docker pull rocker/rstudio:4.3.2
+
+# Listar imagens locais
+
+docker images
+
+# Construir imagem do Dockerfile
+
+docker build -t meu-projeto:1.0 .
+
+# Remover imagem
+
+docker rmi meu-projeto:1.0
+```
+:::
+
+::: {.column width="50%"}
+**Gerenciamento de containers:**
+
+```
+# Executar container
+
+docker run --rm -p 8787:8787 \
+-e PASSWORD=senha123 rocker/verse:4.5.1
+
+# Listar containers em execução
+
+docker ps
+
+# Parar container
+
+docker stop tainer-id>
+
+# Remover container
+
+docker rm tainer-id>
+```
+:::
+:::::
+
+::: notes
+Comandos básicos para referência futura. Na aula, priorizaremos GUI do
+Docker Desktop. Esses comandos são úteis para: 1) usuários que preferem
+terminal, 2) automação via scripts, 3) ambientes sem GUI (servidores).
+Enfatizar que Docker Desktop GUI executa exatamente esses comandos nos
+bastidores.
+:::
+
+------------------------------------------------------------------------
+
+## Boas Práticas: Dockerfile para Pesquisa
+
+<br>
+
+```
+# Fixar versão específica do R
+
+FROM rocker/verse:4.5.1
+
+# Instalar dependências do sistema (se necessário)
+
+RUN apt-get update \&\& apt-get install -y \
+libcurl4-openssl-dev \
+libssl-dev
+
+# Copiar renv.lock para o container
+
+COPY renv.lock /home/rstudio/renv.lock
+
+# Instalar renv e restaurar pacotes
+
+RUN R -e "install.packages('renv')"
+WORKDIR /home/rstudio
+RUN R -e "renv::restore()"
+
+# Copiar projeto completo
+
+COPY . /home/rstudio/meu-projeto
+
+# Ajustar permissões
+
+RUN chown -R rstudio:rstudio /home/rstudio
+```
+
+::: notes
+Dockerfile autoexplicativo. Comentários documentam cada etapa. Boas
+práticas: 1) Versão fixa de R (reprodutibilidade), 2) Dependências do
+sistema explícitas, 3) renv.lock copiado e restaurado, 4) Permissões
+corretas para usuário rstudio. Rodrigues (2023) e Zandonella & Massidda
+(2022) detalham otimizações adicionais.
+:::
+
+------------------------------------------------------------------------
+
+## Checklist: Reprodutibilidade Completa ✅ {.smaller}
+
+<br>
+
+::::: incremental
+::: {.column width="50%"}
+**Organização (Módulos 4-6):**
+
+-   ☑️ TIER Protocol seguido
+-   ☑️ Git/GitHub ativo
+-   ☑️ README completo
+-   ☑️ Dados em repositório confiável (OSF, Zenodo)
+-   ☑️ Código documentado (Quarto)
+
+**Controle de Ambiente (Este módulo):**
+
+-   ☑️ `renv.lock` atualizado
+-   ☑️ `Dockerfile` funcional
+-   ☑️ Imagem Docker testada
+-   ☑️ Análise re-executada em container
+-   ☑️ Resultados conferidos (idênticos)
+:::
+
+::: {.column width="50%"}
+**Compartilhamento:**
+
+-   ☑️ Repositório GitHub público
+-   ☑️ Licença explícita (MIT, CC-BY)
+-   ☑️ DOI obtido (Zenodo)
+-   ☑️ Instruções claras no README
+-   ☑️ (Opcional) Imagem no Docker Hub
+
+**Teste final:**
+
+-   🧪 Colega consegue clonar e executar?
+-   🧪 Container inicia sem erros?
+-   🧪 Resultados são reproduzidos?
+-   ✅ **Se sim: reprodutibilidade completa!**
+:::
+:::::
+
+::: notes
+Checklist operacional para autoavaliação. Combina lições de todos os
+módulos. Reprodutibilidade completa não é evento isolado - é resultado
+de práticas acumuladas. ARTE implementa todos esses itens. Incentive
+alunos a usar como meta aspiracional, não obrigação rígida. Progresso
+incremental é válido.
+:::
+
+------------------------------------------------------------------------
+
+## Limitações e Considerações {.smaller}
+
+<br>
+
+::::: incremental
+::: {.column width="50%"}
+**Curva de aprendizado:**
+
+-   Docker tem conceitos novos (imagens, containers, volumes)
+-   Docker Desktop simplifica, mas ainda requer familiarização
+-   Investimento inicial compensa no longo prazo
+
+**Requisitos técnicos:**
+
+-   Windows: virtualização habilitada no BIOS (WSL2)
+-   Mac: funciona nativamente (Intel ou Apple Silicon)
+-   Linux: instalação mais direta
+-   ⚠️ **Instalação pode levar tempo - fazer com antecedência**
+:::
+
+::: {.column width="50%"}
+**Quando Docker pode ser excessivo:**
+
+-   Projetos muito simples (script único + dados tabulares)
+-   Análises puramente descritivas sem dependências complexas
+-   Situações onde renv sozinho é suficiente
+
+**Quando Docker é essencial:**
+
+-   Dependências do sistema (bibliotecas C++, compiladores)
+-   Análises complexas com múltiplas linguagens
+-   Replicações pré-registradas
+-   Artigos metodológicos
+-   Preservação de longo prazo (\>5 anos)
+:::
+:::::
+
+::: notes
+Transparência sobre limitações. Docker não é bala de prata para tudo.
+Rodrigues (2023) discute trade-offs. Para muitos projetos, renv + boa
+documentação bastam. Docker é "seguro extra" para situações críticas.
+Enfatizar: mesmo reprodutibilidade parcial (renv) é enorme avanço sobre
+status quo.
+:::
+
+------------------------------------------------------------------------
+
+## Recursos para Aprofundamento
+
+<br>
+
+::: incremental
+::: {.column width="50%"}
+**Documentação oficial:**
+
+-   [Docker Documentation](https://docs.docker.com/)
+-   [Rocker Project](https://rocker-project.org/)
+-   [renv Documentation](https://rstudio.github.io/renv/)
+:::
+::: {.column width="50%"}
+**Leitura Sugerida:**
+
+-   [Wiebels & Moreau (2021)](https://doi.org/10.1177/25152459211017853)
+-   [Moreau et al. (2023)](https://doi.org/10.1038/s43586-023-00236-9)
+-   [Rodrigues (2023)](https://raps-with-r.dev/)
+-   [Zandonella & Massidda (2022)](https://arca-dpss.github.io/manual-open-science/)
+:::
+:::
+
+::: notes
+Recursos cuidadosamente selecionados. Wiebels & Moreau (2021) é tutorial
+hands-on excelente. Moreau et al. (2023) oferece visão panorâmica.
+Rodrigues (2023) conecta renv + targets + Docker. Zandonella & Massidda
+(2022) é manual completo de Open Science.
+:::
