@@ -1,7 +1,16 @@
+# R/RStudio
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+
+# Quarto and builds
+.quarto/
+_book/
+adm/
+site_libs/
+_site/
+_temp/
+_freeze/
+
 /.quarto/
-/_book/
-/adm/

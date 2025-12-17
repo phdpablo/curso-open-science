@@ -2,24 +2,7 @@
 
 <br>
 
-::: {.content-visible unless-format="pdf"}
--   \emojitext{📝} **FAÇA SUA INSCRIÇÃO [AQUI](https://forms.gle/wRNWAU9Ffyp7o4Vq9)**
-  - Turma Nov/25 fechada, volte em Dez/25 e faça sua inscrição para a próxima edição!
-
--   \emojitext{📅} **CONSULTE A AGENDA ATUALIZADA [AQUI](https://phdpablo.github.io/curso-open-science/00-schedule.html)**
-
--   \emojitext{🛠️} **NO CURSO VOCÊ VAI APRENDER A IMPLEMENTAR UM ARTIGO COMO [ESSE](https://phdpablo.github.io/article-template/) E/OU DESENVOLVER UMA DISCIPLINA COMO [ESSA](https://fccp.phdpablo.com/).**
-
--   \emojitext{🔁} **DURANTE O CURSO, ESSE SITE SERÁ ATUALIZADO REGULARMENTE, PORTANTO, O CONTEÚDO QUE VOCÊ ESTÁ VISUALIZANDO AGORA PODE NÃO CORRESPONDER AO QUE SERÁ APRESENTADO NO CURSO.** Vide principais [Mudanças](#sec-change) previstas.
-
-<br>
-
-Página do curso **"Artigo à Prova de Futuro: Jornada de Open Science na Prática"**. Nesse site você encontrará informações sobre o programa do curso, materiais didáticos (resumos, notas de aulas e vídeos) e sugestões de leituras sobre a prática da Ciência Aberta (artigos e livros).
-:::
-
-::: {.content-visible unless-format="html"}
-Material didático do curso **"Artigo à Prova de Futuro: Jornada de Open Science na Prática"**. Nesse ebook você encontrará um conteúdo programático sobre Ciência Aberta (CA) e Pesquisa Reprodutível, com resumo de textos, recursos didáticos (notas de aulas e vídeos) e sugestões de leitura (artigos e livros).
-:::
+Página do curso **"Artigo à Prova de Futuro: Jornada de Open Science na Prática"**. Nesse site você encontrará informações sobre o programa do curso, materiais didáticos (resumos, notas de aulas e vídeos) e sugestões de leituras sobre a prática da Ciência Aberta (artigos e livros). Ele foi concebido para ser um **Recurso Educacional Aberto (REA)** e, portanto, todo o conteúdo está disponível gratuitamente para consulta e download. O site é um guia para os que buscam conhecimento sobre ferramentas e práticas relacionadas à Ciência Aberta e à Pesquisa Reprodutível, mas principalmente, uma fonte inicial de leitura e estudo para os participantes do curso.
 
 ## Instrutores {#sec-instrutor .unnumbered}
 
@@ -33,9 +16,7 @@ O curso tem objetivo de introduzir os conceitos relacionados com a Ciência Aber
 
 Ao final pretendemos que os pesquisadores e estudantes de pós-graduação estejam gabaritados para implementar o [ARTE (Article Reproducibility Template & Environment)](https://phdpablo.github.io/article-template/), por exemplo, e os professores empenhados em desenvolver um Recurso Didático Aberto (REA), tal como o exemplo dessa disciplina: [Finanças Corporativas de Curto Prazo](https://fccp.phdpablo.com/).
 
-O protagonista do curso é o professor e/ou pesquisador brasileiro que deseja aprimorar a qualidade e a transparência de suas aulas e pesquisa, e que busca ferramentas para tornar-lás mais eficiente e acessível.
-
-Trata-se de um curso intermitente programado para acontecer em 8 encontros de 2 horas/aula, totalizando 16 horas/aula. Para alcançar um número maior de interessadosO o curso é remoto e síncrono. Ele poderá acontecer mais de uma vez no ano, com datas e horários a serem definidos. Para o calendário atual do curso, consulte a seção [Agenda](00-schedule.html).
+Trata-se de um curso intermitente programado para acontecer em 8 encontros de 2 horas/aula, totalizando 16 horas/aula. Para alcançar um número maior de interessadosO o curso é remoto e síncrono. Ele poderá acontecer mais de uma vez no ano, com datas e horários a serem definidos. Para o último calendário do curso, consulte a seção [Agenda](00-schedule.html).
 
 O curso é gratuito e com de certificado de extensão pela Universidade Federal de Uberlândia (UFU). As inscrições são feitas por meio de um [formulário](https://forms.gle/wRNWAU9Ffyp7o4Vq9) intermediado pelo projeto [Psico&Econo_METRIA](https://www.youtube.com/c/PsicoEconoMETRIA). Quando da previsão das datas ou início do curso, uma campanha de e-mail marketing divulgará para os inscritos na [lista de espera](https://forms.gle/wRNWAU9Ffyp7o4Vq9) e para coordenações de pós-graduações selecionadas.
 
@@ -43,7 +24,7 @@ As vagas são limitadas e a seleção será feita por ordem de inscrição. Apó
 
 ## Ementa {#sec-ementa .unnumbered}
 
-Introdução da Ciência Aberta / Repositórios da Ciência Aberta / Gerenciamento de Referências e Bibliotecas / Gestão de Projetos, Dados e Scripts / Controle de Versão / Documentos Dinâmicos e Reprodutíveis / Controle de Ambiente / IA Aplicada à Pesquisa Reprodutível.
+Introdução da Ciência Aberta / Repositórios da Ciência Aberta / Gerenciamento de Referências e Bibliotecas / Organização de Projetos, Dados e Scripts / Controle de Versão / Documentos Dinâmicos e Reprodutíveis / Controle de Ambiente / IA Aplicada à Pesquisa Reprodutível.
 
 ## Metodologia {#sec-method .unnumbered}
 
@@ -53,26 +34,25 @@ A proposta do curso busca seguir de perto a mensagem de @dogucu2022 e ser um **R
 
 O REA aqui proposto é para orientação e contextualização dos participantes do curso sobre cada um dos módulos ministrados. Dessa forma, esperamos que em cada uma das aulas (módulos) os alunos façam uma leitura prévia da página do conteúdo a ser ministrado, para que possam acompanhar melhor as explicações e demonstrações feitas durante as aulas síncronas.
 
-Este curso adota o uso de **Inteligência Artificial Generativa (IA)** \emojitext{🤖} como ferramenta de apoio metodológico e pedagógico, alinhado às diretrizes éticas e responsáveis propostas por @sampaio2024a. A IA é utilizada exclusivamente em funções complementares — como resumo de materiais, auxílio na codificação, estruturação de conteúdos, busca de literatura, elaboração de recursos visuais, revisão e tradução — **sem substituir o trabalho intelectual, crítico e autoral do pesquisador**. Consideramos que o uso ético e transparente de IA alinha-se perfeitamente com os princípios da **Ciência Aberta** \emojitext{🔓}: transparência, reprodutibilidade e compartilhamento de processos. Para conhecer em detalhes as aplicações específicas da IA neste curso e os princípios norteadores dessa prática, consulte a seção final [**"Uso de Inteligência Artificial no Curso"**](08-AI.html).
-
+Este curso adota o uso de **Inteligência Artificial Generativa (IA)** \emojitext{🤖} como ferramenta de apoio metodológico e pedagógico, alinhado às diretrizes éticas e responsáveis propostas por @sampaio2024a. A IA é utilizada exclusivamente em funções complementares — como resumo de materiais, auxílio na codificação, estruturação de conteúdos, busca de literatura, elaboração de recursos visuais, revisão e tradução — **sem substituir o trabalho intelectual, crítico e autoral do pesquisador**. Consideramos que o uso ético e transparente de IA alinha-se perfeitamente com os princípios da **Ciência Aberta** \emojitext{🔓}: transparência, reprodutibilidade e compartilhamento de processos.
 
 ## Mudanças {#sec-change .unnumbered}
 
-As principais mudanças previstas para serem implementadas nesta edição do curso em relação à edição anterior:
+As principais mudanças implementadas na edição atual do curso em relação à edição anterior foram:
 
-1️⃣ **OSF atualizado** – exploraremos a nova estrutura e layout do repositório.
+1️⃣ **OSF** – exploramos a nova estrutura e layout do repositório, lançada em outubro de 2025.
 
-2️⃣ **Zotero 7** – avançando em relação à versão 6 trabalhada anteriormente
+2️⃣ **Zotero 7** – abordamos a versão atualizada dessa ferramenta acessória, em relação à versão 6 trabalhada anteriormente.
 
 3️⃣ **Projeto TIER 4.0** – boas práticas para organização de pastas e arquivos.
 
-4️⃣ [**ARTE – Article Template Reproducibility & Environment**](https://phdpablo.github.io/article-template/) – modelo para artigos reprodutíveis.
+4️⃣ [**ARTE – Article Template Reproducibility & Environment**](https://phdpablo.github.io/article-template/) – modelo para artigos reprodutíveis implementado tranversalmente ao longo de vários módulos do curso.
 
-5️⃣ **Conteinerização com Docker** – foco maior em ambientes portáveis.
+5️⃣ **Docker** – foco maior em ambientes portáveis.
 
-6️⃣ **Inteligência Artificial aplicada à Pesquisa Reprodutível.**
+6️⃣ **IA Aplicada à Pesquisa Reprodutível** – módulo reformulado abordando o uso ético e responsável da inteligência artificial na pesquisa reprodutível, alinhado às diretrizes de @sampaio2024a.
 
-7️⃣ **Material totalmente reformulado** – atualizado e implementado com recursos didáticos extras.
+7️⃣ **Material** – totalmente reformulado, atualizado e implementado com recursos didáticos extras.
 
 \newpage
 
