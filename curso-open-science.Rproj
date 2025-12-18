@@ -12,4 +12,4 @@ Encoding: UTF-8
 RnwWeave: Sweave
 LaTeX: pdfLaTeX
 
-ZoteroLibraries: "Artigo TERMO","Cleber","Crossover Studies","My Library","OS Project"
+ZoteroLibraries: "My Library","Artigo TERMO","Cleber","Crossover Studies","OS Project"

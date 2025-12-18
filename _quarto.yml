@@ -6,9 +6,6 @@ project:
   resources:
     - resources/
     - img/
-exclude:
-  - renv/
-  - adm/
 
 execute: 
   #echo: false
