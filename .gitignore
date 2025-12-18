@@ -7,11 +7,12 @@
 # Quarto and builds
 .quarto/
 _book/
-site_libs/
+/site_libs/
 _site/
 _temp/
 _freeze/
 
 adm/
-/.quarto/
 renv/
+
+/.quarto/
