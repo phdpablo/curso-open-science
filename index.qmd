@@ -61,7 +61,7 @@ As principais mudanças implementadas na edição atual do curso em relação à
 Se você utilizar o material desse curso em algum trabalho acadêmico, por favor, cite o livro do curso da seguinte forma:
 
 ::: {.callout-important appearance="minimal" icon="false"}
-Rogers, P. (2024). Artigo à Prova de Futuro: Jornada de Open Science na Prática (1.0). Disponível em: https://phdpablo.github.io/curso-open-science/. https://doi.org/10.5281/zenodo.12593928
+Rogers, P. (2026). Artigo à Prova de Futuro: Jornada de Open Science na Prática (2.0). Disponível em: https://phdpablo.github.io/curso-open-science/. https://doi.org/10.5281/zenodo.12593927
 :::
 
 ::: {.content-visible unless-format="pdf"}
@@ -73,10 +73,10 @@ BibTex:
   title        = {{Artigo à Prova de Futuro: Jornada de Open Science 
                    na Prática}},
   month        = jun,
-  year         = 2024,
+  year         = 2026,
   publisher    = {Zenodo},
-  version      = {1.0},
-  doi          = {10.5281/zenodo.12593928},
+  version      = {2.0},
+  doi          = {10.5281/zenodo.12593927},
   url          = {https://phdpablo.github.io/curso-open-science/}
 }
 ```
